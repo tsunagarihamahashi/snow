@@ -136,6 +136,12 @@
   .map-card .mc-sub { font-size: 12px; color: var(--text-muted); }
   .map-card .mc-arrow { color: var(--ember-500); font-size: 18px; flex: none; }
 
+  .piste-map { height: 340px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-top: 16px; background: var(--snow-100); }
+  .piste-legend { display: flex; gap: 14px; margin-top: 10px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
+  .piste-legend .sw { display: inline-block; width: 16px; height: 3px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+  .piste-source { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+  .piste-source a { color: inherit; }
+
   .livecam-bar { display: block; background: var(--ember-500); color: #fff; text-decoration: none; }
   .livecam-bar .inner { max-width: 720px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 10px; }
   .livecam-bar .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
@@ -188,6 +194,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="ishiuchi_piste_data.js"></script>
 
 <div class="statusbar">
   <div class="inner">
@@ -265,10 +274,18 @@
       <span><span class="sw" style="background:var(--amber-600);"></span>中級 40%</span>
       <span><span class="sw" style="background:var(--ridge-700);"></span>上級 30%</span>
     </div>
+    <div id="pisteMap" class="piste-map"></div>
+    <div class="piste-legend">
+      <span><span class="sw" style="background:var(--pine-600);"></span>初級</span>
+      <span><span class="sw" style="background:var(--amber-600);"></span>中級</span>
+      <span><span class="sw" style="background:var(--ridge-700);"></span>上級</span>
+      <span><span class="sw" style="background:var(--dust-600);"></span>バックカントリー系</span>
+    </div>
+    <p class="piste-source">コース形状データ: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>（ODbLライセンス）。公式のトレイルマップ画像は著作物のため掲載していません。</p>
     <a class="map-card" href="https://ishiuchi.or.jp/winter/ski/lift-course/" target="_blank" rel="noopener">
       <div class="mc-text">
-        <span class="mc-title">コースマップを見る（公式サイト）</span>
-        <span class="mc-sub">マップ画像は各スキー場の著作物のため、本ページには掲載していません</span>
+        <span class="mc-title">最新の運行状況を見る（公式サイト）</span>
+        <span class="mc-sub">当日のコース開放・リフト稼働状況はこちら</span>
       </div>
       <span class="mc-arrow">→</span>
     </a>
@@ -443,6 +460,26 @@
   });
 
   renderLines();
+
+  // ---- piste map (OSM piste:type data via Overpass, ODbL license) ----
+  (function () {
+    const el = document.getElementById("pisteMap");
+    if (!el || typeof L === "undefined" || typeof PISTE_DATA === "undefined") return;
+    const colors = { easy: "#2e6b52", intermediate: "#b8862e", advanced: "#3c5064", freeride: "#8a4a3a", unknown: "#8a97a5" };
+    const map = L.map(el, { scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    const bounds = [];
+    PISTE_DATA.forEach(p => {
+      const latlngs = p.coords.map(c => [c[0], c[1]]);
+      const line = L.polyline(latlngs, { color: colors[p.difficulty] || colors.unknown, weight: 4, opacity: 0.85 }).addTo(map);
+      if (p.name) line.bindPopup(p.name);
+      latlngs.forEach(c => bounds.push(c));
+    });
+    if (bounds.length) map.fitBounds(bounds, { padding: [16, 16] });
+  })();
 
   // ---- season status ----
   const seasonStart = new Date("2025-12-19T00:00:00+09:00");

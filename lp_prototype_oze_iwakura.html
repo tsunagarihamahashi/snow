@@ -1,0 +1,487 @@
+<title>尾瀬岩鞍</title>
+<style>
+  :root {
+    --snow-50: #f5f7fa;
+    --snow-100: #e8edf2;
+    --snow-200: #d7dfe7;
+    --ridge-900: #1c2a3a;
+    --ridge-700: #3c5064;
+    --ridge-500: #5c7086;
+    --ice-400: #7fa0b8;
+    --ember-500: #de5b2c;
+    --ember-600: #c44a1f;
+    --pine-600: #2e6b52;
+    --pine-100: #e1efe8;
+    --amber-600: #b8862e;
+    --amber-100: #f4ecd8;
+    --dust-600: #8a4a3a;
+    --dust-100: #f1e4de;
+    --card: #ffffff;
+    --border: var(--snow-200);
+    --text: var(--ridge-900);
+    --text-muted: var(--ridge-500);
+    --bg: var(--snow-50);
+    --shadow: 0 1px 2px rgba(28,42,58,0.06), 0 8px 24px -12px rgba(28,42,58,0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --snow-50: #12181f;
+      --snow-100: #1a222b;
+      --snow-200: #29343f;
+      --ridge-900: #eef2f6;
+      --ridge-700: #c3cdd6;
+      --ridge-500: #93a2af;
+      --ice-400: #7fa0b8;
+      --ember-500: #ec6a3b;
+      --ember-600: #f28453;
+      --pine-600: #59b391;
+      --pine-100: #17332a;
+      --amber-600: #d9a94a;
+      --amber-100: #332c17;
+      --dust-600: #d98f7c;
+      --dust-100: #33221d;
+      --card: #182029;
+      --border: var(--snow-200);
+      --text: var(--ridge-900);
+      --text-muted: var(--ridge-500);
+      --bg: var(--snow-50);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --snow-50: #12181f;
+    --snow-100: #1a222b;
+    --snow-200: #29343f;
+    --ridge-900: #eef2f6;
+    --ridge-700: #c3cdd6;
+    --ridge-500: #93a2af;
+    --ice-400: #7fa0b8;
+    --ember-500: #ec6a3b;
+    --ember-600: #f28453;
+    --pine-600: #59b391;
+    --pine-100: #17332a;
+    --amber-600: #d9a94a;
+    --amber-100: #332c17;
+    --dust-600: #d98f7c;
+    --dust-100: #33221d;
+    --card: #182029;
+    --border: var(--snow-200);
+    --text: var(--ridge-900);
+    --text-muted: var(--ridge-500);
+    --bg: var(--snow-50);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+
+  /* ---- status strip ---- */
+  .statusbar {
+    background: var(--ridge-900);
+    color: var(--snow-50);
+    padding: 22px 20px 20px;
+  }
+  .statusbar .inner { max-width: 720px; margin: 0 auto; }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--ice-400);
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  h1.resort-name {
+    font-family: "Shippori Mincho", serif;
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 4px;
+    text-wrap: balance;
+  }
+  .pref { font-size: 14px; color: var(--ice-400); margin: 0 0 16px; }
+  .status-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; border-radius: 100px;
+    font-size: 13px; font-weight: 700;
+  }
+  .pill.open { background: var(--pine-100); color: var(--pine-600); }
+  .pill.closed { background: rgba(255,255,255,0.1); color: var(--snow-100); }
+  .pill .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .status-note { font-size: 13px; color: var(--ice-400); }
+
+  /* ---- section shell ---- */
+  section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  h2 {
+    font-family: "Shippori Mincho", serif;
+    font-size: 21px;
+    margin: 0;
+  }
+  .section-num { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.05em; }
+
+  /* ---- access ---- */
+  .kv-grid { display: grid; grid-template-columns: 96px 1fr; row-gap: 12px; column-gap: 16px; font-size: 15px; }
+  .kv-grid dt { color: var(--text-muted); }
+  .kv-grid dd { margin: 0; }
+  .outlink {
+    color: var(--ember-500); text-decoration: none; border-bottom: 1px solid currentColor;
+  }
+  .outlink:hover { color: var(--ember-600); }
+
+  /* ---- calculator ---- */
+  .calc-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow); padding: 22px;
+  }
+  .daytype-toggle { display: flex; gap: 8px; margin-bottom: 20px; }
+  .daytype-toggle button {
+    flex: 1; padding: 9px 8px; border-radius: 9px; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 13px; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+  }
+  .daytype-toggle button[aria-pressed="true"] {
+    background: var(--ember-500); border-color: var(--ember-500); color: #fff;
+  }
+  .cat-row {
+    display: grid; grid-template-columns: 1fr auto auto; align-items: center;
+    gap: 10px; padding: 12px 0; border-top: 1px solid var(--border);
+  }
+  .cat-row:first-of-type { border-top: none; }
+  .cat-label { font-size: 15px; }
+  .cat-cond { font-size: 12px; color: var(--text-muted); display: block; margin-top: 1px; }
+  .cat-price {
+    font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums;
+    font-size: 14px; color: var(--text-muted); text-align: right; min-width: 68px;
+  }
+  .stepper { display: flex; align-items: center; gap: 8px; }
+  .stepper button {
+    width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 16px; line-height: 1;
+    cursor: pointer; font-family: inherit;
+  }
+  .stepper input {
+    width: 30px; text-align: center; border: none; background: none; color: var(--text);
+    font-family: "Roboto Mono", monospace; font-size: 15px; font-variant-numeric: tabular-nums;
+  }
+  .calc-total {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-top: 18px; padding-top: 18px; border-top: 2px solid var(--ridge-900);
+  }
+  :root[data-theme="dark"] .calc-total, @media (prefers-color-scheme: dark) { }
+  .calc-total .label { font-size: 14px; color: var(--text-muted); }
+  .calc-total .amount {
+    font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums;
+    font-size: 30px; font-weight: 700; color: var(--ember-500);
+  }
+  .calc-foot { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+
+  .rental-acc { margin-top: 14px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .rental-acc summary {
+    cursor: pointer; list-style: none; padding: 12px 16px; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: space-between; background: var(--snow-100);
+  }
+  .rental-acc summary::-webkit-details-marker { display: none; }
+  .rental-acc summary .chev { transition: transform 0.15s ease; color: var(--text-muted); }
+  .rental-acc[open] summary .chev { transform: rotate(180deg); }
+  .rental-table { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .rental-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+  .rental-row .r-label { color: var(--text); }
+  .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
+
+  /* ---- scale stats ---- */
+  .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .stat { background: var(--card); padding: 16px 12px; text-align: center; }
+  .stat .num { font-family: "Roboto Mono", monospace; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .stat .unit { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .stat .idx-tag { display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
+  .stat.tier-good .num { color: var(--pine-600); }
+  .stat.tier-good .idx-tag { background: var(--pine-100); color: var(--pine-600); }
+  .stat.tier-mid .num { color: var(--amber-600); }
+  .stat.tier-mid .idx-tag { background: var(--amber-100); color: var(--amber-600); }
+  .stat.tier-low .num { color: var(--dust-600); }
+  .stat.tier-low .idx-tag { background: var(--dust-100); color: var(--dust-600); }
+
+  .map-card {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--card);
+    text-decoration: none; color: var(--text); margin-top: 16px;
+  }
+  .map-card:hover { border-color: var(--ember-500); }
+  .map-card .mc-text { display: flex; flex-direction: column; gap: 2px; }
+  .map-card .mc-title { font-weight: 700; font-size: 14px; }
+  .map-card .mc-sub { font-size: 12px; color: var(--text-muted); }
+  .map-card .mc-arrow { color: var(--ember-500); font-size: 18px; flex: none; }
+
+  .livecam-bar {
+    display: block; background: var(--ember-500); color: #fff; text-decoration: none;
+  }
+  .livecam-bar .inner {
+    max-width: 720px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 10px;
+  }
+  .livecam-bar .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
+  .livecam-bar .lc-text { font-size: 13px; font-weight: 700; flex: 1; }
+  .livecam-bar .lc-arrow { font-size: 15px; }
+  @media (prefers-reduced-motion: reduce) { .livecam-bar .lc-dot { animation: none; } }
+  @keyframes lc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  /* ---- gochiso ---- */
+  .cospa-badge {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; font-size: 13px;
+  }
+  .cospa-badge.tier-good { background: var(--pine-100); color: var(--pine-600); }
+  .cospa-badge.tier-mid { background: var(--amber-100); color: var(--amber-600); }
+  .cospa-badge.tier-low { background: var(--dust-100); color: var(--dust-600); }
+  .cospa-badge .score { font-family: "Roboto Mono", monospace; font-size: 20px; font-weight: 700; }
+  .shop-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .shop-list li { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; padding: 10px 10px 10px 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+  .shop-list .shop-main { display: flex; flex-direction: column; min-width: 0; }
+  .shop-list .shop-tag { font-size: 12px; color: var(--text-muted); }
+  .maplink {
+    display: inline-flex; align-items: center; gap: 4px; flex: none;
+    font-size: 12px; font-weight: 700; color: var(--ember-500); text-decoration: none;
+    padding: 6px 10px; border-radius: 8px; background: var(--dust-100);
+    white-space: nowrap;
+  }
+  .maplink:hover { color: var(--ember-600); }
+  .maplink svg { width: 12px; height: 12px; }
+
+  /* ---- news ---- */
+  .news-list { list-style: none; margin: 0; padding: 0; }
+  .news-list li { padding: 10px 0; border-top: 1px solid var(--border); display: flex; gap: 14px; }
+  .news-list li:first-child { border-top: none; }
+  .news-date { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); white-space: nowrap; padding-top: 1px; }
+  .news-list a { color: var(--text); text-decoration: none; font-size: 14px; }
+  .news-list a:hover { color: var(--ember-500); }
+
+  footer { padding: 28px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+  footer p { margin: 0 0 8px; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">群馬県 / 関東最大級ゲレンデ</p>
+    <h1 class="resort-name">尾瀬岩鞍</h1>
+    <p class="pref">群馬県利根郡片品村 千倉</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<a class="livecam-bar" href="https://www.oze-iwakura.co.jp/ski/slopeguide/live/" target="_blank" rel="noopener">
+  <div class="inner">
+    <span class="lc-dot"></span>
+    <span class="lc-text">ライブカメラで今のゲレンデを見る（公式サイト）</span>
+    <span class="lc-arrow">→</span>
+  </div>
+</a>
+
+<div class="wrap">
+
+  <section id="access">
+    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">01 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 沼田IC → 国道120号（椎坂トンネル・尾瀬大橋経由）約45〜50分・31km</dd>
+      <dt>駐車場</dt>
+      <dd>ゲレンデ直結・戸倉方面あわせて計1,100台以上（第1約200台・第2約900台、24時間1,000円の駐車場もあり）</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.oze-iwakura.co.jp/ski/" target="_blank" rel="noopener">oze-iwakura.co.jp／アクセス詳細・ライブカメラ</a></dd>
+    </dl>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">02 / 料金</span></div>
+    <div class="calc-card">
+      <div class="daytype-toggle" role="group" aria-label="日付タイプ">
+        <button data-day="weekday" aria-pressed="true">平日</button>
+        <button data-day="weekend" aria-pressed="false">休日</button>
+        <button data-day="special" aria-pressed="false">特定日</button>
+      </div>
+      <div id="catRows"></div>
+      <div class="calc-total">
+        <span class="label">1日券 合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot">シニアは60歳以上（証明書要）。幼児（未就学児）は無料ですがリフト同乗時は専用券が必要です。特定日は年末年始・繁忙期の指定日。</p>
+      <details class="rental-acc">
+        <summary>レンタル料金を見る<span class="chev">▾</span></summary>
+        <div class="rental-table">
+          <div class="rental-row"><span class="r-label">フルセット（板・ブーツ・ウェア一式）</span><span class="r-price">大人 ¥8,500 ／ 小人 ¥6,500</span></div>
+          <div class="rental-row"><span class="r-label">板・ブーツ・ストックのみ（ウェアなし）</span><span class="r-price">大人 ¥4,500 ／ 小人 ¥3,500</span></div>
+          <div class="rental-row"><span class="r-label">岩鞍リゾートホテル・岩鞍ハウス宿泊者</span><span class="r-price">上記セットより ¥1,000引き</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="scale">
+    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">03 / コース</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">111</div><div class="unit">総面積 ha</div></div>
+      <div class="stat"><div class="num">16〜18</div><div class="unit">コース数</div></div>
+      <div class="stat"><div class="num">3,200</div><div class="unit">最長滑走 m</div></div>
+      <div class="stat tier-mid"><div class="num">1,010</div><div class="unit">混雑しにくさ ㎡/台<br>（面積÷駐車場台数）</div><span class="idx-tag">平均的・10件中4位</span></div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">初級から上級まで多彩なコースを備える関東最大級のビッグゲレンデ。良質なパウダースノーが特徴。</p>
+    <a class="map-card" href="https://www.oze-iwakura.co.jp/ski/slopeguide/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">コースマップを見る（公式サイト）</span>
+        <span class="mc-sub">マップ画像は各スキー場の著作物のため、本ページには掲載していません</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2>ゲレ食</h2><span class="section-num">04 / 飲食</span></div>
+    <div class="cospa-badge tier-low">
+      <span>ゲレ飯コスパ指数</span><span class="score">0.24</span><span>／ やや弱め・検証7ゲレンデ中3位（旅館系食堂は未集計、実際はより上位の可能性）</span>
+    </div>
+    <ul class="shop-list" id="shopList"></ul>
+    <p class="calc-foot" style="margin-top:14px;">上記はゲレンデ直結の代表例で網羅ではありません（旅館・民宿併設の食堂は特に把握が難しく、精査中）。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。</p>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2>お知らせ</h2><span class="section-num">05 / 運営情報</span></div>
+    <ul class="news-list" id="newsList"></ul>
+  </section>
+
+  <footer>
+    <p>営業期間：2025年12月13日〜2026年4月5日（例年ベース、最新情報は公式サイトをご確認ください）。ゲレンデマップ画像は各スキー場の著作物のため本ページには掲載せず、公式サイトへ直接リンクしています。</p>
+    <p>データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。</p>
+  </footer>
+</div>
+
+<script>
+  const priceTable = {
+    weekday: { adult: 5800, elem: 3800, senior: 5300, infant: 0 },
+    weekend: { adult: 6500, elem: 4500, senior: 6000, infant: 0 },
+    special: { adult: 7000, elem: 5000, senior: 6500, infant: 0 },
+  };
+  const categories = [
+    { key: "adult",  label: "大人",   cond: null },
+    { key: "elem",   label: "小学生", cond: null },
+    { key: "senior", label: "シニア", cond: "60歳以上" },
+    { key: "infant", label: "幼児",   cond: "未就学児" },
+  ];
+  const counts = { adult: 2, elem: 0, senior: 0, infant: 0 };
+  let dayType = "weekday";
+
+  const catRows = document.getElementById("catRows");
+  categories.forEach(cat => {
+    const row = document.createElement("div");
+    row.className = "cat-row";
+    row.innerHTML = `
+      <div>
+        <span class="cat-label">${cat.label}</span>
+        ${cat.cond ? `<span class="cat-cond">${cat.cond}</span>` : ""}
+      </div>
+      <div class="cat-price" data-price="${cat.key}"></div>
+      <div class="stepper">
+        <button type="button" data-act="dec" data-key="${cat.key}" aria-label="${cat.label}を減らす">−</button>
+        <input type="text" inputmode="numeric" readonly value="${counts[cat.key]}" data-count="${cat.key}">
+        <button type="button" data-act="inc" data-key="${cat.key}" aria-label="${cat.label}を増やす">＋</button>
+      </div>`;
+    catRows.appendChild(row);
+  });
+
+  function render() {
+    const prices = priceTable[dayType];
+    categories.forEach(cat => {
+      document.querySelector(`[data-price="${cat.key}"]`).textContent = "¥" + prices[cat.key].toLocaleString();
+      document.querySelector(`[data-count="${cat.key}"]`).value = counts[cat.key];
+    });
+    const total = categories.reduce((sum, cat) => sum + prices[cat.key] * counts[cat.key], 0);
+    document.getElementById("totalAmount").textContent = "¥" + total.toLocaleString();
+  }
+
+  catRows.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-act]");
+    if (!btn) return;
+    const key = btn.dataset.key;
+    if (btn.dataset.act === "inc") counts[key] = Math.min(counts[key] + 1, 20);
+    else counts[key] = Math.max(counts[key] - 1, 0);
+    render();
+  });
+
+  document.querySelectorAll(".daytype-toggle button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".daytype-toggle button").forEach(b => b.setAttribute("aria-pressed", "false"));
+      btn.setAttribute("aria-pressed", "true");
+      dayType = btn.dataset.day;
+      render();
+    });
+  });
+
+  render();
+
+  // ---- season / open-closed status (computed from real season dates vs viewer's clock) ----
+  const seasonStart = new Date("2025-12-13T00:00:00+09:00");
+  const seasonEnd = new Date("2026-04-05T23:59:00+09:00");
+  const now = new Date();
+  const pill = document.getElementById("statusPill");
+  const statusText = document.getElementById("statusText");
+  const statusNote = document.getElementById("statusNote");
+  if (now >= seasonStart && now <= seasonEnd) {
+    pill.classList.add("open");
+    statusText.textContent = "営業中（シーズン期間内）";
+    statusNote.textContent = "積雪・リフト稼働の最新状況は公式サイトでご確認ください";
+  } else {
+    pill.classList.add("closed");
+    statusText.textContent = "営業期間外";
+    const nextStart = now > seasonEnd ? "次シーズンは例年12月中旬オープン予定" : `オープンまで ${Math.ceil((seasonStart - now) / 86400000)} 日`;
+    statusNote.textContent = nextStart;
+  }
+
+  // ---- gochiso: shops + per-shop Google Maps search link ----
+  const shops = [
+    { name: "レストラン・ホルン", tag: "西山エリア最大規模", mapQuery: "尾瀬岩鞍 レストランホルン" },
+    { name: "ラ・セゾン", tag: "尾瀬岩鞍リゾートホテル内", mapQuery: "尾瀬岩鞍リゾートホテル ラセゾン" },
+    { name: "オクタ", tag: "焼きカレー", mapQuery: "尾瀬岩鞍 オクタ 焼きカレー" },
+    { name: "カフェラウンジ モンブラン", tag: "自家製パン工房バーガー", mapQuery: "尾瀬岩鞍 カフェラウンジモンブラン" },
+    { name: "岩鞍食堂", tag: "初心者ゲレンデ中腹・独立系", mapQuery: "岩鞍食堂 片品村" },
+    { name: "ロッジ岩鞍やまと 食堂", tag: "ゴンドラ正面・0分", mapQuery: "ロッジ岩鞍やまと" },
+    { name: "ヴィラ岩鞍山荘 食堂", tag: "旅館の食堂・日帰り利用可", mapQuery: "ヴィラ岩鞍山荘" },
+  ];
+  const pinSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
+  const shopList = document.getElementById("shopList");
+  shops.forEach(shop => {
+    const li = document.createElement("li");
+    const mapUrl = "https://www.google.com/maps/search/" + encodeURIComponent(shop.mapQuery);
+    li.innerHTML = `
+      <div class="shop-main">
+        <span>${shop.name}</span>
+        <span class="shop-tag">${shop.tag}</span>
+      </div>
+      <a class="maplink" href="${mapUrl}" target="_blank" rel="noopener">${pinSvg}地図で見る</a>`;
+    shopList.appendChild(li);
+  });
+
+  // ---- scraped news (from scraper_poc.py verification run, 2026-09-08) ----
+  const news = [
+    { date: "2026年09月02日", title: "公式サイトリニューアルのお知らせ", url: "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=432920" },
+    { date: "2026年08月25日", title: "9/1より26/27シーズンパスポート販売開始！", url: "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=432310" },
+    { date: "2026年08月03日", title: "尾瀬岩鞍が「NSDキッズプログラム」に新規参画しました！", url: "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=431711" },
+    { date: "2026年04月01日", title: "キャンプ営業の予約を開始しました", url: "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=362772" },
+    { date: "2025年12月18日", title: "【重要なお知らせ】ゲレンデ内での板置き（場所取り）禁止について", url: "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=418276" },
+  ];
+  const newsList = document.getElementById("newsList");
+  news.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="news-date">${item.date}</span><a href="${item.url}" target="_blank" rel="noopener">${item.title}</a>`;
+    newsList.appendChild(li);
+  });
+</script>

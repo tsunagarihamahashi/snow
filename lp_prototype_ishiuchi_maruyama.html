@@ -1,0 +1,497 @@
+<title>石打丸山</title>
+<style>
+  :root {
+    --snow-50: #f5f7fa;
+    --snow-100: #e8edf2;
+    --snow-200: #d7dfe7;
+    --ridge-900: #1c2a3a;
+    --ridge-700: #3c5064;
+    --ridge-500: #5c7086;
+    --ice-400: #7fa0b8;
+    --ember-500: #de5b2c;
+    --ember-600: #c44a1f;
+    --pine-600: #2e6b52;
+    --pine-100: #e1efe8;
+    --amber-600: #b8862e;
+    --amber-100: #f4ecd8;
+    --dust-600: #8a4a3a;
+    --dust-100: #f1e4de;
+    --card: #ffffff;
+    --border: var(--snow-200);
+    --text: var(--ridge-900);
+    --text-muted: var(--ridge-500);
+    --bg: var(--snow-50);
+    --shadow: 0 1px 2px rgba(28,42,58,0.06), 0 8px 24px -12px rgba(28,42,58,0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --snow-50: #12181f; --snow-100: #1a222b; --snow-200: #29343f;
+      --ridge-900: #eef2f6; --ridge-700: #c3cdd6; --ridge-500: #93a2af;
+      --ice-400: #7fa0b8; --ember-500: #ec6a3b; --ember-600: #f28453;
+      --pine-600: #59b391; --pine-100: #17332a; --amber-600: #d9a94a; --amber-100: #332c17;
+      --dust-600: #d98f7c; --dust-100: #33221d;
+      --card: #182029; --border: var(--snow-200); --text: var(--ridge-900);
+      --text-muted: var(--ridge-500); --bg: var(--snow-50);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --snow-50: #12181f; --snow-100: #1a222b; --snow-200: #29343f;
+    --ridge-900: #eef2f6; --ridge-700: #c3cdd6; --ridge-500: #93a2af;
+    --ice-400: #7fa0b8; --ember-500: #ec6a3b; --ember-600: #f28453;
+    --pine-600: #59b391; --pine-100: #17332a; --amber-600: #d9a94a; --amber-100: #332c17;
+    --dust-600: #d98f7c; --dust-100: #33221d;
+    --card: #182029; --border: var(--snow-200); --text: var(--ridge-900);
+    --text-muted: var(--ridge-500); --bg: var(--snow-50);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+
+  .statusbar { background: var(--ridge-900); color: var(--snow-50); padding: 22px 20px 20px; }
+  .statusbar .inner { max-width: 720px; margin: 0 auto; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.12em; color: var(--ice-400); text-transform: uppercase; margin: 0 0 6px; }
+  h1.resort-name { font-family: "Shippori Mincho", serif; font-size: 34px; line-height: 1.2; margin: 0 0 4px; text-wrap: balance; }
+  .pref { font-size: 14px; color: var(--ice-400); margin: 0 0 16px; }
+  .status-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 100px; font-size: 13px; font-weight: 700; }
+  .pill.open { background: var(--pine-100); color: var(--pine-600); }
+  .pill.closed { background: rgba(255,255,255,0.1); color: var(--snow-100); }
+  .pill .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .status-note { font-size: 13px; color: var(--ice-400); }
+
+  section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  h2 { font-family: "Shippori Mincho", serif; font-size: 21px; margin: 0; }
+  .section-num { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.05em; }
+
+  .kv-grid { display: grid; grid-template-columns: 96px 1fr; row-gap: 12px; column-gap: 16px; font-size: 15px; }
+  .kv-grid dt { color: var(--text-muted); }
+  .kv-grid dd { margin: 0; }
+  .outlink { color: var(--ember-500); text-decoration: none; border-bottom: 1px solid currentColor; }
+  .outlink:hover { color: var(--ember-600); }
+
+  .calc-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); padding: 22px; }
+  .toggle-row { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .toggle-row button {
+    flex: 1; min-width: 90px; padding: 9px 8px; border-radius: 9px; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 13px; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+  }
+  .toggle-row button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
+  .toggle-row.channel button[aria-pressed="true"] { background: var(--ridge-900); border-color: var(--ridge-900); }
+  .toggle-label { font-size: 11px; letter-spacing: 0.06em; color: var(--text-muted); text-transform: uppercase; margin: 4px 0 8px; }
+  .line-item { padding: 16px 0; border-top: 1px solid var(--border); }
+  .line-item:first-of-type { border-top: none; padding-top: 4px; }
+  .line-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+  .line-selects { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; }
+  .line-selects.has-channel { grid-template-columns: 1fr 1fr 1fr; }
+  .line-selects select {
+    width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 13px; font-family: inherit;
+  }
+  .remove-line { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--border); background: var(--snow-100); color: var(--text-muted); font-size: 14px; cursor: pointer; }
+  .line-item:only-of-type .remove-line { visibility: hidden; }
+  .line-cond { font-size: 12px; color: var(--text-muted); margin: 2px 0 8px; }
+  .line-foot { display: flex; align-items: center; justify-content: space-between; }
+  .line-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 13px; color: var(--text-muted); }
+  .stepper { display: flex; align-items: center; gap: 8px; }
+  .stepper button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border); background: var(--snow-100); color: var(--text); font-size: 16px; line-height: 1; cursor: pointer; font-family: inherit; }
+  .stepper button:disabled { opacity: 0.3; cursor: not-allowed; }
+  .stepper input { width: 30px; text-align: center; border: none; background: none; color: var(--text); font-family: "Roboto Mono", monospace; font-size: 15px; font-variant-numeric: tabular-nums; }
+  .line-subtotal { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 15px; font-weight: 700; }
+  .add-line-btn {
+    width: 100%; padding: 10px; margin-top: 6px; border-radius: 9px; border: 1px dashed var(--border);
+    background: none; color: var(--ember-500); font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit;
+  }
+  .add-line-btn:hover { background: var(--dust-100); }
+  .calc-total { display: flex; align-items: baseline; justify-content: space-between; margin-top: 18px; padding-top: 18px; border-top: 2px solid var(--ridge-900); }
+  .calc-total .label { font-size: 14px; color: var(--text-muted); }
+  .calc-total .amount { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 30px; font-weight: 700; color: var(--ember-500); }
+  .calc-foot { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+
+  .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .stat { background: var(--card); padding: 16px 12px; text-align: center; }
+  .stat .num { font-family: "Roboto Mono", monospace; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .stat .unit { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .stat .idx-tag { display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
+  .stat.tier-good .num { color: var(--pine-600); }
+  .stat.tier-good .idx-tag { background: var(--pine-100); color: var(--pine-600); }
+  .stat.tier-mid .num { color: var(--amber-600); }
+  .stat.tier-mid .idx-tag { background: var(--amber-100); color: var(--amber-600); }
+  .stat.tier-low .num { color: var(--dust-600); }
+  .stat.tier-low .idx-tag { background: var(--dust-100); color: var(--dust-600); }
+
+  .map-card {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--card);
+    text-decoration: none; color: var(--text); margin-top: 16px;
+  }
+  .map-card:hover { border-color: var(--ember-500); }
+  .map-card .mc-text { display: flex; flex-direction: column; gap: 2px; }
+  .map-card .mc-title { font-weight: 700; font-size: 14px; }
+  .map-card .mc-sub { font-size: 12px; color: var(--text-muted); }
+  .map-card .mc-arrow { color: var(--ember-500); font-size: 18px; flex: none; }
+
+  .livecam-bar { display: block; background: var(--ember-500); color: #fff; text-decoration: none; }
+  .livecam-bar .inner { max-width: 720px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 10px; }
+  .livecam-bar .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
+  .livecam-bar .lc-text { font-size: 13px; font-weight: 700; flex: 1; }
+  .livecam-bar .lc-arrow { font-size: 15px; }
+  @media (prefers-reduced-motion: reduce) { .livecam-bar .lc-dot { animation: none; } }
+  @keyframes lc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  .rental-acc { margin-top: 14px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .rental-acc summary {
+    cursor: pointer; list-style: none; padding: 12px 16px; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: space-between; background: var(--snow-100);
+  }
+  .rental-acc summary::-webkit-details-marker { display: none; }
+  .rental-acc summary .chev { transition: transform 0.15s ease; color: var(--text-muted); }
+  .rental-acc[open] summary .chev { transform: rotate(180deg); }
+  .rental-table { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .rental-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+  .rental-row .r-label { color: var(--text); }
+  .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
+
+  .level-bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 16px; }
+  .level-bar span { display: block; height: 100%; }
+  .level-legend { display: flex; gap: 16px; margin-top: 8px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
+  .level-legend .sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+
+  .cospa-badge { display: inline-flex; align-items: baseline; gap: 8px; border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; font-size: 13px; }
+  .cospa-badge .score { font-family: "Roboto Mono", monospace; font-size: 20px; font-weight: 700; }
+  .cospa-badge.tier-good { background: var(--pine-100); color: var(--pine-600); }
+  .cospa-badge.tier-mid { background: var(--amber-100); color: var(--amber-600); }
+  .cospa-badge.tier-low { background: var(--dust-100); color: var(--dust-600); }
+  .shop-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .shop-list li { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; padding: 10px 10px 10px 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+  .shop-list .shop-main { display: flex; flex-direction: column; min-width: 0; }
+  .shop-list .shop-tag { font-size: 12px; color: var(--text-muted); }
+  .maplink { display: inline-flex; align-items: center; gap: 4px; flex: none; font-size: 12px; font-weight: 700; color: var(--ember-500); text-decoration: none; padding: 6px 10px; border-radius: 8px; background: var(--dust-100); white-space: nowrap; }
+  .maplink:hover { color: var(--ember-600); }
+  .maplink svg { width: 12px; height: 12px; }
+
+  .news-list { list-style: none; margin: 0; padding: 0; }
+  .news-list li { padding: 10px 0; border-top: 1px solid var(--border); display: flex; gap: 14px; }
+  .news-list li:first-child { border-top: none; }
+  .news-date { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); white-space: nowrap; padding-top: 1px; }
+  .news-list a { color: var(--text); text-decoration: none; font-size: 14px; }
+  .news-list a:hover { color: var(--ember-500); }
+
+  footer { padding: 28px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+  footer p { margin: 0 0 8px; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">新潟県 / 湯沢エリア</p>
+    <h1 class="resort-name">石打丸山</h1>
+    <p class="pref">新潟県南魚沼市石打</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<a class="livecam-bar" href="https://ishiuchi.or.jp/winter/livecamera/" target="_blank" rel="noopener">
+  <div class="inner">
+    <span class="lc-dot"></span>
+    <span class="lc-text">ライブカメラで今のゲレンデを見る（公式サイト）</span>
+    <span class="lc-arrow">→</span>
+  </div>
+</a>
+
+<div class="wrap">
+
+  <section id="access">
+    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">01 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 塩沢石打IC → 国道17号 約5分・3km（練馬ICから約120分）</dd>
+      <dt>駐車場</dt>
+      <dd>約1,000台</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://ishiuchi.or.jp/winter/access/" target="_blank" rel="noopener">ishiuchi.or.jp／アクセス詳細</a></dd>
+    </dl>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">02 / 料金</span></div>
+    <p class="calc-foot" style="margin-bottom:12px;">人（区分）ごとに券種・チャネルを別々に選べます。例：お子様は1日券、大人は4時間券。</p>
+    <div class="calc-card">
+      <div id="lineList"></div>
+      <button type="button" class="add-line-btn" id="addLineBtn">＋ 人数区分を追加</button>
+      <div class="calc-total">
+        <span class="label">合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot" id="calcFoot"></p>
+      <details class="rental-acc">
+        <summary>レンタル料金を見る（1日）<span class="chev">▾</span></summary>
+        <div class="rental-table">
+          <div class="rental-row"><span class="r-label">基本セット（板・ブーツ・ストック等）</span><span class="r-price">大人 ¥7,000 ／ 子供 ¥3,600</span></div>
+          <div class="rental-row"><span class="r-label">フルセット（基本セット＋ウェア）</span><span class="r-price">大人 ¥12,000 ／ 子供 ¥6,200</span></div>
+          <div class="rental-row"><span class="r-label">パフォーマンスモデル基本セット</span><span class="r-price">共通 ¥8,500</span></div>
+          <div class="rental-row"><span class="r-label">ウェアのみ</span><span class="r-price">大人 ¥6,000 ／ 子供 ¥3,600</span></div>
+          <div class="rental-row"><span class="r-label">ヘルメット／長靴</span><span class="r-price">各 ¥2,000</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="scale">
+    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">03 / コース</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">230</div><div class="unit">総面積 ha</div></div>
+      <div class="stat"><div class="num">23</div><div class="unit">コース数</div></div>
+      <div class="stat"><div class="num">13</div><div class="unit">リフト・ゴンドラ基数</div></div>
+      <div class="stat tier-good"><div class="num">2,300</div><div class="unit">混雑しにくさ ㎡/台<br>（面積÷駐車場台数）</div><span class="idx-tag">混みにくい方・10件中1位</span></div>
+    </div>
+    <div class="level-bar">
+      <span style="width:30%; background:var(--pine-600);"></span>
+      <span style="width:40%; background:var(--amber-600);"></span>
+      <span style="width:30%; background:var(--ridge-700);"></span>
+    </div>
+    <div class="level-legend">
+      <span><span class="sw" style="background:var(--pine-600);"></span>初級 30%</span>
+      <span><span class="sw" style="background:var(--amber-600);"></span>中級 40%</span>
+      <span><span class="sw" style="background:var(--ridge-700);"></span>上級 30%</span>
+    </div>
+    <a class="map-card" href="https://ishiuchi.or.jp/winter/ski/lift-course/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">コースマップを見る（公式サイト）</span>
+        <span class="mc-sub">マップ画像は各スキー場の著作物のため、本ページには掲載していません</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2>ゲレ食</h2><span class="section-num">04 / 飲食</span></div>
+    <div class="cospa-badge tier-good">
+      <span>ゲレ飯コスパ指数</span><span class="score">1.00</span><span>／ コスパ良好・検証7ゲレンデ中1位（飲食店24店舗・公式値）</span>
+    </div>
+    <ul class="shop-list" id="shopList"></ul>
+    <p class="calc-foot" style="margin-top:14px;">24店舗中6店を代表例として掲載（網羅ではありません）。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。</p>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2>お知らせ</h2><span class="section-num">05 / 運営情報</span></div>
+    <ul class="news-list" id="newsList"></ul>
+    <p class="calc-foot" style="margin-top:10px;">取得時点（2026年9月）はグリーンシーズン中のため、夏季のお知らせが中心です。冬季は運行状況・臨時休業等に切り替わります。</p>
+  </section>
+
+  <footer>
+    <p>営業期間：2025年12月19日〜2026年4月5日（例年ベース、最新情報は公式サイトをご確認ください）。ゲレンデマップ画像は著作物のため本ページには掲載せず、公式サイトへ直接リンクしています。</p>
+    <p>データ精度：料金・面積は複数の公開情報を照合した参考値です。WEB国内料金は日により変動するため計算機では目安の代表値を使用しています。当日の運行状況は公式サイトのライブ情報を優先してください。</p>
+  </footer>
+</div>
+
+<script>
+  // ---- ticket types: 券種 x チャネル x 区分 の3軸データ ----
+  const ticketTypes = [
+    {
+      id: "flex", label: "フレックス(8.5h)",
+      channels: ["web_domestic", "web_general", "madoguchi"],
+      channelLabels: { web_domestic: "WEB国内", web_general: "WEB一般", madoguchi: "窓口" },
+      categories: [
+        { key: "adult", label: "大人", mode: "channel", prices: { web_domestic: 6000, web_general: 7400, madoguchi: 7900 }, note: "WEB国内は日により5,200〜6,800円で変動（目安を表示）" },
+        { key: "elemMid", label: "小・中学生", cond: "6〜15歳", mode: "channel", prices: { web_domestic: 3200, web_general: 4000, madoguchi: 4200 } },
+        { key: "senior", label: "シニア", cond: "65歳以上・窓口のみ", mode: "fixed", price: 6700 },
+        { key: "kids", label: "キッズ", cond: "4〜6歳・全チャネル共通", mode: "fixed", price: 1500 },
+      ],
+    },
+    {
+      id: "allday", label: "オールデイ(〜20時)",
+      channels: ["web_general", "madoguchi"],
+      channelLabels: { web_general: "WEB", madoguchi: "窓口" },
+      categories: [
+        { key: "adult", label: "大人", mode: "channel", prices: { web_general: 8300, madoguchi: 8700 } },
+        { key: "elemMid", label: "小・中学生", cond: "6〜15歳", mode: "channel", prices: { web_general: 4400, madoguchi: 4600 } },
+        { key: "senior", label: "シニア", cond: "65歳以上・窓口のみ", mode: "fixed", price: 7400 },
+      ],
+    },
+    {
+      id: "hour4", label: "4時間券",
+      channels: ["common"],
+      channelLabels: { common: "共通" },
+      categories: [
+        { key: "adult", label: "大人", mode: "fixed", price: 6300 },
+        { key: "elemMid", label: "小・中学生", cond: "6〜15歳", mode: "fixed", price: 3200 },
+        { key: "senior", label: "シニア", cond: "65歳以上・窓口のみ", mode: "fixed", price: 5300 },
+      ],
+    },
+    {
+      id: "nighter", label: "ナイター(16-20時)",
+      channels: ["web_general", "madoguchi"],
+      channelLabels: { web_general: "WEB", madoguchi: "窓口" },
+      categories: [
+        { key: "adult", label: "大人", mode: "channel", prices: { web_general: 3600, madoguchi: 3800 } },
+        { key: "elemMid", label: "小・中学生", cond: "6〜15歳・全チャネル共通", mode: "fixed", price: 2000 },
+        { key: "kids", label: "キッズ", cond: "4〜6歳・全チャネル共通", mode: "fixed", price: 1000 },
+      ],
+    },
+  ];
+
+  function getTicket(id) { return ticketTypes.find(t => t.id === id); }
+  function getCategory(ticketId, key) { return getTicket(ticketId).categories.find(c => c.key === key); }
+  function priceFor(ticketId, key, channel) {
+    const cat = getCategory(ticketId, key);
+    if (!cat) return null;
+    return cat.mode === "fixed" ? cat.price : cat.prices[channel];
+  }
+
+  let lineSeq = 0;
+  const lines = [
+    { id: lineSeq++, category: "adult", ticket: "flex", channel: "web_domestic", count: 2 },
+  ];
+
+  const lineList = document.getElementById("lineList");
+
+  function renderLines() {
+    lineList.innerHTML = "";
+    lines.forEach(line => {
+      const ticket = getTicket(line.ticket);
+      const availableCats = ticket.categories;
+      // if current category isn't valid for this ticket, fall back to the first available
+      if (!availableCats.find(c => c.key === line.category)) line.category = availableCats[0].key;
+      const cat = getCategory(line.ticket, line.category);
+      const hasChannel = cat.mode === "channel";
+      if (hasChannel && !ticket.channels.includes(line.channel)) line.channel = ticket.channels[0];
+
+      const el = document.createElement("div");
+      el.className = "line-item";
+
+      const catOptions = availableCats.map(c => `<option value="${c.key}" ${c.key === line.category ? "selected" : ""}>${c.label}</option>`).join("");
+      const ticketOptions = ticketTypes.map(t => `<option value="${t.id}" ${t.id === line.ticket ? "selected" : ""}>${t.label}</option>`).join("");
+      const channelOptions = hasChannel ? ticket.channels.map(ch => `<option value="${ch}" ${ch === line.channel ? "selected" : ""}>${ticket.channelLabels[ch]}</option>`).join("") : "";
+
+      const price = hasChannel ? priceFor(line.ticket, line.category, line.channel) : cat.price;
+
+      el.innerHTML = `
+        <div class="line-head">
+          <div class="line-selects ${hasChannel ? "has-channel" : ""}">
+            <select data-field="category" data-line="${line.id}">${catOptions}</select>
+            <select data-field="ticket" data-line="${line.id}">${ticketOptions}</select>
+            ${hasChannel ? `<select data-field="channel" data-line="${line.id}">${channelOptions}</select>` : ""}
+          </div>
+          <button type="button" class="remove-line" data-remove="${line.id}" aria-label="この行を削除">×</button>
+        </div>
+        ${cat.cond ? `<p class="line-cond">${cat.cond}</p>` : ""}
+        <div class="line-foot">
+          <span class="line-price">¥${price.toLocaleString()} ${!hasChannel ? "（" + (cat.cond && cat.cond.includes("共通") ? "全チャネル共通" : "固定") + "）" : ""}</span>
+          <div class="stepper">
+            <button type="button" data-act="dec" data-line="${line.id}">−</button>
+            <input type="text" readonly value="${line.count}" data-count-line="${line.id}">
+            <button type="button" data-act="inc" data-line="${line.id}">＋</button>
+          </div>
+          <span class="line-subtotal">¥${(price * line.count).toLocaleString()}</span>
+        </div>`;
+      lineList.appendChild(el);
+    });
+    updateTotal();
+    const notes = [...new Set(lines.map(l => getCategory(l.ticket, l.category).note).filter(Boolean))];
+    document.getElementById("calcFoot").textContent = notes.length ? notes.join(" / ") : "行を追加すると、券種の異なる組み合わせも計算できます。";
+  }
+
+  function updateTotal() {
+    let total = 0;
+    lines.forEach(line => {
+      const cat = getCategory(line.ticket, line.category);
+      const price = cat.mode === "fixed" ? cat.price : cat.prices[line.channel];
+      total += price * line.count;
+    });
+    document.getElementById("totalAmount").textContent = "¥" + total.toLocaleString();
+  }
+
+  lineList.addEventListener("click", (e) => {
+    const stepBtn = e.target.closest("button[data-act]");
+    if (stepBtn) {
+      const line = lines.find(l => l.id == stepBtn.dataset.line);
+      if (stepBtn.dataset.act === "inc") line.count = Math.min(line.count + 1, 20);
+      else line.count = Math.max(line.count - 1, 0);
+      renderLines();
+      return;
+    }
+    const removeBtn = e.target.closest("button[data-remove]");
+    if (removeBtn && lines.length > 1) {
+      const idx = lines.findIndex(l => l.id == removeBtn.dataset.remove);
+      lines.splice(idx, 1);
+      renderLines();
+    }
+  });
+
+  lineList.addEventListener("change", (e) => {
+    const sel = e.target.closest("select[data-field]");
+    if (!sel) return;
+    const line = lines.find(l => l.id == sel.dataset.line);
+    line[sel.dataset.field] = sel.value;
+    renderLines();
+  });
+
+  document.getElementById("addLineBtn").addEventListener("click", () => {
+    lines.push({ id: lineSeq++, category: "adult", ticket: "flex", channel: "web_domestic", count: 1 });
+    renderLines();
+  });
+
+  renderLines();
+
+  // ---- season status ----
+  const seasonStart = new Date("2025-12-19T00:00:00+09:00");
+  const seasonEnd = new Date("2026-04-05T23:59:00+09:00");
+  const now = new Date();
+  const pill = document.getElementById("statusPill");
+  const statusText = document.getElementById("statusText");
+  const statusNote = document.getElementById("statusNote");
+  if (now >= seasonStart && now <= seasonEnd) {
+    pill.classList.add("open");
+    statusText.textContent = "営業中（シーズン期間内）";
+    statusNote.textContent = "積雪・リフト稼働の最新状況は公式サイトでご確認ください";
+  } else {
+    pill.classList.add("closed");
+    statusText.textContent = "営業期間外";
+    const note = now > seasonEnd ? "次シーズンは例年12月中旬オープン予定" : `オープンまで ${Math.ceil((seasonStart - now) / 86400000)} 日`;
+    statusNote.textContent = note;
+  }
+
+  // ---- gochiso shops ----
+  const shops = [
+    { name: "大丸", tag: "本格焼肉", mapQuery: "石打丸山 大丸 焼肉" },
+    { name: "レストランケルン", tag: "越後もち豚", mapQuery: "石打丸山 レストランケルン" },
+    { name: "しみず食堂", tag: "雪下ニンジン使用メニュー", mapQuery: "石打丸山 しみず食堂" },
+    { name: "オーストリアスノーハウス", tag: "ヨーロッパ料理・焼きたてパン", mapQuery: "石打丸山 オーストリアスノーハウス" },
+    { name: "ラ・ファミーユ中角", tag: "キッズパーク隣接・ファミリー向け", mapQuery: "石打丸山 ラファミーユ中角" },
+    { name: "ザ・ヴェランダ石打丸山", tag: "席数No.1・魚沼平野一望", mapQuery: "ザ・ヴェランダ石打丸山" },
+  ];
+  const pinSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
+  const shopList = document.getElementById("shopList");
+  shops.forEach(shop => {
+    const li = document.createElement("li");
+    const mapUrl = "https://www.google.com/maps/search/" + encodeURIComponent(shop.mapQuery);
+    li.innerHTML = `<div class="shop-main"><span>${shop.name}</span><span class="shop-tag">${shop.tag}</span></div><a class="maplink" href="${mapUrl}" target="_blank" rel="noopener">${pinSvg}地図で見る</a>`;
+    shopList.appendChild(li);
+  });
+
+  // ---- scraped news (from scraper_poc.py verification run, 2026-09-08) ----
+  const news = [
+    { date: "2026.08.25", title: "夕焼けから花火まで。夜を楽しむ、特別なシルバーウィーク。", url: "https://ishiuchi.or.jp/green/news/260804" },
+    { date: "2026.08.24", title: "ペチュニアが見ごろを迎えています【棚田ガーデン】", url: "https://ishiuchi.or.jp/green/news/%e3%83%9a%e3%83%81%e3%83%a5%e3%83%8b%e3%82%a2%e3%81%8c%e8%a6%8b%e3%81%94%e3%82%8d%e3%82%92%e8%bf%8e%e3%81%88%e3%81%a6%e3%81%84%e3%81%be%e3%81%99%e3%80%90%e6%a3%9a%e7%94%b0%e3%82%ac%e3%83%bc%e3%83%87"},
+    { date: "2026.08.19", title: "「絶景×食」手ぶらでBBQ！秋はお得な「平日限定セットプラン」登場！", url: "https://ishiuchi.or.jp/green/news/bbq" },
+    { date: "2026.08.02", title: "絶景のトレーラーサウナ体験「Trailer Sauna」", url: "https://ishiuchi.or.jp/green/news/260802" },
+    { date: "2026.07.21", title: "六華の足水浴のご紹介", url: "https://ishiuchi.or.jp/green/news/%e5%85%ad%e8%8f%af%e3%81%ae%e8%b6%b3%e6%b0%b4%e6%b5%b4%e3%81%ae%e3%81%94%e7%b4%b9%e4%bb%8b" },
+  ];
+  const newsList = document.getElementById("newsList");
+  news.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="news-date">${item.date}</span><a href="${item.url}" target="_blank" rel="noopener">${item.title}</a>`;
+    newsList.appendChild(li);
+  });
+</script>

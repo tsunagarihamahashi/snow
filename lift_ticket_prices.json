@@ -1,0 +1,234 @@
+{
+  "_schema_note": "券種(ticket_types)ごとに price_categories(区分ラベル・条件文・単価)を自由配列で持つ。区分の意味（年齢基準等）はcondition文字列に記述し、固定enumにしない。channel(web国内/web一般/窓口)やday_type(平日/休日/特定日)で単価が分岐する場合はpricesを配列にする。",
+  "resorts": {
+    "oze_iwakura": {
+      "name": "尾瀬岩鞍",
+      "season": "2025-12-13 ~ 2026-04-05",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "condition": null, "prices": [{"day_type": "平日", "price": 5800}, {"day_type": "休日", "price": 6500}, {"day_type": "特定日", "price": 7000}]},
+            {"label": "小学生", "condition": null, "prices": [{"day_type": "平日", "price": 3800}, {"day_type": "休日", "price": 4500}, {"day_type": "特定日", "price": 5000}]},
+            {"label": "シニア", "condition": "60歳以上、証明書必要", "prices": [{"day_type": "平日", "price": 5300}, {"day_type": "休日", "price": 6000}, {"day_type": "特定日", "price": 6500}]},
+            {"label": "幼児", "condition": "未就学児", "prices": [{"day_type": "全日", "price": 0}]}
+          ]
+        }
+      ],
+      "confidence": "中（複数の третьей-party記事から合成、公式ページ直接確認できず）"
+    },
+    "marunuma_kogen": {
+      "name": "丸沼高原",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "condition": "高校生以上60歳未満", "prices": [{"day_type": "トップシーズン", "price": null, "note": "要問い合わせ"}, {"day_type": "春シーズン", "price": 5700}]},
+            {"label": "小中学生", "condition": null, "prices": [{"day_type": "トップシーズン", "price": 3000}, {"day_type": "春シーズン", "price": 2500}]},
+            {"label": "シニア", "condition": "60歳以上、証明書必要", "prices": [{"day_type": "平日", "price": 5200}, {"day_type": "休日", "price": 5900}, {"day_type": "春シーズン", "price": 5300}]},
+            {"label": "幼児", "condition": "小学生未満、保護者同乗", "prices": [{"day_type": "全日", "price": 0}]}
+          ]
+        }
+      ],
+      "confidence": "中"
+    },
+    "kawaba": {
+      "name": "川場",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "condition": null, "prices": [{"day_type": "通常", "price": 5900}, {"day_type": "トップシーズン平日", "price": 6500}, {"day_type": "トップシーズン休日", "price": 6800}, {"day_type": "特定日", "price": 7300}]},
+            {"label": "シニア・中学生", "condition": "シニアは50歳以上", "prices": [{"day_type": "通常", "price": 4000}, {"day_type": "特定日", "price": 6800}]},
+            {"label": "小学生", "condition": null, "prices": [{"day_type": "通常", "price": 2800}, {"day_type": "特定日", "price": 5700}]}
+          ]
+        }
+      ],
+      "confidence": "高（公式サイト直接確認）"
+    },
+    "hodaigi": {
+      "name": "宝台樹",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "condition": null, "prices": [{"day_type": "全日", "price": 6900}]},
+            {"label": "中高生", "condition": null, "prices": [{"day_type": "全日", "price": 5200}]},
+            {"label": "小学生", "condition": null, "prices": [{"day_type": "全日", "price": 4200}]},
+            {"label": "シニア", "condition": "基準年齢不明", "prices": [{"day_type": "全日", "price": 6300}]},
+            {"label": "幼児", "condition": "未就学児", "prices": [{"day_type": "全日", "price": 0}]}
+          ]
+        }
+      ],
+      "confidence": "中"
+    },
+    "naeba": {
+      "name": "苗場",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "condition": "中学生以上", "prices": [{"day_type": "全日", "price": 7800}]},
+            {"label": "小学生以下", "condition": "プリンス系共通ポリシーで無料", "prices": [{"day_type": "全日", "price": 0}]},
+            {"label": "シニア", "condition": "55歳以上、証明書必要、料金不明", "prices": [{"day_type": "全日", "price": null}]}
+          ]
+        }
+      ],
+      "confidence": "中"
+    },
+    "gala_yuzawa": {
+      "name": "ガーラ湯沢",
+      "ticket_types": [
+        {
+          "type": "ゴンドラ・リフト1日券",
+          "price_categories": [
+            {"label": "大人", "condition": null, "prices": [{"day_type": "レギュラーWEB", "price": 6800}, {"day_type": "春シーズンWEB", "price": 5800}]},
+            {"label": "小学生", "condition": "毎月第3日曜は無料", "prices": [{"day_type": "レギュラーWEB", "price": 2800}, {"day_type": "春シーズンWEB", "price": 2300}]}
+          ]
+        }
+      ],
+      "confidence": "中",
+      "note": "電車直結アクセス。駐車場ベースの来場者代理指標が効きにくい([[gerende-cospa-index-findings]]参照)"
+    },
+    "kandatsu": {
+      "name": "神立",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "condition": null, "prices": [{"day_type": "全日", "price": 6500}]},
+            {"label": "小学生", "condition": null, "prices": [{"day_type": "全日", "price": 4000}]},
+            {"label": "シニア", "condition": "55歳以上", "prices": [{"day_type": "全日", "price": 2200}]},
+            {"label": "幼児", "condition": "小学生未満", "prices": [{"day_type": "全日", "price": 0}]}
+          ]
+        }
+      ],
+      "confidence": "低（シニア料金が他ゲレンデと比べ極端に安く、要再確認）"
+    },
+    "kagura": {
+      "name": "かぐら",
+      "ticket_types": [
+        {
+          "type": "1日券（かぐら・みつまた・田代エリア）",
+          "price_categories": [
+            {"label": "大人（一般）", "condition": "中学生以上", "prices": [{"day_type": "全日", "price": 7500}]},
+            {"label": "大人（会員）", "condition": "中学生以上", "prices": [{"day_type": "全日", "price": 7000}]},
+            {"label": "午前券", "condition": null, "prices": [{"day_type": "全日", "price": 6000}]},
+            {"label": "午後券", "condition": null, "prices": [{"day_type": "全日", "price": 5500}]},
+            {"label": "小学生以下", "condition": "プリンス系共通ポリシーで無料", "prices": [{"day_type": "全日", "price": 0}]}
+          ]
+        },
+        {
+          "type": "1日券（Mt.Naeba＝苗場・かぐら・みつまた・田代全エリア）",
+          "price_categories": [
+            {"label": "大人", "condition": "中学生以上", "prices": [{"day_type": "全日", "price": 9800}]},
+            {"label": "小学生以下", "condition": null, "prices": [{"day_type": "全日", "price": 0}]}
+          ]
+        }
+      ],
+      "confidence": "中"
+    },
+    "ishiuchi_maruyama": {
+      "name": "石打丸山",
+      "ticket_types": [
+        {
+          "type": "フレックスタイム1日券（8.5時間）",
+          "price_categories": [
+            {"label": "大人", "condition": null, "prices": [{"channel": "WEB国内", "price_range": [5200, 6800]}, {"channel": "WEB一般", "price": 7400}, {"channel": "窓口", "price": 7900}]},
+            {"label": "小・中学生", "condition": "6~15歳", "prices": [{"channel": "WEB国内", "price_range": [2800, 3600]}, {"channel": "WEB一般", "price": 4000}, {"channel": "窓口", "price": 4200}]},
+            {"label": "シニア", "condition": "65歳以上", "prices": [{"channel": "窓口のみ", "price": 6700}]},
+            {"label": "キッズ", "condition": "4~6歳", "prices": [{"channel": "共通", "price": 1500}]}
+          ]
+        },
+        {
+          "type": "オールデイ1日券（8:30-20:00 最大11.5時間）",
+          "price_categories": [
+            {"label": "大人", "condition": null, "prices": [{"channel": "WEB国内", "price": 8300}, {"channel": "窓口", "price": 8700}]},
+            {"label": "小・中学生", "condition": null, "prices": [{"channel": "WEB", "price": 4400}, {"channel": "窓口", "price": 4600}]},
+            {"label": "シニア", "condition": "65歳以上", "prices": [{"channel": "窓口のみ", "price": 7400}]}
+          ]
+        },
+        {"type": "4時間券", "price_categories": [{"label": "大人", "prices": [{"price": 6300}]}, {"label": "小・中学生", "prices": [{"price": 3200}]}, {"label": "シニア", "condition": "65歳以上", "prices": [{"price": 5300}]}]},
+        {"type": "ナイター券（16:00-20:00）", "price_categories": [{"label": "大人", "prices": [{"channel": "WEB", "price": 3600}, {"channel": "窓口", "price": 3800}]}, {"label": "小・中学生", "prices": [{"price": 2000}]}]},
+        {"type": "学割1日券", "price_categories": [{"label": "高校～大学生", "prices": [{"price_range": [3900, 5900]}]}]},
+        {"type": "障がい者割引1日券", "price_categories": [{"label": "大人", "prices": [{"price": 3950}]}, {"label": "小・中学生", "prices": [{"price": 2100}]}]}
+      ],
+      "confidence": "高（公式サイト直接確認）",
+      "note": "券種×購入チャネル×属性の3軸分岐がある最複雑な実例。固定2軸(券種×区分)スキーマでは表現不可"
+    },
+    "maiko": {
+      "name": "舞子",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "prices": [{"price": 7000}]},
+            {"label": "小学生", "prices": [{"price": 3500}]},
+            {"label": "未就学児", "condition": "保護者1名につき2名まで無料（リフト券は必要）", "prices": [{"price": 0}]}
+          ]
+        }
+      ],
+      "confidence": "低"
+    },
+    "ryuoo": {
+      "name": "竜王スキーパーク",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "prices": [{"day_type": "通常期間", "price": 5800}, {"day_type": "初滑り・春スキー", "price": 4500}]},
+            {"label": "小人", "condition": "4歳～小学生", "prices": [{"price": 2800}]},
+            {"label": "シルバー", "condition": "55歳以上", "prices": [{"price": 4400}]}
+          ]
+        }
+      ],
+      "confidence": "中"
+    },
+    "sugadaira": {
+      "name": "菅平高原",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "condition": "中学生以上", "prices": [{"price": 6400}]},
+            {"label": "小人", "condition": "小学生", "prices": [{"price": 3800}]},
+            {"label": "キッズ", "condition": "4歳以上～小学生未満", "prices": [{"price": 1500}]},
+            {"label": "幼児", "condition": "3歳以下", "prices": [{"price": 0}]}
+          ]
+        }
+      ],
+      "confidence": "中",
+      "note": "「うえだ菅平割」で一律1000円引の期間限定キャンペーンあり"
+    },
+    "shiga_kogen": {
+      "name": "志賀高原",
+      "ticket_types": [
+        {
+          "type": "共通リフト券（キーチケット、全18スキー場対応）",
+          "price_categories": [
+            {"label": "大人", "prices": [{"channel": "窓口", "price": 9000}]},
+            {"label": "中高生", "prices": [{"channel": "窓口", "price": 6700}]},
+            {"label": "小学生", "prices": [{"channel": "窓口", "price": 4100}]},
+            {"label": "シニア", "condition": "基準年齢不明", "prices": [{"channel": "窓口", "price": 6900}]}
+          ]
+        }
+      ],
+      "confidence": "中",
+      "note": "18エリア連合体。[[gerende-mvp-resort-list]]の方針通り丸ごと1ページ扱い"
+    },
+    "grandeco": {
+      "name": "グランデコ",
+      "ticket_types": [
+        {
+          "type": "1日券",
+          "price_categories": [
+            {"label": "大人", "prices": [{"day_type": "平日", "price": 4300}, {"day_type": "休日", "price": 5500}]},
+            {"label": "小学生", "prices": [{"day_type": "平日", "price": 3000}, {"day_type": "休日", "price": 3800}]},
+            {"label": "50歳以上", "prices": [{"day_type": "平日", "price": 3800}, {"day_type": "休日", "price": 4800}]}
+          ]
+        }
+      ],
+      "confidence": "中"
+    }
+  }
+}

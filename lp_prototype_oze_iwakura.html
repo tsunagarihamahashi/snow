@@ -219,7 +219,8 @@
   .map-card .mc-sub { font-size: 12px; color: var(--text-muted); }
   .map-card .mc-arrow { color: var(--ember-500); font-size: 18px; flex: none; }
 
-  .piste-map { height: 340px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-top: 16px; background: var(--snow-100); }
+  .piste-map { height: 460px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-top: 16px; background: var(--snow-100); }
+  .piste-map .piste-tooltip { font-family: "Zen Kaku Gothic New", sans-serif; font-size: 12px; font-weight: 700; padding: 2px 7px; }
   .piste-legend { display: flex; gap: 14px; margin-top: 10px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
   .piste-legend .sw { display: inline-block; width: 16px; height: 3px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
   .piste-source { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
@@ -450,16 +451,25 @@
     const el = document.getElementById("pisteMap");
     if (!el || typeof L === "undefined" || typeof PISTE_DATA === "undefined") return;
     const colors = { easy: "#2e6b52", intermediate: "#b8862e", advanced: "#3c5064", freeride: "#8a4a3a", unknown: "#8a97a5" };
-    const map = L.map(el, { scrollWheelZoom: false });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    const map = L.map(el, { scrollWheelZoom: false, minZoom: 12 });
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
       maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     }).addTo(map);
     const bounds = [];
+    // draw a white casing first so colored lines stand out against the base map, then the colored lines on top
     PISTE_DATA.forEach(p => {
       const latlngs = p.coords.map(c => [c[0], c[1]]);
-      const line = L.polyline(latlngs, { color: colors[p.difficulty] || colors.unknown, weight: 4, opacity: 0.85 }).addTo(map);
-      if (p.name) line.bindPopup(p.name);
+      L.polyline(latlngs, { color: "#ffffff", weight: 7, opacity: 0.9 }).addTo(map);
+    });
+    PISTE_DATA.forEach(p => {
+      const latlngs = p.coords.map(c => [c[0], c[1]]);
+      const line = L.polyline(latlngs, { color: colors[p.difficulty] || colors.unknown, weight: 4, opacity: 0.95 }).addTo(map);
+      if (p.name) {
+        line.bindTooltip(p.name, { sticky: true, direction: "top", className: "piste-tooltip" });
+        line.on("mouseover", () => line.setStyle({ weight: 6 }));
+        line.on("mouseout", () => line.setStyle({ weight: 4 }));
+      }
       latlngs.forEach(c => bounds.push(c));
     });
     if (bounds.length) map.fitBounds(bounds, { padding: [16, 16] });

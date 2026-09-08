@@ -117,6 +117,8 @@
   .stat { background: var(--card); padding: 16px 12px; text-align: center; }
   .stat .num { font-family: "Roboto Mono", monospace; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .stat .unit { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .stat-wide { grid-column: 1 / -1; }
+  .stat-wide .num-unit { font-size: 14px; font-weight: 400; color: var(--text-muted); margin-left: 4px; }
   .stat .idx-tag { display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
   .stat.tier-good .num { color: var(--pine-600); }
   .stat.tier-good .idx-tag { background: var(--pine-100); color: var(--pine-600); }
@@ -259,6 +261,7 @@
       <div class="stat"><div class="num">23</div><div class="unit">コース数</div></div>
       <div class="stat"><div class="num">13</div><div class="unit">リフト・ゴンドラ基数</div></div>
       <div class="stat tier-good"><div class="num">2,300</div><div class="unit">混雑しにくさ ㎡/台<br>（面積÷駐車場台数）</div><span class="idx-tag">混みにくい方・10件中1位</span></div>
+      <div class="stat stat-wide"><div class="num">約22,200<span class="num-unit">人/時</span></div><div class="unit">リフト輸送力（クワッド4基・トリプル5基・ペア3基・ゴンドラ1基、標準値による推定）</div></div>
     </div>
     <div class="level-bar">
       <span style="width:30%; background:var(--pine-600);"></span>
@@ -270,6 +273,7 @@
       <span><span class="sw" style="background:var(--amber-600);"></span>中級 40%</span>
       <span><span class="sw" style="background:var(--ridge-700);"></span>上級 30%</span>
     </div>
+    <p class="calc-foot" style="margin-top:14px;">輸送力を駐車場台数で割ると約22.2人時/台で、リフト待ちのリスクは低めと推定されます（尾瀬岩鞍は約14.2人時/台。算出済み2ゲレンデでの比較）。</p>
     <a href="https://ishiuchi.or.jp/winter/ski/lift-course/" target="_blank" rel="noopener">
       <img class="trail-map-img" src="https://ishiuchi.or.jp/winter/wp/wp-content/uploads/2025/12/25-26_ishiuchi_A5%E3%83%9E%E3%83%83%E3%83%97.png" alt="石打丸山 コースマップ" loading="lazy">
     </a>

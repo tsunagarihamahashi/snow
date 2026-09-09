@@ -143,11 +143,17 @@
   .piste-source a { color: inherit; }
 
 
-  .livecam-bar { display: block; background: var(--ember-500); color: #fff; text-decoration: none; }
-  .livecam-bar .inner { max-width: 720px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 10px; }
-  .livecam-bar .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
-  .livecam-bar .lc-text { font-size: 13px; font-weight: 700; flex: 1; }
-  .livecam-bar .lc-arrow { font-size: 15px; }
+  .livecam-bar { display: block; background: var(--ridge-900); }
+  .livecam-bar .inner { max-width: 720px; margin: 0 auto; padding: 14px 20px 18px; }
+  .livecam-bar .lc-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+  .livecam-bar .lc-head-left { display: flex; align-items: center; gap: 8px; }
+  .livecam-bar .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember-500); flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
+  .livecam-bar .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
+  .livecam-bar .lc-updated { font-size: 11px; color: var(--ice-400); font-family: "Roboto Mono", monospace; }
+  .livecam-bar .lc-player { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: #000; }
+  .livecam-bar .lc-player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .livecam-bar .lc-more { display: block; margin-top: 10px; font-size: 12px; color: var(--ice-400); text-decoration: none; }
+  .livecam-bar .lc-more:hover { color: #fff; }
   @media (prefers-reduced-motion: reduce) { .livecam-bar .lc-dot { animation: none; } }
   @keyframes lc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
@@ -208,13 +214,21 @@
   </div>
 </div>
 
-<a class="livecam-bar" href="https://ishiuchi.or.jp/winter/livecamera/" target="_blank" rel="noopener">
+<div class="livecam-bar">
   <div class="inner">
-    <span class="lc-dot"></span>
-    <span class="lc-text">ライブカメラで今のゲレンデを見る（公式サイト）</span>
-    <span class="lc-arrow">→</span>
+    <div class="lc-head">
+      <div class="lc-head-left">
+        <span class="lc-dot"></span>
+        <span class="lc-text">ライブカメラ｜山頂から魚沼盆地の展望</span>
+      </div>
+      <span class="lc-updated" id="lcUpdated"></span>
+    </div>
+    <div class="lc-player">
+      <img id="lcImg" src="https://livecam.ishiuchi.jp/cgi/maruview1_50.cgi" alt="石打丸山ライブカメラ（山頂から魚沼盆地の展望）">
+    </div>
+    <a class="lc-more" href="https://ishiuchi.or.jp/winter/livecamera/" target="_blank" rel="noopener">他のカメラアングルを見る（公式サイト）→</a>
   </div>
-</a>
+</div>
 
 <div class="wrap">
 
@@ -474,6 +488,20 @@
     const note = now > seasonEnd ? "次シーズンは例年12月中旬オープン予定" : `オープンまで ${Math.ceil((seasonStart - now) / 86400000)} 日`;
     statusNote.textContent = note;
   }
+
+  // ---- livecam: refresh the still image periodically (cache-busting query param) ----
+  (function () {
+    const img = document.getElementById("lcImg");
+    const updatedEl = document.getElementById("lcUpdated");
+    if (!img) return;
+    const baseSrc = img.src;
+    function refresh() {
+      img.src = baseSrc + "?t=" + Date.now();
+      if (updatedEl) updatedEl.textContent = new Date().toLocaleTimeString("ja-JP", { hour: "2-digit", minute: "2-digit" }) + " 更新";
+    }
+    refresh();
+    setInterval(refresh, 30000);
+  })();
 
   // ---- gochiso shops ----
   const shops = [

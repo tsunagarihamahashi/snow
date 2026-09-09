@@ -237,8 +237,13 @@
   .livecam-bar .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
   .livecam-bar .lc-player { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
   .livecam-bar .lc-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .livecam-bar .lc-more { display: block; margin-top: 10px; font-size: 12px; color: var(--ice-400); text-decoration: none; }
-  .livecam-bar .lc-more:hover { color: #fff; }
+  .livecam-bar .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .livecam-bar .lc-tabs button {
+    padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06); color: var(--ice-400); font-size: 11px; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+  }
+  .livecam-bar .lc-tabs button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
   @media (prefers-reduced-motion: reduce) { .livecam-bar .lc-dot { animation: none; } }
   @keyframes lc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
@@ -295,12 +300,12 @@
   <div class="inner">
     <div class="lc-head">
       <span class="lc-dot"></span>
-      <span class="lc-text">ライブカメラ｜ゴンドラ山頂駅前</span>
+      <span class="lc-text">ライブカメラ｜<span id="lcLabel">ゴンドラ山頂駅前</span></span>
     </div>
     <div class="lc-player">
-      <iframe src="https://www.youtube.com/embed/upwUqOrD0Zg?autoplay=1&mute=1" title="尾瀬岩鞍ライブカメラ（ゴンドラ山頂駅前）" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+      <iframe id="lcFrame" src="https://www.youtube.com/embed/upwUqOrD0Zg?autoplay=1&mute=1" title="尾瀬岩鞍ライブカメラ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
     </div>
-    <a class="lc-more" href="https://www.oze-iwakura.co.jp/ski/slopeguide/live/" target="_blank" rel="noopener">他のカメラアングルを見る（公式サイト）→</a>
+    <div class="lc-tabs" id="lcTabs"></div>
   </div>
 </div>
 
@@ -448,6 +453,33 @@
   });
 
   render();
+
+  // ---- livecam: all official camera angles, switchable in-page (no outbound navigation) ----
+  (function () {
+    const cams = [
+      { label: "ゴンドラ山麓駅前", id: "7DZP1tiOykA" },
+      { label: "ゴンドラ山頂駅前", id: "upwUqOrD0Zg" },
+      { label: "国体女子沢・リーゼン・エキスパート", id: "4wYgmnaMAaY" },
+      { label: "ロマンス・チャンピオンA", id: "yLmHCuy4Wlg" },
+    ];
+    const tabs = document.getElementById("lcTabs");
+    const frame = document.getElementById("lcFrame");
+    const label = document.getElementById("lcLabel");
+    if (!tabs || !frame) return;
+    cams.forEach((cam, i) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = cam.label;
+      btn.setAttribute("aria-pressed", i === 1 ? "true" : "false");
+      btn.addEventListener("click", () => {
+        frame.src = `https://www.youtube.com/embed/${cam.id}?autoplay=1&mute=1`;
+        label.textContent = cam.label;
+        [...tabs.children].forEach(b => b.setAttribute("aria-pressed", "false"));
+        btn.setAttribute("aria-pressed", "true");
+      });
+      tabs.appendChild(btn);
+    });
+  })();
 
   // ---- season / open-closed status (computed from real season dates vs viewer's clock) ----
   const seasonStart = new Date("2025-12-13T00:00:00+09:00");

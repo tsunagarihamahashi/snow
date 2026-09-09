@@ -148,13 +148,13 @@
   .stat .unit { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
   .stat-wide { grid-column: 1 / -1; }
   .stat-wide .num-unit { font-size: 14px; font-weight: 400; color: var(--text-muted); margin-left: 4px; }
-  .stat .idx-tag { display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
+  .stat .idx-tag { display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 1.5px 7.5px; border-radius: 100px; background: var(--card); border: 1.5px solid; }
   .stat.tier-good .num { color: var(--pine-600); }
-  .stat.tier-good .idx-tag { background: var(--pine-100); color: var(--pine-600); }
+  .stat.tier-good .idx-tag { border-color: var(--pine-600); color: var(--pine-600); }
   .stat.tier-mid .num { color: var(--amber-600); }
-  .stat.tier-mid .idx-tag { background: var(--amber-100); color: var(--amber-600); }
+  .stat.tier-mid .idx-tag { border-color: var(--amber-600); color: var(--amber-600); }
   .stat.tier-low .num { color: var(--dust-600); }
-  .stat.tier-low .idx-tag { background: var(--dust-100); color: var(--dust-600); }
+  .stat.tier-low .idx-tag { border-color: var(--dust-600); color: var(--dust-600); }
 
   .map-card {
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -220,11 +220,11 @@
   .level-legend { display: flex; gap: 16px; margin-top: 8px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
   .level-legend .sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
 
-  .cospa-badge { display: inline-flex; align-items: baseline; gap: 8px; border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; font-size: 13px; }
+  .cospa-badge { display: inline-flex; align-items: baseline; gap: 8px; background: var(--card); border: 1.5px solid; border-radius: 10px; padding: 9px 13px; margin-bottom: 16px; font-size: 13px; }
   .cospa-badge .score { font-family: "Roboto Mono", monospace; font-size: 20px; font-weight: 700; }
-  .cospa-badge.tier-good { background: var(--pine-100); color: var(--pine-600); }
-  .cospa-badge.tier-mid { background: var(--amber-100); color: var(--amber-600); }
-  .cospa-badge.tier-low { background: var(--dust-100); color: var(--dust-600); }
+  .cospa-badge.tier-good { border-color: var(--pine-600); color: var(--pine-600); }
+  .cospa-badge.tier-mid { border-color: var(--amber-600); color: var(--amber-600); }
+  .cospa-badge.tier-low { border-color: var(--dust-600); color: var(--dust-600); }
   .shop-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
   .shop-list li { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; padding: 10px 10px 10px 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
   .shop-list .shop-main { display: flex; flex-direction: column; min-width: 0; }

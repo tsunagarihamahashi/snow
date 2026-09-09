@@ -143,23 +143,34 @@
   .piste-source a { color: inherit; }
 
 
-  .livecam-bar { display: block; background: var(--ridge-900); }
-  .livecam-bar .inner { max-width: 720px; margin: 0 auto; padding: 14px 20px 18px; }
-  .livecam-bar .lc-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
-  .livecam-bar .lc-head-left { display: flex; align-items: center; gap: 8px; }
-  .livecam-bar .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember-500); flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
-  .livecam-bar .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
-  .livecam-bar .lc-updated { font-size: 11px; color: var(--ice-400); font-family: "Roboto Mono", monospace; }
-  .livecam-bar .lc-player { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: #000; }
-  .livecam-bar .lc-player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .livecam-bar .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
-  .livecam-bar .lc-tabs button {
+  .jumpnav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .jumpnav .inner {
+    max-width: 720px; margin: 0 auto; padding: 10px 20px; display: flex; gap: 8px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .jumpnav .inner::-webkit-scrollbar { display: none; }
+  .jumpnav a {
+    flex: none; font-size: 12px; font-weight: 700; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 100px; border: 1px solid var(--border); white-space: nowrap;
+  }
+  .jumpnav a:hover { color: var(--ember-500); border-color: var(--ember-500); }
+
+  .livecam-card { background: var(--ridge-900); border-radius: 14px; padding: 16px 16px 18px; }
+  .livecam-card .lc-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+  .livecam-card .lc-head-left { display: flex; align-items: center; gap: 8px; }
+  .livecam-card .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember-500); flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
+  .livecam-card .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
+  .livecam-card .lc-updated { font-size: 11px; color: var(--ice-400); font-family: "Roboto Mono", monospace; }
+  .livecam-card .lc-player { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: #000; }
+  .livecam-card .lc-player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .livecam-card .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .livecam-card .lc-tabs button {
     padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
     background: rgba(255,255,255,0.06); color: var(--ice-400); font-size: 11px; font-weight: 700;
     cursor: pointer; font-family: inherit;
   }
-  .livecam-bar .lc-tabs button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
-  @media (prefers-reduced-motion: reduce) { .livecam-bar .lc-dot { animation: none; } }
+  .livecam-card .lc-tabs button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
+  @media (prefers-reduced-motion: reduce) { .livecam-card .lc-dot { animation: none; } }
   @keyframes lc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
   .rental-acc { margin-top: 14px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -219,62 +230,21 @@
   </div>
 </div>
 
-<div class="livecam-bar">
+<nav class="jumpnav">
   <div class="inner">
-    <div class="lc-head">
-      <div class="lc-head-left">
-        <span class="lc-dot"></span>
-        <span class="lc-text">ライブカメラ｜<span id="lcLabel">山頂から魚沼盆地の展望</span></span>
-      </div>
-      <span class="lc-updated" id="lcUpdated"></span>
-    </div>
-    <div class="lc-player">
-      <img id="lcImg" src="https://livecam.ishiuchi.jp/cgi/maruview1_50.cgi" alt="石打丸山ライブカメラ">
-    </div>
-    <div class="lc-tabs" id="lcTabs"></div>
+    <a href="#scale">コース</a>
+    <a href="#price">料金</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
   </div>
-</div>
+</nav>
 
 <div class="wrap">
 
-  <section id="access">
-    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">01 / 場所</span></div>
-    <dl class="kv-grid">
-      <dt>車で</dt>
-      <dd>関越道 塩沢石打IC → 国道17号 約5分・3km（練馬ICから約120分）</dd>
-      <dt>駐車場</dt>
-      <dd>約1,000台</dd>
-      <dt>公式</dt>
-      <dd><a class="outlink" href="https://ishiuchi.or.jp/winter/access/" target="_blank" rel="noopener">ishiuchi.or.jp／アクセス詳細</a></dd>
-    </dl>
-  </section>
-
-  <section id="price">
-    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">02 / 料金</span></div>
-    <p class="calc-foot" style="margin-bottom:12px;">人（区分）ごとに券種・チャネルを別々に選べます。例：お子様は1日券、大人は4時間券。</p>
-    <div class="calc-card">
-      <div id="lineList"></div>
-      <button type="button" class="add-line-btn" id="addLineBtn">＋ 人数区分を追加</button>
-      <div class="calc-total">
-        <span class="label">合計</span>
-        <span class="amount" id="totalAmount">¥0</span>
-      </div>
-      <p class="calc-foot" id="calcFoot"></p>
-      <details class="rental-acc">
-        <summary>レンタル料金を見る（1日）<span class="chev">▾</span></summary>
-        <div class="rental-table">
-          <div class="rental-row"><span class="r-label">基本セット（板・ブーツ・ストック等）</span><span class="r-price">大人 ¥7,000 ／ 子供 ¥3,600</span></div>
-          <div class="rental-row"><span class="r-label">フルセット（基本セット＋ウェア）</span><span class="r-price">大人 ¥12,000 ／ 子供 ¥6,200</span></div>
-          <div class="rental-row"><span class="r-label">パフォーマンスモデル基本セット</span><span class="r-price">共通 ¥8,500</span></div>
-          <div class="rental-row"><span class="r-label">ウェアのみ</span><span class="r-price">大人 ¥6,000 ／ 子供 ¥3,600</span></div>
-          <div class="rental-row"><span class="r-label">ヘルメット／長靴</span><span class="r-price">各 ¥2,000</span></div>
-        </div>
-      </details>
-    </div>
-  </section>
-
   <section id="scale">
-    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">03 / コース</span></div>
+    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
     <div class="stat-grid">
       <div class="stat"><div class="num">230</div><div class="unit">総面積 ha</div></div>
       <div class="stat"><div class="num">23</div><div class="unit">コース数</div></div>
@@ -306,6 +276,47 @@
     </a>
   </section>
 
+  <section id="price">
+    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">02 / 料金</span></div>
+    <p class="calc-foot" style="margin-bottom:12px;">人（区分）ごとに券種・チャネルを別々に選べます。例：お子様は1日券、大人は4時間券。</p>
+    <div class="calc-card">
+      <div id="lineList"></div>
+      <button type="button" class="add-line-btn" id="addLineBtn">＋ 人数区分を追加</button>
+      <div class="calc-total">
+        <span class="label">合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot" id="calcFoot"></p>
+      <details class="rental-acc">
+        <summary>レンタル料金を見る（1日）<span class="chev">▾</span></summary>
+        <div class="rental-table">
+          <div class="rental-row"><span class="r-label">基本セット（板・ブーツ・ストック等）</span><span class="r-price">大人 ¥7,000 ／ 子供 ¥3,600</span></div>
+          <div class="rental-row"><span class="r-label">フルセット（基本セット＋ウェア）</span><span class="r-price">大人 ¥12,000 ／ 子供 ¥6,200</span></div>
+          <div class="rental-row"><span class="r-label">パフォーマンスモデル基本セット</span><span class="r-price">共通 ¥8,500</span></div>
+          <div class="rental-row"><span class="r-label">ウェアのみ</span><span class="r-price">大人 ¥6,000 ／ 子供 ¥3,600</span></div>
+          <div class="rental-row"><span class="r-label">ヘルメット／長靴</span><span class="r-price">各 ¥2,000</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2>ライブカメラ</h2><span class="section-num">03 / 現地の様子</span></div>
+    <div class="livecam-card">
+      <div class="lc-head">
+        <div class="lc-head-left">
+          <span class="lc-dot"></span>
+          <span class="lc-text"><span id="lcLabel">山頂から魚沼盆地の展望</span></span>
+        </div>
+        <span class="lc-updated" id="lcUpdated"></span>
+      </div>
+      <div class="lc-player">
+        <img id="lcImg" src="https://livecam.ishiuchi.jp/cgi/maruview1_50.cgi" alt="石打丸山ライブカメラ">
+      </div>
+      <div class="lc-tabs" id="lcTabs"></div>
+    </div>
+  </section>
+
   <section id="gochiso">
     <div class="section-head"><h2>ゲレ食</h2><span class="section-num">04 / 飲食</span></div>
     <div class="cospa-badge tier-good">
@@ -315,8 +326,20 @@
     <p class="calc-foot" style="margin-top:14px;">24店舗中6店を代表例として掲載（網羅ではありません）。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。</p>
   </section>
 
+  <section id="access">
+    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">05 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 塩沢石打IC → 国道17号 約5分・3km（練馬ICから約120分）</dd>
+      <dt>駐車場</dt>
+      <dd>約1,000台</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://ishiuchi.or.jp/winter/access/" target="_blank" rel="noopener">ishiuchi.or.jp／アクセス詳細</a></dd>
+    </dl>
+  </section>
+
   <section id="news">
-    <div class="section-head"><h2>お知らせ</h2><span class="section-num">05 / 運営情報</span></div>
+    <div class="section-head"><h2>お知らせ</h2><span class="section-num">06 / 運営情報</span></div>
     <ul class="news-list" id="newsList"></ul>
     <p class="calc-foot" style="margin-top:10px;">取得時点（2026年9月）はグリーンシーズン中のため、夏季のお知らせが中心です。冬季は運行状況・臨時休業等に切り替わります。</p>
   </section>

@@ -226,25 +226,32 @@
   .piste-source a { color: inherit; }
 
 
-  .livecam-bar {
-    display: block; background: var(--ridge-900);
+  .jumpnav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .jumpnav .inner {
+    max-width: 720px; margin: 0 auto; padding: 10px 20px; display: flex; gap: 8px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
   }
-  .livecam-bar .inner {
-    max-width: 720px; margin: 0 auto; padding: 14px 20px 18px;
+  .jumpnav .inner::-webkit-scrollbar { display: none; }
+  .jumpnav a {
+    flex: none; font-size: 12px; font-weight: 700; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 100px; border: 1px solid var(--border); white-space: nowrap;
   }
-  .livecam-bar .lc-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-  .livecam-bar .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember-500); flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
-  .livecam-bar .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
-  .livecam-bar .lc-player { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
-  .livecam-bar .lc-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .livecam-bar .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
-  .livecam-bar .lc-tabs button {
+  .jumpnav a:hover { color: var(--ember-500); border-color: var(--ember-500); }
+
+  .livecam-card { background: var(--ridge-900); border-radius: 14px; padding: 16px 16px 18px; }
+  .livecam-card .lc-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .livecam-card .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember-500); flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
+  .livecam-card .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
+  .livecam-card .lc-player { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
+  .livecam-card .lc-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .livecam-card .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .livecam-card .lc-tabs button {
     padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
     background: rgba(255,255,255,0.06); color: var(--ice-400); font-size: 11px; font-weight: 700;
     cursor: pointer; font-family: inherit;
   }
-  .livecam-bar .lc-tabs button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
-  @media (prefers-reduced-motion: reduce) { .livecam-bar .lc-dot { animation: none; } }
+  .livecam-card .lc-tabs button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
+  @media (prefers-reduced-motion: reduce) { .livecam-card .lc-dot { animation: none; } }
   @keyframes lc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
   /* ---- gochiso ---- */
@@ -296,31 +303,40 @@
   </div>
 </div>
 
-<div class="livecam-bar">
+<nav class="jumpnav">
   <div class="inner">
-    <div class="lc-head">
-      <span class="lc-dot"></span>
-      <span class="lc-text">ライブカメラ｜<span id="lcLabel">ゴンドラ山頂駅前</span></span>
-    </div>
-    <div class="lc-player">
-      <iframe id="lcFrame" src="https://www.youtube.com/embed/upwUqOrD0Zg?autoplay=1&mute=1" title="尾瀬岩鞍ライブカメラ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="lc-tabs" id="lcTabs"></div>
+    <a href="#scale">コース</a>
+    <a href="#price">料金</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
   </div>
-</div>
+</nav>
 
 <div class="wrap">
 
-  <section id="access">
-    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">01 / 場所</span></div>
-    <dl class="kv-grid">
-      <dt>車で</dt>
-      <dd>関越道 沼田IC → 国道120号（椎坂トンネル・尾瀬大橋経由）約45〜50分・31km</dd>
-      <dt>駐車場</dt>
-      <dd>ゲレンデ直結・戸倉方面あわせて計1,100台以上（第1約200台・第2約900台、24時間1,000円の駐車場もあり）</dd>
-      <dt>公式</dt>
-      <dd><a class="outlink" href="https://www.oze-iwakura.co.jp/ski/" target="_blank" rel="noopener">oze-iwakura.co.jp／アクセス詳細・ライブカメラ</a></dd>
-    </dl>
+  <section id="scale">
+    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">111</div><div class="unit">総面積 ha</div></div>
+      <div class="stat"><div class="num">16〜18</div><div class="unit">コース数</div></div>
+      <div class="stat"><div class="num">3,200</div><div class="unit">最長滑走 m</div></div>
+      <div class="stat tier-mid"><div class="num">1,010</div><div class="unit">混雑しにくさ ㎡/台<br>（面積÷駐車場台数）</div><span class="idx-tag">平均的・10件中4位</span></div>
+      <div class="stat stat-wide"><div class="num">約15,600<span class="num-unit">人/時</span></div><div class="unit">リフト輸送力（ペア8基・クワッド2基・ゴンドラ1基、標準値による推定）</div></div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">初級から上級まで多彩なコースを備える関東最大級のビッグゲレンデ。良質なパウダースノーが特徴。輸送力を駐車場台数で割ると約14.2人時/台で、リフト待ちのリスクは中程度と推定されます（石打丸山は約22.2人時/台）。</p>
+    <a href="https://www.oze-iwakura.co.jp/ski/slopeguide/" target="_blank" rel="noopener">
+      <img class="trail-map-img" src="https://www.oze-iwakura.co.jp/ski/slopeguide/images/map.jpg" alt="尾瀬岩鞍 コースマップ" loading="lazy">
+    </a>
+    <p class="piste-source">画像提供: 尾瀬岩鞍リゾート（<a href="https://www.oze-iwakura.co.jp/ski/slopeguide/" target="_blank" rel="noopener">公式サイト</a>）</p>
+    <a class="map-card" href="https://www.oze-iwakura.co.jp/ski/slopeguide/live/" target="_blank" rel="noopener" style="margin-top:8px;">
+      <div class="mc-text">
+        <span class="mc-title">最新の運行状況を見る（公式サイト）</span>
+        <span class="mc-sub">当日のコース開放・リフト稼働状況はこちら</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
   </section>
 
   <section id="price">
@@ -348,27 +364,18 @@
     </div>
   </section>
 
-  <section id="scale">
-    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">03 / コース</span></div>
-    <div class="stat-grid">
-      <div class="stat"><div class="num">111</div><div class="unit">総面積 ha</div></div>
-      <div class="stat"><div class="num">16〜18</div><div class="unit">コース数</div></div>
-      <div class="stat"><div class="num">3,200</div><div class="unit">最長滑走 m</div></div>
-      <div class="stat tier-mid"><div class="num">1,010</div><div class="unit">混雑しにくさ ㎡/台<br>（面積÷駐車場台数）</div><span class="idx-tag">平均的・10件中4位</span></div>
-      <div class="stat stat-wide"><div class="num">約15,600<span class="num-unit">人/時</span></div><div class="unit">リフト輸送力（ペア8基・クワッド2基・ゴンドラ1基、標準値による推定）</div></div>
-    </div>
-    <p class="calc-foot" style="margin-top:14px;">初級から上級まで多彩なコースを備える関東最大級のビッグゲレンデ。良質なパウダースノーが特徴。輸送力を駐車場台数で割ると約14.2人時/台で、リフト待ちのリスクは中程度と推定されます（石打丸山は約22.2人時/台）。</p>
-    <a href="https://www.oze-iwakura.co.jp/ski/slopeguide/" target="_blank" rel="noopener">
-      <img class="trail-map-img" src="https://www.oze-iwakura.co.jp/ski/slopeguide/images/map.jpg" alt="尾瀬岩鞍 コースマップ" loading="lazy">
-    </a>
-    <p class="piste-source">画像提供: 尾瀬岩鞍リゾート（<a href="https://www.oze-iwakura.co.jp/ski/slopeguide/" target="_blank" rel="noopener">公式サイト</a>）</p>
-    <a class="map-card" href="https://www.oze-iwakura.co.jp/ski/slopeguide/live/" target="_blank" rel="noopener" style="margin-top:8px;">
-      <div class="mc-text">
-        <span class="mc-title">最新の運行状況を見る（公式サイト）</span>
-        <span class="mc-sub">当日のコース開放・リフト稼働状況はこちら</span>
+  <section id="livecam">
+    <div class="section-head"><h2>ライブカメラ</h2><span class="section-num">03 / 現地の様子</span></div>
+    <div class="livecam-card">
+      <div class="lc-head">
+        <span class="lc-dot"></span>
+        <span class="lc-text"><span id="lcLabel">ゴンドラ山頂駅前</span></span>
       </div>
-      <span class="mc-arrow">→</span>
-    </a>
+      <div class="lc-player">
+        <iframe id="lcFrame" src="https://www.youtube.com/embed/upwUqOrD0Zg?autoplay=1&mute=1" title="尾瀬岩鞍ライブカメラ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="lc-tabs" id="lcTabs"></div>
+    </div>
   </section>
 
   <section id="gochiso">
@@ -380,8 +387,20 @@
     <p class="calc-foot" style="margin-top:14px;">上記はゲレンデ直結の代表例で網羅ではありません（旅館・民宿併設の食堂は特に把握が難しく、精査中）。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。</p>
   </section>
 
+  <section id="access">
+    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">05 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 沼田IC → 国道120号（椎坂トンネル・尾瀬大橋経由）約45〜50分・31km</dd>
+      <dt>駐車場</dt>
+      <dd>ゲレンデ直結・戸倉方面あわせて計1,100台以上（第1約200台・第2約900台、24時間1,000円の駐車場もあり）</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.oze-iwakura.co.jp/ski/" target="_blank" rel="noopener">oze-iwakura.co.jp／アクセス詳細・ライブカメラ</a></dd>
+    </dl>
+  </section>
+
   <section id="news">
-    <div class="section-head"><h2>お知らせ</h2><span class="section-num">05 / 運営情報</span></div>
+    <div class="section-head"><h2>お知らせ</h2><span class="section-num">06 / 運営情報</span></div>
     <ul class="news-list" id="newsList"></ul>
   </section>
 

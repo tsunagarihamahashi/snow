@@ -1,0 +1,16 @@
+{
+  "scraped_at": "2026-09-09T11:07:24.440800+00:00",
+  "resorts": {
+    "oze_iwakura": {
+      "available": true,
+      "top": 0.0,
+      "mid": 0.0,
+      "base": 0.0,
+      "updated": "9/6 8:03"
+    },
+    "ishiuchi_maruyama": {
+      "available": false,
+      "note": "オフシーズンのため積雪情報が未掲載です"
+    }
+  }
+}

@@ -140,6 +140,19 @@
   }
   .outlink:hover { color: var(--ember-600); }
 
+  /* ---- reviews ---- */
+  .review-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .review-col { border: 1.5px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .review-col.good { border-color: var(--pine-600); }
+  .review-col.bad { border-color: var(--dust-600); }
+  .review-col-head { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; margin: 0 0 10px; }
+  .review-col.good .review-col-head { color: var(--pine-600); }
+  .review-col.bad .review-col-head { color: var(--dust-600); }
+  .review-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+  .review-col ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--text); }
+  .review-col li { line-height: 1.5; }
+  @media (max-width: 480px) { .review-cols { grid-template-columns: 1fr; } }
+
   /* ---- weather ---- */
   .snowdepth-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 16px; background: var(--card); }
   .snowdepth-card .sd-cells { display: flex; gap: 1px; background: var(--border); }
@@ -366,6 +379,7 @@
 <nav class="jumpnav">
   <div class="inner">
     <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
     <a href="#weather">天気</a>
     <a href="#livecam">ライブカメラ</a>
     <a href="#price">料金</a>
@@ -400,8 +414,35 @@
     </a>
   </section>
 
+  <section id="reviews">
+    <div class="section-head"><h2>口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+          <li>コースのバリエーションが豊富（斜度・コブ・圧雪/非圧雪）で1日滑っても飽きない</li>
+          <li>上級スキーヤーが多く、マナーも良好で気持ちよく滑れる</li>
+          <li>雪質が非常に良い（西山エリアが特に好評）</li>
+          <li>レストランが分散していて混雑しにくく、価格もリーズナブル</li>
+          <li>ゲレンデが広く、コースに出てしまえばストレスが少ない</li>
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+          <li>沼田ICから片品までの道が混雑しやすく、都内から片道4時間かかることも</li>
+          <li>リフト券が高い割に高速リフト・フード付きリフトが少ない</li>
+          <li>週末の駐車料金が高い</li>
+          <li>ファミリー向けというより上級者向け</li>
+          <li>大会でコース閉鎖が多く、お目当てのコースが使えないことがある</li>
+        </ul>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">じゃらん・SURF&SNOW・スキー・スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。</p>
+  </section>
+
   <section id="weather">
-    <div class="section-head"><h2>天気・積雪</h2><span class="section-num">02 / 予報</span></div>
+    <div class="section-head"><h2>天気・積雪</h2><span class="section-num">03 / 予報</span></div>
     <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
     <div class="weather-toggle" role="group" aria-label="予報の範囲">
       <button data-range="today" aria-pressed="true">当日</button>
@@ -413,7 +454,7 @@
   </section>
 
   <section id="livecam">
-    <div class="section-head"><h2>ライブカメラ</h2><span class="section-num">03 / 現地の様子</span></div>
+    <div class="section-head"><h2>ライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
     <div class="livecam-card">
       <div class="lc-head">
         <span class="lc-dot"></span>
@@ -427,7 +468,7 @@
   </section>
 
   <section id="price">
-    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">04 / 料金</span></div>
+    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
     <div class="calc-card">
       <div class="daytype-toggle" role="group" aria-label="日付タイプ">
         <button data-day="weekday" aria-pressed="true">平日</button>
@@ -452,7 +493,7 @@
   </section>
 
   <section id="kids">
-    <div class="section-head"><h2>キッズパーク</h2><span class="section-num">05 / 家族向け</span></div>
+    <div class="section-head"><h2>キッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
     <ul class="shop-list">
       <li><div class="shop-main"><span>ロックン広場</span><span class="shop-tag">そり・チュービング・スノーストライダー・エア遊具、スノーエスカレーター完備</span></div><span class="shop-tag">¥1,500（リフト券持参で割引）</span></li>
       <li><div class="shop-main"><span>託児所</span><span class="shop-tag">尾瀬岩鞍リゾートホテル内</span></div><span class="shop-tag">要予約</span></li>
@@ -461,7 +502,7 @@
   </section>
 
   <section id="gochiso">
-    <div class="section-head"><h2>ゲレ食</h2><span class="section-num">06 / 飲食</span></div>
+    <div class="section-head"><h2>ゲレ食</h2><span class="section-num">07 / 飲食</span></div>
     <div class="cospa-badge tier-low">
       <span>ゲレ飯コスパ指数</span><span class="score">0.24</span><span>／ やや弱め・検証7ゲレンデ中3位（旅館系食堂は未集計、実際はより上位の可能性）</span>
     </div>
@@ -470,7 +511,7 @@
   </section>
 
   <section id="onsen">
-    <div class="section-head"><h2>温泉</h2><span class="section-num">07 / 帰りに一風呂</span></div>
+    <div class="section-head"><h2>温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
     <ul class="shop-list">
       <li><div class="shop-main"><span>尾瀬岩鞍リゾートホテル 日帰り温泉</span><span class="shop-tag">ゲレンデ直結・バスタオルレンタル¥350・大人¥800／子供¥600</span></div><a class="maplink" href="https://www.oze-iwakura.co.jp/hotel/spa/" target="_blank" rel="noopener">公式サイト</a></li>
     </ul>
@@ -478,7 +519,7 @@
   </section>
 
   <section id="access">
-    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">08 / 場所</span></div>
+    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
     <dl class="kv-grid">
       <dt>車で</dt>
       <dd>関越道 沼田IC → 国道120号（椎坂トンネル・尾瀬大橋経由）約45〜50分・31km</dd>
@@ -490,7 +531,7 @@
   </section>
 
   <section id="news">
-    <div class="section-head"><h2>お知らせ</h2><span class="section-num">09 / 運営情報</span></div>
+    <div class="section-head"><h2>お知らせ</h2><span class="section-num">10 / 運営情報</span></div>
     <ul class="news-list" id="newsList"></ul>
   </section>
 

@@ -255,9 +255,22 @@
   .map-card .mc-sub { font-size: 12px; color: var(--text-muted); }
   .map-card .mc-arrow { color: var(--ember-500); font-size: 18px; flex: none; }
 
-  .trail-map-img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); margin-top: 16px; }
+  .trail-map-img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); margin-top: 16px; cursor: zoom-in; }
   .piste-source { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
   .piste-source a { color: inherit; }
+
+  .map-modal {
+    position: fixed; inset: 0; background: rgba(10,14,20,0.9); z-index: 100;
+    display: none; align-items: center; justify-content: center; padding: 24px;
+  }
+  .map-modal.open { display: flex; }
+  .map-modal img { max-width: 100%; max-height: 100%; border-radius: 8px; cursor: zoom-out; }
+  .map-modal-close {
+    position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25);
+    font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .map-modal-close:hover { background: rgba(255,255,255,0.22); }
 
 
   .jumpnav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
@@ -376,9 +389,7 @@
       <div class="stat stat-wide"><div class="num">約15,600<span class="num-unit">人/時</span></div><div class="unit">リフト輸送力（ペア8基・クワッド2基・ゴンドラ1基、標準値による推定）</div></div>
     </div>
     <p class="calc-foot" style="margin-top:14px;">初級から上級まで多彩なコースを備える関東最大級のビッグゲレンデ。良質なパウダースノーが特徴。輸送力を駐車場台数で割ると約14.2人時/台で、リフト待ちのリスクは中程度と推定されます（石打丸山は約22.2人時/台）。</p>
-    <a href="https://www.oze-iwakura.co.jp/ski/slopeguide/" target="_blank" rel="noopener">
-      <img class="trail-map-img" src="https://www.oze-iwakura.co.jp/ski/slopeguide/images/map.jpg" alt="尾瀬岩鞍 コースマップ" loading="lazy">
-    </a>
+    <img class="trail-map-img" id="trailMapImg" src="https://www.oze-iwakura.co.jp/ski/slopeguide/images/map.jpg" alt="尾瀬岩鞍 コースマップ（クリックで拡大）" loading="lazy">
     <p class="piste-source">画像提供: 尾瀬岩鞍リゾート（<a href="https://www.oze-iwakura.co.jp/ski/slopeguide/" target="_blank" rel="noopener">公式サイト</a>）</p>
     <a class="map-card" href="https://www.oze-iwakura.co.jp/ski/slopeguide/live/" target="_blank" rel="noopener" style="margin-top:8px;">
       <div class="mc-text">
@@ -489,6 +500,11 @@
   </footer>
 </div>
 
+<div class="map-modal" id="mapModal">
+  <button class="map-modal-close" id="mapModalClose" aria-label="閉じる">✕</button>
+  <img id="mapModalImg" src="" alt="">
+</div>
+
 <script>
   const priceTable = {
     weekday: { adult: 5800, elem: 3800, senior: 5300, infant: 0 },
@@ -551,6 +567,29 @@
   });
 
   render();
+
+  // ---- trail map: click to enlarge in a modal ----
+  (function () {
+    const img = document.getElementById("trailMapImg");
+    const modal = document.getElementById("mapModal");
+    const modalImg = document.getElementById("mapModalImg");
+    const closeBtn = document.getElementById("mapModalClose");
+    if (!img || !modal) return;
+    function openModal() {
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal() {
+      modal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+    img.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  })();
 
   // ---- snow depth (実測値, scraped daily by GitHub Actions into snow_data.json) ----
   (function () {

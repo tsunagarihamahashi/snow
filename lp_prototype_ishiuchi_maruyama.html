@@ -172,9 +172,22 @@
   .map-card .mc-sub { font-size: 12px; color: var(--text-muted); }
   .map-card .mc-arrow { color: var(--ember-500); font-size: 18px; flex: none; }
 
-  .trail-map-img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); margin-top: 16px; }
+  .trail-map-img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); margin-top: 16px; cursor: zoom-in; }
   .piste-source { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
   .piste-source a { color: inherit; }
+
+  .map-modal {
+    position: fixed; inset: 0; background: rgba(10,14,20,0.9); z-index: 100;
+    display: none; align-items: center; justify-content: center; padding: 24px;
+  }
+  .map-modal.open { display: flex; }
+  .map-modal img { max-width: 100%; max-height: 100%; border-radius: 8px; cursor: zoom-out; }
+  .map-modal-close {
+    position: absolute; top: 16px; right: 16px; width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25);
+    font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .map-modal-close:hover { background: rgba(255,255,255,0.22); }
 
 
   .jumpnav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
@@ -315,9 +328,7 @@
       <span><span class="sw" style="background:var(--ridge-700);"></span>上級 30%</span>
     </div>
     <p class="calc-foot" style="margin-top:14px;">輸送力を駐車場台数で割ると約22.2人時/台で、リフト待ちのリスクは低めと推定されます（尾瀬岩鞍は約14.2人時/台。算出済み2ゲレンデでの比較）。</p>
-    <a href="https://ishiuchi.or.jp/winter/ski/lift-course/" target="_blank" rel="noopener">
-      <img class="trail-map-img" src="https://ishiuchi.or.jp/winter/wp/wp-content/uploads/2025/12/25-26_ishiuchi_A5%E3%83%9E%E3%83%83%E3%83%97.png" alt="石打丸山 コースマップ" loading="lazy">
-    </a>
+    <img class="trail-map-img" id="trailMapImg" src="https://ishiuchi.or.jp/winter/wp/wp-content/uploads/2025/12/25-26_ishiuchi_A5%E3%83%9E%E3%83%83%E3%83%97.png" alt="石打丸山 コースマップ（クリックで拡大）" loading="lazy">
     <p class="piste-source">画像提供: 石打丸山スキー場（<a href="https://ishiuchi.or.jp/winter/ski/lift-course/" target="_blank" rel="noopener">公式サイト</a>）</p>
     <a class="map-card" href="https://ishiuchi.or.jp/winter/ski/lift-course/" target="_blank" rel="noopener">
       <div class="mc-text">
@@ -431,6 +442,11 @@
     <p>営業期間：2025年12月19日〜2026年4月5日（例年ベース、最新情報は公式サイトをご確認ください）。ゲレンデマップ画像は著作物のため本ページには掲載せず、公式サイトへ直接リンクしています。</p>
     <p>データ精度：料金・面積は複数の公開情報を照合した参考値です。WEB国内料金は日により変動するため計算機では目安の代表値を使用しています。当日の運行状況は公式サイトのライブ情報を優先してください。</p>
   </footer>
+</div>
+
+<div class="map-modal" id="mapModal">
+  <button class="map-modal-close" id="mapModalClose" aria-label="閉じる">✕</button>
+  <img id="mapModalImg" src="" alt="">
 </div>
 
 <script>
@@ -581,6 +597,29 @@
   });
 
   renderLines();
+
+  // ---- trail map: click to enlarge in a modal ----
+  (function () {
+    const img = document.getElementById("trailMapImg");
+    const modal = document.getElementById("mapModal");
+    const modalImg = document.getElementById("mapModalImg");
+    const closeBtn = document.getElementById("mapModalClose");
+    if (!img || !modal) return;
+    function openModal() {
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal() {
+      modal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+    img.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  })();
 
   // ---- snow depth (実測値, scraped daily by GitHub Actions into snow_data.json) ----
   (function () {

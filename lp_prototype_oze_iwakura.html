@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>尾瀬岩鞍</title>
 <style>
   :root {
@@ -285,7 +290,7 @@
 
   /* ---- gochiso ---- */
   .cospa-badge {
-    display: inline-flex; align-items: baseline; gap: 8px; background: var(--card); border: 1.5px solid;
+    display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; background: var(--card); border: 1.5px solid;
     border-radius: 10px; padding: 9px 13px; margin-bottom: 16px; font-size: 13px;
   }
   .cospa-badge.tier-good { border-color: var(--pine-600); color: var(--pine-600); }
@@ -315,10 +320,23 @@
 
   footer { padding: 28px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.7; }
   footer p { margin: 0 0 8px; }
+
+  /* ---- mobile ---- */
+  @media (max-width: 480px) {
+    body { overflow-x: hidden; }
+    .wrap { padding-left: 16px; padding-right: 16px; }
+    .statusbar .inner { padding-left: 16px; padding-right: 16px; }
+    h1.resort-name { font-size: 28px; }
+    .calc-total .amount { font-size: 26px; }
+    .shop-list li { flex-direction: column; align-items: flex-start; }
+    .shop-list li > .maplink { align-self: flex-start; }
+  }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
 
 <div class="statusbar">
   <div class="inner">
@@ -717,3 +735,5 @@
     newsList.appendChild(li);
   });
 </script>
+</body>
+</html>

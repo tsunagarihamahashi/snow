@@ -123,11 +123,12 @@
   /* ---- section shell ---- */
   section { padding: 40px 0; border-bottom: 1px solid var(--border); }
   section:last-of-type { border-bottom: none; }
-  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 16px; margin-bottom: 18px; flex-wrap: wrap; }
   h2 {
     font-family: "Shippori Mincho", serif;
-    font-size: 21px;
+    font-size: 19px;
     margin: 0;
+    text-wrap: balance;
   }
   .section-num { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.05em; }
 
@@ -395,7 +396,7 @@
 <div class="wrap">
 
   <section id="scale">
-    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
     <div class="stat-grid">
       <div class="stat"><div class="num">111</div><div class="unit">総面積 ha</div></div>
       <div class="stat"><div class="num">16〜18</div><div class="unit">コース数</div></div>
@@ -416,7 +417,7 @@
   </section>
 
   <section id="reviews">
-    <div class="section-head"><h2>口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
     <div class="review-cols">
       <div class="review-col good">
         <p class="review-col-head"><span class="review-dot"></span>良い点</p>
@@ -443,7 +444,7 @@
   </section>
 
   <section id="weather">
-    <div class="section-head"><h2>天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
     <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
     <div class="weather-toggle" role="group" aria-label="予報の範囲">
       <button data-range="today" aria-pressed="true">当日</button>
@@ -455,7 +456,7 @@
   </section>
 
   <section id="livecam">
-    <div class="section-head"><h2>ライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
     <div class="livecam-card">
       <div class="lc-head">
         <span class="lc-dot"></span>
@@ -469,7 +470,7 @@
   </section>
 
   <section id="price">
-    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
     <div class="calc-card">
       <div class="daytype-toggle" role="group" aria-label="日付タイプ">
         <button data-day="weekday" aria-pressed="true">平日</button>
@@ -494,7 +495,7 @@
   </section>
 
   <section id="kids">
-    <div class="section-head"><h2>キッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
     <ul class="shop-list">
       <li><div class="shop-main"><span>ロックン広場</span><span class="shop-tag">そり・チュービング・スノーストライダー・エア遊具、スノーエスカレーター完備</span></div><span class="shop-tag">¥1,500（リフト券持参で割引）</span></li>
       <li><div class="shop-main"><span>託児所</span><span class="shop-tag">尾瀬岩鞍リゾートホテル内</span></div><span class="shop-tag">要予約</span></li>
@@ -503,7 +504,7 @@
   </section>
 
   <section id="gochiso">
-    <div class="section-head"><h2>ゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
     <div class="cospa-badge tier-low">
       <span>ゲレ飯コスパ指数</span><span class="score">0.24</span><span>／ やや弱め・検証7ゲレンデ中3位（旅館系食堂は未集計、実際はより上位の可能性）</span>
     </div>
@@ -512,7 +513,7 @@
   </section>
 
   <section id="onsen">
-    <div class="section-head"><h2>温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
     <ul class="shop-list">
       <li><div class="shop-main"><span>尾瀬岩鞍リゾートホテル 日帰り温泉</span><span class="shop-tag">ゲレンデ直結・バスタオルレンタル¥350・大人¥800／子供¥600</span></div><a class="maplink" href="https://www.oze-iwakura.co.jp/hotel/spa/" target="_blank" rel="noopener">公式サイト</a></li>
     </ul>
@@ -520,7 +521,7 @@
   </section>
 
   <section id="access">
-    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
     <dl class="kv-grid">
       <dt>車で</dt>
       <dd>関越道 沼田IC → 国道120号（椎坂トンネル・尾瀬大橋経由）約45〜50分・31km</dd>
@@ -532,12 +533,12 @@
   </section>
 
   <section id="news">
-    <div class="section-head"><h2>お知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
     <ul class="news-list" id="newsList"></ul>
   </section>
 
   <section id="sns">
-    <div class="section-head"><h2>公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+    <div class="section-head"><h2>ホワイトワールド尾瀬岩鞍の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
     <a class="map-card" href="https://x.com/ozeiwakura_2011" target="_blank" rel="noopener">
       <div class="mc-text">
         <span class="mc-title">@ozeiwakura_2011（公式X）</span>

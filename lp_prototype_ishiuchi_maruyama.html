@@ -69,8 +69,8 @@
 
   section { padding: 40px 0; border-bottom: 1px solid var(--border); }
   section:last-of-type { border-bottom: none; }
-  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
-  h2 { font-family: "Shippori Mincho", serif; font-size: 21px; margin: 0; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 16px; margin-bottom: 18px; flex-wrap: wrap; }
+  h2 { font-family: "Shippori Mincho", serif; font-size: 19px; margin: 0; text-wrap: balance; }
   .section-num { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.05em; }
 
   .kv-grid { display: grid; grid-template-columns: 96px 1fr; row-gap: 12px; column-gap: 16px; font-size: 15px; }
@@ -326,7 +326,7 @@
 <div class="wrap">
 
   <section id="scale">
-    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="section-head"><h2>石打丸山スキー場のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
     <div class="stat-grid">
       <div class="stat"><div class="num">230</div><div class="unit">総面積 ha</div></div>
       <div class="stat"><div class="num">23</div><div class="unit">コース数</div></div>
@@ -357,7 +357,7 @@
   </section>
 
   <section id="reviews">
-    <div class="section-head"><h2>口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="section-head"><h2>石打丸山スキー場の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
     <div class="review-cols">
       <div class="review-col good">
         <p class="review-col-head"><span class="review-dot"></span>良い点</p>
@@ -384,7 +384,7 @@
   </section>
 
   <section id="weather">
-    <div class="section-head"><h2>天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="section-head"><h2>石打丸山スキー場の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
     <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
     <div class="weather-toggle" role="group" aria-label="予報の範囲">
       <button data-range="today" aria-pressed="true">当日</button>
@@ -396,7 +396,7 @@
   </section>
 
   <section id="livecam">
-    <div class="section-head"><h2>ライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <div class="section-head"><h2>石打丸山スキー場のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
     <div class="livecam-card">
       <div class="lc-head">
         <div class="lc-head-left">
@@ -413,7 +413,7 @@
   </section>
 
   <section id="price">
-    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="section-head"><h2>石打丸山スキー場のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
     <p class="calc-foot" style="margin-bottom:12px;">人（区分）ごとに券種・チャネルを別々に選べます。例：お子様は1日券、大人は4時間券。</p>
     <div class="calc-card">
       <div id="lineList"></div>
@@ -437,7 +437,7 @@
   </section>
 
   <section id="kids">
-    <div class="section-head"><h2>キッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+    <div class="section-head"><h2>石打丸山スキー場のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
     <ul class="shop-list">
       <li><div class="shop-main"><span>ザ・ヴェランダ石打丸山（中腹）</span><span class="shop-tag">サンライズエクスプレス降車後すぐ。スノーエスカレーター・スノーレーサー・ソリ等</span></div><span class="shop-tag">ゴンドラ往復券／リフト1日券に含む</span></li>
       <li><div class="shop-main"><span>ゆきあそびパーク（山麓）</span><span class="shop-tag">リゾートセンター横・駐車場併設</span></div><span class="shop-tag">¥1,000（リフト券保持者は無料）</span></li>
@@ -446,7 +446,7 @@
   </section>
 
   <section id="gochiso">
-    <div class="section-head"><h2>ゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <div class="section-head"><h2>石打丸山スキー場のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
     <div class="cospa-badge tier-good">
       <span>ゲレ飯コスパ指数</span><span class="score">1.00</span><span>／ コスパ良好・検証7ゲレンデ中1位（飲食店24店舗・公式値）</span>
     </div>
@@ -455,7 +455,7 @@
   </section>
 
   <section id="onsen">
-    <div class="section-head"><h2>温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+    <div class="section-head"><h2>石打丸山スキー場の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
     <ul class="shop-list">
       <li><div class="shop-main"><span>ハツカ石温泉 石打ユングパルナス</span><span class="shop-tag">スキー場ハツカ石口すぐそば・冬季24時間営業（清掃8:00〜10:00除く）</span></div><a class="maplink" href="http://www.yungparunas.com/" target="_blank" rel="noopener">公式サイト</a></li>
       <li><div class="shop-main"><span>丸山温泉 古城館</span><span class="shop-tag">公式サイト紹介の周辺施設</span></div><a class="maplink" href="https://kojyokan.com/" target="_blank" rel="noopener">公式サイト</a></li>
@@ -465,7 +465,7 @@
   </section>
 
   <section id="access">
-    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <div class="section-head"><h2>石打丸山スキー場のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
     <dl class="kv-grid">
       <dt>車で</dt>
       <dd>関越道 塩沢石打IC → 国道17号 約5分・3km（練馬ICから約120分）</dd>
@@ -477,13 +477,13 @@
   </section>
 
   <section id="news">
-    <div class="section-head"><h2>お知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <div class="section-head"><h2>石打丸山スキー場のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
     <ul class="news-list" id="newsList"></ul>
     <p class="calc-foot" style="margin-top:10px;">取得時点（2026年9月）はグリーンシーズン中のため、夏季のお知らせが中心です。冬季は運行状況・臨時休業等に切り替わります。</p>
   </section>
 
   <section id="sns">
-    <div class="section-head"><h2>公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+    <div class="section-head"><h2>石打丸山スキー場の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
     <a class="map-card" href="https://x.com/ishiuchi_IM" target="_blank" rel="noopener">
       <div class="mc-text">
         <span class="mc-title">@ishiuchi_IM（公式X）</span>

@@ -255,6 +255,8 @@
   .rental-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
   .rental-row .r-label { color: var(--text); }
   .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
+  .rental-sim { padding: 14px 16px 4px; }
+  .rental-sim .calc-total { margin-top: 10px; padding-top: 14px; }
 
   .level-bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 16px; }
   .level-bar span { display: block; height: 100%; }
@@ -444,13 +446,14 @@
       </div>
       <p class="calc-foot" id="calcFoot"></p>
       <details class="rental-acc">
-        <summary>レンタル料金を見る（1日）<span class="chev">▾</span></summary>
-        <div class="rental-table">
-          <div class="rental-row"><span class="r-label">基本セット（板・ブーツ・ストック等）</span><span class="r-price">大人 ¥7,000 ／ 子供 ¥3,600</span></div>
-          <div class="rental-row"><span class="r-label">フルセット（基本セット＋ウェア）</span><span class="r-price">大人 ¥12,000 ／ 子供 ¥6,200</span></div>
-          <div class="rental-row"><span class="r-label">パフォーマンスモデル基本セット</span><span class="r-price">共通 ¥8,500</span></div>
-          <div class="rental-row"><span class="r-label">ウェアのみ</span><span class="r-price">大人 ¥6,000 ／ 子供 ¥3,600</span></div>
-          <div class="rental-row"><span class="r-label">ヘルメット／長靴</span><span class="r-price">各 ¥2,000</span></div>
+        <summary>レンタル料金をシミュレーション（1日）<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <div id="rentalLineList"></div>
+          <button type="button" class="add-line-btn" id="addRentalLineBtn">＋ 品目を追加</button>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
         </div>
       </details>
     </div>
@@ -672,6 +675,117 @@
   });
 
   renderLines();
+
+  // ---- rental simulator: プラン x 区分 の2軸データ ----
+  const rentalPlans = [
+    { id: "basic", label: "基本セット（板・ブーツ・ストック等）", categories: [
+        { key: "adult", label: "大人", price: 7000 },
+        { key: "child", label: "子供", price: 3600 },
+    ]},
+    { id: "full", label: "フルセット（基本セット＋ウェア）", categories: [
+        { key: "adult", label: "大人", price: 12000 },
+        { key: "child", label: "子供", price: 6200 },
+    ]},
+    { id: "perf", label: "パフォーマンスモデル基本セット", categories: [
+        { key: "common", label: "共通", price: 8500 },
+    ]},
+    { id: "wear", label: "ウェアのみ", categories: [
+        { key: "adult", label: "大人", price: 6000 },
+        { key: "child", label: "子供", price: 3600 },
+    ]},
+    { id: "helmet", label: "ヘルメット", categories: [
+        { key: "common", label: "共通", price: 2000 },
+    ]},
+    { id: "boots", label: "長靴", categories: [
+        { key: "common", label: "共通", price: 2000 },
+    ]},
+  ];
+
+  function getRentalPlan(id) { return rentalPlans.find(p => p.id === id); }
+  function getRentalCat(planId, key) { return getRentalPlan(planId).categories.find(c => c.key === key); }
+
+  let rentalLineSeq = 0;
+  const rentalLines = [
+    { id: rentalLineSeq++, plan: "basic", category: "adult", count: 1 },
+  ];
+
+  const rentalLineList = document.getElementById("rentalLineList");
+
+  function renderRentalLines() {
+    rentalLineList.innerHTML = "";
+    rentalLines.forEach(line => {
+      const plan = getRentalPlan(line.plan);
+      if (!plan.categories.find(c => c.key === line.category)) line.category = plan.categories[0].key;
+      const cat = getRentalCat(line.plan, line.category);
+
+      const el = document.createElement("div");
+      el.className = "line-item";
+
+      const planOptions = rentalPlans.map(p => `<option value="${p.id}" ${p.id === line.plan ? "selected" : ""}>${p.label}</option>`).join("");
+      const catOptions = plan.categories.map(c => `<option value="${c.key}" ${c.key === line.category ? "selected" : ""}>${c.label}</option>`).join("");
+
+      el.innerHTML = `
+        <div class="line-head">
+          <div class="line-selects">
+            <select data-rfield="plan" data-rline="${line.id}">${planOptions}</select>
+            <select data-rfield="category" data-rline="${line.id}">${catOptions}</select>
+          </div>
+          <button type="button" class="remove-line" data-rremove="${line.id}" aria-label="この行を削除">×</button>
+        </div>
+        <div class="line-foot">
+          <span class="line-price">¥${cat.price.toLocaleString()}</span>
+          <div class="stepper">
+            <button type="button" data-ract="dec" data-rline="${line.id}">−</button>
+            <input type="text" readonly value="${line.count}" data-rcountline="${line.id}">
+            <button type="button" data-ract="inc" data-rline="${line.id}">＋</button>
+          </div>
+          <span class="line-subtotal">¥${(cat.price * line.count).toLocaleString()}</span>
+        </div>`;
+      rentalLineList.appendChild(el);
+    });
+    updateRentalTotal();
+  }
+
+  function updateRentalTotal() {
+    let total = 0;
+    rentalLines.forEach(line => {
+      const cat = getRentalCat(line.plan, line.category);
+      total += cat.price * line.count;
+    });
+    document.getElementById("rentalTotalAmount").textContent = "¥" + total.toLocaleString();
+  }
+
+  rentalLineList.addEventListener("click", (e) => {
+    const stepBtn = e.target.closest("button[data-ract]");
+    if (stepBtn) {
+      const line = rentalLines.find(l => l.id == stepBtn.dataset.rline);
+      if (stepBtn.dataset.ract === "inc") line.count = Math.min(line.count + 1, 20);
+      else line.count = Math.max(line.count - 1, 0);
+      renderRentalLines();
+      return;
+    }
+    const removeBtn = e.target.closest("button[data-rremove]");
+    if (removeBtn && rentalLines.length > 1) {
+      const idx = rentalLines.findIndex(l => l.id == removeBtn.dataset.rremove);
+      rentalLines.splice(idx, 1);
+      renderRentalLines();
+    }
+  });
+
+  rentalLineList.addEventListener("change", (e) => {
+    const sel = e.target.closest("select[data-rfield]");
+    if (!sel) return;
+    const line = rentalLines.find(l => l.id == sel.dataset.rline);
+    line[sel.dataset.rfield] = sel.value;
+    renderRentalLines();
+  });
+
+  document.getElementById("addRentalLineBtn").addEventListener("click", () => {
+    rentalLines.push({ id: rentalLineSeq++, plan: "basic", category: "adult", count: 1 });
+    renderRentalLines();
+  });
+
+  renderRentalLines();
 
   // ---- trail map: click to enlarge in a modal ----
   (function () {

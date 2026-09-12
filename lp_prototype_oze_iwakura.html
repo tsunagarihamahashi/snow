@@ -257,6 +257,20 @@
   .rental-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
   .rental-row .r-label { color: var(--text); }
   .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
+  .rental-sim { padding: 14px 16px 4px; }
+  .rental-sim .calc-total { margin-top: 14px; padding-top: 14px; }
+  .rental-discount { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text); margin-top: 4px; padding-bottom: 4px; cursor: pointer; }
+  .rental-discount input { accent-color: var(--ember-500); width: 16px; height: 16px; flex: none; }
+  .rental-legend { font-size: 12px; color: var(--text-muted); margin: 0 0 10px; }
+  @media (max-width: 480px) {
+    .rcat-row {
+      grid-template-columns: 1fr auto; row-gap: 8px;
+      grid-template-areas: "label label" "price stepper";
+    }
+    .rcat-row > div:first-child { grid-area: label; }
+    .rcat-row .cat-price { grid-area: price; text-align: left; }
+    .rcat-row .stepper { grid-area: stepper; }
+  }
 
   /* ---- scale stats ---- */
   .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -509,11 +523,15 @@
       </div>
       <p class="calc-foot">シニアは60歳以上（証明書要）。幼児（未就学児）は無料ですがリフト同乗時は専用券が必要です。特定日は年末年始・繁忙期の指定日。</p>
       <details class="rental-acc">
-        <summary>レンタル料金を見る<span class="chev">▾</span></summary>
-        <div class="rental-table">
-          <div class="rental-row"><span class="r-label">フルセット（板・ブーツ・ウェア一式）</span><span class="r-price">大人 ¥8,500 ／ 小人 ¥6,500</span></div>
-          <div class="rental-row"><span class="r-label">板・ブーツ・ストックのみ（ウェアなし）</span><span class="r-price">大人 ¥4,500 ／ 小人 ¥3,500</span></div>
-          <div class="rental-row"><span class="r-label">岩鞍リゾートホテル・岩鞍ハウス宿泊者</span><span class="r-price">上記セットより ¥1,000引き</span></div>
+        <summary>レンタル料金をシミュレーション<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <p class="rental-legend">フルセット＝板・ブーツ・ウェア一式／基本セット＝板・ブーツ・ストックのみ</p>
+          <div id="rentalCatRows"></div>
+          <label class="rental-discount"><input type="checkbox" id="lodgeDiscount"> 岩鞍リゾートホテル・岩鞍ハウス宿泊者（セットごとに¥1,000引き）</label>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
         </div>
       </details>
     </div>
@@ -646,6 +664,59 @@
   });
 
   render();
+
+  // ---- rental simulator ----
+  const rentalPriceTable = {
+    full: { adult: 8500, child: 6500 },
+    basic: { adult: 4500, child: 3500 },
+  };
+  const rentalCategories = [
+    { key: "full_adult", label: "フルセット・大人", plan: "full", person: "adult" },
+    { key: "full_child", label: "フルセット・小人", plan: "full", person: "child" },
+    { key: "basic_adult", label: "基本セット・大人", plan: "basic", person: "adult" },
+    { key: "basic_child", label: "基本セット・小人", plan: "basic", person: "child" },
+  ];
+  const rentalCounts = { full_adult: 0, full_child: 0, basic_adult: 0, basic_child: 0 };
+
+  const rentalCatRows = document.getElementById("rentalCatRows");
+  rentalCategories.forEach(cat => {
+    const row = document.createElement("div");
+    row.className = "cat-row rcat-row";
+    row.innerHTML = `
+      <div><span class="cat-label">${cat.label}</span></div>
+      <div class="cat-price" data-rprice="${cat.key}"></div>
+      <div class="stepper">
+        <button type="button" data-ract="dec" data-rkey="${cat.key}" aria-label="${cat.label}を減らす">−</button>
+        <input type="text" inputmode="numeric" readonly value="0" data-rcount="${cat.key}">
+        <button type="button" data-ract="inc" data-rkey="${cat.key}" aria-label="${cat.label}を増やす">＋</button>
+      </div>`;
+    rentalCatRows.appendChild(row);
+  });
+
+  function renderRental() {
+    let total = 0;
+    let setCount = 0;
+    rentalCategories.forEach(cat => {
+      const price = rentalPriceTable[cat.plan][cat.person];
+      document.querySelector(`[data-rprice="${cat.key}"]`).textContent = "¥" + price.toLocaleString();
+      document.querySelector(`[data-rcount="${cat.key}"]`).value = rentalCounts[cat.key];
+      total += price * rentalCounts[cat.key];
+      setCount += rentalCounts[cat.key];
+    });
+    const discount = document.getElementById("lodgeDiscount").checked ? setCount * 1000 : 0;
+    document.getElementById("rentalTotalAmount").textContent = "¥" + Math.max(total - discount, 0).toLocaleString();
+  }
+
+  rentalCatRows.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-ract]");
+    if (!btn) return;
+    const key = btn.dataset.rkey;
+    if (btn.dataset.ract === "inc") rentalCounts[key] = Math.min(rentalCounts[key] + 1, 20);
+    else rentalCounts[key] = Math.max(rentalCounts[key] - 1, 0);
+    renderRental();
+  });
+  document.getElementById("lodgeDiscount").addEventListener("change", renderRental);
+  renderRental();
 
   // ---- trail map: click to enlarge in a modal ----
   (function () {

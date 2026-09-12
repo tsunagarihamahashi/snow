@@ -256,6 +256,27 @@
   .rental-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
   .rental-row .r-label { color: var(--text); }
   .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
+  .rental-sim { padding: 14px 16px 4px; }
+  .rental-sim .calc-total { margin-top: 10px; padding-top: 14px; }
+  .line-item { padding: 16px 0; border-top: 1px solid var(--border); }
+  .line-item:first-of-type { border-top: none; padding-top: 4px; }
+  .line-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+  .line-selects { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; }
+  .line-selects select {
+    width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 13px; font-family: inherit;
+  }
+  .remove-line { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--border); background: var(--snow-100); color: var(--text-muted); font-size: 14px; cursor: pointer; }
+  .line-item:only-of-type .remove-line { visibility: hidden; }
+  .line-foot { display: flex; align-items: center; justify-content: space-between; }
+  .line-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 13px; color: var(--text-muted); }
+  .line-subtotal { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 15px; font-weight: 700; }
+  .add-line-btn {
+    width: 100%; padding: 10px; margin-top: 6px; border-radius: 9px; border: 1px dashed var(--border);
+    background: none; color: var(--ember-500); font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit;
+  }
+  .add-line-btn:hover { background: var(--dust-100); }
+  @media (max-width: 480px) { .line-selects { grid-template-columns: 1fr; } }
 
   /* ---- scale stats ---- */
   .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
@@ -493,9 +514,15 @@
       </div>
       <p class="calc-foot">シニア・中学生は50歳以上または中学生が対象。繁忙期のシニア・中学生料金は未確認のため通常料金と同額で表示しています。特定日は年末年始等の指定日。</p>
       <details class="rental-acc">
-        <summary>レンタル料金の目安<span class="chev">▾</span></summary>
-        <div class="rental-table">
-          <div class="rental-row"><span class="r-label">レンタル料金</span><span class="r-price">公式サイトでご確認ください</span></div>
+        <summary>レンタル料金をシミュレーション<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <div id="rentalLineList"></div>
+          <button type="button" class="add-line-btn" id="addRentalLineBtn">＋ 品目を追加</button>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
+          <p class="calc-foot">大人は高校生以上、小人は中学生以下。事前決済利用で1品目あたり200円程度割引の場合あり。</p>
         </div>
       </details>
     </div>
@@ -624,6 +651,132 @@
   });
 
   render();
+
+  // ---- rental simulator: 品目 x 区分 の2軸データ ----
+  const rentalPlans = [
+    { id: "ski_set", label: "スキー3点セット（板・ブーツ・ストック）", categories: [
+        { key: "adult", label: "大人", price: 6000 },
+        { key: "child", label: "小人", price: 4800 },
+    ]},
+    { id: "board_set", label: "スノーボード2点セット（ボード・ブーツ）", categories: [
+        { key: "adult", label: "大人", price: 6000 },
+        { key: "child", label: "小人", price: 4800 },
+    ]},
+    { id: "board_only", label: "板／ボードのみ", categories: [
+        { key: "adult", label: "大人", price: 4300 },
+        { key: "child", label: "小人", price: 3900 },
+    ]},
+    { id: "boots_only", label: "ブーツのみ", categories: [
+        { key: "adult", label: "大人", price: 4300 },
+        { key: "child", label: "小人", price: 3900 },
+    ]},
+    { id: "poles_only", label: "ストックのみ", categories: [
+        { key: "adult", label: "大人", price: 2000 },
+        { key: "child", label: "小人", price: 1300 },
+    ]},
+    { id: "wear_set", label: "ウェア上下セット", categories: [
+        { key: "adult", label: "大人", price: 5500 },
+        { key: "child", label: "小人", price: 4700 },
+    ]},
+    { id: "wear_half", label: "ウェア（ジャケットまたはパンツのみ）", categories: [
+        { key: "adult", label: "大人", price: 4200 },
+        { key: "child", label: "小人", price: 3900 },
+    ]},
+    { id: "snowboots", label: "スノーブーツ", categories: [
+        { key: "adult", label: "大人", price: 4000 },
+        { key: "child", label: "小人", price: 3700 },
+    ]},
+    { id: "helmet", label: "ヘルメット", categories: [
+        { key: "adult", label: "大人", price: 2000 },
+        { key: "child", label: "小人", price: 1000 },
+    ]},
+  ];
+
+  function getRentalPlan(id) { return rentalPlans.find(p => p.id === id); }
+  function getRentalCat(planId, key) { return getRentalPlan(planId).categories.find(c => c.key === key); }
+
+  let rentalLineSeq = 0;
+  const rentalLines = [
+    { id: rentalLineSeq++, plan: "ski_set", category: "adult", count: 1 },
+  ];
+
+  const rentalLineList = document.getElementById("rentalLineList");
+
+  function renderRentalLines() {
+    rentalLineList.innerHTML = "";
+    rentalLines.forEach(line => {
+      const plan = getRentalPlan(line.plan);
+      if (!plan.categories.find(c => c.key === line.category)) line.category = plan.categories[0].key;
+      const cat = getRentalCat(line.plan, line.category);
+
+      const el = document.createElement("div");
+      el.className = "line-item";
+
+      const planOptions = rentalPlans.map(p => `<option value="${p.id}" ${p.id === line.plan ? "selected" : ""}>${p.label}</option>`).join("");
+      const catOptions = plan.categories.map(c => `<option value="${c.key}" ${c.key === line.category ? "selected" : ""}>${c.label}</option>`).join("");
+
+      el.innerHTML = `
+        <div class="line-head">
+          <div class="line-selects">
+            <select data-rfield="plan" data-rline="${line.id}">${planOptions}</select>
+            <select data-rfield="category" data-rline="${line.id}">${catOptions}</select>
+          </div>
+          <button type="button" class="remove-line" data-rremove="${line.id}" aria-label="この行を削除">×</button>
+        </div>
+        <div class="line-foot">
+          <span class="line-price">¥${cat.price.toLocaleString()}</span>
+          <div class="stepper">
+            <button type="button" data-ract="dec" data-rline="${line.id}">−</button>
+            <input type="text" readonly value="${line.count}" data-rcountline="${line.id}">
+            <button type="button" data-ract="inc" data-rline="${line.id}">＋</button>
+          </div>
+          <span class="line-subtotal">¥${(cat.price * line.count).toLocaleString()}</span>
+        </div>`;
+      rentalLineList.appendChild(el);
+    });
+    updateRentalTotal();
+  }
+
+  function updateRentalTotal() {
+    let total = 0;
+    rentalLines.forEach(line => {
+      const cat = getRentalCat(line.plan, line.category);
+      total += cat.price * line.count;
+    });
+    document.getElementById("rentalTotalAmount").textContent = "¥" + total.toLocaleString();
+  }
+
+  rentalLineList.addEventListener("click", (e) => {
+    const stepBtn = e.target.closest("button[data-ract]");
+    if (stepBtn) {
+      const line = rentalLines.find(l => l.id == stepBtn.dataset.rline);
+      if (stepBtn.dataset.ract === "inc") line.count = Math.min(line.count + 1, 20);
+      else line.count = Math.max(line.count - 1, 0);
+      renderRentalLines();
+      return;
+    }
+    const removeBtn = e.target.closest("button[data-rremove]");
+    if (removeBtn && rentalLines.length > 1) {
+      const idx = rentalLines.findIndex(l => l.id == removeBtn.dataset.rremove);
+      rentalLines.splice(idx, 1);
+      renderRentalLines();
+    }
+  });
+
+  rentalLineList.addEventListener("change", (e) => {
+    const sel = e.target.closest("select[data-rfield]");
+    if (!sel) return;
+    const line = rentalLines.find(l => l.id == sel.dataset.rline);
+    line[sel.dataset.rfield] = sel.value;
+    renderRentalLines();
+  });
+
+  document.getElementById("addRentalLineBtn").addEventListener("click", () => {
+    rentalLines.push({ id: rentalLineSeq++, plan: "ski_set", category: "adult", count: 1 });
+    renderRentalLines();
+  });
+
+  renderRentalLines();
 
   // ---- snow depth (実測値, scraped daily by GitHub Actions into snow_data.json) ----
   (function () {

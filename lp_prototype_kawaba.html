@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>川場</title>
+<style>
+  :root {
+    --snow-50: #f5f7fa;
+    --snow-100: #e8edf2;
+    --snow-200: #d7dfe7;
+    --ridge-900: #1c2a3a;
+    --ridge-700: #3c5064;
+    --ridge-500: #5c7086;
+    --ice-400: #7fa0b8;
+    --ember-500: #de5b2c;
+    --ember-600: #c44a1f;
+    --pine-600: #2e6b52;
+    --pine-100: #e1efe8;
+    --amber-600: #b8862e;
+    --amber-100: #f4ecd8;
+    --dust-600: #8a4a3a;
+    --dust-100: #f1e4de;
+    --card: #ffffff;
+    --border: var(--snow-200);
+    --text: var(--ridge-900);
+    --text-muted: var(--ridge-500);
+    --bg: var(--snow-50);
+    --shadow: 0 1px 2px rgba(28,42,58,0.06), 0 8px 24px -12px rgba(28,42,58,0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --snow-50: #12181f;
+      --snow-100: #1a222b;
+      --snow-200: #29343f;
+      --ridge-900: #eef2f6;
+      --ridge-700: #c3cdd6;
+      --ridge-500: #93a2af;
+      --ice-400: #7fa0b8;
+      --ember-500: #ec6a3b;
+      --ember-600: #f28453;
+      --pine-600: #59b391;
+      --pine-100: #17332a;
+      --amber-600: #d9a94a;
+      --amber-100: #332c17;
+      --dust-600: #d98f7c;
+      --dust-100: #33221d;
+      --card: #182029;
+      --border: var(--snow-200);
+      --text: var(--ridge-900);
+      --text-muted: var(--ridge-500);
+      --bg: var(--snow-50);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --snow-50: #12181f;
+    --snow-100: #1a222b;
+    --snow-200: #29343f;
+    --ridge-900: #eef2f6;
+    --ridge-700: #c3cdd6;
+    --ridge-500: #93a2af;
+    --ice-400: #7fa0b8;
+    --ember-500: #ec6a3b;
+    --ember-600: #f28453;
+    --pine-600: #59b391;
+    --pine-100: #17332a;
+    --amber-600: #d9a94a;
+    --amber-100: #332c17;
+    --dust-600: #d98f7c;
+    --dust-100: #33221d;
+    --card: #182029;
+    --border: var(--snow-200);
+    --text: var(--ridge-900);
+    --text-muted: var(--ridge-500);
+    --bg: var(--snow-50);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+
+  /* ---- status strip ---- */
+  .statusbar {
+    background: var(--ridge-900);
+    color: var(--snow-50);
+    padding: 22px 20px 20px;
+  }
+  .statusbar .inner { max-width: 720px; margin: 0 auto; }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--ice-400);
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  h1.resort-name {
+    font-family: "Shippori Mincho", serif;
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 4px;
+    text-wrap: balance;
+  }
+  .pref { font-size: 14px; color: var(--ice-400); margin: 0 0 16px; }
+  .status-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; border-radius: 100px;
+    font-size: 13px; font-weight: 700;
+  }
+  .pill.open { background: var(--pine-100); color: var(--pine-600); }
+  .pill.closed { background: rgba(255,255,255,0.1); color: var(--snow-100); }
+  .pill .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .status-note { font-size: 13px; color: var(--ice-400); }
+
+  /* ---- section shell ---- */
+  section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  h2 {
+    font-family: "Shippori Mincho", serif;
+    font-size: 21px;
+    margin: 0;
+  }
+  .section-num { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.05em; }
+
+  /* ---- access ---- */
+  .kv-grid { display: grid; grid-template-columns: 96px 1fr; row-gap: 12px; column-gap: 16px; font-size: 15px; }
+  .kv-grid dt { color: var(--text-muted); }
+  .kv-grid dd { margin: 0; }
+  .outlink {
+    color: var(--ember-500); text-decoration: none; border-bottom: 1px solid currentColor;
+  }
+  .outlink:hover { color: var(--ember-600); }
+
+  /* ---- reviews ---- */
+  .review-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .review-col { border: 1.5px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .review-col.good { border-color: var(--pine-600); }
+  .review-col.bad { border-color: var(--dust-600); }
+  .review-col-head { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; margin: 0 0 10px; }
+  .review-col.good .review-col-head { color: var(--pine-600); }
+  .review-col.bad .review-col-head { color: var(--dust-600); }
+  .review-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+  .review-col ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--text); }
+  .review-col li { line-height: 1.5; }
+  @media (max-width: 480px) { .review-cols { grid-template-columns: 1fr; } }
+
+  /* ---- weather ---- */
+  .snowdepth-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 16px; background: var(--card); }
+  .snowdepth-card .sd-cells { display: flex; gap: 1px; background: var(--border); }
+  .snowdepth-card .sd-cell { flex: 1; background: var(--card); padding: 12px 8px; text-align: center; }
+  .snowdepth-card .sd-num { font-family: "Roboto Mono", monospace; font-size: 20px; font-weight: 700; color: var(--ice-400); font-variant-numeric: tabular-nums; }
+  .snowdepth-card .sd-label { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .snowdepth-card .sd-updated { padding: 6px 8px; text-align: center; font-size: 10px; color: var(--text-muted); border-top: 1px solid var(--border); }
+  .snowdepth-unavailable { font-size: 12px; color: var(--text-muted); background: var(--snow-100); border-radius: 12px; padding: 12px 14px; margin-bottom: 16px; }
+  .weather-toggle { display: flex; gap: 8px; margin-bottom: 16px; }
+  .weather-toggle button {
+    flex: 1; padding: 9px 8px; border-radius: 9px; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 13px; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+  }
+  .weather-toggle button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
+  .weather-row { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+  .weather-card {
+    flex: none; width: 84px; background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 8px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .weather-card .w-time { font-size: 11px; color: var(--text-muted); font-family: "Roboto Mono", monospace; }
+  .weather-card .w-icon { width: 28px; height: 28px; color: var(--ember-500); }
+  .weather-card .w-icon.snow { color: var(--ice-400); }
+  .weather-card .w-temp { font-family: "Roboto Mono", monospace; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .weather-card .w-temp .lo { color: var(--text-muted); font-weight: 400; }
+  .weather-card .w-snow { font-size: 11px; color: var(--ice-400); font-family: "Roboto Mono", monospace; }
+  .weather-foot { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+  .weather-foot a { color: inherit; }
+
+  /* ---- calculator ---- */
+  .calc-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow); padding: 22px;
+  }
+  .daytype-toggle { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+  .daytype-toggle button {
+    flex: 1; min-width: 70px; padding: 9px 6px; border-radius: 9px; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 12px; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+  }
+  .daytype-toggle button[aria-pressed="true"] {
+    background: var(--ember-500); border-color: var(--ember-500); color: #fff;
+  }
+  .cat-row {
+    display: grid; grid-template-columns: 1fr auto auto; align-items: center;
+    gap: 10px; padding: 12px 0; border-top: 1px solid var(--border);
+  }
+  .cat-row:first-of-type { border-top: none; }
+  .cat-label { font-size: 15px; }
+  .cat-cond { font-size: 12px; color: var(--text-muted); display: block; margin-top: 1px; }
+  .cat-price {
+    font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums;
+    font-size: 14px; color: var(--text-muted); text-align: right; min-width: 68px;
+  }
+  .stepper { display: flex; align-items: center; gap: 8px; }
+  .stepper button {
+    width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--snow-100); color: var(--text); font-size: 16px; line-height: 1;
+    cursor: pointer; font-family: inherit;
+  }
+  .stepper input {
+    width: 30px; text-align: center; border: none; background: none; color: var(--text);
+    font-family: "Roboto Mono", monospace; font-size: 15px; font-variant-numeric: tabular-nums;
+  }
+  .calc-total {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-top: 18px; padding-top: 18px; border-top: 2px solid var(--ridge-900);
+  }
+  .calc-total .label { font-size: 14px; color: var(--text-muted); }
+  .calc-total .amount {
+    font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums;
+    font-size: 30px; font-weight: 700; color: var(--ember-500);
+  }
+  .calc-foot { font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+
+  .rental-acc { margin-top: 14px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .rental-acc summary {
+    cursor: pointer; list-style: none; padding: 12px 16px; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: space-between; background: var(--snow-100);
+  }
+  .rental-acc summary::-webkit-details-marker { display: none; }
+  .rental-acc summary .chev { transition: transform 0.15s ease; color: var(--text-muted); }
+  .rental-acc[open] summary .chev { transform: rotate(180deg); }
+  .rental-table { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .rental-row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+  .rental-row .r-label { color: var(--text); }
+  .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
+
+  /* ---- scale stats ---- */
+  .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .stat { background: var(--card); padding: 16px 12px; text-align: center; }
+  .stat .num { font-family: "Roboto Mono", monospace; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .stat .unit { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .stat-wide { grid-column: 1 / -1; }
+  .stat-wide .num-unit { font-size: 14px; font-weight: 400; color: var(--text-muted); margin-left: 4px; }
+  .stat .idx-tag { display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 1.5px 7.5px; border-radius: 100px; background: var(--card); border: 1.5px solid; }
+  .stat.tier-good .num { color: var(--pine-600); }
+  .stat.tier-good .idx-tag { border-color: var(--pine-600); color: var(--pine-600); }
+  .stat.tier-mid .num { color: var(--amber-600); }
+  .stat.tier-mid .idx-tag { border-color: var(--amber-600); color: var(--amber-600); }
+  .stat.tier-low .num { color: var(--dust-600); }
+  .stat.tier-low .idx-tag { border-color: var(--dust-600); color: var(--dust-600); }
+
+  .map-card {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--card);
+    text-decoration: none; color: var(--text); margin-top: 16px;
+  }
+  .map-card:hover { border-color: var(--ember-500); }
+  .map-card .mc-text { display: flex; flex-direction: column; gap: 2px; }
+  .map-card .mc-title { font-weight: 700; font-size: 14px; }
+  .map-card .mc-sub { font-size: 12px; color: var(--text-muted); }
+  .map-card .mc-arrow { color: var(--ember-500); font-size: 18px; flex: none; }
+
+  .jumpnav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .jumpnav .inner {
+    max-width: 720px; margin: 0 auto; padding: 10px 20px; display: flex; gap: 8px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .jumpnav .inner::-webkit-scrollbar { display: none; }
+  .jumpnav a {
+    flex: none; font-size: 12px; font-weight: 700; color: var(--text-muted); text-decoration: none;
+    padding: 6px 12px; border-radius: 100px; border: 1px solid var(--border); white-space: nowrap;
+  }
+  .jumpnav a:hover { color: var(--ember-500); border-color: var(--ember-500); }
+
+  .livecam-card { background: var(--ridge-900); border-radius: 14px; padding: 16px 16px 18px; }
+  .livecam-card .lc-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+  .livecam-card .lc-head-left { display: flex; align-items: center; gap: 8px; }
+  .livecam-card .lc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember-500); flex: none; animation: lc-pulse 1.6s ease-in-out infinite; }
+  .livecam-card .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
+  .livecam-card .lc-updated { font-size: 11px; color: var(--ice-400); font-family: "Roboto Mono", monospace; }
+  .livecam-card .lc-player { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: #000; }
+  .livecam-card .lc-player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .livecam-card .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .livecam-card .lc-tabs button {
+    padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06); color: var(--ice-400); font-size: 11px; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+  }
+  .livecam-card .lc-tabs button[aria-pressed="true"] { background: var(--ember-500); border-color: var(--ember-500); color: #fff; }
+  @media (prefers-reduced-motion: reduce) { .livecam-card .lc-dot { animation: none; } }
+  @keyframes lc-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  /* ---- gochiso ---- */
+  .cospa-badge {
+    display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; background: var(--card); border: 1.5px solid;
+    border-radius: 10px; padding: 9px 13px; margin-bottom: 16px; font-size: 13px;
+  }
+  .cospa-badge.tier-good { border-color: var(--pine-600); color: var(--pine-600); }
+  .cospa-badge.tier-mid { border-color: var(--amber-600); color: var(--amber-600); }
+  .cospa-badge.tier-low { border-color: var(--dust-600); color: var(--dust-600); }
+  .cospa-badge .score { font-family: "Roboto Mono", monospace; font-size: 20px; font-weight: 700; }
+  .shop-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .shop-list li { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; padding: 10px 10px 10px 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+  .shop-list .shop-main { display: flex; flex-direction: column; min-width: 0; }
+  .shop-list .shop-tag { font-size: 12px; color: var(--text-muted); }
+  .maplink {
+    display: inline-flex; align-items: center; gap: 4px; flex: none;
+    font-size: 12px; font-weight: 700; color: var(--ember-600); text-decoration: none;
+    padding: 5px 9px; border-radius: 8px; background: var(--card); border: 1.5px solid var(--ember-600);
+    white-space: nowrap;
+  }
+  .maplink:hover { color: #fff; background: var(--ember-600); }
+  .maplink svg { width: 12px; height: 12px; }
+
+  /* ---- news ---- */
+  .news-list { list-style: none; margin: 0; padding: 0; }
+  .news-list li { padding: 10px 0; border-top: 1px solid var(--border); display: flex; gap: 14px; }
+  .news-list li:first-child { border-top: none; }
+  .news-date { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); white-space: nowrap; padding-top: 1px; }
+  .news-list a { color: var(--text); text-decoration: none; font-size: 14px; }
+  .news-list a:hover { color: var(--ember-500); }
+
+  footer { padding: 28px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+  footer p { margin: 0 0 8px; }
+
+  /* ---- mobile ---- */
+  @media (max-width: 480px) {
+    body { overflow-x: hidden; }
+    .wrap { padding-left: 16px; padding-right: 16px; }
+    .statusbar .inner { padding-left: 16px; padding-right: 16px; }
+    h1.resort-name { font-size: 28px; }
+    .calc-total .amount { font-size: 26px; }
+    .shop-list li { flex-direction: column; align-items: flex-start; }
+    .shop-list li > .maplink { align-self: flex-start; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">群馬県 / 首都圏から日帰りのゲレンデ</p>
+    <h1 class="resort-name">川場</h1>
+    <p class="pref">群馬県利根郡川場村</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<nav class="jumpnav">
+  <div class="inner">
+    <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
+    <a href="#weather">天気</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#price">料金</a>
+    <a href="#kids">キッズ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#onsen">温泉</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="scale">
+    <div class="section-head"><h2>ゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">42</div><div class="unit">総面積 ha</div></div>
+      <div class="stat"><div class="num">10</div><div class="unit">コース数</div></div>
+      <div class="stat"><div class="num">3,300</div><div class="unit">最長滑走 m</div></div>
+      <div class="stat tier-low"><div class="num">323</div><div class="unit">混雑しにくさ ㎡/台<br>（面積÷駐車場台数）</div><span class="idx-tag">やや混みやすい・10件中9位</span></div>
+      <div class="stat stat-wide"><div class="num">11,032<span class="num-unit">人/時</span></div><div class="unit">リフト輸送力（公式発表値）</div></div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">標高差640m（1,230m〜1,870m）。フード付きリフトもあり初級者でも山頂まで行ける構成。輸送力を駐車場台数で割ると約8.5人時/台で、尾瀬岩鞍（約14.2）・石打丸山（約22.2）と比べるとリフト待ちのリスクはやや高めと推定されます。</p>
+    <a class="map-card" href="https://www.kawaba.co.jp/gelande/course/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">コースマップを見る（公式サイト）</span>
+        <span class="mc-sub">全体図の画像を確認できていないため、公式サイトへのリンクに留めています</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="reviews">
+    <div class="section-head"><h2>口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+          <li>立体駐車場が日帰りスキーセンターと直結。雪が積もらず快適</li>
+          <li>ICから近く日帰りに適している</li>
+          <li>コースが長く、フード付きリフトもあり初級者でも山頂まで行ける</li>
+          <li>ゲレ食が美味しい（窯焼きピザ、インド料理カレーが好評）</li>
+          <li>標高が高く雪質が良いという評価が多い</li>
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+          <li>開発規制の影響かコース幅が細めで、中級者以上向け</li>
+          <li>土曜日は混雑しやすい</li>
+          <li>アイスバーンになることもあり、パウダー狙いなら他エリアが良いとの声も</li>
+          <li>輸送力が近隣ゲレンデより低めで、混雑時はリフト待ちが発生しやすい可能性</li>
+        </ul>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">じゃらん・SURF&SNOW・スキー・スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。</p>
+  </section>
+
+  <section id="weather">
+    <div class="section-head"><h2>天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
+    <div class="weather-toggle" role="group" aria-label="予報の範囲">
+      <button data-range="today" aria-pressed="true">当日</button>
+      <button data-range="2day" aria-pressed="false">2日間</button>
+      <button data-range="week" aria-pressed="false">週間</button>
+    </div>
+    <div class="weather-row" id="weatherRow"><p class="weather-foot">読み込み中…</p></div>
+    <p class="weather-foot">山頂付近（標高約1,300m）の予報。<a href="https://weathernews.jp/s/ski/spot/34201/" target="_blank" rel="noopener">現地の最新情報</a>も合わせてご確認ください。</p>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2>ライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <div class="livecam-card">
+      <div class="lc-head">
+        <div class="lc-head-left">
+          <span class="lc-dot"></span>
+          <span class="lc-text"><span id="lcLabel">ゲレンデ（中間エリア）</span></span>
+        </div>
+        <span class="lc-updated" id="lcUpdated"></span>
+      </div>
+      <div class="lc-player">
+        <img id="lcImg" src="https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch2.jpg" alt="川場ライブカメラ">
+      </div>
+      <div class="lc-tabs" id="lcTabs"></div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2>リフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="calc-card">
+      <div class="daytype-toggle" role="group" aria-label="日付タイプ">
+        <button data-day="normal" aria-pressed="true">通常</button>
+        <button data-day="peak_wd" aria-pressed="false">繁忙期平日</button>
+        <button data-day="peak_we" aria-pressed="false">繁忙期休日</button>
+        <button data-day="special" aria-pressed="false">特定日</button>
+      </div>
+      <div id="catRows"></div>
+      <div class="calc-total">
+        <span class="label">1日券 合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot">シニア・中学生は50歳以上または中学生が対象。繁忙期のシニア・中学生料金は未確認のため通常料金と同額で表示しています。特定日は年末年始等の指定日。</p>
+      <details class="rental-acc">
+        <summary>レンタル料金の目安<span class="chev">▾</span></summary>
+        <div class="rental-table">
+          <div class="rental-row"><span class="r-label">レンタル料金</span><span class="r-price">公式サイトでご確認ください</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="kids">
+    <div class="section-head"><h2>キッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>キッズパーク</span><span class="shop-tag">フード付きスノーエスカレーター完備。そり・スノーストライダー</span></div><span class="shop-tag">未就学児1日券¥2,000</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">3歳〜就学前は1日券¥2,000、2歳以下は無料。「NSDキッズプログラム」会員はキッズパーク無料。最新情報は<a class="outlink" href="https://www.kawaba.co.jp/" target="_blank" rel="noopener">公式サイト</a>でご確認ください。</p>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2>ゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <ul class="shop-list" id="shopList"></ul>
+    <p class="calc-foot" style="margin-top:14px;">ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。</p>
+  </section>
+
+  <section id="onsen">
+    <div class="section-head"><h2>温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>川場温泉センター いこいの湯</span><span class="shop-tag">スキー場から車で約15分・アルカリ性単純温泉</span></div></li>
+      <li><div class="shop-main"><span>かわば田園温泉 楽楽の湯</span><span class="shop-tag">道の駅 川場田園プラザすぐそば</span></div></li>
+      <li><div class="shop-main"><span>川場温泉 悠湯里庵</span><span class="shop-tag">スキー場から約14分・10:30〜20:00</span></div></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">料金・営業時間は変動するため、各施設にご確認ください。</p>
+  </section>
+
+  <section id="access">
+    <div class="section-head"><h2>アクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 沼田IC → 車で約25分（東京から車で約2時間）</dd>
+      <dt>電車</dt>
+      <dd>JR沼田駅・上毛高原駅から無料送迎バスあり（朝・夕のみ、要予約）</dd>
+      <dt>駐車場</dt>
+      <dd>立体駐車場900台＋屋外400台＝計1,300台。立体駐車場は日帰りスキーセンターと直結</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.kawaba.co.jp/access/" target="_blank" rel="noopener">kawaba.co.jp／アクセス詳細</a></dd>
+    </dl>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2>お知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <ul class="news-list" id="newsList"></ul>
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2>公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+    <a class="map-card" href="https://x.com/kawabaski" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">@kawabaski（公式X）</span>
+        <span class="mc-sub">最新の投稿はXでご確認ください</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>営業期間：2025年12月中旬（例年ベース）〜2026年4月19日。ゲレンデマップ画像は各スキー場の著作物のため本ページには掲載せず、公式サイトへ直接リンクしています。</p>
+    <p>データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。</p>
+  </footer>
+</div>
+
+<script>
+  const priceTable = {
+    normal:  { adult: 5900, elem: 2800, senior: 4000, infant: 0 },
+    peak_wd: { adult: 6500, elem: 2800, senior: 4000, infant: 0 },
+    peak_we: { adult: 6800, elem: 2800, senior: 4000, infant: 0 },
+    special: { adult: 7300, elem: 5700, senior: 6800, infant: 0 },
+  };
+  const categories = [
+    { key: "adult",  label: "大人",   cond: null },
+    { key: "elem",   label: "小学生", cond: null },
+    { key: "senior", label: "シニア・中学生", cond: "50歳以上 または 中学生" },
+    { key: "infant", label: "幼児",   cond: "未就学児" },
+  ];
+  const counts = { adult: 2, elem: 0, senior: 0, infant: 0 };
+  let dayType = "normal";
+
+  const catRows = document.getElementById("catRows");
+  categories.forEach(cat => {
+    const row = document.createElement("div");
+    row.className = "cat-row";
+    row.innerHTML = `
+      <div>
+        <span class="cat-label">${cat.label}</span>
+        ${cat.cond ? `<span class="cat-cond">${cat.cond}</span>` : ""}
+      </div>
+      <div class="cat-price" data-price="${cat.key}"></div>
+      <div class="stepper">
+        <button type="button" data-act="dec" data-key="${cat.key}" aria-label="${cat.label}を減らす">−</button>
+        <input type="text" inputmode="numeric" readonly value="${counts[cat.key]}" data-count="${cat.key}">
+        <button type="button" data-act="inc" data-key="${cat.key}" aria-label="${cat.label}を増やす">＋</button>
+      </div>`;
+    catRows.appendChild(row);
+  });
+
+  function render() {
+    const prices = priceTable[dayType];
+    categories.forEach(cat => {
+      document.querySelector(`[data-price="${cat.key}"]`).textContent = "¥" + prices[cat.key].toLocaleString();
+      document.querySelector(`[data-count="${cat.key}"]`).value = counts[cat.key];
+    });
+    const total = categories.reduce((sum, cat) => sum + prices[cat.key] * counts[cat.key], 0);
+    document.getElementById("totalAmount").textContent = "¥" + total.toLocaleString();
+  }
+
+  catRows.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-act]");
+    if (!btn) return;
+    const key = btn.dataset.key;
+    if (btn.dataset.act === "inc") counts[key] = Math.min(counts[key] + 1, 20);
+    else counts[key] = Math.max(counts[key] - 1, 0);
+    render();
+  });
+
+  document.querySelectorAll(".daytype-toggle button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".daytype-toggle button").forEach(b => b.setAttribute("aria-pressed", "false"));
+      btn.setAttribute("aria-pressed", "true");
+      dayType = btn.dataset.day;
+      render();
+    });
+  });
+
+  render();
+
+  // ---- snow depth (実測値, scraped daily by GitHub Actions into snow_data.json) ----
+  (function () {
+    const el = document.getElementById("snowDepth");
+    if (!el) return;
+    fetch("snow_data.json").then(r => r.json()).then(json => {
+      const d = json.resorts && json.resorts.kawaba;
+      if (!d || !d.available) {
+        el.outerHTML = `<p class="snowdepth-unavailable">積雪の実測値は${(d && d.note) || "現在取得できません"}。<a href="https://www.kawaba.co.jp/" target="_blank" rel="noopener">公式サイト</a>でご確認ください。</p>`;
+        return;
+      }
+      el.innerHTML = `
+        <div class="sd-cells">
+          <div class="sd-cell"><div class="sd-num">${d.amount}</div><div class="sd-label">積雪 cm</div></div>
+        </div>
+        <div class="sd-updated">積雪実測値・公式サイト ${d.updated || ""} 更新</div>`;
+    }).catch(() => {
+      el.outerHTML = '<p class="snowdepth-unavailable">積雪データを取得できませんでした。</p>';
+    });
+  })();
+
+  // ---- weather (Open-Meteo, no API key required) ----
+  (function () {
+    const row = document.getElementById("weatherRow");
+    const toggle = document.querySelector(".weather-toggle");
+    if (!row || !toggle) return;
+
+    const ICONS = {
+      sun: '<svg class="w-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+      cloud: '<svg class="w-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18a4 4 0 0 1-.6-7.96A5 5 0 0 1 15 8a3.5 3.5 0 0 1 3.4 4.24A3.5 3.5 0 0 1 17.5 18H6Z"/></svg>',
+      rain: '<svg class="w-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15a4 4 0 0 1-.6-7.96A5 5 0 0 1 15 5a3.5 3.5 0 0 1 3.4 4.24A3.5 3.5 0 0 1 17.5 15H6Z"/><path d="M8 18v2M12 18v2M16 18v2"/></svg>',
+      snow: '<svg class="w-icon snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15a4 4 0 0 1-.6-7.96A5 5 0 0 1 15 5a3.5 3.5 0 0 1 3.4 4.24A3.5 3.5 0 0 1 17.5 15H6Z"/><circle cx="8" cy="19" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="20" r="0.9" fill="currentColor" stroke="none"/><circle cx="16" cy="19" r="0.9" fill="currentColor" stroke="none"/></svg>',
+    };
+    function wmo(code) {
+      if ([71, 73, 75, 77, 85, 86].includes(code)) return { icon: "snow", label: "雪" };
+      if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return { icon: "rain", label: "雨" };
+      if ([95, 96, 99].includes(code)) return { icon: "rain", label: "雷雨" };
+      if ([45, 48].includes(code)) return { icon: "cloud", label: "霧" };
+      if ([1, 2, 3].includes(code)) return { icon: "cloud", label: "曇" };
+      return { icon: "sun", label: "晴" };
+    }
+
+    const LAT = 36.7689, LON = 139.1081;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}` +
+      `&daily=weather_code,temperature_2m_max,temperature_2m_min,snowfall_sum` +
+      `&hourly=temperature_2m,weather_code,snowfall` +
+      `&timezone=Asia%2FTokyo&forecast_days=7`;
+
+    let data = null;
+    let range = "today";
+
+    function renderCards() {
+      if (!data) return;
+      row.innerHTML = "";
+      if (range === "today") {
+        const todayStr = data.hourly.time[0].slice(0, 10);
+        const idxs = data.hourly.time.map((t, i) => i).filter(i => data.hourly.time[i].slice(0, 10) === todayStr && Number(data.hourly.time[i].slice(11, 13)) % 3 === 0);
+        idxs.forEach(i => {
+          const w = wmo(data.hourly.weather_code[i]);
+          const hour = data.hourly.time[i].slice(11, 16);
+          const snow = data.hourly.snowfall[i];
+          row.innerHTML += `<div class="weather-card">
+            <span class="w-time">${hour}</span>
+            ${ICONS[w.icon]}
+            <span class="w-temp">${Math.round(data.hourly.temperature_2m[i])}°</span>
+            ${snow > 0 ? `<span class="w-snow">雪 ${snow.toFixed(1)}cm</span>` : ""}
+          </div>`;
+        });
+      } else {
+        const count = range === "2day" ? 2 : 7;
+        for (let i = 0; i < count; i++) {
+          const w = wmo(data.daily.weather_code[i]);
+          const date = new Date(data.daily.time[i] + "T00:00:00+09:00");
+          const label = i === 0 ? "今日" : i === 1 ? "明日" : `${date.getMonth() + 1}/${date.getDate()}`;
+          const snow = data.daily.snowfall_sum[i];
+          row.innerHTML += `<div class="weather-card">
+            <span class="w-time">${label}</span>
+            ${ICONS[w.icon]}
+            <span class="w-temp">${Math.round(data.daily.temperature_2m_max[i])}°<span class="lo">/${Math.round(data.daily.temperature_2m_min[i])}°</span></span>
+            ${snow > 0 ? `<span class="w-snow">雪 ${snow.toFixed(0)}cm</span>` : ""}
+          </div>`;
+        }
+      }
+    }
+
+    toggle.querySelectorAll("button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        range = btn.dataset.range;
+        toggle.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", "false"));
+        btn.setAttribute("aria-pressed", "true");
+        renderCards();
+      });
+    });
+
+    fetch(url).then(r => r.json()).then(json => { data = json; renderCards(); })
+      .catch(() => { row.innerHTML = '<p class="weather-foot">天気情報の取得に失敗しました。</p>'; });
+  })();
+
+  // ---- livecam: all official camera angles, switchable in-page, auto-refreshed (no outbound navigation) ----
+  (function () {
+    const cams = [
+      { label: "ゲレンデ（中間エリア）", url: "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch2.jpg" },
+      { label: "パノラマハウス", url: "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch3.jpg" },
+      { label: "FLUX PARK", url: "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch4.jpg" },
+      { label: "駐車場", url: "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch5.jpg" },
+    ];
+    const img = document.getElementById("lcImg");
+    const updatedEl = document.getElementById("lcUpdated");
+    const tabs = document.getElementById("lcTabs");
+    const label = document.getElementById("lcLabel");
+    if (!img || !tabs) return;
+    let current = cams[0];
+    function refresh() {
+      img.src = current.url + "?t=" + Date.now();
+      if (updatedEl) updatedEl.textContent = new Date().toLocaleTimeString("ja-JP", { hour: "2-digit", minute: "2-digit" }) + " 更新";
+    }
+    cams.forEach((cam, i) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = cam.label;
+      btn.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+      btn.addEventListener("click", () => {
+        current = cam;
+        label.textContent = cam.label;
+        [...tabs.children].forEach(b => b.setAttribute("aria-pressed", "false"));
+        btn.setAttribute("aria-pressed", "true");
+        refresh();
+      });
+      tabs.appendChild(btn);
+    });
+    refresh();
+    setInterval(refresh, 30000);
+  })();
+
+  // ---- season / open-closed status (computed from real season dates vs viewer's clock) ----
+  const seasonStart = new Date("2025-12-13T00:00:00+09:00");
+  const seasonEnd = new Date("2026-04-19T23:59:00+09:00");
+  const now = new Date();
+  const pill = document.getElementById("statusPill");
+  const statusText = document.getElementById("statusText");
+  const statusNote = document.getElementById("statusNote");
+  if (now >= seasonStart && now <= seasonEnd) {
+    pill.classList.add("open");
+    statusText.textContent = "営業中（シーズン期間内）";
+    statusNote.textContent = "積雪・リフト稼働の最新状況は公式サイトでご確認ください";
+  } else {
+    pill.classList.add("closed");
+    statusText.textContent = "営業期間外";
+    const nextStart = now > seasonEnd ? "次シーズンは例年12月中旬オープン予定" : `オープンまで ${Math.ceil((seasonStart - now) / 86400000)} 日`;
+    statusNote.textContent = nextStart;
+  }
+
+  // ---- gochiso: shops + per-shop Google Maps search link ----
+  const shops = [
+    { name: "ティンバーライン", tag: "総合レストラン・地産地消メニュー", mapQuery: "川場スキー場 ティンバーライン" },
+    { name: "Good diner KAWABA", tag: "ニューヨークスタイルピザ・川場オリジナルバーガー", mapQuery: "川場スキー場 Good diner KAWABA" },
+    { name: "ボスコ", tag: "本格石窯ピザ", mapQuery: "川場スキー場 ボスコ ピザ" },
+    { name: "パノラマハウス", tag: "ゲレンデ中腹・カワバーガー", mapQuery: "川場スキー場 パノラマハウス" },
+    { name: "かわばジェラート", tag: "川場産生乳のジェラート", mapQuery: "川場スキー場 かわばジェラート" },
+  ];
+  const pinSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
+  const shopList = document.getElementById("shopList");
+  shops.forEach(shop => {
+    const li = document.createElement("li");
+    const mapUrl = "https://www.google.com/maps/search/" + encodeURIComponent(shop.mapQuery);
+    li.innerHTML = `<div class="shop-main"><span>${shop.name}</span><span class="shop-tag">${shop.tag}</span></div><a class="maplink" href="${mapUrl}" target="_blank" rel="noopener">${pinSvg}地図で見る</a>`;
+    shopList.appendChild(li);
+  });
+
+  // ---- scraped news (from kawaba.co.jp/topics/, 2026-09-12) ----
+  const news = [
+    { date: "2026年04月19日", title: "2025-26シーズン終了のお知らせ", url: "https://www.kawaba.co.jp/topics/9398/" },
+    { date: "2026年04月17日", title: "明日4/19の雪山登山に関しまして", url: "https://www.kawaba.co.jp/topics/5362/" },
+    { date: "2026年04月14日", title: "FLUX PARK今シーズンの営業終了のお知らせ", url: "https://www.kawaba.co.jp/topics/9357/" },
+    { date: "2026年04月06日", title: "25-26シーズン 営業終了日延長のお知らせ", url: "https://www.kawaba.co.jp/topics/9217/" },
+    { date: "2025年10月06日", title: "300枚限定！30時間券のご案内", url: "https://www.kawaba.co.jp/topics/6913/" },
+  ];
+  const newsList = document.getElementById("newsList");
+  news.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="news-date">${item.date}</span><a href="${item.url}" target="_blank" rel="noopener">${item.title}</a>`;
+    newsList.appendChild(li);
+  });
+</script>
+</body>
+</html>

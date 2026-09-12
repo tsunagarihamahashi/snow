@@ -53,12 +53,32 @@ def scrape_ishiuchi_maruyama():
     return {"available": False, "note": "積雪要素は見つかったが未対応の構造です（要確認）"}
 
 
+def scrape_kawaba():
+    try:
+        soup = fetch("https://www.kawaba.co.jp/")
+    except Exception as e:
+        return {"available": False, "note": f"取得エラー: {e}"}
+    dd = soup.find("dd", class_="weather-amount")
+    if not dd:
+        return {"available": False, "note": "積雪量の要素が見つかりませんでした"}
+    text = dd.get_text(" ", strip=True)
+    m = re.search(r"([\d.]+)\s*CM", text, re.IGNORECASE)
+    if not m:
+        return {"available": False, "note": "積雪量の数値を解析できませんでした"}
+    updated = None
+    update_el = soup.find("span", class_="update-info")
+    if update_el:
+        updated = update_el.get_text(strip=True)
+    return {"available": True, "amount": float(m.group(1)), "updated": updated}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
         "resorts": {
             "oze_iwakura": scrape_oze_iwakura(),
             "ishiuchi_maruyama": scrape_ishiuchi_maruyama(),
+            "kawaba": scrape_kawaba(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

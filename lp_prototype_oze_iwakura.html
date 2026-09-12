@@ -344,6 +344,10 @@
   .news-list a { color: var(--text); text-decoration: none; font-size: 14px; }
   .news-list a:hover { color: var(--ember-500); }
 
+  /* ---- sns embed ---- */
+  .sns-embed { max-width: 550px; margin: 0 auto; min-height: 200px; }
+  .sns-fallback { font-size: 12px; color: var(--text-muted); text-align: center; padding: 20px; border: 1px solid var(--border); border-radius: 12px; }
+
   footer { padding: 28px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.7; }
   footer p { margin: 0 0 8px; }
 
@@ -388,6 +392,7 @@
     <a href="#onsen">温泉</a>
     <a href="#access">アクセス</a>
     <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
   </div>
 </nav>
 
@@ -533,6 +538,15 @@
   <section id="news">
     <div class="section-head"><h2>お知らせ</h2><span class="section-num">10 / 運営情報</span></div>
     <ul class="news-list" id="newsList"></ul>
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2>公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+    <div class="sns-embed">
+      <a class="twitter-timeline" data-height="500" href="https://twitter.com/ozeiwakura_2011?ref_src=twsrc%5Etfw">Tweets by ozeiwakura_2011</a>
+      <noscript><p class="sns-fallback">JavaScriptが無効なため表示できません。<a class="outlink" href="https://x.com/ozeiwakura_2011" target="_blank" rel="noopener">@ozeiwakura_2011（公式X）</a>で最新の投稿を確認できます。</p></noscript>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </section>
 
   <footer>

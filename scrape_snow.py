@@ -122,6 +122,12 @@ def scrape_hodaigi():
     return {"available": True, "amount": float(m.group(1)), "updated": update_text.replace("更新", "").strip() or None}
 
 
+def scrape_naeba():
+    # 公式サイト（princehotels.co.jp）に積雪量の直接表示要素が見当たらなかったため、
+    # 現時点ではスクレイピング未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -131,6 +137,7 @@ def main():
             "kawaba": scrape_kawaba(),
             "marunuma": scrape_marunuma(),
             "hodaigi": scrape_hodaigi(),
+            "naeba": scrape_naeba(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

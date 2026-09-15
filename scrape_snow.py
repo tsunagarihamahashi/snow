@@ -146,6 +146,12 @@ def scrape_kagura():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_maiko():
+    # 公式サイト（maiko-resort.com）に積雪量の直接表示要素が見当たらなかったため、
+    # 現時点ではスクレイピング未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -159,6 +165,7 @@ def main():
             "gala": scrape_gala(),
             "kandatsu": scrape_kandatsu(),
             "kagura": scrape_kagura(),
+            "maiko": scrape_maiko(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

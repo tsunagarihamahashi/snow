@@ -170,6 +170,13 @@ def scrape_shigakogen():
     return {"available": False, "note": "18スキー場共通の積雪データソースが未確認のため今回は取得していません"}
 
 
+def scrape_grandeco():
+    # 公式サイト（grandecoresort.co.jp）のコース/リフト情報ページに積雪cmを表示する
+    # ウィジェットがあるが、現時点では実装方法が未確認のため、
+    # スクレイピング未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -187,6 +194,7 @@ def main():
             "ryuoo": scrape_ryuoo(),
             "sugadaira": scrape_sugadaira(),
             "shigakogen": scrape_shigakogen(),
+            "grandeco": scrape_grandeco(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

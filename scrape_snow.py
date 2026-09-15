@@ -134,6 +134,12 @@ def scrape_gala():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_kandatsu():
+    # 公式サイト（kandatsu.com）に積雪量の直接表示要素が見当たらなかったため、
+    # 現時点ではスクレイピング未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -145,6 +151,7 @@ def main():
             "hodaigi": scrape_hodaigi(),
             "naeba": scrape_naeba(),
             "gala": scrape_gala(),
+            "kandatsu": scrape_kandatsu(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

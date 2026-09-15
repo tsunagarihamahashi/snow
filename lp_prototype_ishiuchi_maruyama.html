@@ -257,6 +257,13 @@
   .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
   .rental-sim { padding: 14px 16px 4px; }
   .rental-sim .calc-total { margin-top: 10px; padding-top: 14px; }
+  .grand-total {
+    display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px;
+    margin-top: 12px; padding: 14px 16px; border-radius: 10px;
+    background: var(--ridge-900); color: var(--snow-50);
+  }
+  .grand-total .label { font-size: 13px; color: var(--ice-400); }
+  .grand-total .amount { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 24px; font-weight: 700; color: var(--snow-50); }
 
   .level-bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 16px; }
   .level-bar span { display: block; height: 100%; }
@@ -454,6 +461,10 @@
             <span class="label">レンタル合計</span>
             <span class="amount" id="rentalTotalAmount">¥0</span>
           </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
         </div>
       </details>
     </div>
@@ -634,6 +645,13 @@
     document.getElementById("calcFoot").textContent = notes.length ? notes.join(" / ") : "行を追加すると、券種の異なる組み合わせも計算できます。";
   }
 
+  let liftTotal = 0;
+  let rentalTotal = 0;
+  function updateGrandTotal() {
+    const el = document.getElementById("grandTotalAmount");
+    if (el) el.textContent = "¥" + (liftTotal + rentalTotal).toLocaleString();
+  }
+
   function updateTotal() {
     let total = 0;
     lines.forEach(line => {
@@ -642,6 +660,8 @@
       total += price * line.count;
     });
     document.getElementById("totalAmount").textContent = "¥" + total.toLocaleString();
+    liftTotal = total;
+    updateGrandTotal();
   }
 
   lineList.addEventListener("click", (e) => {
@@ -753,6 +773,8 @@
       total += cat.price * line.count;
     });
     document.getElementById("rentalTotalAmount").textContent = "¥" + total.toLocaleString();
+    rentalTotal = total;
+    updateGrandTotal();
   }
 
   rentalLineList.addEventListener("click", (e) => {

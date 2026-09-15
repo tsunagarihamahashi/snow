@@ -262,6 +262,13 @@
   .rental-discount { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text); margin-top: 4px; padding-bottom: 4px; cursor: pointer; }
   .rental-discount input { accent-color: var(--ember-500); width: 16px; height: 16px; flex: none; }
   .rental-legend { font-size: 12px; color: var(--text-muted); margin: 0 0 10px; }
+  .grand-total {
+    display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px;
+    margin-top: 12px; padding: 14px 16px; border-radius: 10px;
+    background: var(--ridge-900); color: var(--snow-50);
+  }
+  .grand-total .label { font-size: 13px; color: var(--ice-400); }
+  .grand-total .amount { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 24px; font-weight: 700; color: var(--snow-50); }
   @media (max-width: 480px) {
     .rcat-row {
       grid-template-columns: 1fr auto; row-gap: 8px;
@@ -532,6 +539,10 @@
             <span class="label">レンタル合計</span>
             <span class="amount" id="rentalTotalAmount">¥0</span>
           </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
         </div>
       </details>
     </div>
@@ -616,6 +627,12 @@
   ];
   const counts = { adult: 2, elem: 0, senior: 0, infant: 0 };
   let dayType = "weekday";
+  let liftTotal = 0;
+  let rentalTotal = 0;
+  function updateGrandTotal() {
+    const el = document.getElementById("grandTotalAmount");
+    if (el) el.textContent = "¥" + (liftTotal + rentalTotal).toLocaleString();
+  }
 
   const catRows = document.getElementById("catRows");
   categories.forEach(cat => {
@@ -643,6 +660,8 @@
     });
     const total = categories.reduce((sum, cat) => sum + prices[cat.key] * counts[cat.key], 0);
     document.getElementById("totalAmount").textContent = "¥" + total.toLocaleString();
+    liftTotal = total;
+    updateGrandTotal();
   }
 
   catRows.addEventListener("click", (e) => {
@@ -704,7 +723,10 @@
       setCount += rentalCounts[cat.key];
     });
     const discount = document.getElementById("lodgeDiscount").checked ? setCount * 1000 : 0;
-    document.getElementById("rentalTotalAmount").textContent = "¥" + Math.max(total - discount, 0).toLocaleString();
+    const rentalNet = Math.max(total - discount, 0);
+    document.getElementById("rentalTotalAmount").textContent = "¥" + rentalNet.toLocaleString();
+    rentalTotal = rentalNet;
+    updateGrandTotal();
   }
 
   rentalCatRows.addEventListener("click", (e) => {

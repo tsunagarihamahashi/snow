@@ -258,6 +258,13 @@
   .rental-row .r-price { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; color: var(--text-muted); text-align: right; }
   .rental-sim { padding: 14px 16px 4px; }
   .rental-sim .calc-total { margin-top: 10px; padding-top: 14px; }
+  .grand-total {
+    display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px;
+    margin-top: 12px; padding: 14px 16px; border-radius: 10px;
+    background: var(--ridge-900); color: var(--snow-50);
+  }
+  .grand-total .label { font-size: 13px; color: var(--ice-400); }
+  .grand-total .amount { font-family: "Roboto Mono", monospace; font-variant-numeric: tabular-nums; font-size: 24px; font-weight: 700; color: var(--snow-50); }
   .line-item { padding: 16px 0; border-top: 1px solid var(--border); }
   .line-item:first-of-type { border-top: none; padding-top: 4px; }
   .line-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
@@ -522,6 +529,10 @@
             <span class="label">レンタル合計</span>
             <span class="amount" id="rentalTotalAmount">¥0</span>
           </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
           <p class="calc-foot">大人は高校生以上、小人は中学生以下。事前決済利用で1品目あたり200円程度割引の場合あり。</p>
         </div>
       </details>
@@ -603,6 +614,12 @@
   ];
   const counts = { adult: 2, elem: 0, senior: 0, infant: 0 };
   let dayType = "normal";
+  let liftTotal = 0;
+  let rentalTotal = 0;
+  function updateGrandTotal() {
+    const el = document.getElementById("grandTotalAmount");
+    if (el) el.textContent = "¥" + (liftTotal + rentalTotal).toLocaleString();
+  }
 
   const catRows = document.getElementById("catRows");
   categories.forEach(cat => {
@@ -630,6 +647,8 @@
     });
     const total = categories.reduce((sum, cat) => sum + prices[cat.key] * counts[cat.key], 0);
     document.getElementById("totalAmount").textContent = "¥" + total.toLocaleString();
+    liftTotal = total;
+    updateGrandTotal();
   }
 
   catRows.addEventListener("click", (e) => {
@@ -744,6 +763,8 @@
       total += cat.price * line.count;
     });
     document.getElementById("rentalTotalAmount").textContent = "¥" + total.toLocaleString();
+    rentalTotal = total;
+    updateGrandTotal();
   }
 
   rentalLineList.addEventListener("click", (e) => {

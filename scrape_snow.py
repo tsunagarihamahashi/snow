@@ -164,6 +164,12 @@ def scrape_sugadaira():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_shigakogen():
+    # 18スキー場が個別に積雪量を公開しており、全山共通の単一の積雪量データソースが
+    # 見当たらなかったため、現時点ではスクレイピング未対応として正直に記録する。
+    return {"available": False, "note": "18スキー場共通の積雪データソースが未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -180,6 +186,7 @@ def main():
             "maiko": scrape_maiko(),
             "ryuoo": scrape_ryuoo(),
             "sugadaira": scrape_sugadaira(),
+            "shigakogen": scrape_shigakogen(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

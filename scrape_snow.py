@@ -91,6 +91,37 @@ def scrape_marunuma():
     return {"available": True, "amount": float(m.group(1)), "updated": None}
 
 
+def scrape_hodaigi():
+    # このサイトはオフシーズンでも前シーズン最終日の数値を表示し続けるため、
+    # 更新日が古い（3日以上前）場合はスクレイピングできても「古いデータ」として扱う。
+    try:
+        soup = fetch("https://hodaigi.jp/gelande-guide/")
+    except Exception as e:
+        return {"available": False, "note": f"取得エラー: {e}"}
+    dt = soup.find("dt", string=lambda s: s and "積雪" in s)
+    if not dt:
+        return {"available": False, "note": "積雪量の要素が見つかりませんでした"}
+    dd = dt.find_next_sibling("dd")
+    text = dd.get_text(strip=True) if dd else ""
+    m = re.match(r"^([\d.]+)\s*cm$", text, re.IGNORECASE)
+    if not m:
+        return {"available": False, "note": "積雪量の数値を解析できませんでした（オフシーズンの可能性）"}
+    update_text = ""
+    date_m = None
+    for el in soup.find_all("span", class_="update"):
+        t = el.get_text(strip=True)
+        m2 = re.search(r"(\d{4})\.(\d{1,2})\.(\d{1,2})", t)
+        if m2:
+            update_text = t
+            date_m = m2
+            break
+    if date_m:
+        updated_date = datetime(int(date_m.group(1)), int(date_m.group(2)), int(date_m.group(3)), tzinfo=timezone.utc)
+        if (datetime.now(timezone.utc) - updated_date).days > 3:
+            return {"available": False, "note": f"公式サイトの表示が{update_text}のまま更新されていません（オフシーズンの可能性）"}
+    return {"available": True, "amount": float(m.group(1)), "updated": update_text.replace("更新", "").strip() or None}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -99,6 +130,7 @@ def main():
             "ishiuchi_maruyama": scrape_ishiuchi_maruyama(),
             "kawaba": scrape_kawaba(),
             "marunuma": scrape_marunuma(),
+            "hodaigi": scrape_hodaigi(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

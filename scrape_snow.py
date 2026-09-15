@@ -72,6 +72,25 @@ def scrape_kawaba():
     return {"available": True, "amount": float(m.group(1)), "updated": updated}
 
 
+def scrape_marunuma():
+    try:
+        soup = fetch("https://www.marunuma.jp/winter/")
+    except Exception as e:
+        return {"available": False, "note": f"取得エラー: {e}"}
+    title_el = soup.find("h4", class_="weatherarea-bottom-snow-title")
+    if not title_el:
+        return {"available": False, "note": "積雪量の要素が見つかりませんでした"}
+    desc_el = title_el.find_next_sibling("p", class_="weatherarea-bottom-snow-desc")
+    if not desc_el:
+        return {"available": False, "note": "積雪量の要素が見つかりませんでした"}
+    span = desc_el.find("span", class_="oswald")
+    text = span.get_text(strip=True) if span else ""
+    m = re.match(r"^([\d.]+)$", text)
+    if not m:
+        return {"available": False, "note": "積雪量の数値を解析できませんでした（オフシーズンの可能性）"}
+    return {"available": True, "amount": float(m.group(1)), "updated": None}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -79,6 +98,7 @@ def main():
             "oze_iwakura": scrape_oze_iwakura(),
             "ishiuchi_maruyama": scrape_ishiuchi_maruyama(),
             "kawaba": scrape_kawaba(),
+            "marunuma": scrape_marunuma(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

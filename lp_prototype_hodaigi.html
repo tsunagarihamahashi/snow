@@ -341,7 +341,7 @@
   .livecam-card .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
   .livecam-card .lc-updated { font-size: 11px; color: var(--ice-400); font-family: "Roboto Mono", monospace; }
   .livecam-card .lc-player { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
-  .livecam-card .lc-player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .livecam-card .lc-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .livecam-card .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
   .livecam-card .lc-tabs button {
     padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
@@ -495,13 +495,18 @@
 
   <section id="livecam">
     <div class="section-head"><h2>群馬みなかみほうだいぎスキー場のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
-    <a class="map-card" href="https://hodaigi.jp/live-camera/" target="_blank" rel="noopener">
-      <div class="mc-text">
-        <span class="mc-title">ライブカメラを見る（公式サイト）</span>
-        <span class="mc-sub">公式のファミリーゲレンデ映像はYouTube側の設定で埋め込みが無効化されているため、公式サイトへのリンクに留めています</span>
+    <div class="livecam-card">
+      <div class="lc-head">
+        <div class="lc-head-left">
+          <span class="lc-dot"></span>
+          <span class="lc-text">ファミリーゲレンデ</span>
+        </div>
       </div>
-      <span class="mc-arrow">→</span>
-    </a>
+      <div class="lc-player">
+        <iframe src="https://www.youtube.com/embed/FNrVE0yzEpA?autoplay=1&mute=1" title="群馬みなかみほうだいぎスキー場ライブカメラ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:10px;">撮影対象：たんぽぽコース・ファミリーゲレンデ・第6ペアリフト乗り場・第8クワッドリフト乗り場・駐車場付近</p>
   </section>
 
   <section id="price">

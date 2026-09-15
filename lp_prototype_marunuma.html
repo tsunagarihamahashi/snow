@@ -341,7 +341,8 @@
   .livecam-card .lc-text { font-size: 13px; font-weight: 700; color: #fff; }
   .livecam-card .lc-updated { font-size: 11px; color: var(--ice-400); font-family: "Roboto Mono", monospace; }
   .livecam-card .lc-player { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
-  .livecam-card .lc-player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .livecam-card .lc-player img,
+  .livecam-card .lc-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
   .livecam-card .lc-tabs { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
   .livecam-card .lc-tabs button {
     padding: 6px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
@@ -502,10 +503,9 @@
           <span class="lc-dot"></span>
           <span class="lc-text"><span id="lcLabel">バイオレットコース（標高1500m）</span></span>
         </div>
-        <span class="lc-updated" id="lcUpdated"></span>
       </div>
       <div class="lc-player">
-        <img id="lcImg" src="https://www.marunuma.jp/live/maru93.jpg" alt="丸沼高原ライブカメラ">
+        <iframe id="lcFrame" src="https://www.youtube.com/embed/cqvEOhOzN2o?autoplay=1&mute=1" title="丸沼高原ライブカメラ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="lc-tabs" id="lcTabs"></div>
     </div>
@@ -916,38 +916,31 @@
       .catch(() => { row.innerHTML = '<p class="weather-foot">天気情報の取得に失敗しました。</p>'; });
   })();
 
-  // ---- livecam: official static-image angles, switchable in-page, auto-refreshed (no outbound navigation) ----
+  // ---- livecam: YouTube live embeds, switchable in-page ----
+  // 丸沼高原公式ライブ映像ページには5アングル掲載されていたが、実際にiframe埋め込みで
+  // 検証したところ動作したのはこの2本のみ（他3本は非公開/削除済み/再生不可）。
   (function () {
     const cams = [
-      { label: "バイオレットコース（標高1500m）", url: "https://www.marunuma.jp/live/maru93.jpg" },
-      { label: "国道120号入口", url: "https://www.marunuma.jp/live/maru126.jpg" },
+      { label: "バイオレットコース（標高1500m）", id: "cqvEOhOzN2o" },
+      { label: "日光白根山", id: "0Q2YZBnp7vk" },
     ];
-    const img = document.getElementById("lcImg");
-    const updatedEl = document.getElementById("lcUpdated");
+    const frame = document.getElementById("lcFrame");
     const tabs = document.getElementById("lcTabs");
     const label = document.getElementById("lcLabel");
-    if (!img || !tabs) return;
-    let current = cams[0];
-    function refresh() {
-      img.src = current.url + "?t=" + Date.now();
-      if (updatedEl) updatedEl.textContent = new Date().toLocaleTimeString("ja-JP", { hour: "2-digit", minute: "2-digit" }) + " 更新";
-    }
+    if (!frame || !tabs) return;
     cams.forEach((cam, i) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.textContent = cam.label;
       btn.setAttribute("aria-pressed", i === 0 ? "true" : "false");
       btn.addEventListener("click", () => {
-        current = cam;
         label.textContent = cam.label;
+        frame.src = `https://www.youtube.com/embed/${cam.id}?autoplay=1&mute=1`;
         [...tabs.children].forEach(b => b.setAttribute("aria-pressed", "false"));
         btn.setAttribute("aria-pressed", "true");
-        refresh();
       });
       tabs.appendChild(btn);
     });
-    refresh();
-    setInterval(refresh, 60000);
   })();
 
   // ---- season / open-closed status (computed from real season dates vs viewer's clock) ----

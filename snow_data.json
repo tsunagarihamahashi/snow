@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-14T23:38:44.567880+00:00",
+  "scraped_at": "2026-09-15T23:20:29.200843+00:00",
   "resorts": {
     "oze_iwakura": {
       "available": true,
@@ -16,6 +16,50 @@
       "available": true,
       "amount": 0.0,
       "updated": "2026/04/26/16:22"
+    },
+    "marunuma": {
+      "available": false,
+      "note": "積雪量の数値を解析できませんでした（オフシーズンの可能性）"
+    },
+    "hodaigi": {
+      "available": false,
+      "note": "公式サイトの表示が2026.3.29 06:30更新のまま更新されていません（オフシーズンの可能性）"
+    },
+    "naeba": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "gala": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "kandatsu": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "kagura": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "maiko": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "ryuoo": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "sugadaira": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "shigakogen": {
+      "available": false,
+      "note": "18スキー場共通の積雪データソースが未確認のため今回は取得していません"
+    },
+    "grandeco": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
     }
   }
 }

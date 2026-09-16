@@ -1,0 +1,283 @@
+{
+  "id": "maiko",
+  "title": "舞子スノーリゾート",
+  "name": "舞子スノーリゾート",
+  "eyebrow": "新潟県 / 関越道ICから1分",
+  "pref": "新潟県南魚沼市舞子",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "平日8:30<br/>土休日8:00"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "平日8:30<br/>土休日8:00"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜16:45"
+      },
+      {
+        "label": "ナイター",
+        "value": "15:30〜19:00/20:00"
+      }
+    ],
+    "foot": "ナイターは12/29〜1/2・1月〜3月中旬の土日限定（日程により終了時刻が異なる）。天候により時刻は前後する場合あり"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "115",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "26",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "6,000",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "660",
+        "num_unit": null,
+        "unit": "標高差 m<br/>（260〜920m）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "11",
+        "num_unit": "基",
+        "unit": "索道数（ゴンドラ1・リフト10）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "コース26本の内訳は初級40%・中級40%・上級20%（公式サイトより）。長峰・奥添地の2エリア構成、最大斜度32度。ツリーラン滑走エリアもあり（事前申請制）。",
+    "map_img": {
+      "src": "https://www.maiko-resort.com/wp/wp-content/themes/maiko2024/assets/images/liftmap/lift.gif",
+      "alt": "舞子スノーリゾート コースマップ（クリックで拡大）"
+    },
+    "map_source_note": null,
+    "cards": []
+  },
+  "reviews": {
+    "good": [
+      "関越道 塩沢石打ICから約1分と圧倒的にアクセスが良い",
+      "ゲレンデが広く、長峰・奥添地の2エリアで斜面のバリエーションが豊富",
+      "未就学児でも滑れるほど緩やかな初級コースが長く続く",
+      "大型ゴンドラや温泉など施設が充実、バイキングレストランも好評",
+      "毎年訪れるリピーターが多い安定したゲレンデ"
+    ],
+    "bad": [
+      "上級コースの割合はやや少なめ（初級40%・中級40%・上級20%）",
+      "アクセスが良い分、休日は混雑しやすい"
+    ],
+    "foot": "アソビュー！・スキー&スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.955,
+    "lon": 138.871,
+    "foot": "南魚沼市舞子付近（標高約400m）の予報。<a href=\"https://weathernews.jp/ski/spot/35464/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "maiko",
+    "fallback_url": "https://www.maiko-resort.com/liftmap.html",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [
+      {
+        "href": "https://www.maiko-resort.com/liftmap.html",
+        "title": "ライブカメラ・リフト運行状況を見る（公式サイト）",
+        "sub": "公式のライブカメラは現在配信エラーのため、リフト運行状況マップへのリンクに留めています"
+      }
+    ],
+    "foot": null,
+    "type": "linkout"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "flat",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": null
+      },
+      {
+        "key": "teen",
+        "label": "中高生",
+        "cond": null
+      },
+      {
+        "key": "child",
+        "label": "小学生",
+        "cond": null
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "teen": 0,
+      "child": 0
+    },
+    "prices": {
+      "adult": 7000,
+      "teen": 6000,
+      "child": 3500
+    },
+    "foot": "未就学児は保護者同伴時2名まで無料。ナイター料金（大人¥2,200／中高生¥1,700／小学生¥1,200）等は別途公式サイトでご確認ください。障がい者割引もあります。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "周辺レンタルショップの参考価格。店舗により料金は異なるため公式サイト・現地でご確認ください。",
+    "mode": "stepper",
+    "items": [
+      {
+        "key": "set_adult",
+        "label": "スキー／スノーボードセット・大人",
+        "price": 5500
+      },
+      {
+        "key": "set_child",
+        "label": "スキー／スノーボードセット・子供",
+        "price": 3500
+      },
+      {
+        "key": "wear_adult",
+        "label": "ウェア上下・大人",
+        "price": 4000
+      },
+      {
+        "key": "wear_child",
+        "label": "ウェア上下・子供",
+        "price": 2500
+      }
+    ]
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "スマイルキッズパーク（長峰エリア）",
+        "tag": "スノーエスカレーター常設・各種そり利用可",
+        "right": "大人・子供¥800",
+        "link": null
+      },
+      {
+        "name": "スマイルキッズパーク（舞子エリア）",
+        "tag": "雪遊び専用エリア",
+        "right": "無料",
+        "link": null
+      }
+    ],
+    "foot": "2歳以下は無料。営業期間は2026年12月19日〜2027年3月28日（予定）。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "スパ舞子温泉",
+        "tag": "日帰りスキーセンター4階・ゴンドラ乗り場直結、大きな窓からゲレンデを一望",
+        "right": "大人¥1,000／中高生¥900／小人¥800",
+        "link": null
+      }
+    ],
+    "foot": "未就学児無料。バスタオルレンタル¥300・フェイスタオル¥150。営業は平日14:30〜17:30、土日祝14:00〜18:00（受付は終了30分前まで）。弱アルカリ性の温泉。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "カフェテリアビュー",
+        "tag": "舞子エリア最大のレストラン・厚切りベーコンのカルボナーラ、舞子釜めし",
+        "mapQuery": "舞子スノーリゾート カフェテリアビュー"
+      },
+      {
+        "name": "レストランテラス",
+        "tag": "スキー場初のセルフプレートランチ・土日祝限定",
+        "mapQuery": "舞子スノーリゾート レストランテラス"
+      },
+      {
+        "name": "メインダイニング ギャラリー",
+        "tag": "舞子高原ホテルの和洋中バイキング（宿泊者以外も利用可）",
+        "mapQuery": "舞子スノーリゾート ギャラリー"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 塩沢石打IC → 約1km・車で約1分"
+      },
+      {
+        "k": "電車",
+        "v": "越後湯沢駅から無料シャトルバスで約20分"
+      },
+      {
+        "k": "駐車場",
+        "v": "約2,000台。平日無料（一部繁忙日を除く）、土曜・繁忙日は¥1,000、日祝は無料"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.maiko-resort.com/winter/access.html\" rel=\"noopener\" target=\"_blank\">maiko-resort.com／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from maiko-resort.com/news, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年09月07日",
+        "title": "ふるさと納税返礼品に「舞子スノーリゾート1dayパス」を出品中",
+        "url": "https://www.maiko-resort.com/news/furusatonouzei2026snow.html"
+      },
+      {
+        "date": "2026年09月07日",
+        "title": "舞子スノーリゾート2026-2027採用情報",
+        "url": "https://www.maiko-resort.com/news/recruit.html"
+      },
+      {
+        "date": "2026年09月02日",
+        "title": "【早割第1弾9/30までが最得】2026-2027舞子シーズン券のご案内",
+        "url": "https://www.maiko-resort.com/news/2027seasonticket.html"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/maiko_snow",
+    "title": "@maiko_snow（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：2026年12月19日〜2027年3月28日（予定）。コースマップ画像は舞子スノーリゾート公式サイト掲載の著作物です。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-19",
+    "end": "2027-03-28",
+    "approximate": false,
+    "next_note": "次シーズンは例年12月下旬オープン予定"
+  }
+}

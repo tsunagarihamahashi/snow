@@ -1,0 +1,586 @@
+{
+  "id": "ishiuchi_maruyama",
+  "title": "石打丸山スキー場",
+  "name": "石打丸山スキー場",
+  "eyebrow": "新潟県 / 湯沢エリア",
+  "pref": "新潟県南魚沼市石打",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "8:30〜"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "8:30〜17:00"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜17:00"
+      },
+      {
+        "label": "ナイター",
+        "value": "16:00〜20:00"
+      }
+    ],
+    "foot": "ゴンドラは「サンライズエクスプレス」。ナイターは対象5リフトのみ運行（12/27〜2/28は毎日、以降3/28まで金土）"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "230",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "23",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "13",
+        "num_unit": null,
+        "unit": "リフト・ゴンドラ基数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "2,300",
+        "num_unit": null,
+        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
+        "wide": false,
+        "tier": "good",
+        "idx_tag": "混みにくい方・10件中1位"
+      },
+      {
+        "num": "約22,200",
+        "num_unit": "人/時",
+        "unit": "リフト輸送力（クワッド4基・トリプル5基・ペア3基・ゴンドラ1基、標準値による推定）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": [
+      {
+        "pct": 30.0,
+        "color": "var(--pine-600)",
+        "label": "初級 30%"
+      },
+      {
+        "pct": 40.0,
+        "color": "var(--amber-600)",
+        "label": "中級 40%"
+      },
+      {
+        "pct": 30.0,
+        "color": "var(--ridge-700)",
+        "label": "上級 30%"
+      }
+    ],
+    "notice": null,
+    "foot": "輸送力を駐車場台数で割ると約22.2人時/台で、リフト待ちのリスクは低めと推定されます（尾瀬岩鞍は約14.2人時/台。算出済み2ゲレンデでの比較）。",
+    "map_img": {
+      "src": "https://ishiuchi.or.jp/winter/wp/wp-content/uploads/2025/12/25-26_ishiuchi_A5%E3%83%9E%E3%83%83%E3%83%97.png",
+      "alt": "石打丸山スキー場 コースマップ（クリックで拡大）"
+    },
+    "map_source_note": "画像提供: 石打丸山スキー場（<a href=\"https://ishiuchi.or.jp/winter/ski/lift-course/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>）",
+    "cards": [
+      {
+        "href": "https://ishiuchi.or.jp/winter/ski/lift-course/",
+        "title": "最新の運行状況を見る（公式サイト）",
+        "sub": "当日のコース開放・リフト稼働状況はこちら"
+      }
+    ]
+  },
+  "reviews": {
+    "good": [
+      "総面積236haとポテンシャルが高く、初級〜上級まで楽しめるコース設計",
+      "銀座ゲレンデは幅200mで初心者も安心",
+      "ナイター対応エリアが広く照明も明るい。夜の雪質も良いという声",
+      "ゲレ食のバリエーションが豊富で「ハシゴ」が楽しい（イタリアン等も充実）",
+      "越後湯沢駅から無料シャトルで約20分、石打駅から徒歩7分とアクセス良好"
+    ],
+    "bad": [
+      "施設に古さがあり、大きなスキーセンターがない",
+      "コース・リフトの配置が複雑でわかりにくく、乗り継ぎでスケーティング必須な箇所がある",
+      "短いリフトが多く山頂到達に時間がかかる",
+      "駐車場がわかりにくいという声",
+      "クワッドリフトに屋根がなく雨天時は辛い"
+    ],
+    "foot": "じゃらん・SURF&SNOW・スキー・スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.9706,
+    "lon": 138.7921,
+    "foot": "山頂付近（標高約1,000m）の予報。<a href=\"https://tenki.jp/mountain/famous/6/9/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "ishiuchi_maruyama",
+    "fallback_url": "https://ishiuchi.or.jp/winter/",
+    "layout": "top_mid_base"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "山頂から魚沼盆地の展望",
+    "type": "image",
+    "cams": [
+      {
+        "label": "山頂から魚沼盆地の展望",
+        "url": "https://livecam.ishiuchi.jp/cgi/maruview1_50.cgi"
+      },
+      {
+        "label": "サンライズエクスプレス降り場付近",
+        "url": "https://livecam.ishiuchi.jp/cgi/maruview2_50.cgi"
+      },
+      {
+        "label": "北丸山ファミリーゲレンデ",
+        "url": "https://livecam.ishiuchi.jp/cgi/maruview4_50.cgi"
+      },
+      {
+        "label": "ハツカ石ファミリーゲレンデ",
+        "url": "https://livecam.ishiuchi.jp/cgi/maruview3_50.cgi"
+      },
+      {
+        "label": "銀座ゲレンデ 中腹",
+        "url": "https://livecam.ishiuchi.jp/cgi/maruview5.cgi"
+      },
+      {
+        "label": "銀座ゲレンデ 下部",
+        "url": "https://livecam.ishiuchi.jp/cgi/camview1_50.cgi"
+      }
+    ],
+    "alt": "石打丸山スキー場ライブカメラ",
+    "refresh_ms": 30000,
+    "aspect": "4/3"
+  },
+  "price": {
+    "intro": "人（区分）ごとに券種・チャネルを別々に選べます。例：お子様は1日券、大人は4時間券。",
+    "total_label": "合計",
+    "mode": "lines",
+    "ticket_types": [
+      {
+        "id": "flex",
+        "label": "フレックス(8.5h)",
+        "channels": [
+          "web_domestic",
+          "web_general",
+          "madoguchi"
+        ],
+        "channelLabels": {
+          "web_domestic": "WEB国内",
+          "web_general": "WEB一般",
+          "madoguchi": "窓口"
+        },
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "mode": "channel",
+            "prices": {
+              "web_domestic": 6000,
+              "web_general": 7400,
+              "madoguchi": 7900
+            },
+            "note": "WEB国内は日により5,200〜6,800円で変動（目安を表示）"
+          },
+          {
+            "key": "elemMid",
+            "label": "小・中学生",
+            "cond": "6〜15歳",
+            "mode": "channel",
+            "prices": {
+              "web_domestic": 3200,
+              "web_general": 4000,
+              "madoguchi": 4200
+            }
+          },
+          {
+            "key": "senior",
+            "label": "シニア",
+            "cond": "65歳以上・窓口のみ",
+            "mode": "fixed",
+            "price": 6700
+          },
+          {
+            "key": "kids",
+            "label": "キッズ",
+            "cond": "4〜6歳・全チャネル共通",
+            "mode": "fixed",
+            "price": 1500
+          }
+        ]
+      },
+      {
+        "id": "allday",
+        "label": "オールデイ(〜20時)",
+        "channels": [
+          "web_general",
+          "madoguchi"
+        ],
+        "channelLabels": {
+          "web_general": "WEB",
+          "madoguchi": "窓口"
+        },
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "mode": "channel",
+            "prices": {
+              "web_general": 8300,
+              "madoguchi": 8700
+            }
+          },
+          {
+            "key": "elemMid",
+            "label": "小・中学生",
+            "cond": "6〜15歳",
+            "mode": "channel",
+            "prices": {
+              "web_general": 4400,
+              "madoguchi": 4600
+            }
+          },
+          {
+            "key": "senior",
+            "label": "シニア",
+            "cond": "65歳以上・窓口のみ",
+            "mode": "fixed",
+            "price": 7400
+          }
+        ]
+      },
+      {
+        "id": "hour4",
+        "label": "4時間券",
+        "channels": [
+          "common"
+        ],
+        "channelLabels": {
+          "common": "共通"
+        },
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "mode": "fixed",
+            "price": 6300
+          },
+          {
+            "key": "elemMid",
+            "label": "小・中学生",
+            "cond": "6〜15歳",
+            "mode": "fixed",
+            "price": 3200
+          },
+          {
+            "key": "senior",
+            "label": "シニア",
+            "cond": "65歳以上・窓口のみ",
+            "mode": "fixed",
+            "price": 5300
+          }
+        ]
+      },
+      {
+        "id": "nighter",
+        "label": "ナイター(16-20時)",
+        "channels": [
+          "web_general",
+          "madoguchi"
+        ],
+        "channelLabels": {
+          "web_general": "WEB",
+          "madoguchi": "窓口"
+        },
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "mode": "channel",
+            "prices": {
+              "web_general": 3600,
+              "madoguchi": 3800
+            }
+          },
+          {
+            "key": "elemMid",
+            "label": "小・中学生",
+            "cond": "6〜15歳・全チャネル共通",
+            "mode": "fixed",
+            "price": 2000
+          },
+          {
+            "key": "kids",
+            "label": "キッズ",
+            "cond": "4〜6歳・全チャネル共通",
+            "mode": "fixed",
+            "price": 1000
+          }
+        ]
+      }
+    ],
+    "default_line": {
+      "category": "adult",
+      "ticket": "flex",
+      "channel": "web_domestic",
+      "count": 2
+    },
+    "add_line": {
+      "category": "adult",
+      "ticket": "flex",
+      "channel": "web_domestic",
+      "count": 1
+    },
+    "foot": null,
+    "empty_note": "行を追加すると、券種の異なる組み合わせも計算できます。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション（1日）",
+    "legend": null,
+    "foot": null,
+    "mode": "cart",
+    "plans": [
+      {
+        "id": "basic",
+        "label": "基本セット（板・ブーツ・ストック等）",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 7000
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 3600
+          }
+        ]
+      },
+      {
+        "id": "full",
+        "label": "フルセット（基本セット＋ウェア）",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 12000
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 6200
+          }
+        ]
+      },
+      {
+        "id": "perf",
+        "label": "パフォーマンスモデル基本セット",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 8500
+          }
+        ]
+      },
+      {
+        "id": "wear",
+        "label": "ウェアのみ",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 6000
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 3600
+          }
+        ]
+      },
+      {
+        "id": "helmet",
+        "label": "ヘルメット",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 2000
+          }
+        ]
+      },
+      {
+        "id": "boots",
+        "label": "長靴",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 2000
+          }
+        ]
+      }
+    ],
+    "default_line": {
+      "plan": "basic",
+      "category": "adult",
+      "count": 1
+    }
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "ザ・ヴェランダ石打丸山（中腹）",
+        "tag": "サンライズエクスプレス降車後すぐ。スノーエスカレーター・スノーレーサー・ソリ等",
+        "right": "ゴンドラ往復券／リフト1日券に含む",
+        "link": null
+      },
+      {
+        "name": "ゆきあそびパーク（山麓）",
+        "tag": "リゾートセンター横・駐車場併設",
+        "right": "¥1,000（リフト券保持者は無料）",
+        "link": null
+      }
+    ],
+    "foot": "4歳以上未就学児向け「キッズ券」は両エリア利用料＋ゴンドラ・リフト乗車＋ドームテント利用がセット。最新情報は<a class=\"outlink\" href=\"https://ishiuchi.or.jp/winter/ski/kids-snowland/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>でご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "ハツカ石温泉 石打ユングパルナス",
+        "tag": "スキー場ハツカ石口すぐそば・冬季24時間営業（清掃8:00〜10:00除く）",
+        "right": null,
+        "link": {
+          "href": "http://www.yungparunas.com/",
+          "label": "公式サイト"
+        }
+      },
+      {
+        "name": "丸山温泉 古城館",
+        "tag": "公式サイト紹介の周辺施設",
+        "right": null,
+        "link": {
+          "href": "https://kojyokan.com/",
+          "label": "公式サイト"
+        }
+      },
+      {
+        "name": "塩沢江戸川荘",
+        "tag": "公式サイト紹介の周辺施設",
+        "right": null,
+        "link": {
+          "href": "https://edogawasou.com/",
+          "label": "公式サイト"
+        }
+      }
+    ],
+    "foot": "料金・営業時間は変動するため、各施設または<a class=\"outlink\" href=\"https://ishiuchi.or.jp/winter/faq-list/%E8%BF%91%E3%81%8F%E3%81%AB%E6%B8%A9%E6%B3%89%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>でご確認ください。"
+  },
+  "gochiso": {
+    "badge": {
+      "tier": "good",
+      "spans": [
+        "ゲレ飯コスパ指数",
+        "1.00",
+        "／ コスパ良好・検証7ゲレンデ中1位（飲食店24店舗・公式値）"
+      ]
+    },
+    "shops": [
+      {
+        "name": "大丸",
+        "tag": "本格焼肉",
+        "mapQuery": "石打丸山 大丸 焼肉"
+      },
+      {
+        "name": "レストランケルン",
+        "tag": "越後もち豚",
+        "mapQuery": "石打丸山 レストランケルン"
+      },
+      {
+        "name": "しみず食堂",
+        "tag": "雪下ニンジン使用メニュー",
+        "mapQuery": "石打丸山 しみず食堂"
+      },
+      {
+        "name": "オーストリアスノーハウス",
+        "tag": "ヨーロッパ料理・焼きたてパン",
+        "mapQuery": "石打丸山 オーストリアスノーハウス"
+      },
+      {
+        "name": "ラ・ファミーユ中角",
+        "tag": "キッズパーク隣接・ファミリー向け",
+        "mapQuery": "石打丸山 ラファミーユ中角"
+      },
+      {
+        "name": "ザ・ヴェランダ石打丸山",
+        "tag": "席数No.1・魚沼平野一望",
+        "mapQuery": "ザ・ヴェランダ石打丸山"
+      }
+    ],
+    "foot": "24店舗中6店を代表例として掲載（網羅ではありません）。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 塩沢石打IC → 国道17号 約5分・3km（練馬ICから約120分）"
+      },
+      {
+        "k": "駐車場",
+        "v": "約1,000台"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://ishiuchi.or.jp/winter/access/\" rel=\"noopener\" target=\"_blank\">ishiuchi.or.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from ishiuchi.or.jp/winter/, 2026-09-16",
+    "items": [
+      {
+        "date": "2026年09月11日",
+        "title": "26-27シーズン 早割1日券の販売開始について",
+        "url": "https://ishiuchi.or.jp/winter/other/8304/"
+      },
+      {
+        "date": "2026年08月01日",
+        "title": "1日券あたり最安5,200円！チャージ機能付きチケット「DAY PASS」早割販売開始！",
+        "url": "https://ishiuchi.or.jp/winter/other/8141/"
+      },
+      {
+        "date": "2026年06月30日",
+        "title": "2026-2027ウィンターシーズン シーズン券「スーパー早割」販売開始！",
+        "url": "https://ishiuchi.or.jp/winter/news/8044/"
+      }
+    ],
+    "foot": "取得時点（2026年9月）はグリーンシーズン中のため、夏季のお知らせが中心です。冬季は運行状況・臨時休業等に切り替わります。"
+  },
+  "sns": {
+    "href": "https://x.com/ishiuchi_IM",
+    "title": "@ishiuchi_IM（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：例年12月中旬〜4月上旬（2025-26シーズンは2025年12月19日〜2026年4月5日）。2026-27シーズンの正式な日程は公式サイトでご確認ください。ゲレンデマップ画像は著作物のため本ページには掲載せず、公式サイトへ直接リンクしています。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。WEB国内料金は日により変動するため計算機では目安の代表値を使用しています。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-18",
+    "end": "2027-04-04",
+    "approximate": true,
+    "next_note": "次シーズンは例年12月中旬オープン予定"
+  }
+}

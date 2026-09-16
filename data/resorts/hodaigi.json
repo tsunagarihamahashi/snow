@@ -1,0 +1,400 @@
+{
+  "id": "hodaigi",
+  "title": "群馬みなかみほうだいぎスキー場",
+  "name": "群馬みなかみほうだいぎスキー場",
+  "eyebrow": "群馬県 / みなかみのパウダーエリア",
+  "pref": "群馬県利根郡みなかみ町藤原",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "8:30"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "なし"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜16:30"
+      },
+      {
+        "label": "ナイター",
+        "value": "なし（2017年に終了）"
+      }
+    ],
+    "foot": "期間・天候により時刻は前後する場合あり"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "86",
+        "num_unit": null,
+        "unit": "コース面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "16",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "2,600",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "570",
+        "num_unit": null,
+        "unit": "標高差 m<br/>（570〜1,400m）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "7",
+        "num_unit": "基",
+        "unit": "リフト数（クワッド2・ペア5）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "コース16本の内訳は初級4・中級6・上級6（公式ゲレンデガイドより）。総コース長12,620m、最大斜度40度。コース面積86haはSURF&SNOW掲載値のため参考値です。",
+    "map_img": {
+      "src": "https://hodaigi.jp/wp-content/uploads/2025/12/%E3%82%B2%E3%83%AC%E3%83%B3%E3%83%87%E3%83%9E%E3%83%83%E3%83%97_.png",
+      "alt": "群馬みなかみほうだいぎスキー場 コースマップ（クリックで拡大）"
+    },
+    "map_source_note": null,
+    "cards": []
+  },
+  "reviews": {
+    "good": [
+      "標高が高く積雪量が豊富で、雪質も首都圏近郊では屈指との評価",
+      "初心者向けコースが多く、地形遊び・ツリーランも楽しめる",
+      "頂上（第9クワッド山頂）からの眺めが良く、上越国境の山々を一望できる",
+      "ゲレ食の評判が良い（カフェテリアペガサスの焼きチーズカレー、宝台樹食堂のカツ丼）",
+      "平日は駐車場が無料"
+    ],
+    "bad": [
+      "水上ICから車で約30分とアクセスがやや遠い",
+      "リフト7基と輸送力は控えめで、混雑時は待ち時間が出やすい",
+      "「全体的に平均的で強くおすすめとまでは言えない」という声もある",
+      "ナイター営業は2017年に終了しており、平日の滑走時間が限られる"
+    ],
+    "foot": "SURF&SNOW・スキー&スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.858,
+    "lon": 139.183,
+    "foot": "みなかみ町藤原付近（標高約1,000m）の予報。<a href=\"https://weathernews.jp/ski/spot/34216/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "hodaigi",
+    "fallback_url": "https://hodaigi.jp/gelande-guide/",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": "撮影対象：たんぽぽコース・ファミリーゲレンデ・第6ペアリフト乗り場・第8クワッドリフト乗り場・駐車場付近",
+    "label": "ファミリーゲレンデ",
+    "type": "youtube",
+    "cams": [
+      {
+        "label": "ファミリーゲレンデ",
+        "id": "FNrVE0yzEpA"
+      }
+    ],
+    "iframe_title": "群馬みなかみほうだいぎスキー場ライブカメラ",
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": null
+      },
+      {
+        "key": "teen",
+        "label": "中高生",
+        "cond": null
+      },
+      {
+        "key": "elem",
+        "label": "小学生",
+        "cond": null
+      },
+      {
+        "key": "senior",
+        "label": "シニア",
+        "cond": "55歳以上（要証明）"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "teen": 0,
+      "elem": 0,
+      "senior": 0
+    },
+    "options": [
+      {
+        "key": "weekday",
+        "label": "平日"
+      },
+      {
+        "key": "weekend",
+        "label": "休日"
+      }
+    ],
+    "aria_label": "日付タイプ",
+    "price_table": {
+      "weekday": {
+        "adult": 7100,
+        "teen": 5400,
+        "elem": 4400,
+        "senior": 6500
+      },
+      "weekend": {
+        "adult": 7400,
+        "teen": 5700,
+        "elem": 4700,
+        "senior": 6800
+      }
+    },
+    "default_option": "weekday",
+    "foot": "シニアは55歳以上（要証明）。5時間券（¥6,900）等の時間制チケットは別途公式サイトでご確認ください。障がい者割引（本人のみ）もあります。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "子供料金は小学生以下、シニアは55歳以上が対象。午前・午後の半日料金は別途公式サイトでご確認ください。",
+    "mode": "cart",
+    "plans": [
+      {
+        "id": "set",
+        "label": "スキー／スノーボードセット",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 6000
+          },
+          {
+            "key": "senior",
+            "label": "シニア",
+            "price": 5400
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 4700
+          }
+        ]
+      },
+      {
+        "id": "wear",
+        "label": "ウェア上下セット",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 5500
+          },
+          {
+            "key": "senior",
+            "label": "シニア",
+            "price": 5500
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 4000
+          }
+        ]
+      },
+      {
+        "id": "board",
+        "label": "板単品（スキー・ボード）",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 4200
+          }
+        ]
+      },
+      {
+        "id": "boots",
+        "label": "ブーツ単品",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 3300
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 2700
+          }
+        ]
+      },
+      {
+        "id": "poles",
+        "label": "ポール単品",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 1500
+          }
+        ]
+      }
+    ],
+    "default_line": {
+      "plan": "set",
+      "category": "adult",
+      "count": 1
+    }
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "キッズランド",
+        "tag": "フェンスで囲まれた専用エリア、専用スノーエスカレーター付き",
+        "right": null,
+        "link": null
+      },
+      {
+        "name": "連続ウェーブ",
+        "tag": "第8クワッドリフト下部・お子様に人気のウェーブ地形",
+        "right": null,
+        "link": null
+      }
+    ],
+    "foot": "料金・営業時間の詳細は<a class=\"outlink\" href=\"https://hodaigi.jp/gelande-guide/#kidsland\" rel=\"noopener\" target=\"_blank\">公式ゲレンデガイド</a>でご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "宝川温泉 宝川山荘",
+        "tag": "スキー場から車で約15分・大露天風呂",
+        "right": "大人¥1,500／小学生¥1,000",
+        "link": null
+      }
+    ],
+    "foot": "未就学児は無料。リフト券が近隣の日帰り温泉の割引券になる場合があります。料金・営業時間は変動するため各施設にご確認ください。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "宝台樹食堂",
+        "tag": "メインレストラン・厚切り三元豚デミソースカツ丼が人気",
+        "mapQuery": "群馬みなかみほうだいぎスキー場 宝台樹食堂"
+      },
+      {
+        "name": "カフェテリア ペガサス",
+        "tag": "焼きチーズカレーが名物",
+        "mapQuery": "群馬みなかみほうだいぎスキー場 カフェテリアペガサス"
+      },
+      {
+        "name": "スカイテラスあさひ",
+        "tag": "第9クワッドリフト山頂・上越国境を一望",
+        "mapQuery": "群馬みなかみほうだいぎスキー場 スカイテラスあさひ"
+      },
+      {
+        "name": "カレーハウス武尊",
+        "tag": "土日祝のみ営業",
+        "mapQuery": "群馬みなかみほうだいぎスキー場 カレーハウス武尊"
+      },
+      {
+        "name": "カフェレストラン谷川・宝台樹ベーカリー",
+        "tag": "土日祝のみ営業",
+        "mapQuery": "群馬みなかみほうだいぎスキー場 カフェレストラン谷川"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 水上IC → 宝川温泉・湯ノ小屋方面へ19km・車で約30分"
+      },
+      {
+        "k": "電車",
+        "v": "上毛高原駅・水上駅からバス・タクシーで約30〜45分。無料シャトルバスあり（運行日限定）"
+      },
+      {
+        "k": "駐車場",
+        "v": "平日無料（年末年始除く）、土日祝・年末年始は普通車¥1,000・大型車¥2,000"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://hodaigi.jp/access/\" rel=\"noopener\" target=\"_blank\">hodaigi.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from hodaigi.jp/news/, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年08月30日",
+        "title": "9月1日（火）〜「9月限定早割Webリフト1日券」販売開始！",
+        "url": "https://hodaigi.jp/news-event/2052/"
+      },
+      {
+        "date": "2026年08月30日",
+        "title": "9月1日（火）〜27\"スノーシーズン「早割シーズン券」販売開始！",
+        "url": "https://hodaigi.jp/news-event/2048/"
+      },
+      {
+        "date": "2026年03月29日",
+        "title": "今シーズンの営業は終了しました。",
+        "url": "https://hodaigi.jp/news-event/2032/"
+      },
+      {
+        "date": "2026年03月28日",
+        "title": "3月29日（日）最終営業日になります。",
+        "url": "https://hodaigi.jp/news-event/2031/"
+      },
+      {
+        "date": "2026年03月27日",
+        "title": "ファイナルイベント「宝さがし」開催！",
+        "url": "https://hodaigi.jp/news-event/2028/"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/houdaigiskiarea",
+    "title": "@houdaigiskiarea（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：2026年12月12日オープン予定（公式発表）〜2027年3月下旬（例年ベース）。コースマップ画像は群馬みなかみほうだいぎスキー場公式サイト掲載の著作物です。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-12",
+    "end": "2027-03-28",
+    "approximate": false,
+    "next_note": "次シーズンは例年12月中旬オープン予定"
+  }
+}

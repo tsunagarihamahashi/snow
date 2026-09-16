@@ -1,0 +1,335 @@
+{
+  "id": "gala",
+  "title": "GALA湯沢スキー場",
+  "name": "GALA湯沢スキー場",
+  "eyebrow": "新潟県 / 新幹線駅直結スキー場",
+  "pref": "新潟県南魚沼郡湯沢町湯沢",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "8:00"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "8:00"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜16:30"
+      },
+      {
+        "label": "ナイター",
+        "value": "なし"
+      }
+    ],
+    "foot": "春期間（4/6〜）は8:00〜16:00に短縮。天候により時刻は前後する場合あり"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "14",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "9",
+        "num_unit": null,
+        "unit": "索道数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "2,500",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "33",
+        "num_unit": null,
+        "unit": "最大斜度 度",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "2",
+        "num_unit": "エリア",
+        "unit": "中央エリア・北エリア（南エリアは2026-27シーズン休止）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": "⚠️ 2026-2027ウインターシーズンは南エリア（260万ダラー・ブロンコ・イライザ・バットマンの4コース、ワゴネット・ランドーの2設備）が営業休止となります（<a href=\"https://gala.co.jp/winter/news/64209/\" rel=\"noopener\" target=\"_blank\">公式発表</a>・2026年9月15日付）。以下の数値は営業休止後の中央・北エリアのみで算出しています。",
+    "foot": "コース14本の内訳は初級6・中級7・上級1、索道9基は8人乗りゴンドラ1＋リフト8（公式サイトの本日のコース・リフト一覧を本サイトで集計、南エリア分を除く）。総面積70ha・標高358〜1,181mは南エリア休止前の全体値のため参考値です。",
+    "map_img": null,
+    "map_source_note": null,
+    "cards": [
+      {
+        "href": "https://gala.co.jp/winter/cmsw/wp-content/uploads/2025/11/3a2fd628ce100e195c916f805d12f38d.pdf",
+        "title": "コースマップを見る（公式PDF）",
+        "sub": "公式サイトの配布形式がPDFのため、1枚画像としては掲載していません"
+      }
+    ]
+  },
+  "reviews": {
+    "good": [
+      "新幹線駅に直結する国内唯一のゲレンデで、東京駅から最速71分とアクセス抜群",
+      "雪質が良く「新幹線で行けるのに満足度が高い」との評価",
+      "施設が綺麗でレンタルもスムーズ、スキーセンター直結で手ぶらで行ける",
+      "ゲレンデにバリエーションがあり、1日楽しむには十分"
+    ],
+    "bad": [
+      "アクセスの良さゆえ「日本一混雑するゲレンデ」との指摘も。リフト待ちで列が乱れることも",
+      "中級者向けコースが主体で、初級・上級コースは少なめ。混雑もあり初心者のゲレンデデビューには不向きとの声",
+      "駐車場は約400台と少なめ（新幹線利用が前提の設計）"
+    ],
+    "foot": "トリップアドバイザー・スキー&スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.951,
+    "lon": 138.794,
+    "foot": "湯沢町湯沢付近（標高約700m）の予報。<a href=\"https://weathernews.jp/ski/spot/35430/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "gala",
+    "fallback_url": "https://gala.co.jp/winter/gelande",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "北エリア（ブロードウェイコース）",
+    "type": "image",
+    "cams": [
+      {
+        "label": "北エリア（ブロードウェイコース）",
+        "url": "https://gala.co.jp/camera/cam1.jpg"
+      },
+      {
+        "label": "中央エリア（メロディコース）",
+        "url": "https://gala.co.jp/camera/cam2.jpg"
+      },
+      {
+        "label": "中央エリア（ジジコース）",
+        "url": "https://gala.co.jp/camera/cam3.jpg"
+      }
+    ],
+    "alt": "GALA湯沢スキー場ライブカメラ",
+    "refresh_ms": 60000,
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": null
+      },
+      {
+        "key": "child",
+        "label": "小学生",
+        "cond": null
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "child": 0
+    },
+    "options": [
+      {
+        "key": "day1",
+        "label": "1日券"
+      },
+      {
+        "key": "day2",
+        "label": "2日券"
+      },
+      {
+        "key": "hour4",
+        "label": "4時間券"
+      }
+    ],
+    "aria_label": "券種",
+    "price_table": {
+      "day1": {
+        "adult": 6800,
+        "child": 2800
+      },
+      "day2": {
+        "adult": 11000,
+        "child": 4300
+      },
+      "hour4": {
+        "adult": 6000,
+        "child": 2200
+      }
+    },
+    "default_option": "day1",
+    "foot": "通常期間（〜4月上旬）のWEB価格（2025-26シーズン実績、2026-27の正式料金は公式サイトで順次発表予定）。春期間は割安になります。ゴンドラ&バルーシュ券（窓口限定、大人¥5,000／小学生¥2,500）等その他の券種は公式サイトでご確認ください。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "「FISCHER SNOW BASE GALA YUZAWA」の1日料金。子供は小学生以下が対象。WEB事前申込＋決済でスムーズに受け取れます（PICK UP BOXは+¥1,000/人）。",
+    "mode": "stepper",
+    "items": [
+      {
+        "key": "ski_adult",
+        "label": "スキー3点セット・13歳以上",
+        "price": 6500
+      },
+      {
+        "key": "ski_child",
+        "label": "スキー3点セット・12歳以下",
+        "price": 3500
+      },
+      {
+        "key": "board_adult",
+        "label": "スノーボード2点セット・13歳以上",
+        "price": 6500
+      },
+      {
+        "key": "board_child",
+        "label": "スノーボード2点セット・12歳以下",
+        "price": 3500
+      },
+      {
+        "key": "wear_adult",
+        "label": "ウェア上下・13歳以上",
+        "price": 5500
+      },
+      {
+        "key": "wear_child",
+        "label": "ウェア上下・12歳以下",
+        "price": 3000
+      },
+      {
+        "key": "helmet",
+        "label": "ヘルメット（共通）",
+        "price": 2000
+      }
+    ]
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "ゆきあそびパーク",
+        "tag": "フード付きスノーエスカレーター完備・雪の日でも快適にそり遊び",
+        "right": null,
+        "link": null
+      }
+    ],
+    "foot": "中央エリア・北エリアには展望台もあり記念撮影にも人気。料金・営業時間の詳細は<a class=\"outlink\" href=\"https://gala.co.jp/winter/activities#c_a2\" rel=\"noopener\" target=\"_blank\">公式サイト</a>でご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "SPAガーラの湯",
+        "tag": "スキーセンター内・温泉＋フィットネスプール＋子供用プール併設",
+        "right": "大人¥1,200〜／小学生¥700〜",
+        "link": null
+      }
+    ],
+    "foot": "タオルセット付き。営業12:00〜19:00（15時までの入場は割安、15〜19時は大人¥1,500／小学生¥900）。春期間は12:00〜17:00に短縮。無料休憩スペース「ZASHIKI」も併設。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "和食レストラン ゆた",
+        "tag": "南魚沼産新米使用の定食・丼もの、地元日本酒も充実",
+        "mapQuery": "GALA湯沢スキー場 和食レストランゆた"
+      },
+      {
+        "name": "鮮極",
+        "tag": "地域食材と海の幸を使った郷土料理の新名店",
+        "mapQuery": "GALA湯沢スキー場 鮮極"
+      },
+      {
+        "name": "フードコート パルパル",
+        "tag": "GALA湯沢で一番座席数の多いメインレストラン",
+        "mapQuery": "GALA湯沢スキー場 パルパル"
+      },
+      {
+        "name": "六花RIKKA",
+        "tag": "VEGANメニュー・お寿司など多彩な食のニーズに対応",
+        "mapQuery": "GALA湯沢スキー場 六花RIKKA"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "新幹線",
+        "v": "上越新幹線「ガーラ湯沢駅」に直結。東京駅から最速約71分"
+      },
+      {
+        "k": "電車",
+        "v": "「越後湯沢駅」下車の場合は東口から無料シャトルバス"
+      },
+      {
+        "k": "車で",
+        "v": "関越道 湯沢IC → 約3km・車で約5分"
+      },
+      {
+        "k": "駐車場",
+        "v": "約400台・全日無料・24時間（夜間は除雪状況により駐車不可の場合あり）"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://gala.co.jp/winter/access/\" rel=\"noopener\" target=\"_blank\">gala.co.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from gala.co.jp/winter/news, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年09月15日",
+        "title": "2026-2027ウインターシーズン南エリア営業休止のお知らせ",
+        "url": "https://gala.co.jp/winter/news/64209/"
+      },
+      {
+        "date": "2026年08月01日",
+        "title": "【リクルート】正社員募集",
+        "url": "https://gala.co.jp/winter/pickup/20923/"
+      },
+      {
+        "date": "2026年02月12日",
+        "title": "弊社サーバーへの不正アクセスによりお客さま情報が漏えいした可能性について",
+        "url": "https://gala.co.jp/winter/pickup/60429/"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/GALA_yuzawa",
+    "title": "@GALA_yuzawa（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：例年12月下旬〜5月上旬（2025-26シーズンは2025年12月20日〜2026年5月6日）。2026-27シーズンの正式な日程は公式サイトでご確認ください。コースマップは公式サイトのPDFへ直接リンクしています。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。混雑が非常に多いゲレンデのため、来場者数の代理指標として駐車場台数（約400台）は参考程度に留めてください（新幹線利用者が大半）。"
+  ],
+  "season": {
+    "start": "2026-12-19",
+    "end": "2027-05-05",
+    "approximate": true,
+    "next_note": "次シーズンは例年12月下旬オープン予定"
+  }
+}

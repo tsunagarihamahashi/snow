@@ -1,0 +1,384 @@
+{
+  "id": "oze_iwakura",
+  "title": "ホワイトワールド尾瀬岩鞍",
+  "name": "ホワイトワールド尾瀬岩鞍",
+  "eyebrow": "群馬県 / 関東最大級ゲレンデ",
+  "pref": "群馬県利根郡片品村 千倉",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "8:30〜"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "8:30〜16:30"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜16:30"
+      },
+      {
+        "label": "ナイター",
+        "value": "16:30〜20:00"
+      }
+    ],
+    "foot": "ゴンドラは「岩鞍ゴンドラスーパーウェイ」。ナイターは第3クワッドリフト・第7ロマンスリフトのみ、特定日限定で運行（最終乗車19:45）"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "111",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "16〜18",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "3,200",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "1,010",
+        "num_unit": null,
+        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
+        "wide": false,
+        "tier": "mid",
+        "idx_tag": "平均的・10件中4位"
+      },
+      {
+        "num": "約15,600",
+        "num_unit": "人/時",
+        "unit": "リフト輸送力（ペア8基・クワッド2基・ゴンドラ1基、標準値による推定）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "初級から上級まで多彩なコースを備える関東最大級のビッグゲレンデ。良質なパウダースノーが特徴。輸送力を駐車場台数で割ると約14.2人時/台で、リフト待ちのリスクは中程度と推定されます（石打丸山は約22.2人時/台）。",
+    "map_img": {
+      "src": "https://www.oze-iwakura.co.jp/ski/slopeguide/images/map.jpg",
+      "alt": "ホワイトワールド尾瀬岩鞍 コースマップ（クリックで拡大）"
+    },
+    "map_source_note": "画像提供: 尾瀬岩鞍リゾート（<a href=\"https://www.oze-iwakura.co.jp/ski/slopeguide/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>）",
+    "cards": [
+      {
+        "href": "https://www.oze-iwakura.co.jp/ski/slopeguide/live/",
+        "title": "最新の運行状況を見る（公式サイト）",
+        "sub": "当日のコース開放・リフト稼働状況はこちら"
+      }
+    ]
+  },
+  "reviews": {
+    "good": [
+      "コースのバリエーションが豊富（斜度・コブ・圧雪/非圧雪）で1日滑っても飽きない",
+      "上級スキーヤーが多く、マナーも良好で気持ちよく滑れる",
+      "雪質が非常に良い（西山エリアが特に好評）",
+      "レストランが分散していて混雑しにくく、価格もリーズナブル",
+      "ゲレンデが広く、コースに出てしまえばストレスが少ない"
+    ],
+    "bad": [
+      "沼田ICから片品までの道が混雑しやすく、都内から片道4時間かかることも",
+      "リフト券が高い割に高速リフト・フード付きリフトが少ない",
+      "週末の駐車料金が高い",
+      "ファミリー向けというより上級者向け",
+      "大会でコース閉鎖が多く、お目当てのコースが使えないことがある"
+    ],
+    "foot": "じゃらん・SURF&SNOW・スキー・スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.816,
+    "lon": 139.214,
+    "foot": "山頂付近（標高約1,100m）の予報。<a href=\"https://tenki.jp/mountain/famous/6/9/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "oze_iwakura",
+    "fallback_url": "https://www.oze-iwakura.co.jp/ski/",
+    "layout": "top_mid_base"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "ゴンドラ山頂駅前",
+    "type": "youtube",
+    "cams": [
+      {
+        "label": "ゴンドラ山頂駅前",
+        "id": "upwUqOrD0Zg"
+      },
+      {
+        "label": "ゴンドラ山麓駅前",
+        "id": "7DZP1tiOykA"
+      },
+      {
+        "label": "国体女子沢・リーゼン・エキスパート",
+        "id": "4wYgmnaMAaY"
+      },
+      {
+        "label": "ロマンス・チャンピオンA",
+        "id": "yLmHCuy4Wlg"
+      }
+    ],
+    "iframe_title": "ホワイトワールド尾瀬岩鞍ライブカメラ",
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": null
+      },
+      {
+        "key": "elem",
+        "label": "小学生",
+        "cond": null
+      },
+      {
+        "key": "senior",
+        "label": "シニア",
+        "cond": "60歳以上"
+      },
+      {
+        "key": "infant",
+        "label": "幼児",
+        "cond": "未就学児"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "elem": 0,
+      "senior": 0,
+      "infant": 0
+    },
+    "options": [
+      {
+        "key": "weekday",
+        "label": "平日"
+      },
+      {
+        "key": "weekend",
+        "label": "休日"
+      },
+      {
+        "key": "special",
+        "label": "特定日"
+      }
+    ],
+    "aria_label": "日付タイプ",
+    "price_table": {
+      "weekday": {
+        "adult": 5800,
+        "elem": 3800,
+        "senior": 5300,
+        "infant": 0
+      },
+      "weekend": {
+        "adult": 6500,
+        "elem": 4500,
+        "senior": 6000,
+        "infant": 0
+      },
+      "special": {
+        "adult": 7000,
+        "elem": 5000,
+        "senior": 6500,
+        "infant": 0
+      }
+    },
+    "default_option": "weekday",
+    "foot": "シニアは60歳以上（証明書要）。幼児（未就学児）は無料ですがリフト同乗時は専用券が必要です。特定日は年末年始・繁忙期の指定日。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": "フルセット＝板・ブーツ・ウェア一式／基本セット＝板・ブーツ・ストックのみ",
+    "foot": null,
+    "mode": "stepper",
+    "items": [
+      {
+        "key": "full_adult",
+        "label": "フルセット・大人",
+        "price": 8500
+      },
+      {
+        "key": "full_child",
+        "label": "フルセット・小人",
+        "price": 6500
+      },
+      {
+        "key": "basic_adult",
+        "label": "基本セット・大人",
+        "price": 4500
+      },
+      {
+        "key": "basic_child",
+        "label": "基本セット・小人",
+        "price": 3500
+      }
+    ],
+    "discount": {
+      "label": "岩鞍リゾートホテル・岩鞍ハウス宿泊者（セットごとに¥1,000引き）",
+      "per_item": 1000
+    }
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "ロックン広場",
+        "tag": "そり・チュービング・スノーストライダー・エア遊具、スノーエスカレーター完備",
+        "right": "¥1,500（リフト券持参で割引）",
+        "link": null
+      },
+      {
+        "name": "託児所",
+        "tag": "尾瀬岩鞍リゾートホテル内",
+        "right": "要予約",
+        "link": null
+      }
+    ],
+    "foot": "料金は情報源により表記に幅があります（当日リフト券持参での割引条件等）。最新情報は<a class=\"outlink\" href=\"https://www.oze-iwakura.co.jp/ski/kids/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>でご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "尾瀬岩鞍リゾートホテル 日帰り温泉",
+        "tag": "ゲレンデ直結・バスタオルレンタル¥350・大人¥800／子供¥600",
+        "right": null,
+        "link": {
+          "href": "https://www.oze-iwakura.co.jp/hotel/spa/",
+          "label": "公式サイト"
+        }
+      }
+    ],
+    "foot": "火曜レディースデーは入浴料半額（大人¥400／子供¥300）。利用状況により案内できない場合があるため、事前に<a class=\"outlink\" href=\"tel:0278587131\">0278-58-7131</a>への確認がおすすめです。"
+  },
+  "gochiso": {
+    "badge": {
+      "tier": "low",
+      "spans": [
+        "ゲレ飯コスパ指数",
+        "0.24",
+        "／ やや弱め・検証7ゲレンデ中3位（旅館系食堂は未集計、実際はより上位の可能性）"
+      ]
+    },
+    "shops": [
+      {
+        "name": "レストラン・ホルン",
+        "tag": "西山エリア最大規模",
+        "mapQuery": "尾瀬岩鞍 レストランホルン"
+      },
+      {
+        "name": "ラ・セゾン",
+        "tag": "尾瀬岩鞍リゾートホテル内",
+        "mapQuery": "尾瀬岩鞍リゾートホテル ラセゾン"
+      },
+      {
+        "name": "オクタ",
+        "tag": "焼きカレー",
+        "mapQuery": "尾瀬岩鞍 オクタ 焼きカレー"
+      },
+      {
+        "name": "カフェラウンジ モンブラン",
+        "tag": "自家製パン工房バーガー",
+        "mapQuery": "尾瀬岩鞍 カフェラウンジモンブラン"
+      },
+      {
+        "name": "岩鞍食堂",
+        "tag": "初心者ゲレンデ中腹・独立系",
+        "mapQuery": "岩鞍食堂 片品村"
+      },
+      {
+        "name": "ロッジ岩鞍やまと 食堂",
+        "tag": "ゴンドラ正面・0分",
+        "mapQuery": "ロッジ岩鞍やまと"
+      },
+      {
+        "name": "ヴィラ岩鞍山荘 食堂",
+        "tag": "旅館の食堂・日帰り利用可",
+        "mapQuery": "ヴィラ岩鞍山荘"
+      }
+    ],
+    "foot": "上記はゲレンデ直結の代表例で網羅ではありません（旅館・民宿併設の食堂は特に把握が難しく、精査中）。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 沼田IC → 国道120号（椎坂トンネル・尾瀬大橋経由）約45〜50分・31km"
+      },
+      {
+        "k": "駐車場",
+        "v": "ゲレンデ直結・戸倉方面あわせて計1,100台以上（第1約200台・第2約900台、24時間1,000円の駐車場もあり）"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.oze-iwakura.co.jp/ski/\" rel=\"noopener\" target=\"_blank\">oze-iwakura.co.jp／アクセス詳細・ライブカメラ</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from scraper_poc.py verification run, 2026-09-08",
+    "items": [
+      {
+        "date": "2026年09月02日",
+        "title": "公式サイトリニューアルのお知らせ",
+        "url": "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=432920"
+      },
+      {
+        "date": "2026年08月25日",
+        "title": "9/1より26/27シーズンパスポート販売開始！",
+        "url": "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=432310"
+      },
+      {
+        "date": "2026年08月03日",
+        "title": "尾瀬岩鞍が「NSDキッズプログラム」に新規参画しました！",
+        "url": "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=431711"
+      },
+      {
+        "date": "2026年04月01日",
+        "title": "キャンプ営業の予約を開始しました",
+        "url": "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=362772"
+      },
+      {
+        "date": "2025年12月18日",
+        "title": "【重要なお知らせ】ゲレンデ内での板置き（場所取り）禁止について",
+        "url": "https://www.oze-iwakura.co.jp/ski/news/detail.html?CN=418276"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/ozeiwakura_2011",
+    "title": "@ozeiwakura_2011（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：例年12月中旬〜4月上旬（2025-26シーズンは2025年12月13日〜2026年4月5日）。2026-27シーズンの正式な日程は公式サイトでご確認ください。ゲレンデマップ画像は各スキー場の著作物のため本ページには掲載せず、公式サイトへ直接リンクしています。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-12",
+    "end": "2027-04-04",
+    "approximate": true,
+    "next_note": "次シーズンは例年12月中旬オープン予定"
+  }
+}

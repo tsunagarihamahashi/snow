@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>{{ r.title }}</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">{{ r.eyebrow }}</p>
+    <h1 class="resort-name">{{ r.name }}</h1>
+    <p class="pref">{{ r.pref }}</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<div class="hours-strip">
+  <div class="inner">
+{%- for h in r.hours['items'] %}
+    <div class="hour-item"><span class="hour-label">{{ h.label|safe }}</span><span class="hour-value">{{ h.value|safe }}</span></div>
+{%- endfor %}
+  </div>
+  <p class="hours-foot">{{ r.hours.foot|safe }}</p>
+</div>
+
+<nav class="jumpnav">
+  <div class="inner">
+    <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
+    <a href="#weather">天気</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#price">料金</a>
+    <a href="#kids">キッズ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#onsen">温泉</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
+  </div>
+</nav>
+
+{%- macro card(c) %}
+    <a class="map-card" href="{{ c.href }}" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">{{ c.title|safe }}</span>
+        <span class="mc-sub">{{ c.sub|safe }}</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+{%- endmacro %}
+
+{%- macro shop_items(items) %}
+    <ul class="shop-list">
+{%- for it in items %}
+      <li><div class="shop-main"><span>{{ it.name|safe }}</span>{% if it.tag %}<span class="shop-tag">{{ it.tag|safe }}</span>{% endif %}</div>
+        {%- if it.link %}<a class="maplink" href="{{ it.link.href }}" target="_blank" rel="noopener">{{ it.link.label }}</a>{% elif it.right is not none %}<span class="shop-tag">{{ it.right|safe }}</span>{% endif %}</li>
+{%- endfor %}
+    </ul>
+{%- endmacro %}
+
+<div class="wrap">
+
+  <section id="scale">
+    <div class="section-head"><h2>{{ r.name }}のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+{%- if r.scale.get('notice') %}
+    <p class="calc-foot" style="margin-bottom:14px;">{{ r.scale.notice|safe }}</p>
+{%- endif %}
+    <div class="stat-grid">
+{%- for s in r.scale.stats %}
+      <div class="stat{% if s.wide %} stat-wide{% endif %}{% if s.tier %} tier-{{ s.tier }}{% endif %}"><div class="num">{{ s.num|safe }}{% if s.num_unit %}<span class="num-unit">{{ s.num_unit|safe }}</span>{% endif %}</div><div class="unit">{{ s.unit|safe }}</div>{% if s.idx_tag %}<span class="idx-tag">{{ s.idx_tag|safe }}</span>{% endif %}</div>
+{%- endfor %}
+    </div>
+{%- if r.scale.level_bar %}
+    <div class="level-bar">
+{%- for l in r.scale.level_bar %}
+      <span style="width:{{ l.pct|int }}%; background:{{ l.color }};"></span>
+{%- endfor %}
+    </div>
+    <div class="level-legend">
+{%- for l in r.scale.level_bar %}
+      <span><span class="sw" style="background:{{ l.color }};"></span>{{ l.label }}</span>
+{%- endfor %}
+    </div>
+{%- endif %}
+{%- if r.scale.foot %}
+    <p class="calc-foot" style="margin-top:14px;">{{ r.scale.foot|safe }}</p>
+{%- endif %}
+{%- if r.scale.map_img %}
+    <img class="trail-map-img" id="trailMapImg" src="{{ r.scale.map_img.src }}" alt="{{ r.scale.map_img.alt }}" loading="lazy">
+{%- endif %}
+{%- if r.scale.map_source_note %}
+    <p class="piste-source">{{ r.scale.map_source_note|safe }}</p>
+{%- endif %}
+{%- for c in r.scale.cards %}{{ card(c) }}{% endfor %}
+  </section>
+
+  <section id="reviews">
+    <div class="section-head"><h2>{{ r.name }}の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+{%- for li in r.reviews.good %}
+          <li>{{ li|safe }}</li>
+{%- endfor %}
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+{%- for li in r.reviews.bad %}
+          <li>{{ li|safe }}</li>
+{%- endfor %}
+        </ul>
+      </div>
+    </div>
+{%- if r.reviews.foot %}
+    <p class="calc-foot" style="margin-top:14px;">{{ r.reviews.foot|safe }}</p>
+{%- endif %}
+  </section>
+
+  <section id="weather">
+    <div class="section-head"><h2>{{ r.name }}の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
+    <div class="weather-toggle" role="group" aria-label="予報の範囲">
+      <button data-range="today" aria-pressed="true">当日</button>
+      <button data-range="2day" aria-pressed="false">2日間</button>
+      <button data-range="week" aria-pressed="false">週間</button>
+    </div>
+    <div class="weather-row" id="weatherRow"><p class="weather-foot">読み込み中…</p></div>
+    <p class="weather-foot">{{ r.weather.foot|safe }}</p>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2>{{ r.name }}のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+{%- set L = r.livecam %}
+{%- if L.type != 'linkout' %}
+    <div class="livecam-card">
+      <div class="lc-head">
+        <span class="lc-head-left"><span class="lc-dot"></span><span class="lc-text" id="lcLabel">{{ L.cams[0].label }}</span></span>
+{%- if L.type == 'image' %}
+        <span class="lc-updated" id="lcUpdated"></span>
+{%- endif %}
+      </div>
+      <div class="lc-player"{% if L.get('aspect') and L.aspect != '16/9' %} style="aspect-ratio: {{ L.aspect }};"{% endif %}>
+{%- if L.type == 'youtube' %}
+        <iframe id="lcFrame" src="https://www.youtube.com/embed/{{ L.cams[0].id }}?autoplay=1&mute=1" title="{{ L.get('iframe_title') or (r.name ~ ' ライブカメラ') }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+{%- elif L.type == 'skiday' %}
+        <iframe id="lcFrame" src="{{ L.cams[0].src }}" title="{{ L.get('iframe_title') or (r.name ~ ' ライブカメラ') }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+{%- else %}
+        <img id="lcImg" src="{{ L.cams[0].url }}" alt="{{ L.get('alt') or (r.name ~ ' ライブカメラ') }}">
+{%- endif %}
+      </div>
+{%- if L.cams|length > 1 %}
+      <div class="lc-tabs" id="lcTabs"></div>
+{%- endif %}
+    </div>
+{%- endif %}
+{%- for c in L.cards %}{{ card(c) }}{% endfor %}
+{%- if L.get('foot') %}
+    <p class="calc-foot" style="margin-top:10px;">{{ L.foot|safe }}</p>
+{%- endif %}
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2>{{ r.name }}のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+{%- set P = r.price %}
+{%- if P.get('intro') %}
+    <p class="calc-foot" style="margin-bottom:12px;">{{ P.intro|safe }}</p>
+{%- endif %}
+    <div class="calc-card">
+{%- if P.mode == 'lines' %}
+      <div id="lineList"></div>
+      <button type="button" class="add-line-btn" id="addLineBtn">＋ 人数区分を追加</button>
+{%- else %}
+{%- if P.mode == 'toggle' %}
+      <div class="daytype-toggle" role="group" aria-label="{{ P.get('aria_label') or '日付タイプ' }}">
+{%- for o in P.options %}
+        <button data-day="{{ o.key }}" aria-pressed="{{ 'true' if o.key == P.default_option else 'false' }}">{{ o.label }}</button>
+{%- endfor %}
+      </div>
+{%- endif %}
+      <div id="catRows"></div>
+{%- endif %}
+      <div class="calc-total">
+        <span class="label">{{ P.total_label }}</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+{%- if P.mode == 'lines' %}
+      <p class="calc-foot" id="calcFoot"></p>
+{%- elif P.get('foot') %}
+      <p class="calc-foot">{{ P.foot|safe }}</p>
+{%- endif %}
+{%- set RT = r.rental %}
+{%- if RT.mode != 'none' %}
+      <details class="rental-acc">
+        <summary>{{ RT.summary }}<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+{%- if RT.get('legend') %}
+          <p class="rental-legend">{{ RT.legend|safe }}</p>
+{%- endif %}
+{%- if RT.mode == 'cart' %}
+          <div id="rentalLineList"></div>
+          <button type="button" class="add-line-btn" id="addRentalLineBtn">＋ 品目を追加</button>
+{%- else %}
+          <div id="rentalCatRows"></div>
+{%- if RT.get('discount') %}
+          <label class="rental-discount"><input type="checkbox" id="rentalDiscount"> {{ RT.discount.label }}</label>
+{%- endif %}
+{%- endif %}
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
+{%- if RT.get('foot') %}
+          <p class="calc-foot">{{ RT.foot|safe }}</p>
+{%- endif %}
+        </div>
+      </details>
+{%- endif %}
+    </div>
+  </section>
+
+  <section id="kids">
+    <div class="section-head"><h2>{{ r.name }}のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+{{ shop_items(r.kids['items']) }}
+{%- if r.kids.foot %}
+    <p class="calc-foot" style="margin-top:14px;">{{ r.kids.foot|safe }}</p>
+{%- endif %}
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2>{{ r.name }}のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+{%- if r.gochiso.badge %}
+    <div class="cospa-badge tier-{{ r.gochiso.badge.tier }}">
+      {% for s in r.gochiso.badge.spans %}<span{% if loop.index == 2 %} class="score"{% endif %}>{{ s|safe }}</span>{% endfor %}
+    </div>
+{%- endif %}
+    <ul class="shop-list" id="shopList">
+{%- for s in r.gochiso.shops %}
+      <li><div class="shop-main"><span>{{ s.name }}</span><span class="shop-tag">{{ s.tag }}</span></div><a class="maplink" href="https://www.google.com/maps/search/{{ s.mapQuery|urlencode }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+{%- endfor %}
+    </ul>
+{%- if r.gochiso.foot %}
+    <p class="calc-foot" style="margin-top:14px;">{{ r.gochiso.foot|safe }}</p>
+{%- endif %}
+  </section>
+
+  <section id="onsen">
+    <div class="section-head"><h2>{{ r.name }}の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+{{ shop_items(r.onsen['items']) }}
+{%- if r.onsen.foot %}
+    <p class="calc-foot" style="margin-top:14px;">{{ r.onsen.foot|safe }}</p>
+{%- endif %}
+  </section>
+
+  <section id="access">
+    <div class="section-head"><h2>{{ r.name }}のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <dl class="kv-grid">
+{%- for kv in r.access.kv %}
+      <dt>{{ kv.k|safe }}</dt>
+      <dd>{{ kv.v|safe }}</dd>
+{%- endfor %}
+    </dl>
+{%- if r.access.foot %}
+    <p class="calc-foot" style="margin-top:14px;">{{ r.access.foot|safe }}</p>
+{%- endif %}
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2>{{ r.name }}のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <ul class="news-list" id="newsList">
+{%- for n in r.news['items'] %}
+      <li><span class="news-date">{{ n.date }}</span><a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a></li>
+{%- endfor %}
+    </ul>
+{%- if r.news.foot %}
+    <p class="calc-foot" style="margin-top:10px;">{{ r.news.foot|safe }}</p>
+{%- endif %}
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2>{{ r.name }}の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+{{ card(r.sns) }}
+  </section>
+
+  <footer>
+{%- for p in r.footer %}
+    <p>{{ p|safe }}</p>
+{%- endfor %}
+  </footer>
+</div>
+
+{%- if r.scale.map_img %}
+
+<div class="map-modal" id="mapModal">
+  <button class="map-modal-close" id="mapModalClose" aria-label="閉じる">✕</button>
+  <img id="mapModalImg" src="" alt="">
+</div>
+{%- endif %}
+
+<script>window.RESORT = {{ payload|tojson }};</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

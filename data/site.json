@@ -1,0 +1,20 @@
+{
+  "title": "ゲレンデアプリ テストサイト",
+  "heading": "ゲレンデアプリ MVP LPプロトタイプ",
+  "resorts": [
+    "oze_iwakura",
+    "ishiuchi_maruyama",
+    "kawaba",
+    "marunuma",
+    "hodaigi",
+    "naeba",
+    "gala",
+    "kandatsu",
+    "kagura",
+    "maiko",
+    "ryuoo",
+    "sugadaira",
+    "shigakogen",
+    "grandeco"
+  ]
+}

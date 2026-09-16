@@ -1,0 +1,302 @@
+{
+  "id": "kagura",
+  "title": "かぐらスキー場",
+  "name": "かぐらスキー場",
+  "eyebrow": "新潟県 / プリンススノーリゾート",
+  "pref": "新潟県南魚沼郡湯沢町三俣",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "平日8:00<br/>土休日7:30"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "8:00"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜17:00"
+      },
+      {
+        "label": "ナイター",
+        "value": "17:00〜21:00"
+      }
+    ],
+    "foot": "期間・天候・コースにより時刻は前後する場合あり"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "172",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "30",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "1,225",
+        "num_unit": null,
+        "unit": "標高差 m<br/>（620〜1,845m）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "3",
+        "num_unit": null,
+        "unit": "エリア数<br/>（かぐら・みつまた・田代）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "17",
+        "num_unit": "施設",
+        "unit": "索道数（ロープウェー2・ドラゴンドラ1・ゴンドラ1・高速リフト4・ロマンスリフト9）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "コース30本の内訳は初級11（37%）・中級13（43%）・上級6（20%）（公式サイトより）。かぐら・みつまた・田代の3エリア構成。田代エリアは日本最長5,481mのドラゴンドラで苗場と直結。",
+    "map_img": {
+      "src": "https://www.princehotels.co.jp/image.jsp?id=498189",
+      "alt": "かぐらスキー場 コースマップ（クリックで拡大）"
+    },
+    "map_source_note": null,
+    "cards": []
+  },
+  "reviews": {
+    "good": [
+      "天気の良い日は景色が最高、標高が高く関東近辺で最も早くオープンする一つ",
+      "コース数が多く雪質も良好で、気に入るコースがどこかに必ずある",
+      "冬のパウダー・春のコブなど幅広く楽しめる",
+      "駐車場にきれいなトイレ・更衣室がある",
+      "ICから近く、ドラゴンドラで苗場エリアとも直結"
+    ],
+    "bad": [
+      "上部エリアまでの乗り継ぎが多く、ロープウェイ・ゴンドラ移動に45分以上かかることも",
+      "帰りのみつまたロープウェイは長蛇の列ができやすい",
+      "駐車場料金・リフト券が高めという指摘も"
+    ],
+    "foot": "アソビュー！・じゃらん等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.845,
+    "lon": 138.75,
+    "foot": "湯沢町三俣付近（標高約900m）の予報。<a href=\"https://weathernews.jp/ski/spot/35473/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "kagura",
+    "fallback_url": "https://www.princehotels.co.jp/ski/kagura/",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [
+      {
+        "href": "https://www.princehotels.co.jp/ski/kagura/livecamera/",
+        "title": "ライブカメラを見る（公式サイト）",
+        "sub": "かぐらエリア専用カメラは配信エラーのため非表示。同ページに表示される映像は隣接する苗場エリアのものです"
+      }
+    ],
+    "foot": null,
+    "type": "linkout"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人（中学生以上）",
+        "cond": null
+      },
+      {
+        "key": "child",
+        "label": "子供",
+        "cond": "小学生以下・無料"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "child": 0
+    },
+    "options": [
+      {
+        "key": "mtnaeba",
+        "label": "Mt.苗場 （苗場共通）"
+      },
+      {
+        "key": "kagura1day",
+        "label": "かぐらエリア 1日券"
+      },
+      {
+        "key": "halfam",
+        "label": "半日券 （午前）"
+      }
+    ],
+    "aria_label": "券種",
+    "price_table": {
+      "mtnaeba": {
+        "adult": 9800,
+        "child": 0
+      },
+      "kagura1day": {
+        "adult": 7500,
+        "child": 0
+      },
+      "halfam": {
+        "adult": 6000,
+        "child": 0
+      }
+    },
+    "default_option": "mtnaeba",
+    "foot": "子供（小学生以下）はリフト券売り場で専用チケットが無料で発行されます。2日券（大人¥14,500）・午後半日券（大人¥5,500）等その他の券種は公式サイトでご確認ください。SEIBU PRINCE CLUB会員は割引あり。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "周辺レンタルショップの参考価格。店舗により料金は異なるため公式サイト・現地でご確認ください。",
+    "mode": "stepper",
+    "items": [
+      {
+        "key": "full_adult",
+        "label": "板・ブーツ・ウェア全セット・大人",
+        "price": 5500
+      },
+      {
+        "key": "full_child",
+        "label": "板・ブーツ・ウェア全セット・子供",
+        "price": 3000
+      },
+      {
+        "key": "set_adult",
+        "label": "板・ブーツのみ・大人",
+        "price": 4000
+      },
+      {
+        "key": "set_child",
+        "label": "板・ブーツのみ・子供",
+        "price": 1500
+      }
+    ]
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "キッズゲレンデ（みつまたエリア）",
+        "tag": "みつまたステーション直結・ファミリー向けエリア",
+        "right": null,
+        "link": null
+      }
+    ],
+    "foot": "料金・営業時間の詳細は<a class=\"outlink\" href=\"https://www.princehotels.co.jp/ski/kagura/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>でご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "街道の湯",
+        "tag": "道の駅みつまた隣接・露天風呂＋岩造り風呂",
+        "right": "大人¥500／子供¥300",
+        "link": null
+      }
+    ],
+    "foot": "かぐら・みつまたの宿泊者は割引入浴券あり。料金・営業時間は変動するため施設に直接ご確認ください。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "お食事処 和田小屋",
+        "tag": "宿泊施設併設・うどん、そば等で冷えた体を温める",
+        "mapQuery": "かぐらスキー場 和田小屋"
+      },
+      {
+        "name": "レストラン アルム",
+        "tag": "田代エリア・北欧リゾートの雰囲気でカレー、パスタ、ピザ等",
+        "mapQuery": "かぐらスキー場 レストランアルム"
+      },
+      {
+        "name": "レストランみつまた",
+        "tag": "みつまたエリアのメインレストラン",
+        "mapQuery": "かぐらスキー場 レストランみつまた"
+      },
+      {
+        "name": "カフェ＆レストラン スノーマン",
+        "tag": "みつまたエリア・バターチキンカレー、豆乳ラーメン等",
+        "mapQuery": "かぐらスキー場 スノーマン"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 湯沢IC → 国道17号を8km・車で約15分"
+      },
+      {
+        "k": "電車",
+        "v": "越後湯沢駅東口から路線バス急行で、かぐら三俣バス停まで約18分・田代バス停まで約27分"
+      },
+      {
+        "k": "駐車場",
+        "v": "みつまたステーション約1,200台・田代ステーション約800台（計約2,000台）。平日無料、土日祝等¥1,000"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.princehotels.co.jp/ski/kagura/winter/access/\" rel=\"noopener\" target=\"_blank\">princehotels.co.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from princehotels.co.jp/ski/kagura/informations, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年04月21日",
+        "title": "2026グリーンシーズン営業のご案内",
+        "url": "https://www.princehotels.co.jp/ski/kagura/informations"
+      },
+      {
+        "date": "2025年11月21日",
+        "title": "遭難救助費用負担について",
+        "url": "https://www.princehotels.co.jp/ski/kagura/informations"
+      },
+      {
+        "date": "2025年10月11日",
+        "title": "湯沢DMOスキースノーボードスクール・インストラクター・各種ガイド登録制度",
+        "url": "https://www.princehotels.co.jp/ski/kagura/informations"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/kaguraski9221",
+    "title": "@kaguraski9221（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：例年11月下旬〜5月中旬（2025-26シーズンは2025年11月22日〜2026年5月17日）。2026-27シーズンの正式な日程は公式サイトでご確認ください。コースマップ画像はかぐらスキー場公式サイト掲載の著作物です。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-11-21",
+    "end": "2027-05-16",
+    "approximate": true,
+    "next_note": "次シーズンは例年11月下旬オープン予定"
+  }
+}

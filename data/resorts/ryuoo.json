@@ -1,0 +1,297 @@
+{
+  "id": "ryuoo",
+  "title": "竜王スキーパーク",
+  "name": "竜王スキーパーク",
+  "eyebrow": "長野県 / 信州中野ICから16km",
+  "pref": "長野県下高井郡山ノ内町",
+  "hours": {
+    "items": [
+      {
+        "label": "日中営業",
+        "value": "8:15〜17:00"
+      },
+      {
+        "label": "ロープウェイ",
+        "value": "166人乗り<br/>山頂駅1,770m"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜17:00"
+      },
+      {
+        "label": "ナイター",
+        "value": "17:00〜20:00"
+      }
+    ],
+    "foot": "ナイターは日曜日・月曜日・連休最終日は休業（12/22〜1/3は連日営業）。山頂エリアのみの営業日は9:00〜。天候により時刻は前後する場合あり"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "6,000",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "1,000",
+        "num_unit": null,
+        "unit": "標高差 m以上",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "13",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "1,930",
+        "num_unit": null,
+        "unit": "標高 m（山頂エリア）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "8",
+        "num_unit": "基",
+        "unit": "索道数（世界最大級166人乗りロープウェイ1・リフト7）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "内陸部特有のドライパウダーが楽しめる山頂エリアは平均斜度10度で初心者でも安心。竜王名物・最大斜度36度の非圧雪コース「木落しBowl」やツリーランエリアもあり（ヘルメット着用義務）。スノーパークはBlue&Greenエリアと「Wavy Lines」の2ヵ所。",
+    "map_img": null,
+    "map_source_note": null,
+    "cards": [
+      {
+        "href": "https://ryuoo.com/zP7gL2nW/wp-content/uploads/2026/02/1a9c59bc08d6c056d1299502c03beeca.pdf",
+        "title": "コースマップを見る（公式サイト・PDF）",
+        "sub": "場内は運行状況を反映したインタラクティブマップのため、単体画像の代わりにPDF版をご案内しています"
+      }
+    ]
+  },
+  "reviews": {
+    "good": [
+      "世界最大級166人乗りロープウェイで標高1,770mの山頂駅まで一気にアクセス、条件が合えば雲海が広がる「SORA terrace」の絶景",
+      "標高1,930mの高標高エリアで良質なパウダースノーが楽しめる",
+      "最長約6,000mのロングランがあり、標高差を活かして初級者でも長く滑走できる",
+      "竜王名物「木落しBowl」など上級者向け非圧雪・ツリーランも充実",
+      "無料スノボデビューレッスンが充実、ヘルメット・レディースウェアも無料貸出"
+    ],
+    "bad": [
+      "SORA terrace（山頂エリア）へは車で直接行けず、ロープウェイの利用が必須",
+      "電車の場合は湯田中駅からのシャトルバス利用が前提となる",
+      "専用の雪遊びキッズエリア（そり広場等）は確認できず、小さな子供連れにはやや不向き"
+    ],
+    "foot": "公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.747,
+    "lon": 138.494,
+    "foot": "長野県山ノ内町・竜王高原付近の予報。<a href=\"https://tenki.jp/forecast/3/23/4810/20561/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "ryuoo",
+    "fallback_url": "https://ryuoo.com/winter/gelande/",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "山頂ソラテラスライブカメラ",
+    "type": "youtube",
+    "cams": [
+      {
+        "label": "山頂ソラテラスライブカメラ",
+        "id": "Mde4BtGxyWE"
+      }
+    ],
+    "iframe_title": "竜王スキーパーク 山頂ソラテラスライブカメラ",
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": "中学生以上"
+      },
+      {
+        "key": "child",
+        "label": "子供",
+        "cond": "4歳以上"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "child": 0
+    },
+    "options": [
+      {
+        "key": "weekday",
+        "label": "平日"
+      },
+      {
+        "key": "weekend",
+        "label": "土日祝"
+      }
+    ],
+    "aria_label": "日付タイプ",
+    "price_table": {
+      "weekday": {
+        "adult": 6000,
+        "child": 3000
+      },
+      "weekend": {
+        "adult": 6200,
+        "child": 3200
+      }
+    },
+    "default_option": "weekday",
+    "foot": "通常期間（2026年12月19日〜2027年3月22日）の料金。ICカード保証金500円（現金）が別途必要。初滑り・春スキー期間は割安（大人4,700〜4,900円）。ナイター券は大人¥2,600／子供¥1,600。障がい者手帳割引あり。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "SPICYレンタル竜王スキーパーク店の参考価格帯。品目・グレードにより料金は異なるため公式サイト・現地でご確認ください。",
+    "mode": "stepper",
+    "items": [
+      {
+        "key": "set_adult",
+        "label": "スキー／スノーボードセット・大人",
+        "price": 5500
+      },
+      {
+        "key": "set_child",
+        "label": "スキー／スノーボードセット・子供",
+        "price": 3500
+      },
+      {
+        "key": "wear_adult",
+        "label": "ウェア上下・大人",
+        "price": 4000
+      },
+      {
+        "key": "wear_child",
+        "label": "ウェア上下・子供",
+        "price": 2500
+      }
+    ]
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "無料スノボデビューレッスン",
+        "tag": "ヘルメット無料貸出（SMITH）・最大6時間・できるまでチャレンジ可",
+        "right": "無料",
+        "link": null
+      },
+      {
+        "name": "THE BASE 2階キッズスペース",
+        "tag": "チケットセンター・レストラン併設施設内",
+        "right": "-",
+        "link": null
+      }
+    ],
+    "foot": "雪遊び専用のキッズパーク（そり広場等）は公式サイト上で確認できませんでした。営業期間は2026年12月5日〜2027年4月4日（予定）。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "湯の駅ぽんぽこ",
+        "tag": "竜王マウンテンリゾート内の日帰り温泉施設",
+        "right": "公式サイトで確認",
+        "link": null
+      },
+      {
+        "name": "湯田中渋温泉郷",
+        "tag": "シャトルバス発着の湯田中駅周辺、外湯9湯めぐりで有名な温泉街",
+        "right": "施設により異なる",
+        "link": null
+      }
+    ],
+    "foot": "湯の駅ぽんぽこの料金・営業時間は変更されることがあるため公式サイトでご確認ください。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "Spirits Grill",
+        "tag": "信州産ジビエバーガーが看板メニュー・朝はカフェ、夜はバー営業",
+        "mapQuery": "竜王スキーパーク Spirits Grill"
+      },
+      {
+        "name": "とんとんとん",
+        "tag": "握りたておにぎり（約27種）と豚汁の専門店、揚げパン・抹茶ドリンクも",
+        "mapQuery": "竜王スキーパーク とんとんとん"
+      },
+      {
+        "name": "SORA terrace cafe",
+        "tag": "標高1,770m山頂駅すぐ、暖炉付きラウンジで絶景を眺めながら休憩",
+        "mapQuery": "竜王スキーパーク SORA terrace cafe"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "上信越道 信州中野IC → 約16km"
+      },
+      {
+        "k": "電車",
+        "v": "長野電鉄 湯田中駅から無料シャトルバス（ロープウェイの運行に準ずる）"
+      },
+      {
+        "k": "駐車場",
+        "v": "バスインフォメーションセンター前に約1,500台収容"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://ryuoo.com/access/\" rel=\"noopener\" target=\"_blank\">ryuoo.com／アクセス詳細</a>"
+      }
+    ],
+    "foot": "SORA terrace（山頂エリア）へは車で直接行けません。ロープウェイをご利用ください。"
+  },
+  "news": {
+    "source": "from ryuoo.com/news, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年09月15日",
+        "title": "2026-2027 ウインターシーズン営業のお知らせ",
+        "url": "https://ryuoo.com/post-7047/"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://twitter.com/ryuooski",
+    "title": "@ryuooski（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：2026年12月5日〜2027年4月4日（予定）、ナイターは12月22日〜3月21日（予定）。コースマップ・ライブカメラ映像は竜王スキーパーク公式サイト掲載の著作物です。",
+    "データ精度：料金・コース数は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-05",
+    "end": "2027-04-04",
+    "approximate": false,
+    "next_note": "次シーズンは例年12月上旬オープン予定"
+  }
+}

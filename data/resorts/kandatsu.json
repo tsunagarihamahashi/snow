@@ -1,0 +1,304 @@
+{
+  "id": "kandatsu",
+  "title": "神立スノーリゾート",
+  "name": "神立スノーリゾート",
+  "eyebrow": "新潟県 / 関東から一番近い100%天然雪",
+  "pref": "新潟県南魚沼郡湯沢町神立",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "平日8:00<br/>土休日7:00"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "なし"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜16:00"
+      },
+      {
+        "label": "ナイター",
+        "value": "18:00〜翌2:00"
+      }
+    ],
+    "foot": "ナイターは金・土・祝前日のみ（年末年始は4夜連続）。年末年始は7:00〜16:00に前倒し"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "130",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "16",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "2,900",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "6",
+        "num_unit": null,
+        "unit": "リフト数<br/>（うち高速クワッド3）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "12,000",
+        "num_unit": "人/時",
+        "unit": "リフト輸送力（参考値）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "コース16本の内訳は初級5・中級5・上級6（公式コースガイドより本サイトで集計）。最長滑走はミルキーウェイコース（尾根づたいの上級ロングコース）。首都圏から一番近い100%天然雪スキー場。",
+    "map_img": null,
+    "map_source_note": null,
+    "cards": [
+      {
+        "href": "https://www.kandatsu.com/course-guide/",
+        "title": "コースマップを見る（公式サイト）",
+        "sub": "公式サイトはレイヤー合成型のインタラクティブマップのため、1枚画像としては掲載していません"
+      }
+    ]
+  },
+  "reviews": {
+    "good": [
+      "斜度のあるコースが多く、レベルに応じたバリエーションが豊富で中上級者に人気",
+      "100%天然雪でパウダースノーが楽しめる",
+      "近代的なリフト施設で待ち時間が少なくスムーズ",
+      "ナイターが18:00〜翌2:00とほぼオールナイト営業で夜遅くまで楽しめる",
+      "湯沢ICから車で約3分とアクセスが良い"
+    ],
+    "bad": [
+      "中上級コースが中心で、初心者向けコースはやや少なめ",
+      "コンパクトなゲレンデのため、広大さを求める人には物足りないとの声も"
+    ],
+    "foot": "スキー・スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。総合評価3.68（口コミサイト集計値）。"
+  },
+  "weather": {
+    "lat": 36.93,
+    "lon": 138.815,
+    "foot": "湯沢町神立付近（標高約500m）の予報。<a href=\"https://www.kandatsu.com/today/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "kandatsu",
+    "fallback_url": "https://www.kandatsu.com/today/",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "ポルックス（メインゲレンデ）",
+    "type": "skiday",
+    "cams": [
+      {
+        "label": "ポルックス（メインゲレンデ）",
+        "src": "https://skiday.app/elPm2Y0xje6IJ6VdIF2W/869223040349647/embed"
+      },
+      {
+        "label": "駐車場",
+        "src": "https://skiday.app/elPm2Y0xje6IJ6VdIF2W/860728064766665/embed"
+      },
+      {
+        "label": "ベースエリア",
+        "src": "https://skiday.app/elPm2Y0xje6IJ6VdIF2W/865036047359763/embed"
+      }
+    ],
+    "iframe_title": "神立スノーリゾートライブカメラ",
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "flat",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": null
+      },
+      {
+        "key": "child",
+        "label": "小学生",
+        "cond": null
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "child": 0
+    },
+    "prices": {
+      "adult": 6500,
+      "child": 4000
+    },
+    "foot": "2025-26シーズンの参考価格（公式サイトでは日別の標準1日券表が非掲載のため、提携チケットサイト掲載価格を参照）。19・20歳割（平日¥3,000／土休日¥3,500）、レディースデイ（平日¥3,800）等の割引は公式サイトでご確認ください。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "1日レンタルの料金。板・ブーツ・ウェア全てセットの場合は大人¥9,500／子供¥6,000のセット割引もあります（公式サイトでご確認ください）。",
+    "mode": "stepper",
+    "items": [
+      {
+        "key": "set_adult",
+        "label": "スキー／スノーボードセット・大人",
+        "price": 5800
+      },
+      {
+        "key": "set_child",
+        "label": "スキー／スノーボードセット・子供",
+        "price": 3500
+      },
+      {
+        "key": "wear_adult",
+        "label": "ウェア上下セット・大人",
+        "price": 5000
+      },
+      {
+        "key": "wear_child",
+        "label": "ウェア上下セット・子供",
+        "price": 3000
+      },
+      {
+        "key": "full_adult",
+        "label": "板・ウェア全セット・大人",
+        "price": 9500
+      },
+      {
+        "key": "full_child",
+        "label": "板・ウェア全セット・子供",
+        "price": 6000
+      },
+      {
+        "key": "helmet",
+        "label": "ヘルメット（共通）",
+        "price": 1000
+      }
+    ]
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "ポラリスコース",
+        "tag": "緩やかで広いコース・スクールレッスンにも使用",
+        "right": null,
+        "link": null
+      }
+    ],
+    "foot": "キッズ向け施設・料金の詳細は<a class=\"outlink\" href=\"https://www.kandatsu.com/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>でご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "神の湯＆サウナ",
+        "tag": "GROUND BASE 4階・約400人収容の湯沢エリア最大級の大浴場、露天風呂＋サウナ＋ジャグジー",
+        "right": "大人¥1,300／小人¥600",
+        "link": null
+      }
+    ],
+    "foot": "営業時間は月〜木14:00〜18:00、金14:00〜24:00、土0:00〜24:00（曜日により変動）。雪見風呂が楽しめる露天風呂も完備。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "レストラン ペガサス",
+        "tag": "南魚沼産コシヒカリ使用のタレカツ丼・海鮮丼・カレー等",
+        "mapQuery": "神立スノーリゾート レストランペガサス"
+      },
+      {
+        "name": "山小屋あじと",
+        "tag": "名物「火山らーめん」、新潟名物たれカツ丼等ご当地グルメ",
+        "mapQuery": "神立スノーリゾート 山小屋あじと"
+      },
+      {
+        "name": "大阪焼肉ふたごや",
+        "tag": "大阪鶴橋ルーツの焼肉丼店",
+        "mapQuery": "神立スノーリゾート 大阪焼肉ふたごや"
+      },
+      {
+        "name": "神立クレープ",
+        "tag": "直営クレープショップ",
+        "mapQuery": "神立スノーリゾート 神立クレープ"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 湯沢IC → 約1km・車で約3分"
+      },
+      {
+        "k": "電車",
+        "v": "東京から越後湯沢駅まで新幹線で約66分。東口から無料シャトルバスで約7分"
+      },
+      {
+        "k": "駐車場",
+        "v": "約2,000台・全日無料（優先駐車場はWeb予約制・1台¥2,000）"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.kandatsu.com/access\" rel=\"noopener\" target=\"_blank\">kandatsu.com／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from kandatsu.com, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年08月28日",
+        "title": "【2026-2027シーズン】超早割シーズンパスポート9/1より販売開始！",
+        "url": "https://www.kandatsu.com/seasonpass/"
+      },
+      {
+        "date": "2026年08月06日",
+        "title": "【2026-2027シーズン】KSRスタッフ大募集！",
+        "url": "https://www.kandatsu.com/news/%e3%80%902026-2027%e3%82%b7%e3%83%bc%e3%82%ba%e3%83%b3%e3%80%91ksr%e3%82%b9%e3%82%bf%e3%83%83%e3%83%95%e5%a4%a7%e5%8b%9f%e9%9b%86%ef%bc%81/"
+      },
+      {
+        "date": "2026年04月07日",
+        "title": "営業終了のお知らせ",
+        "url": "https://www.kandatsu.com/news/%e5%96%b6%e6%a5%ad%e7%b5%82%e4%ba%86%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/KandatsuPegasus",
+    "title": "@KandatsuPegasus（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：2026年12月11日（プレシーズン開始）〜2027年4月11日頃（予定）。コースマップは公式サイトへ直接リンクしています。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-11",
+    "end": "2027-04-11",
+    "approximate": false,
+    "next_note": "次シーズンは例年12月中旬オープン予定"
+  }
+}

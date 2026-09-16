@@ -1,0 +1,288 @@
+{
+  "id": "grandeco",
+  "title": "グランデコスノーリゾート",
+  "name": "グランデコスノーリゾート",
+  "eyebrow": "福島県 / 猪苗代磐梯高原ICから車で30分",
+  "pref": "福島県耶麻郡北塩原村桧原荒砂沢山",
+  "hours": {
+    "items": [
+      {
+        "label": "営業時間",
+        "value": "8:30〜16:00"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "9:00〜15:00"
+      },
+      {
+        "label": "標高",
+        "value": "1,010〜1,590m"
+      },
+      {
+        "label": "最長滑走",
+        "value": "4,500m"
+      }
+    ],
+    "foot": "6人乗り高速ゴンドラ1基・4人乗り高速フード付きリフト3基。運行時間は天候・降雪状況により変動する場合あり"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "58",
+        "num_unit": null,
+        "unit": "ゲレンデ面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "11",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "4,500",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "580",
+        "num_unit": null,
+        "unit": "標高差 m<br/>（1,010〜1,590m）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "4",
+        "num_unit": "基",
+        "unit": "索道数（ゴンドラ1・クワッドリフト3）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "ピーク標高1,590mは東北エリアNo.1（公式サイトより）。コース内訳は初級40%・中級45%・上級15%、最大斜度33°。SNOW SURF PARK・FREE RIDE PARK・KIDS PARK・PLAY GROUNDなどパークも充実。",
+    "map_img": {
+      "src": "https://grandecoresort.co.jp/wp-content/themes/snow/assets/images/course/map.jpg",
+      "alt": "グランデコスノーリゾート コースマップ（クリックで拡大）"
+    },
+    "map_source_note": null,
+    "cards": []
+  },
+  "reviews": {
+    "good": [
+      "ピーク標高1,590mは東北エリアNo.1、上質なパウダースノーが楽しめる",
+      "標高差580m・最長4,500mのロングコースを6人乗り高速ゴンドラで一気にアクセス",
+      "初級40%・中級45%と初中級者にやさしいコース構成で家族連れにも安心",
+      "KIDS PARKやファミリールーム（授乳室付き）など子供連れ向け設備が充実",
+      "オフィシャルホテル直結でゲレンデインアウトが可能、日帰り入浴もできる天然温泉「ぶなの湯」"
+    ],
+    "bad": [
+      "コース数は11と、大規模スキー場と比べるとコンパクト",
+      "猪苗代磐梯高原ICから車で約30分・公共交通は要事前予約のシャトルバス",
+      "ゴンドラの運行時間が9:00〜15:00とリフトよりやや短い"
+    ],
+    "foot": "公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 37.667,
+    "lon": 140.1,
+    "foot": "福島県北塩原村・裏磐梯付近（標高約1,000m）の予報。<a href=\"https://grandecoresort.co.jp/snow/course/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "grandeco",
+    "fallback_url": "https://grandecoresort.co.jp/snow/course/",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "山頂ライブカメラ",
+    "type": "image",
+    "cams": [
+      {
+        "label": "山頂ライブカメラ",
+        "url": "https://camera.en-hotel.com/img/cam4.jpg"
+      }
+    ],
+    "alt": "グランデコスノーリゾート 山頂ライブカメラ",
+    "refresh_ms": 60000,
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": "13〜49歳"
+      },
+      {
+        "key": "child",
+        "label": "小人",
+        "cond": "6〜12歳"
+      },
+      {
+        "key": "senior",
+        "label": "シニア",
+        "cond": "50歳以上"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "child": 0,
+      "senior": 0
+    },
+    "options": [
+      {
+        "key": "weekday",
+        "label": "平日"
+      },
+      {
+        "key": "weekend",
+        "label": "土日祝"
+      }
+    ],
+    "aria_label": "日付タイプ",
+    "price_table": {
+      "weekday": {
+        "adult": 4300,
+        "child": 3000,
+        "senior": 3800
+      },
+      "weekend": {
+        "adult": 5500,
+        "child": 3800,
+        "senior": 4800
+      }
+    },
+    "default_option": "weekday",
+    "foot": "オンシーズン（2026年12月12日〜2027年3月22日）の現地券売機料金。プレシーズン（11/21〜12/11）・スプリングシーズン（3/23〜4/11）は割安料金。年末年始12/26〜1/3は特定日として土日祝料金。事前オンライン購入で500円引きになる割引あり。"
+  },
+  "rental": {
+    "mode": "none"
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "KIDS PARK",
+        "tag": "動く歩道完備・そり/チュービング＋キッズ練習ゲレンデ",
+        "right": "公式サイトで確認",
+        "link": null
+      },
+      {
+        "name": "託児所",
+        "tag": "2〜6歳・完全予約制（最大5名、3日前24時までに要予約）",
+        "right": "公式サイトで確認",
+        "link": null
+      },
+      {
+        "name": "ファミリールーム",
+        "tag": "授乳室・おむつ交換台付き、山麓マウンテンセンター2F",
+        "right": "無料",
+        "link": null
+      }
+    ],
+    "foot": "料金・営業期間は変更される場合があるため公式サイトでご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "デコ平温泉 ぶなの湯",
+        "tag": "EN RESORT Grandeco Hotel内・単純泉、サウナ＆水風呂併設",
+        "right": "中学生以上¥1,100",
+        "link": null
+      }
+    ],
+    "foot": "日帰り入浴は12:00〜16:00（最終受付）。小学生¥800・4歳以上¥500。シーズン券提示で平日半額特典あり。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "Cafeteria / Decoカフェ",
+        "tag": "山麓マウンテンセンター・山塩ラーメンやカレー、丼物など",
+        "mapQuery": "グランデコスノーリゾート Cafeteria"
+      },
+      {
+        "name": "BUNABUNA",
+        "tag": "山頂レストラン・本格ピザ窯で焼くピザやパスタ",
+        "mapQuery": "グランデコスノーリゾート BUNABUNA"
+      },
+      {
+        "name": "Decoクレープ",
+        "tag": "山麓マウンテンセンター・定番の甘い系メニューからおかずクレープまで",
+        "mapQuery": "グランデコスノーリゾート Decoクレープ"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "磐越自動車道 猪苗代磐梯高原IC → 約30分"
+      },
+      {
+        "k": "電車",
+        "v": "JR猪苗代駅から無料シャトルバス（要事前予約・前日17時まで、1日3往復）"
+      },
+      {
+        "k": "駐車場",
+        "v": "平日無料。土日祝・年末年始は普通車¥1,000（ホテル宿泊者は通年無料）"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://grandecoresort.co.jp/snow/access/\" rel=\"noopener\" target=\"_blank\">grandecoresort.co.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from grandecoresort.co.jp/snow, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年08月29日",
+        "title": "2026-2027 冬季シーズン情報の更新",
+        "url": "https://grandecoresort.co.jp/snow/2026/08/29/2026-2027-%e5%86%ac%e5%ad%a3%e3%82%b7%e3%83%bc%e3%82%ba%e3%83%b3%e6%83%85%e5%a0%b1%e3%81%ae%e6%9b%b4%e6%96%b0/"
+      },
+      {
+        "date": "2026年08月24日",
+        "title": "25-26シーズンパス特典について",
+        "url": "https://grandecoresort.co.jp/snow/2026/08/24/25-26%e3%82%b7%e3%83%bc%e3%82%ba%e3%83%b3%e3%83%91%e3%82%b9%e7%89%b9%e5%85%b8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
+      },
+      {
+        "date": "2026年06月19日",
+        "title": "SURF & SNOW 2025-2026 SKI RESORTランキング",
+        "url": "https://grandecoresort.co.jp/snow/2026/06/19/surf-snow-2025-2026ski-resort-%e3%83%a9%e3%83%b3%e3%82%ad%e3%83%b3%e3%82%b0/"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/grandeco",
+    "title": "@grandeco（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：2026年11月21日〜2027年4月11日（予定・プレシーズン/オンシーズン/スプリングシーズンの3期間制）。コースマップ・ライブカメラ映像はグランデコスノーリゾート公式サイト掲載の著作物です。",
+    "データ精度：料金・面積は公式サイトを基にした参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-11-21",
+    "end": "2027-04-11",
+    "approximate": false,
+    "next_note": "次シーズンは例年11月下旬オープン予定"
+  }
+}

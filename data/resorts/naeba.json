@@ -1,0 +1,308 @@
+{
+  "id": "naeba",
+  "title": "苗場スキー場",
+  "name": "苗場スキー場",
+  "eyebrow": "新潟県 / プリンススノーリゾート",
+  "pref": "新潟県南魚沼郡湯沢町三国",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "8:00"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "8:00"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜17:00"
+      },
+      {
+        "label": "ナイター",
+        "value": "17:00〜20:30"
+      }
+    ],
+    "foot": "期間・天候・コースにより時刻は前後する場合あり"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "134",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "24",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "4,000",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "889",
+        "num_unit": null,
+        "unit": "標高差 m<br/>（889〜1,789m）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "12",
+        "num_unit": "基",
+        "unit": "索道数（ゴンドラ3・高速クワッド6・ロマンスリフト3）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "コース24本の内訳は初級9・中級6・上級9（公式サイトより）。総滑走距離17,986m、最大斜度32度。日本最長5,481mのドラゴンドラでかぐらエリアと直結。",
+    "map_img": {
+      "src": "https://www.princehotels.co.jp/image.jsp?id=497058",
+      "alt": "苗場スキー場 コースマップ（クリックで拡大）"
+    },
+    "map_source_note": null,
+    "cards": []
+  },
+  "reviews": {
+    "good": [
+      "雪質が良く、北海道と比べても引けを取らないという声も",
+      "コース・リフトが多く、施設・景観すべてに高い評価",
+      "ホテル直結でゲレンデまで移動が楽（苗場プリンスホテル利用時）",
+      "小学生以下リフト無料で、キッズパークも充実しファミリー向き",
+      "ドラゴンドラでかぐらエリアにも足を伸ばせる"
+    ],
+    "bad": [
+      "リフト券・食事代がやや高めという指摘（「苗場はワンランク高い」との声）",
+      "週末は混雑しやすい（近年は「リフト待ちも5分程度」との声も）",
+      "越後湯沢駅からバスで1時間近くかかり、新幹線での日帰りには不向き"
+    ],
+    "foot": "みん評・トリップアドバイザー・スキー&スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.826,
+    "lon": 138.766,
+    "foot": "湯沢町三国付近（標高約900m）の予報。<a href=\"https://weathernews.jp/ski/spot/35405/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "naeba",
+    "fallback_url": "https://www.princehotels.co.jp/ski/naeba/informations?tab=businesshours",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "ホテル前",
+    "type": "skiday",
+    "cams": [
+      {
+        "label": "ホテル前",
+        "src": "https://skiday.app/qNZn0zI8wvmOV2CZ3OFY/869223047442742/embed"
+      },
+      {
+        "label": "大斜面ゲレンデ",
+        "src": "https://skiday.app/qNZn0zI8wvmOV2CZ3OFY/869223047452949/embed"
+      },
+      {
+        "label": "筍平ゲレンデ",
+        "src": "https://skiday.app/qNZn0zI8wvmOV2CZ3OFY/869223047446750/embed"
+      }
+    ],
+    "iframe_title": "苗場スキー場ライブカメラ",
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人（中学生以上）",
+        "cond": null
+      },
+      {
+        "key": "child",
+        "label": "子供",
+        "cond": "小学生以下・無料"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "child": 0
+    },
+    "options": [
+      {
+        "key": "mtnaeba",
+        "label": "Mt.苗場 （かぐら共通）"
+      },
+      {
+        "key": "naeba1day",
+        "label": "苗場エリア 1日券"
+      },
+      {
+        "key": "naeba4h",
+        "label": "苗場エリア 4時間券"
+      }
+    ],
+    "aria_label": "券種",
+    "price_table": {
+      "mtnaeba": {
+        "adult": 9800,
+        "child": 0
+      },
+      "naeba1day": {
+        "adult": 7800,
+        "child": 0
+      },
+      "naeba4h": {
+        "adult": 6300,
+        "child": 0
+      }
+    },
+    "default_option": "mtnaeba",
+    "foot": "子供（小学生以下）はリフト券売り場で専用チケットが無料で発行されます。8時間券（¥8,300）等その他の券種は公式サイトでご確認ください。SEIBU PRINCE CLUB会員は割引あり。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "プリンスホテル内レンタルショップの料金。5時間券等の時間制料金は別途公式サイトでご確認ください。",
+    "mode": "stepper",
+    "items": [
+      {
+        "key": "set_adult",
+        "label": "セット（板・ブーツ）・大人",
+        "price": 6500
+      },
+      {
+        "key": "set_child",
+        "label": "セット（板・ブーツ）・子供",
+        "price": 5000
+      },
+      {
+        "key": "helmet_adult",
+        "label": "ヘルメット・大人",
+        "price": 1500
+      },
+      {
+        "key": "helmet_child",
+        "label": "ヘルメット・子供",
+        "price": 1000
+      }
+    ]
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "わくわくファミリースノーランド",
+        "tag": "チュービング・スノートレイン等、平日9:30〜16:00／土休日〜16:30",
+        "right": "大人¥1,500／3歳〜小学生¥2,500",
+        "link": null
+      }
+    ],
+    "foot": "2歳以下は無料。スノートレインのみの1日券は¥1,500。営業期間は例年12月下旬〜3月末（2025-26シーズンは2025年12月20日〜2026年3月31日）。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "火打の湯",
+        "tag": "苗場プリンスホテル内・内風呂＋露天風呂（冬季営業）",
+        "right": "大人¥1,000／子供¥500",
+        "link": null
+      }
+    ],
+    "foot": "日帰り入浴 6:00〜9:00（最終入場8:30）／15:00〜23:00（最終受付22:30）。チェックイン前・チェックアウト後は利用不可。中性低張性の天然温泉。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "ゲレンデフードコート",
+        "tag": "厚切りベーコン＆粗びきソーセージのポテトピッツア、BBQポテト等",
+        "mapQuery": "苗場スキー場 ゲレンデフードコート"
+      },
+      {
+        "name": "日帰りスキーセンター シュネー",
+        "tag": "駐車場直結・ラーメン等",
+        "mapQuery": "苗場スキー場 シュネー"
+      },
+      {
+        "name": "田代高原レストラン",
+        "tag": "地元食材の食事・屋外席あり、大きな窓から高原を一望",
+        "mapQuery": "苗場スキー場 田代高原レストラン"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 湯沢IC → 国道17号を21km・車で約30分"
+      },
+      {
+        "k": "電車",
+        "v": "越後湯沢駅からバスで約1時間（新幹線での日帰りにはやや不向き）"
+      },
+      {
+        "k": "駐車場",
+        "v": "約3,800台。平日¥1,000・土休日¥2,000（普通車、宿泊者は1泊¥1,000）"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.princehotels.co.jp/naeba/access/\" rel=\"noopener\" target=\"_blank\">princehotels.co.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from princehotels.co.jp/ski/naeba/informations, 2026-09-16",
+    "items": [
+      {
+        "date": "2026年09月15日",
+        "title": "【9月】アクティビティ営業状況 ※9:00A.M.更新",
+        "url": "https://www.princehotels.co.jp/ski/naeba/informations/activity_spring_autumn"
+      },
+      {
+        "date": "2026年04月22日",
+        "title": "2026-2027冬期シーズン 宿泊プラン Web予約開始！",
+        "url": "https://www.princehotels.co.jp/naeba/informations/winter/reservation/2627/"
+      },
+      {
+        "date": "2025年11月06日",
+        "title": "駐車場全日有料化について",
+        "url": "https://www.princehotels.co.jp/naeba/informations/parking/times"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/Naebanow",
+    "title": "@Naebanow（苗場ドラゴンドラ公式）",
+    "sub": "リフト運行状況やお得情報など、最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：2026年12月18日〜2027年4月4日（公式発表）。コースマップ画像は苗場スキー場公式サイト掲載の著作物です。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-18",
+    "end": "2027-04-04",
+    "approximate": false,
+    "next_note": "次シーズンは例年12月中旬オープン予定"
+  }
+}

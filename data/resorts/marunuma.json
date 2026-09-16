@@ -1,0 +1,427 @@
+{
+  "id": "marunuma",
+  "title": "丸沼高原",
+  "name": "丸沼高原",
+  "eyebrow": "群馬県 / 標高2000mの高原スキー場",
+  "pref": "群馬県利根郡片品村東小川",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "8:30"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "8:30（ロープウェイ）"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜16:00"
+      },
+      {
+        "label": "ナイター",
+        "value": "なし"
+      }
+    ],
+    "foot": "期間・リフトにより時刻は異なる場合あり。日光白根山ロープウェイは観光利用にも供されます"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "59",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "17",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "4,000",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "257",
+        "num_unit": null,
+        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
+        "wide": false,
+        "tier": "low",
+        "idx_tag": "やや混みやすい方"
+      },
+      {
+        "num": "8",
+        "num_unit": "基",
+        "unit": "索道数（ペアリフト5・スーパーツイン2・日光白根山ロープウェイ1）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "コース17本の内訳は初級7・中級7・上級3（丸沼高原公式「本日の丸沼」ステータスページ掲載のコース一覧を本サイトで集計）。総面積59haはWikipedia記載値のため参考値です。標高差は1,400m〜2,000m、最大斜度32度。",
+    "map_img": {
+      "src": "https://www.marunuma.jp/winter/wp/wp-content/uploads/2025/10/2026wcoursemap.jpg",
+      "alt": "丸沼高原 コースマップ（クリックで拡大）"
+    },
+    "map_source_note": null,
+    "cards": []
+  },
+  "reviews": {
+    "good": [
+      "11月下旬〜5月上旬と営業期間が長く、関東で最も早くオープンする屋外スキー場",
+      "標高1,400〜2,000mの高さで積雪が安定し、雪質も「スーパーファインスノー」と評判",
+      "コース幅が広く、初級者でも走りやすい設計",
+      "人工降雪機を活用したゲレンデ整備が丁寧",
+      "平日は駐車場が無料で利便性が高い"
+    ],
+    "bad": [
+      "沼田ICから車で約50分とアクセスがやや遠い",
+      "ペアリフト中心で速度が遅いという指摘",
+      "シーズン序盤・終盤は積雪が少なく混雑しやすい",
+      "スノーボーダーが多く、スキーヤーには肩身が狭いとの声も",
+      "緩斜面が多くコースが単調という意見もある"
+    ],
+    "foot": "じゃらん・SURF&SNOW・スキー&スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.8118,
+    "lon": 139.333,
+    "foot": "山頂付近（標高約2,000m）の予報。<a href=\"https://weathernews.jp/ski/spot/34217/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "marunuma",
+    "fallback_url": "https://www.marunuma.jp/winter/",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "バイオレットコース（標高1500m）",
+    "type": "youtube",
+    "cams": [
+      {
+        "label": "バイオレットコース（標高1500m）",
+        "id": "cqvEOhOzN2o"
+      },
+      {
+        "label": "日光白根山",
+        "id": "0Q2YZBnp7vk"
+      }
+    ],
+    "iframe_title": "丸沼高原ライブカメラ",
+    "aspect": "16/9"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": null
+      },
+      {
+        "key": "elem",
+        "label": "小中学生",
+        "cond": null
+      },
+      {
+        "key": "senior",
+        "label": "シニア",
+        "cond": "60歳以上"
+      },
+      {
+        "key": "infant",
+        "label": "幼児",
+        "cond": "未就学児・大人同伴時無料"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "elem": 0,
+      "senior": 0,
+      "infant": 0
+    },
+    "options": [
+      {
+        "key": "weekday",
+        "label": "平日"
+      },
+      {
+        "key": "weekend",
+        "label": "休日"
+      }
+    ],
+    "aria_label": "日付タイプ",
+    "price_table": {
+      "weekday": {
+        "adult": 5600,
+        "elem": 3000,
+        "senior": 5200,
+        "infant": 0
+      },
+      "weekend": {
+        "adult": 6300,
+        "elem": 3000,
+        "senior": 5900,
+        "infant": 0
+      }
+    },
+    "default_option": "weekday",
+    "foot": "小中学生料金は平日・休日共通。未就学児は大人1名同伴時リフト無料（同乗時は要確認）。フレンドリーパス・5時間券など短時間券は別途公式サイトでご確認ください。オンライン購入で1日券が400円引きになる場合があります。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "子供料金は小学生までが対象。上級者向けエキスパートスキー（オガサカ、板のみ半日¥3,500〜／セット半日¥5,000〜）は別料金体系のため公式サイトでご確認ください。",
+    "mode": "cart",
+    "plans": [
+      {
+        "id": "set",
+        "label": "スキー／スノーボードセット",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 5500
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 3500
+          }
+        ]
+      },
+      {
+        "id": "board",
+        "label": "板単品（スキー・ボード）",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 3000
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 2500
+          }
+        ]
+      },
+      {
+        "id": "boots",
+        "label": "ブーツ単品",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 3000
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 2500
+          }
+        ]
+      },
+      {
+        "id": "poles",
+        "label": "ストック単品",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 500
+          }
+        ]
+      },
+      {
+        "id": "wear",
+        "label": "ウェア上下セット",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 4000
+          },
+          {
+            "key": "child",
+            "label": "子供",
+            "price": 2500
+          }
+        ]
+      },
+      {
+        "id": "wear_half",
+        "label": "ウェア単品",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人のみ",
+            "price": 2500
+          }
+        ]
+      },
+      {
+        "id": "helmet",
+        "label": "ヘルメット",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 800
+          }
+        ]
+      },
+      {
+        "id": "protector",
+        "label": "プロテクター",
+        "categories": [
+          {
+            "key": "common",
+            "label": "共通",
+            "price": 500
+          }
+        ]
+      }
+    ],
+    "default_line": {
+      "plan": "set",
+      "category": "adult",
+      "count": 1
+    }
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "キッズパーク",
+        "tag": "高原の駅前・雪遊び広場＋ソリ乗り場、8:30〜16:00",
+        "right": "無料開放",
+        "link": null
+      }
+    ],
+    "foot": "スノーエスカレーターの設置はありません。そり等の道具貸し出しもないため持参が必要です。営業期間は12月下旬〜4月上旬（予定）。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "座禅温泉",
+        "tag": "センターステーション2階・ゲレンデ直結、受付13:00〜16:30（閉館17:30）",
+        "right": "大人¥800／小学生¥600",
+        "link": null
+      }
+    ],
+    "foot": "バスタオルレンタル¥400、貴重品ロッカー¥100。ナトリウム・カルシウム-硫酸塩温泉。不定休のため詳細は公式サイトでご確認ください。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "レストラン プラトー",
+        "tag": "センターステーション内・ロープウェイ乗り場最寄り",
+        "mapQuery": "丸沼高原 レストランプラトー"
+      },
+      {
+        "name": "カフェ ポックル",
+        "tag": "クレープ・ドリンク、テイクアウト充実",
+        "mapQuery": "丸沼高原 カフェポックル"
+      },
+      {
+        "name": "とんふぁん",
+        "tag": "ゲレンデ内レストラン",
+        "mapQuery": "丸沼高原 とんふぁん"
+      },
+      {
+        "name": "高原の駅",
+        "tag": "ゲレンデ中腹・軽食",
+        "mapQuery": "丸沼高原 高原の駅"
+      },
+      {
+        "name": "山頂しらね",
+        "tag": "標高2000m山頂・絶景レストラン",
+        "mapQuery": "丸沼高原 山頂しらね"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 沼田IC → 国道120号沿いに車で約50分"
+      },
+      {
+        "k": "バス",
+        "v": "片品スノーエクスプレス（バスタ新宿⇔片品）片道¥4,500・往復¥8,000。送迎バスは要予約（エクスプレス利用者は無料）"
+      },
+      {
+        "k": "駐車場",
+        "v": "約2,300台（センター・早出用・ハイステーション・第1〜4）。平日無料、土日祝・年末年始¥1,000。シーズン券保持者は全日無料"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.marunuma.jp/winter/access\" rel=\"noopener\" target=\"_blank\">marunuma.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from marunuma.jp/winter/category/news/, 2026-09-15",
+    "items": [
+      {
+        "date": "2026年05月06日",
+        "title": "2025-26ウィンターシーズン営業終了",
+        "url": "https://www.marunuma.jp/winter/14038/"
+      },
+      {
+        "date": "2026年04月17日",
+        "title": "日光白根山ロープウェイ観光営業のお知らせ",
+        "url": "https://www.marunuma.jp/winter/13774/"
+      },
+      {
+        "date": "2026年03月21日",
+        "title": "第47回丸沼高原大回転競技大会リザルト",
+        "url": "https://www.marunuma.jp/winter/13474/"
+      },
+      {
+        "date": "2026年01月09日",
+        "title": "全面滑走可能",
+        "url": "https://www.marunuma.jp/winter/12451/"
+      },
+      {
+        "date": "2025年12月22日",
+        "title": "12月25日ロープウェイ運行開始",
+        "url": "https://www.marunuma.jp/winter/12168/"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/marunumakogen",
+    "title": "@marunumakogen（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：例年11月下旬〜5月上旬（2025-26シーズンは2025年11月22日〜2026年5月6日）。2026-27シーズンの正式な日程は公式サイトでご確認ください。コースマップ画像は丸沼高原公式サイト掲載の著作物です。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-11-21",
+    "end": "2027-05-05",
+    "approximate": true,
+    "next_note": "次シーズンは例年11月下旬オープン予定"
+  }
+}

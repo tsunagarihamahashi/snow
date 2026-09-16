@@ -1,0 +1,506 @@
+{
+  "id": "kawaba",
+  "title": "川場スキー場",
+  "name": "川場スキー場",
+  "eyebrow": "群馬県 / 首都圏から日帰りのゲレンデ",
+  "pref": "群馬県利根郡川場村",
+  "hours": {
+    "items": [
+      {
+        "label": "始発",
+        "value": "平日8:30<br/>土日祝8:00"
+      },
+      {
+        "label": "ゴンドラ",
+        "value": "なし"
+      },
+      {
+        "label": "最終（通常）",
+        "value": "〜16:00"
+      },
+      {
+        "label": "ナイター",
+        "value": "なし"
+      }
+    ],
+    "foot": "終了時刻は日没状況により前後する場合あり。年末年始は始発が繰り上がることがあります"
+  },
+  "scale": {
+    "stats": [
+      {
+        "num": "42",
+        "num_unit": null,
+        "unit": "総面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "10",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "3,300",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "323",
+        "num_unit": null,
+        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
+        "wide": false,
+        "tier": "low",
+        "idx_tag": "やや混みやすい・10件中9位"
+      },
+      {
+        "num": "11,032",
+        "num_unit": "人/時",
+        "unit": "リフト輸送力（公式発表値）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
+    ],
+    "level_bar": null,
+    "notice": null,
+    "foot": "標高差640m（1,230m〜1,870m）。フード付きリフトもあり初級者でも山頂まで行ける構成。輸送力を駐車場台数で割ると約8.5人時/台で、尾瀬岩鞍（約14.2）・石打丸山（約22.2）と比べるとリフト待ちのリスクはやや高めと推定されます。",
+    "map_img": null,
+    "map_source_note": null,
+    "cards": [
+      {
+        "href": "https://www.kawaba.co.jp/gelande/course/",
+        "title": "コースマップを見る（公式サイト）",
+        "sub": "全体図の画像を確認できていないため、公式サイトへのリンクに留めています"
+      }
+    ]
+  },
+  "reviews": {
+    "good": [
+      "立体駐車場が日帰りスキーセンターと直結。雪が積もらず快適",
+      "ICから近く日帰りに適している",
+      "コースが長く、フード付きリフトもあり初級者でも山頂まで行ける",
+      "ゲレ食が美味しい（窯焼きピザ、インド料理カレーが好評）",
+      "標高が高く雪質が良いという評価が多い"
+    ],
+    "bad": [
+      "開発規制の影響かコース幅が細めで、中級者以上向け",
+      "土曜日は混雑しやすい",
+      "アイスバーンになることもあり、パウダー狙いなら他エリアが良いとの声も",
+      "輸送力が近隣ゲレンデより低めで、混雑時はリフト待ちが発生しやすい可能性"
+    ],
+    "foot": "じゃらん・SURF&SNOW・スキー・スノボ研究所等の口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.7689,
+    "lon": 139.1081,
+    "foot": "山頂付近（標高約1,300m）の予報。<a href=\"https://weathernews.jp/s/ski/spot/34201/\" rel=\"noopener\" target=\"_blank\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "kawaba",
+    "fallback_url": "https://www.kawaba.co.jp/",
+    "layout": "amount"
+  },
+  "livecam": {
+    "cards": [],
+    "foot": null,
+    "label": "ゲレンデ（中間エリア）",
+    "type": "image",
+    "cams": [
+      {
+        "label": "ゲレンデ（中間エリア）",
+        "url": "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch2.jpg"
+      },
+      {
+        "label": "パノラマハウス",
+        "url": "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch3.jpg"
+      },
+      {
+        "label": "FLUX PARK",
+        "url": "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch4.jpg"
+      },
+      {
+        "label": "駐車場",
+        "url": "https://livecam.kannet.ne.jp/kawaba-sky/kawaba-ch5.jpg"
+      }
+    ],
+    "alt": "川場スキー場ライブカメラ",
+    "refresh_ms": 30000,
+    "aspect": "4/3"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "toggle",
+    "categories": [
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": null
+      },
+      {
+        "key": "elem",
+        "label": "小学生",
+        "cond": null
+      },
+      {
+        "key": "senior",
+        "label": "シニア・中学生",
+        "cond": "50歳以上 または 中学生"
+      },
+      {
+        "key": "infant",
+        "label": "幼児",
+        "cond": "未就学児"
+      }
+    ],
+    "counts": {
+      "adult": 2,
+      "elem": 0,
+      "senior": 0,
+      "infant": 0
+    },
+    "options": [
+      {
+        "key": "normal",
+        "label": "通常"
+      },
+      {
+        "key": "peak_wd",
+        "label": "繁忙期平日"
+      },
+      {
+        "key": "peak_we",
+        "label": "繁忙期休日"
+      },
+      {
+        "key": "special",
+        "label": "特定日"
+      }
+    ],
+    "aria_label": "日付タイプ",
+    "price_table": {
+      "normal": {
+        "adult": 5900,
+        "elem": 2800,
+        "senior": 4000,
+        "infant": 0
+      },
+      "peak_wd": {
+        "adult": 6500,
+        "elem": 2800,
+        "senior": 4000,
+        "infant": 0
+      },
+      "peak_we": {
+        "adult": 6800,
+        "elem": 2800,
+        "senior": 4000,
+        "infant": 0
+      },
+      "special": {
+        "adult": 7300,
+        "elem": 5700,
+        "senior": 6800,
+        "infant": 0
+      }
+    },
+    "default_option": "normal",
+    "foot": "シニア・中学生は50歳以上または中学生が対象。繁忙期のシニア・中学生料金は未確認のため通常料金と同額で表示しています。特定日は年末年始等の指定日。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": null,
+    "foot": "大人は高校生以上、小人は中学生以下。事前決済利用で1品目あたり200円程度割引の場合あり。",
+    "mode": "cart",
+    "plans": [
+      {
+        "id": "ski_set",
+        "label": "スキー3点セット（板・ブーツ・ストック）",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 6000
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 4800
+          }
+        ]
+      },
+      {
+        "id": "board_set",
+        "label": "スノーボード2点セット（ボード・ブーツ）",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 6000
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 4800
+          }
+        ]
+      },
+      {
+        "id": "board_only",
+        "label": "板／ボードのみ",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 4300
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 3900
+          }
+        ]
+      },
+      {
+        "id": "boots_only",
+        "label": "ブーツのみ",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 4300
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 3900
+          }
+        ]
+      },
+      {
+        "id": "poles_only",
+        "label": "ストックのみ",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 2000
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 1300
+          }
+        ]
+      },
+      {
+        "id": "wear_set",
+        "label": "ウェア上下セット",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 5500
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 4700
+          }
+        ]
+      },
+      {
+        "id": "wear_half",
+        "label": "ウェア（ジャケットまたはパンツのみ）",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 4200
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 3900
+          }
+        ]
+      },
+      {
+        "id": "snowboots",
+        "label": "スノーブーツ",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 4000
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 3700
+          }
+        ]
+      },
+      {
+        "id": "helmet",
+        "label": "ヘルメット",
+        "categories": [
+          {
+            "key": "adult",
+            "label": "大人",
+            "price": 2000
+          },
+          {
+            "key": "child",
+            "label": "小人",
+            "price": 1000
+          }
+        ]
+      }
+    ],
+    "default_line": {
+      "plan": "ski_set",
+      "category": "adult",
+      "count": 1
+    }
+  },
+  "kids": {
+    "items": [
+      {
+        "name": "キッズパーク",
+        "tag": "フード付きスノーエスカレーター完備。そり・スノーストライダー",
+        "right": "未就学児1日券¥2,000",
+        "link": null
+      }
+    ],
+    "foot": "3歳〜就学前は1日券¥2,000、2歳以下は無料。「NSDキッズプログラム」会員はキッズパーク無料。最新情報は<a class=\"outlink\" href=\"https://www.kawaba.co.jp/\" rel=\"noopener\" target=\"_blank\">公式サイト</a>でご確認ください。"
+  },
+  "onsen": {
+    "items": [
+      {
+        "name": "川場温泉センター いこいの湯",
+        "tag": "スキー場から車で約15分・アルカリ性単純温泉",
+        "right": null,
+        "link": null
+      },
+      {
+        "name": "かわば田園温泉 楽楽の湯",
+        "tag": "道の駅 川場田園プラザすぐそば",
+        "right": null,
+        "link": null
+      },
+      {
+        "name": "川場温泉 悠湯里庵",
+        "tag": "スキー場から約14分・10:30〜20:00",
+        "right": null,
+        "link": null
+      }
+    ],
+    "foot": "料金・営業時間は変動するため、各施設にご確認ください。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {
+        "name": "ティンバーライン",
+        "tag": "総合レストラン・地産地消メニュー",
+        "mapQuery": "川場スキー場 ティンバーライン"
+      },
+      {
+        "name": "Good diner KAWABA",
+        "tag": "ニューヨークスタイルピザ・川場オリジナルバーガー",
+        "mapQuery": "川場スキー場 Good diner KAWABA"
+      },
+      {
+        "name": "ボスコ",
+        "tag": "本格石窯ピザ",
+        "mapQuery": "川場スキー場 ボスコ ピザ"
+      },
+      {
+        "name": "パノラマハウス",
+        "tag": "ゲレンデ中腹・カワバーガー",
+        "mapQuery": "川場スキー場 パノラマハウス"
+      },
+      {
+        "name": "かわばジェラート",
+        "tag": "川場産生乳のジェラート",
+        "mapQuery": "川場スキー場 かわばジェラート"
+      }
+    ],
+    "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
+  },
+  "access": {
+    "kv": [
+      {
+        "k": "車で",
+        "v": "関越道 沼田IC → 車で約25分（東京から車で約2時間）"
+      },
+      {
+        "k": "電車",
+        "v": "JR沼田駅・上毛高原駅から無料送迎バスあり（朝・夕のみ、要予約）"
+      },
+      {
+        "k": "駐車場",
+        "v": "立体駐車場900台＋屋外400台＝計1,300台。立体駐車場は日帰りスキーセンターと直結"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.kawaba.co.jp/access/\" rel=\"noopener\" target=\"_blank\">kawaba.co.jp／アクセス詳細</a>"
+      }
+    ],
+    "foot": null
+  },
+  "news": {
+    "source": "from kawaba.co.jp/topics/, 2026-09-16",
+    "items": [
+      {
+        "date": "2026年07月17日",
+        "title": "ARCHIVE SALE",
+        "url": "https://www.kawaba.co.jp/topics/9527/"
+      },
+      {
+        "date": "2026年04月19日",
+        "title": "2025-26シーズン終了のお知らせ",
+        "url": "https://www.kawaba.co.jp/topics/9398/"
+      },
+      {
+        "date": "2026年04月17日",
+        "title": "明日4/19の雪山登山に関しまして",
+        "url": "https://www.kawaba.co.jp/topics/5362/"
+      },
+      {
+        "date": "2026年04月14日",
+        "title": "FLUX PARK今シーズンの営業終了のお知らせ",
+        "url": "https://www.kawaba.co.jp/topics/9357/"
+      },
+      {
+        "date": "2026年04月06日",
+        "title": "25-26シーズン 営業終了日延長のお知らせ",
+        "url": "https://www.kawaba.co.jp/topics/9217/"
+      }
+    ],
+    "foot": null
+  },
+  "sns": {
+    "href": "https://x.com/kawabaski",
+    "title": "@kawabaski（公式X）",
+    "sub": "最新の投稿はXでご確認ください"
+  },
+  "footer": [
+    "営業期間：例年12月中旬〜4月中旬（2025-26シーズンは2025年12月13日〜2026年4月19日）。2026-27シーズンの正式な日程は公式サイトでご確認ください。ゲレンデマップ画像は各スキー場の著作物のため本ページには掲載せず、公式サイトへ直接リンクしています。",
+    "データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+  ],
+  "season": {
+    "start": "2026-12-12",
+    "end": "2027-04-18",
+    "approximate": true,
+    "next_note": "次シーズンは例年12月中旬オープン予定"
+  }
+}

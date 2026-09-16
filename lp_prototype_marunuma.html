@@ -596,7 +596,7 @@
   </section>
 
   <footer>
-    <p>営業期間：2025年11月下旬（例年ベース）〜2026年5月6日。コースマップ画像は丸沼高原公式サイト掲載の著作物です。</p>
+    <p>営業期間：例年11月下旬〜5月上旬（2025-26シーズンは2025年11月22日〜2026年5月6日）。2026-27シーズンの正式な日程は公式サイトでご確認ください。コースマップ画像は丸沼高原公式サイト掲載の著作物です。</p>
     <p>データ精度：料金・面積は複数の公開情報を照合した参考値です。当日の運行状況は公式サイトのライブ情報を優先してください。</p>
   </footer>
 </div>
@@ -943,21 +943,21 @@
     });
   })();
 
-  // ---- season / open-closed status (computed from real season dates vs viewer's clock) ----
-  const seasonStart = new Date("2025-11-22T00:00:00+09:00");
-  const seasonEnd = new Date("2026-05-06T23:59:00+09:00");
+  // ---- season / open-closed status (approximate: shifted from confirmed 2025-26 dates by 1 year, pending official 2026-27 announcement) ----
+  const seasonStart = new Date("2026-11-21T00:00:00+09:00");
+  const seasonEnd = new Date("2027-05-05T23:59:00+09:00");
   const now = new Date();
   const pill = document.getElementById("statusPill");
   const statusText = document.getElementById("statusText");
   const statusNote = document.getElementById("statusNote");
   if (now >= seasonStart && now <= seasonEnd) {
     pill.classList.add("open");
-    statusText.textContent = "営業中（シーズン期間内）";
+    statusText.textContent = "営業中（シーズン期間内・目安）";
     statusNote.textContent = "積雪・リフト稼働の最新状況は公式サイトでご確認ください";
   } else {
     pill.classList.add("closed");
     statusText.textContent = "営業期間外";
-    const nextStart = now > seasonEnd ? "次シーズンは例年11月下旬オープン予定" : `オープンまで ${Math.ceil((seasonStart - now) / 86400000)} 日`;
+    const nextStart = now > seasonEnd ? "次シーズンは例年11月下旬オープン予定" : `オープンまで ${Math.ceil((seasonStart - now) / 86400000)} 日（目安）`;
     statusNote.textContent = nextStart;
   }
 

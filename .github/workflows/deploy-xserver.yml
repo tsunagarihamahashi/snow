@@ -1,0 +1,76 @@
+name: Deploy to Xserver
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "templates/**"
+      - "assets/**"
+      - "build.py"
+      - "index.html"
+      - "lp_prototype_*.html"
+      - "snow_data.json"
+      - ".github/workflows/deploy-xserver.yml"
+  # 積雪スクレイパーは GITHUB_TOKEN で push するため push トリガーが発火しない。完了を受けて起動する
+  workflow_run:
+    workflows: ["Scrape snow depth"]
+    types: [completed]
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-xserver
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Check secrets
+        id: secrets
+        env:
+          HOST: ${{ secrets.XSERVER_FTP_HOST }}
+        run: |
+          if [ -z "$HOST" ]; then
+            echo "::warning::XSERVER_FTP_* secrets are not set yet; skipping upload."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.secrets.outputs.ready == 'true'
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        if: steps.secrets.outputs.ready == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Build pages from data
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          pip install jinja2
+          python build.py
+
+      - name: Assemble upload set
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          mkdir -p dist
+          cp index.html lp_prototype_*.html snow_data.json dist/
+          cp -r assets dist/assets
+
+      - name: Upload to Xserver (FTPS)
+        if: steps.secrets.outputs.ready == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.XSERVER_FTP_HOST }}
+          username: ${{ secrets.XSERVER_FTP_USER }}
+          password: ${{ secrets.XSERVER_FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./dist/
+          server-dir: ${{ secrets.XSERVER_REMOTE_DIR }}
+          state-name: .snow-deploy-state.json

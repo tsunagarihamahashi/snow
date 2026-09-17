@@ -13,7 +13,7 @@
 <div class="statusbar">
   <div class="inner">
     <p class="eyebrow">{{ r.eyebrow }}</p>
-    <h1 class="resort-name">{{ r.name }}</h1>
+    <h1 class="resort-name">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</h1>
     <p class="pref">{{ r.pref }}</p>
     <div class="status-row">
       <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
@@ -69,7 +69,7 @@
 <div class="wrap">
 
   <section id="scale">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
 {%- if r.scale.get('notice') %}
     <p class="calc-foot" style="margin-bottom:14px;">{{ r.scale.notice|safe }}</p>
 {%- endif %}
@@ -103,7 +103,7 @@
   </section>
 
   <section id="reviews">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
     <div class="review-cols">
       <div class="review-col good">
         <p class="review-col-head"><span class="review-dot"></span>良い点</p>
@@ -128,7 +128,7 @@
   </section>
 
   <section id="weather">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
     <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
     <div class="weather-toggle" role="group" aria-label="予報の範囲">
       <button data-range="today" aria-pressed="true">当日</button>
@@ -140,7 +140,7 @@
   </section>
 
   <section id="livecam">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
 {%- set L = r.livecam %}
 {%- if L.type != 'linkout' %}
     <div class="livecam-card">
@@ -171,7 +171,7 @@
   </section>
 
   <section id="price">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
 {%- set P = r.price %}
 {%- if P.get('intro') %}
     <p class="calc-foot" style="margin-bottom:12px;">{{ P.intro|safe }}</p>
@@ -234,7 +234,7 @@
   </section>
 
   <section id="kids">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
 {{ shop_items(r.kids['items']) }}
 {%- if r.kids.foot %}
     <p class="calc-foot" style="margin-top:14px;">{{ r.kids.foot|safe }}</p>
@@ -242,7 +242,7 @@
   </section>
 
   <section id="gochiso">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
 {%- if r.gochiso.badge %}
     <div class="cospa-badge tier-{{ r.gochiso.badge.tier }}">
       {% for s in r.gochiso.badge.spans %}<span{% if loop.index == 2 %} class="score"{% endif %}>{{ s|safe }}</span>{% endfor %}
@@ -259,7 +259,7 @@
   </section>
 
   <section id="onsen">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
 {{ shop_items(r.onsen['items']) }}
 {%- if r.onsen.foot %}
     <p class="calc-foot" style="margin-top:14px;">{{ r.onsen.foot|safe }}</p>
@@ -267,7 +267,7 @@
   </section>
 
   <section id="access">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
     <dl class="kv-grid">
 {%- for kv in r.access.kv %}
       <dt>{{ kv.k|safe }}</dt>
@@ -280,7 +280,7 @@
   </section>
 
   <section id="news">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
     <ul class="news-list" id="newsList">
 {%- for n in r.news['items'] %}
       <li><span class="news-date">{{ n.date }}</span><a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a></li>
@@ -292,7 +292,7 @@
   </section>
 
   <section id="sns">
-    <div class="section-head"><h2><span class="rn">{{ r.name }}</span>の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
 {{ card(r.sns) }}
   </section>
 

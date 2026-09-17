@@ -141,6 +141,8 @@ h2 {
 .section-num { font-family: "Roboto Mono", monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.05em; }
 /* keep the resort name on one line; wrap only between the name and the suffix */
 h2 .rn { display: inline-block; }
+/* break long resort names only at <wbr> hints; fall back to anywhere only if a segment still cannot fit */
+h1.resort-name, h2 .rn { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* ---- access ---- */
 .kv-grid { display: grid; grid-template-columns: 96px 1fr; row-gap: 12px; column-gap: 16px; font-size: 15px; }

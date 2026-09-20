@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NASPAスキーガーデン</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">新潟県 / 関越道 湯沢ICから約5分・スキーヤー専用</p>
+    <h1 class="resort-name">NASPA<wbr>スキーガーデン</h1>
+    <p class="pref">新潟県南魚沼郡湯沢町湯沢</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<div class="hours-strip">
+  <div class="inner">
+    <div class="hour-item"><span class="hour-label">リフト</span><span class="hour-value">8:30〜17:00</span></div>
+    <div class="hour-item"><span class="hour-label">チケット販売</span><span class="hour-value">8:15〜17:00</span></div>
+    <div class="hour-item"><span class="hour-label">スキーセンター</span><span class="hour-value">8:00〜18:00</span></div>
+    <div class="hour-item"><span class="hour-label">ナイトファーストトラック</span><span class="hour-value">18:00〜19:30（特定日）</span></div>
+  </div>
+  <p class="hours-foot">2026-27シーズンの公式掲載値。通常のナイター営業はなく、特定日のみ18:00〜19:30の「ナイトファーストトラック」（¥2,000）を実施。各券ともリフト運行開始15分前から販売</p>
+</div>
+
+<nav class="jumpnav">
+  <div class="inner">
+    <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
+    <a href="#weather">天気</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#price">料金</a>
+    <a href="#kids">キッズ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#onsen">温泉</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="scale">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <p class="calc-foot" style="margin-bottom:14px;">⚠️ NASPAスキーガーデンはスキーヤー専用ゲレンデです。スノーボードでは滑走できません。</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">8</div><div class="unit">コース数（初級40%・中級30%・上級30%）</div></div>
+      <div class="stat"><div class="num">2,200</div><div class="unit">最長滑走 m（H→Fコース）</div></div>
+      <div class="stat"><div class="num">260</div><div class="unit">標高差 m<br>（430〜690m）</div></div>
+      <div class="stat"><div class="num">38</div><div class="unit">最大斜度 度（Dコース・非圧雪）</div></div>
+      <div class="stat stat-wide"><div class="num">5<span class="num-unit">基</span></div><div class="unit">リフト数（第1〜第5リフト）</div></div>
+    </div>
+    <div class="level-bar">
+      <span style="width:40%; background:var(--pine-600);"></span>
+      <span style="width:30%; background:var(--amber-600);"></span>
+      <span style="width:30%; background:var(--ridge-700);"></span>
+    </div>
+    <div class="level-legend">
+      <span><span class="sw" style="background:var(--pine-600);"></span>初級 40%</span>
+      <span><span class="sw" style="background:var(--amber-600);"></span>中級 30%</span>
+      <span><span class="sw" style="background:var(--ridge-700);"></span>上級 30%</span>
+    </div>
+    <p class="calc-foot" style="margin-top:10px;">混雑しにくさ指標：総面積が公式に公開されていないため算出対象外（駐車場2,000台・リフト5基）。</p>
+    <p class="calc-foot" style="margin-top:8px;">ホテル「NASPAニューオータニ」に隣接するスキー専用ゲレンデ。圧雪70%・非圧雪20%・コブ10%で、初心者向けのH〜Fコース（2.2km）から、SAJ B級公認モーグルコースのあるAコース、最大38°のコブができるDコースまで8コース。ホテル宿泊者はリフト券が無料。</p>
+    <p class="piste-source">コースマップは公式サイトの対話型マップ（画像ではないため掲載していません）。</p>
+    <a class="map-card" href="https://www.naspa.co.jp/ski/gerende/#map" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">ゲレンデMAP・本日の営業状況を見る（公式サイト）</span>
+        <span class="mc-sub">対話型のゲレンデマップとリフト運行状況はこちら</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="reviews">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+          <li>スキーヤー専用ゲレンデで、スノーボーダーとの接触を気にせず初心者や子供が練習できる</li>
+          <li>湯沢ICから約5分、越後湯沢駅からシャトルバス約3分。駐車場は2,000台全日無料</li>
+          <li>ピングーのキッズガーデンやスノーナイトバギー・スノーラフティング・スノーモービルなど雪あそびが充実</li>
+          <li>ホテル直営のカフェテリア「オーロラ」やゲレンデ内レストランでホテルの味が食べられる</li>
+          <li>ホテルの温泉大浴場（越後湯沢温泉）に日帰り入浴でき、ホテル宿泊ならリフト券無料</li>
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+          <li>スノーボードは利用不可。ボーダーを含むグループでは選べない</li>
+          <li>8コース・標高差260mとコンパクトで、上級者が1日滑るには物足りない</li>
+          <li>1日券¥7,000は湯沢エリアでは高めの設定（早割・宿泊利用が前提の価格）</li>
+        </ul>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。</p>
+  </section>
+
+  <section id="weather">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
+    <div class="weather-toggle" role="group" aria-label="予報の範囲">
+      <button data-range="today" aria-pressed="true">当日</button>
+      <button data-range="2day" aria-pressed="false">2日間</button>
+      <button data-range="week" aria-pressed="false">週間</button>
+    </div>
+    <div class="weather-row" id="weatherRow"><p class="weather-foot">読み込み中…</p></div>
+    <p class="weather-foot">新潟県湯沢町・NASPAスキーガーデン付近（標高約500m）の予報。<a href="https://www.naspa.co.jp/ski/gerende/#operation" target="_blank" rel="noopener">現地の最新情報</a>も合わせてご確認ください。</p>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <a class="map-card" href="https://www.naspa.co.jp/ski/gerende/#operation" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">本日の営業状況を見る（公式サイト）</span>
+        <span class="mc-sub">公式サイトにライブカメラの掲載がないため、リフト・コースの営業状況ページへリンクしています</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="calc-card">
+      <div id="catRows"></div>
+      <div class="calc-total">
+        <span class="label">1日券 合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot">2026-27シーズンの公式掲載料金（8:30〜17:00）。超早割1日券（9/16〜30販売）は大人¥4,300／こども¥2,900、早割（10/1〜12/23）は¥4,800／¥3,200。5時間券¥5,800／¥3,800、2日券¥10,000／¥7,300、1回券¥700。春スキー（3/23〜28）¥5,000／¥3,300、NASPAデー（1/13〜3/17の水曜）大人¥4,500、スキーこどもの日（1〜3月の第3日曜）はこども無料。NASPAニューオータニ宿泊者はリフト券無料。</p>
+      <details class="rental-acc">
+        <summary>レンタル料金をシミュレーション<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <p class="rental-legend">1日（8:30〜17:00）料金。大人＝中学生以上、お子さま＝小学生まで。好みのウェアや板を何度でも交換できる「ブランドバイキング」制</p>
+          <div id="rentalCatRows"></div>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
+          <p class="calc-foot">2025-26シーズンの料金。半日（8:30〜13:00／12:30〜17:00）はセット¥5,000／¥4,000、板・ブーツ単品¥3,500／¥3,000。ヘルメット¥1,000、そり¥500、長靴¥500、キッズキャリア¥1,000。事前予約不可。ゴーグル・グローブは販売のみ。スノーボードのレンタルは少数のみ（ゲレンデはスキー専用）。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="kids">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>Pingu™ fun! fun! Kids Garden</span><span class="shop-tag">ホテル前の雪あそび専用エリア。9:30〜16:00。リフト券では入場不可、2歳以上有料（大人も同額）</span></div><span class="shop-tag">1日¥2,500／3.5時間¥2,000</span></li>
+      <li><div class="shop-main"><span>スノーナイトバギーツアー</span><span class="shop-tag">5人乗りスノーバギーで夜の山頂へ。約30分、18:00〜20:45の4便。3歳以上</span></div><span class="shop-tag">¥13,000/グループ（最大5名）</span></li>
+      <li><div class="shop-main"><span>スノーラフティング／スノーモービル</span><span class="shop-tag">ガーデンロッジで当日受付。3歳以上（未就学児は保護者同乗）、水・木曜は原則休み</span></div><span class="shop-tag">¥1,000〜／¥1,500〜</span></li>
+      <li><div class="shop-main"><span>雪あそび広場</span><span class="shop-tag">ログセンター脇の小さな雪の広場。雪だるま作りなど</span></div><span class="shop-tag">無料</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">2025-26シーズンの内容。キッズガーデンはランチ券・ドリンク券付きのセット券（1日¥4,000／ハーフ¥3,500）もあり。未就学児は保護者同伴（同伴者も有料）。幼児用プラスチックスキーは第4リフト・Fコースのみ利用可。</p>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <ul class="shop-list" id="shopList">
+      <li><div class="shop-main"><span>ガーデンレストハウス（第4リフト降り場）</span><span class="shop-tag">新潟たれかつ丼¥1,400、長岡生姜醤油ラーメン¥1,700、ポークヒレカツカレー¥1,800。300席、11:00〜16:00（フード14:30L.O.）</span></div><a class="maplink" href="https://www.google.com/maps/search/NASPA%E3%82%B9%E3%82%AD%E3%83%BC%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%20%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%E3%83%AC%E3%82%B9%E3%83%88%E3%83%8F%E3%82%A6%E3%82%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>カフェテリア オーロラ（NASPAニューオータニ メイン4F）</span><span class="shop-tag">ブーツのまま直行できるホテル直営カフェテリア。自家製肉みそ担々麺¥1,600、ローストビーフ丼¥2,600。340席、11:00〜16:00</span></div><a class="maplink" href="https://www.google.com/maps/search/NASPA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%AA%E3%83%BC%E3%82%BF%E3%83%8B%20%E3%82%AB%E3%83%95%E3%82%A7%E3%83%86%E3%83%AA%E3%82%A2%20%E3%82%AA%E3%83%BC%E3%83%AD%E3%83%A9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>スノーランチョ ダイニング＆クレープ（ガーデンログセンター）</span><span class="shop-tag">ミートソースプレート¥1,500などワンプレートランチとクレープ・チュロス。100席、11:00〜16:00</span></div><a class="maplink" href="https://www.google.com/maps/search/NASPA%E3%82%B9%E3%82%AD%E3%83%BC%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%20%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%81%E3%83%A7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">2025-26シーズンの内容。週末はホテルのメインダイニング「フォンタナ」でもランチ営業。ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。</p>
+  </section>
+
+  <section id="onsen">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>NASPAニューオータニ 温泉大浴場（越後湯沢温泉）</span><span class="shop-tag">男女各250坪の大浴場と露天風呂・サウナ。「美人の湯」と呼ばれる弱アルカリ性単純温泉。日帰り入浴9:00〜18:00（最終受付17:00、清掃時間あり）。受付はスキーセンター内インフォメーション</span></div><span class="shop-tag">大人¥1,500／子供¥1,000（タオル付き）</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">清掃時間（男女で異なる）は公式サイトでご確認ください。湯沢町民・南魚沼市民割引1日券には大浴場利用券が付きます。</p>
+  </section>
+
+  <section id="access">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 湯沢ICから約5分。冬タイヤ必須</dd>
+      <dt>電車</dt>
+      <dd>上越新幹線 越後湯沢駅からシャトルバスで約3分（東京駅から約70分）</dd>
+      <dt>駐車場</dt>
+      <dd>2,000台・全日無料</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.naspa.co.jp/access/" target="_blank" rel="noopener">naspa.co.jp／アクセス詳細</a></dd>
+    </dl>
+    <p class="calc-foot" style="margin-top:14px;">ゲレンデ内に湯沢の4スキー場を結ぶシャトルバスの停留所あり。</p>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <ul class="news-list" id="newsList">
+      <li><span class="news-date">2026年09月10日</span><a href="https://www.naspa.co.jp/ski/news/news/entry-1114.html" target="_blank" rel="noopener">2026-2027シーズン 契約ロッカー販売スケジュールについてのご案内</a></li>
+      <li><span class="news-date">2026年09月05日</span><a href="https://www.naspa.co.jp/ski/news/news/entry-1108.html" target="_blank" rel="noopener">【超早割】2026-2027シーズンリフト券販売のお知らせ（9/16〜30・1日券 大人¥4,300）</a></li>
+      <li><span class="news-date">2026年03月31日</span><a href="https://www.naspa.co.jp/ski/news/news/entry-1032.html" target="_blank" rel="noopener">2025-2026シーズンの営業は終了いたしました</a></li>
+    </ul>
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2><span class="rn">NASPA<wbr>スキーガーデン</span>の公式SNS</h2><span class="section-num">11 / 最新の投稿</span></div>
+
+    <a class="map-card" href="https://www.instagram.com/naspa_ski_official/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">@naspa_ski_official（公式Instagram）</span>
+        <span class="mc-sub">公式Xアカウントは確認できなかったため、公式Instagramへリンクしています</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>営業期間：2026年12月中旬〜2027年3月末（2025-26の実績12/19〜3/31をもとにした目安。2026-27の正式日程は未発表）。ゲレンデ情報はNASPAスキーガーデン（NASPAニューオータニ）公式サイトによります。</p>
+    <p>データ精度：リフト券は2026-27の公式掲載料金、レンタル・キッズ・レストラン・温泉は2025-26シーズンの公式値、コース・標高は公式サイトの値です。総面積は公式に明記がないため混雑しにくさ指標は未算出です。</p>
+  </footer>
+</div>
+
+<script>window.RESORT = {"livecam": {"cards": [{"href": "https://www.naspa.co.jp/ski/gerende/#operation", "sub": "\u516c\u5f0f\u30b5\u30a4\u30c8\u306b\u30e9\u30a4\u30d6\u30ab\u30e1\u30e9\u306e\u63b2\u8f09\u304c\u306a\u3044\u305f\u3081\u3001\u30ea\u30d5\u30c8\u30fb\u30b3\u30fc\u30b9\u306e\u55b6\u696d\u72b6\u6cc1\u30da\u30fc\u30b8\u3078\u30ea\u30f3\u30af\u3057\u3066\u3044\u307e\u3059", "title": "\u672c\u65e5\u306e\u55b6\u696d\u72b6\u6cc1\u3092\u898b\u308b\uff08\u516c\u5f0f\u30b5\u30a4\u30c8\uff09"}], "foot": null, "type": "linkout"}, "price": {"categories": [{"cond": "\u4e2d\u5b66\u751f\u4ee5\u4e0a", "key": "adult", "label": "\u5927\u4eba"}, {"cond": "\u5c0f\u5b66\u751f\u4ee5\u4e0b", "key": "child", "label": "\u3053\u3069\u3082"}], "counts": {"adult": 2, "child": 0}, "foot": "2026-27\u30b7\u30fc\u30ba\u30f3\u306e\u516c\u5f0f\u63b2\u8f09\u6599\u91d1\uff088:30\u301c17:00\uff09\u3002\u8d85\u65e9\u52721\u65e5\u5238\uff089/16\u301c30\u8ca9\u58f2\uff09\u306f\u5927\u4eba\u00a54,300\uff0f\u3053\u3069\u3082\u00a52,900\u3001\u65e9\u5272\uff0810/1\u301c12/23\uff09\u306f\u00a54,800\uff0f\u00a53,200\u30025\u6642\u9593\u5238\u00a55,800\uff0f\u00a53,800\u30012\u65e5\u5238\u00a510,000\uff0f\u00a57,300\u30011\u56de\u5238\u00a5700\u3002\u6625\u30b9\u30ad\u30fc\uff083/23\u301c28\uff09\u00a55,000\uff0f\u00a53,300\u3001NASPA\u30c7\u30fc\uff081/13\u301c3/17\u306e\u6c34\u66dc\uff09\u5927\u4eba\u00a54,500\u3001\u30b9\u30ad\u30fc\u3053\u3069\u3082\u306e\u65e5\uff081\u301c3\u6708\u306e\u7b2c3\u65e5\u66dc\uff09\u306f\u3053\u3069\u3082\u7121\u6599\u3002NASPA\u30cb\u30e5\u30fc\u30aa\u30fc\u30bf\u30cb\u5bbf\u6cca\u8005\u306f\u30ea\u30d5\u30c8\u5238\u7121\u6599\u3002", "intro": null, "mode": "flat", "prices": {"adult": 7000, "child": 4800}, "total_label": "1\u65e5\u5238 \u5408\u8a08"}, "rental": {"foot": "2025-26\u30b7\u30fc\u30ba\u30f3\u306e\u6599\u91d1\u3002\u534a\u65e5\uff088:30\u301c13:00\uff0f12:30\u301c17:00\uff09\u306f\u30bb\u30c3\u30c8\u00a55,000\uff0f\u00a54,000\u3001\u677f\u30fb\u30d6\u30fc\u30c4\u5358\u54c1\u00a53,500\uff0f\u00a53,000\u3002\u30d8\u30eb\u30e1\u30c3\u30c8\u00a51,000\u3001\u305d\u308a\u00a5500\u3001\u9577\u9774\u00a5500\u3001\u30ad\u30c3\u30ba\u30ad\u30e3\u30ea\u30a2\u00a51,000\u3002\u4e8b\u524d\u4e88\u7d04\u4e0d\u53ef\u3002\u30b4\u30fc\u30b0\u30eb\u30fb\u30b0\u30ed\u30fc\u30d6\u306f\u8ca9\u58f2\u306e\u307f\u3002\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u306e\u30ec\u30f3\u30bf\u30eb\u306f\u5c11\u6570\u306e\u307f\uff08\u30b2\u30ec\u30f3\u30c7\u306f\u30b9\u30ad\u30fc\u5c02\u7528\uff09\u3002", "items": [{"key": "set_adult", "label": "\u30b9\u30ad\u30fc\u30bb\u30c3\u30c8\uff08\u677f\u30fb\u30d6\u30fc\u30c4\u30fb\u30b9\u30c8\u30c3\u30af\uff09\u30fb\u5927\u4eba", "price": 6000}, {"key": "set_child", "label": "\u30b9\u30ad\u30fc\u30bb\u30c3\u30c8\u30fb\u304a\u5b50\u3055\u307e", "price": 5000}, {"key": "wear_adult", "label": "\u30a6\u30a7\u30a2\u30fb\u5927\u4eba", "price": 6000}, {"key": "wear_child", "label": "\u30a6\u30a7\u30a2\u30fb\u304a\u5b50\u3055\u307e", "price": 5000}, {"key": "helmet", "label": "\u30d8\u30eb\u30e1\u30c3\u30c8", "price": 1000}], "legend": "1\u65e5\uff088:30\u301c17:00\uff09\u6599\u91d1\u3002\u5927\u4eba\uff1d\u4e2d\u5b66\u751f\u4ee5\u4e0a\u3001\u304a\u5b50\u3055\u307e\uff1d\u5c0f\u5b66\u751f\u307e\u3067\u3002\u597d\u307f\u306e\u30a6\u30a7\u30a2\u3084\u677f\u3092\u4f55\u5ea6\u3067\u3082\u4ea4\u63db\u3067\u304d\u308b\u300c\u30d6\u30e9\u30f3\u30c9\u30d0\u30a4\u30ad\u30f3\u30b0\u300d\u5236", "mode": "stepper", "summary": "\u30ec\u30f3\u30bf\u30eb\u6599\u91d1\u3092\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3"}, "season": {"approximate": true, "end": "2027-03-31", "next_note": "\u6b21\u30b7\u30fc\u30ba\u30f3\u306f\u4f8b\u5e7412\u6708\u4e2d\u65ec\u30aa\u30fc\u30d7\u30f3\u4e88\u5b9a", "start": "2026-12-18"}, "snow": {"fallback_url": "https://www.naspa.co.jp/ski/gerende/#operation", "key": "naspa", "layout": "amount"}, "weather": {"foot": "\u65b0\u6f5f\u770c\u6e6f\u6ca2\u753a\u30fbNASPA\u30b9\u30ad\u30fc\u30ac\u30fc\u30c7\u30f3\u4ed8\u8fd1\uff08\u6a19\u9ad8\u7d04500m\uff09\u306e\u4e88\u5831\u3002\u003ca href=\"https://www.naspa.co.jp/ski/gerende/#operation\" target=\"_blank\" rel=\"noopener\"\u003e\u73fe\u5730\u306e\u6700\u65b0\u60c5\u5831\u003c/a\u003e\u3082\u5408\u308f\u305b\u3066\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002", "lat": 36.921, "lon": 138.796}};</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -183,6 +183,11 @@ def scrape_tambara():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_minakami_kogen():
+    # 公式サイトの積雪表示の構造が未確認のため、現時点では未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -202,6 +207,7 @@ def main():
             "shigakogen": scrape_shigakogen(),
             "grandeco": scrape_grandeco(),
             "tambara": scrape_tambara(),
+            "minakami_kogen": scrape_minakami_kogen(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

@@ -295,7 +295,7 @@
   </section>
 
   <section id="sns">
-    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+    <div class="section-head"><h2><span class="rn">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</span>の{{ '公式X' if r.sns.get('kind', 'x') == 'x' else '公式SNS' }}</h2><span class="section-num">11 / 最新の投稿</span></div>
 {{ card(r.sns) }}
   </section>
 

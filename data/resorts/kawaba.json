@@ -492,7 +492,8 @@
     "area_ha": 42,
     "parking": 1300,
     "lifts": {
-      "quad": 4,
+      "quad": 3,
+      "triple": 1,
       "pair": 1
     },
     "capacity_official": 11032

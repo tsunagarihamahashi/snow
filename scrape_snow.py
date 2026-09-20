@@ -177,6 +177,12 @@ def scrape_grandeco():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_tambara():
+    # 公式サイト（tambara.co.jp/winter/gelande/）の TODAY'S CONDITION に積雪表示があるが、
+    # オフシーズンは「ー」のため構造未確認。現時点では未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -195,6 +201,7 @@ def main():
             "sugadaira": scrape_sugadaira(),
             "shigakogen": scrape_shigakogen(),
             "grandeco": scrape_grandeco(),
+            "tambara": scrape_tambara(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

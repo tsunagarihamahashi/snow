@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>たんばらスキーパーク</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">群馬県 / 関越道 沼田ICから約30分</p>
+    <h1 class="resort-name">たんばら<wbr>スキーパーク</h1>
+    <p class="pref">群馬県沼田市玉原高原</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<div class="hours-strip">
+  <div class="inner">
+    <div class="hour-item"><span class="hour-label">リフト（平日）</span><span class="hour-value">8:30〜16:00</span></div>
+    <div class="hour-item"><span class="hour-label">リフト（特定日）</span><span class="hour-value">8:00〜16:00</span></div>
+    <div class="hour-item"><span class="hour-label">初滑り・春</span><span class="hour-value">8:30〜15:30<br>8:00〜15:30</span></div>
+    <div class="hour-item"><span class="hour-label">ナイター</span><span class="hour-value">なし</span></div>
+  </div>
+  <p class="hours-foot">TOPシーズン（12/12〜4/4）の時間。特定日は土日祝・年末年始（12/28〜1/1）。GW（4/26〜5/5）は7:30〜15:00。積雪状況により変更あり</p>
+</div>
+
+<nav class="jumpnav">
+  <div class="inner">
+    <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
+    <a href="#weather">天気</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#price">料金</a>
+    <a href="#kids">キッズ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#onsen">温泉</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="scale">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">41</div><div class="unit">ゲレンデ面積 ha</div></div>
+      <div class="stat"><div class="num">8</div><div class="unit">コース数</div></div>
+      <div class="stat"><div class="num">2,550</div><div class="unit">最長滑走 m</div></div>
+      <div class="stat"><div class="num">300</div><div class="unit">標高差 m<br>（1,250〜1,550m）</div></div>
+      <div class="stat stat-wide"><div class="num">6<span class="num-unit">基</span></div><div class="unit">リフト数（高速クワッド1・トリプル1・ペア4）</div></div>
+      <div class="stat"><div class="num">205</div><div class="unit">ゲレンデの余裕 ㎡/台<br>（総面積÷駐車場台数）</div><span class="idx-tag">11件中11位</span></div>
+      <div class="stat"><div class="num">4.5</div><div class="unit">リフトの余裕 人時/台<br>（輸送力9,000人/時÷駐車場台数）</div><span class="idx-tag">11件中11位</span></div>
+      <div class="stat stat-wide tier-low"><div class="num">11<span class="num-unit">位 / 11件</span></div><div class="unit">混雑しにくさ 総合（ゲレンデとリフトの順位平均）</div></div>
+    </div>
+    <div class="level-bar">
+      <span style="width:35%; background:var(--pine-600);"></span>
+      <span style="width:45%; background:var(--amber-600);"></span>
+      <span style="width:20%; background:var(--ridge-700);"></span>
+    </div>
+    <div class="level-legend">
+      <span><span class="sw" style="background:var(--pine-600);"></span>初級 35%</span>
+      <span><span class="sw" style="background:var(--amber-600);"></span>中級 45%</span>
+      <span><span class="sw" style="background:var(--ridge-700);"></span>上級 20%</span>
+    </div>
+    <p class="calc-foot" style="margin-top:10px;">混雑しにくさは駐車場台数を来場者数の代理指標として算出した参考値。輸送力はクワッド1・トリプル1・ペア4の標準値から推定。順位は算出対象11ゲレンデ中。</p>
+    <p class="calc-foot" style="margin-top:8px;">平均斜度10°・最大25°（公式サイトより）。センターコース〜ウッディコースをつなぐ最長2,550mのロングランと、幅の広い緩斜面「ファミリーコース」（平均5°）が特徴。11月下旬〜GWまで約160日のロングシーズン営業。</p>
+    <a class="map-card" href="https://www.tambara.co.jp/winter/course/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">コースガイド・運行状況を見る（公式サイト）</span>
+        <span class="mc-sub">コースマップは運行状況を重ねて表示するインタラクティブ形式のため、公式サイトへリンクしています</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="reviews">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+          <li>関越道 沼田ICから約30分、東京から約2時間と日帰りしやすい</li>
+          <li>平均斜度5°のワイドなファミリーコースなど、初心者・子供向けの緩斜面が充実</li>
+          <li>そり・チュービング専用の「たんばランド」があり、滑らない家族も楽しめる</li>
+          <li>標高1,250〜1,550mで雪質が安定し、11月下旬〜GWまでのロングシーズン</li>
+          <li>レストランの座席数が多く（山麓500席・中腹350席）、予約席や座敷席もある</li>
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+          <li>41ha・8コースとコンパクトで、上級者や長距離を滑りたい人には物足りない</li>
+          <li>ファミリー層に人気のため、土日祝はリフト・レストランが混雑しやすい</li>
+          <li>土日祝・年末年始は駐車場が有料（普通車¥1,000）</li>
+        </ul>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。</p>
+  </section>
+
+  <section id="weather">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
+    <div class="weather-toggle" role="group" aria-label="予報の範囲">
+      <button data-range="today" aria-pressed="true">当日</button>
+      <button data-range="2day" aria-pressed="false">2日間</button>
+      <button data-range="week" aria-pressed="false">週間</button>
+    </div>
+    <div class="weather-row" id="weatherRow"><p class="weather-foot">読み込み中…</p></div>
+    <p class="weather-foot">群馬県沼田市・玉原高原付近（標高約1,300m）の予報。<a href="https://www.tambara.co.jp/winter/gelande/" target="_blank" rel="noopener">現地の最新情報</a>も合わせてご確認ください。</p>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <a class="map-card" href="https://www.tambara.co.jp/winter/gelande/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">本日のゲレンデ状況を見る（公式サイト）</span>
+        <span class="mc-sub">公式サイトにライブカメラの配信はなく、天候・気温・積雪とリフト運行状況が毎日更新されています</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="calc-card">
+      <div class="daytype-toggle" role="group" aria-label="日付タイプ">
+        <button data-day="weekday" aria-pressed="true">平日</button>
+        <button data-day="weekend" aria-pressed="false">土日祝</button>
+        <button data-day="peak" aria-pressed="false">年末年始〜2月の土日祝</button>
+        <button data-day="early_spring" aria-pressed="false">初滑り・春</button>
+      </div>
+      <div id="catRows"></div>
+      <div class="calc-total">
+        <span class="label">1日券 合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot">2025-26シーズンの窓口料金を参考値として掲載（2026-27の料金は10月1日の早割販売開始にあわせて公式サイトで発表予定）。3歳以下はリフト無料。「土日祝」は12月中旬・3月〜4月上旬の土日祝、「年末年始〜2月の土日祝」は12月下旬〜2月末の土日祝と年末年始。午後券（12:00〜）・第1リフト専用券・障がい者割引もあります。</p>
+      <details class="rental-acc">
+        <summary>レンタル料金をシミュレーション<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <p class="rental-legend">大人＝中学生以上、キッズ＝未就学児。ワンコイン補償プラン（¥500・掛け捨て）は別途</p>
+          <div id="rentalCatRows"></div>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
+          <p class="calc-foot">スキー（HEAD製）・スノーボード（BURTON製）とも同料金。ストック単品¥500、大人用ヘルメット¥1,300、子供用ヘルメット¥800。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="kids">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>たんばランド</span><span class="shop-tag">雪遊び・そり専用エリア。そり・ハンドルそり・スノーストライダー・チュービング（入園者は無料貸出）</span></div><span class="shop-tag">¥1,800（2歳以下無料）</span></li>
+      <li><div class="shop-main"><span>ファミリーコース（Gコース）</span><span class="shop-tag">平均斜度5°・750mのワイドな緩斜面。初心者・ちびっこのデビューコース</span></div><span class="shop-tag">リフト券で利用</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">たんばランドの営業は2026年12月19日〜2027年4月4日（予定）、9:00〜16:00（土日祝・年末年始は8:30〜、最終入場15:40）。スキー・スノーボードは持ち込み不可。積雪状況により変更あり。</p>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <ul class="shop-list" id="shopList">
+      <li><div class="shop-main"><span>ウッドランドカフェ（レストハウス・中腹）</span><span class="shop-tag">メインダイニング350席。上州麦豚ガーリックライス、ぐんま豚チャーシュー醤油ラーメン、たんばら丼</span></div><a class="maplink" href="https://www.google.com/maps/search/%E3%81%9F%E3%82%93%E3%81%B0%E3%82%89%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E3%82%A6%E3%83%83%E3%83%89%E3%83%A9%E3%83%B3%E3%83%89%E3%82%AB%E3%83%95%E3%82%A7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>レストラン オン＆オフ（リゾートセンター・山麓）</span><span class="shop-tag">500席・お子様メニュー充実。座敷の小上がり席・窓際BOX席は予約可</span></div><a class="maplink" href="https://www.google.com/maps/search/%E3%81%9F%E3%82%93%E3%81%B0%E3%82%89%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%82%AA%E3%83%B3%EF%BC%86%E3%82%AA%E3%83%95" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>ラーメンボーンブロス（レストハウス・中腹）</span><span class="shop-tag">沼田市の人気店が出店。エビ味噌ラーメン・たんばら風ラーメン二郎（土日祝・年末年始のみ）</span></div><a class="maplink" href="https://www.google.com/maps/search/%E3%81%9F%E3%82%93%E3%81%B0%E3%82%89%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%8F%E3%82%A6%E3%82%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。</p>
+  </section>
+
+  <section id="onsen">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>道の駅 白沢 望郷の湯</span><span class="shop-tag">木造モダンな建物と自然を取り入れた露天風呂。たんばらから車で約30分</span></div><span class="shop-tag">車で約30分</span></li>
+      <li><div class="shop-main"><span>川場温泉 悠湯里庵</span><span class="shop-tag">源泉かけ流しの川場温泉</span></div><span class="shop-tag">車で約30分</span></li>
+      <li><div class="shop-main"><span>南郷温泉 しゃくなげの湯</span><span class="shop-tag">檜風呂と玉石を積んだ石風呂</span></div><span class="shop-tag">車で約30分</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">スキー場内に日帰り温泉施設はなく、公式サイトが案内する周辺の日帰り温泉です。料金・営業時間は各施設でご確認ください。</p>
+  </section>
+
+  <section id="access">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 沼田IC → 約30分（東京・練馬ICから約2時間）。冬季はスノーチェーン無料貸出・雪道パトロール「お助け隊」あり</dd>
+      <dt>電車</dt>
+      <dd>JR沼田駅・上毛高原駅から無料送迎バス（事前予約制・先着18名、上毛高原駅発は特定日のみ）</dd>
+      <dt>駐車場</dt>
+      <dd>約2,000台。平日無料、12月下旬〜3月下旬の土日祝・年末年始は普通車¥1,000（第3駐車場は無料）</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.tambara.co.jp/winter/access/" target="_blank" rel="noopener">tambara.co.jp／アクセス詳細</a></dd>
+    </dl>
+    <p class="calc-foot" style="margin-top:14px;">特定日（土日祝・年末年始）は駐車場が5:00開場。夜間の駐車は不可。</p>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <ul class="news-list" id="newsList">
+      <li><span class="news-date">2026年08月30日</span><a href="https://www.tambara.co.jp/winter/news/26-27season/" target="_blank" rel="noopener">2026-27シーズンについて（11月28日営業開始・5月5日まで、10月1日から早割販売）</a></li>
+    </ul>
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2><span class="rn">たんばら<wbr>スキーパーク</span>の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+
+    <a class="map-card" href="https://x.com/tambaraskipark" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">@tambaraskipark（公式X）</span>
+        <span class="mc-sub">最新の投稿はXでご確認ください</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>営業期間：2026年11月28日〜2027年5月5日（公式発表・予定）。コース情報は公式サイト掲載の著作物です。</p>
+    <p>データ精度：料金は2025-26シーズンの公式値、面積・コース数は公式サイトの値です。当日の運行状況は公式サイトのライブ情報を優先してください。</p>
+  </footer>
+</div>
+
+<script>window.RESORT = {"livecam": {"cards": [{"href": "https://www.tambara.co.jp/winter/gelande/", "sub": "\u516c\u5f0f\u30b5\u30a4\u30c8\u306b\u30e9\u30a4\u30d6\u30ab\u30e1\u30e9\u306e\u914d\u4fe1\u306f\u306a\u304f\u3001\u5929\u5019\u30fb\u6c17\u6e29\u30fb\u7a4d\u96ea\u3068\u30ea\u30d5\u30c8\u904b\u884c\u72b6\u6cc1\u304c\u6bce\u65e5\u66f4\u65b0\u3055\u308c\u3066\u3044\u307e\u3059", "title": "\u672c\u65e5\u306e\u30b2\u30ec\u30f3\u30c7\u72b6\u6cc1\u3092\u898b\u308b\uff08\u516c\u5f0f\u30b5\u30a4\u30c8\uff09"}], "foot": null, "type": "linkout"}, "price": {"aria_label": "\u65e5\u4ed8\u30bf\u30a4\u30d7", "categories": [{"cond": "\u4e2d\u5b66\u751f\u301c59\u6b73", "key": "adult", "label": "\u5927\u4eba"}, {"cond": "60\u6b73\u4ee5\u4e0a\uff08\u8981\u8a3c\u660e\u66f8\uff09", "key": "senior", "label": "\u30b7\u30cb\u30a2"}, {"cond": null, "key": "elem", "label": "\u5c0f\u5b66\u751f"}, {"cond": "4\u6b73\u4ee5\u4e0a\u306e\u672a\u5c31\u5b66\u5150", "key": "kids", "label": "\u30ad\u30c3\u30ba"}], "counts": {"adult": 2, "elem": 0, "kids": 0, "senior": 0}, "default_option": "weekday", "foot": "2025-26\u30b7\u30fc\u30ba\u30f3\u306e\u7a93\u53e3\u6599\u91d1\u3092\u53c2\u8003\u5024\u3068\u3057\u3066\u63b2\u8f09\uff082026-27\u306e\u6599\u91d1\u306f10\u67081\u65e5\u306e\u65e9\u5272\u8ca9\u58f2\u958b\u59cb\u306b\u3042\u308f\u305b\u3066\u516c\u5f0f\u30b5\u30a4\u30c8\u3067\u767a\u8868\u4e88\u5b9a\uff09\u30023\u6b73\u4ee5\u4e0b\u306f\u30ea\u30d5\u30c8\u7121\u6599\u3002\u300c\u571f\u65e5\u795d\u300d\u306f12\u6708\u4e2d\u65ec\u30fb3\u6708\u301c4\u6708\u4e0a\u65ec\u306e\u571f\u65e5\u795d\u3001\u300c\u5e74\u672b\u5e74\u59cb\u301c2\u6708\u306e\u571f\u65e5\u795d\u300d\u306f12\u6708\u4e0b\u65ec\u301c2\u6708\u672b\u306e\u571f\u65e5\u795d\u3068\u5e74\u672b\u5e74\u59cb\u3002\u5348\u5f8c\u5238\uff0812:00\u301c\uff09\u30fb\u7b2c1\u30ea\u30d5\u30c8\u5c02\u7528\u5238\u30fb\u969c\u304c\u3044\u8005\u5272\u5f15\u3082\u3042\u308a\u307e\u3059\u3002", "intro": null, "mode": "toggle", "options": [{"key": "weekday", "label": "\u5e73\u65e5"}, {"key": "weekend", "label": "\u571f\u65e5\u795d"}, {"key": "peak", "label": "\u5e74\u672b\u5e74\u59cb\u301c2\u6708\u306e\u571f\u65e5\u795d"}, {"key": "early_spring", "label": "\u521d\u6ed1\u308a\u30fb\u6625"}], "price_table": {"early_spring": {"adult": 5000, "elem": 3400, "kids": 2500, "senior": 4800}, "peak": {"adult": 6500, "elem": 4000, "kids": 2700, "senior": 6200}, "weekday": {"adult": 5200, "elem": 3700, "kids": 2700, "senior": 5000}, "weekend": {"adult": 6000, "elem": 3900, "kids": 2700, "senior": 5700}}, "total_label": "1\u65e5\u5238 \u5408\u8a08"}, "rental": {"foot": "\u30b9\u30ad\u30fc\uff08HEAD\u88fd\uff09\u30fb\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\uff08BURTON\u88fd\uff09\u3068\u3082\u540c\u6599\u91d1\u3002\u30b9\u30c8\u30c3\u30af\u5358\u54c1\u00a5500\u3001\u5927\u4eba\u7528\u30d8\u30eb\u30e1\u30c3\u30c8\u00a51,300\u3001\u5b50\u4f9b\u7528\u30d8\u30eb\u30e1\u30c3\u30c8\u00a5800\u3002", "items": [{"key": "set_adult", "label": "\u30b9\u30ad\u30fc\uff0f\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb\u5927\u4eba", "price": 5500}, {"key": "set_elem", "label": "\u30b9\u30ad\u30fc\uff0f\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb\u5c0f\u5b66\u751f", "price": 3500}, {"key": "set_kids", "label": "\u30b9\u30ad\u30fc\uff0f\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb\u30ad\u30c3\u30ba", "price": 2500}, {"key": "wear_adult", "label": "\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb\u5927\u4eba", "price": 4500}, {"key": "wear_elem", "label": "\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb\u5c0f\u5b66\u751f", "price": 2800}, {"key": "wear_kids", "label": "\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb\u30ad\u30c3\u30ba", "price": 1800}], "legend": "\u5927\u4eba\uff1d\u4e2d\u5b66\u751f\u4ee5\u4e0a\u3001\u30ad\u30c3\u30ba\uff1d\u672a\u5c31\u5b66\u5150\u3002\u30ef\u30f3\u30b3\u30a4\u30f3\u88dc\u511f\u30d7\u30e9\u30f3\uff08\u00a5500\u30fb\u639b\u3051\u6368\u3066\uff09\u306f\u5225\u9014", "mode": "stepper", "summary": "\u30ec\u30f3\u30bf\u30eb\u6599\u91d1\u3092\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3"}, "season": {"approximate": false, "end": "2027-05-05", "next_note": "\u6b21\u30b7\u30fc\u30ba\u30f3\u306f\u4f8b\u5e7411\u6708\u4e0b\u65ec\u30aa\u30fc\u30d7\u30f3\u4e88\u5b9a", "start": "2026-11-28"}, "snow": {"fallback_url": "https://www.tambara.co.jp/winter/gelande/", "key": "tambara", "layout": "amount"}, "weather": {"foot": "\u7fa4\u99ac\u770c\u6cbc\u7530\u5e02\u30fb\u7389\u539f\u9ad8\u539f\u4ed8\u8fd1\uff08\u6a19\u9ad8\u7d041,300m\uff09\u306e\u4e88\u5831\u3002\u003ca href=\"https://www.tambara.co.jp/winter/gelande/\" target=\"_blank\" rel=\"noopener\"\u003e\u73fe\u5730\u306e\u6700\u65b0\u60c5\u5831\u003c/a\u003e\u3082\u5408\u308f\u305b\u3066\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002", "lat": 36.783, "lon": 139.076}};</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

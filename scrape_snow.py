@@ -203,6 +203,11 @@ def scrape_mt_t():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_palcall_tsumagoi():
+    # 公式サイトの積雪表示の構造が未確認のため、現時点では未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -226,6 +231,7 @@ def main():
             "norn": scrape_norn(),
             "ogna_hotaka": scrape_ogna_hotaka(),
             "mt_t": scrape_mt_t(),
+            "palcall_tsumagoi": scrape_palcall_tsumagoi(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

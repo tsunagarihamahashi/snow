@@ -280,5 +280,17 @@
     "end": "2027-03-28",
     "approximate": false,
     "next_note": "次シーズンは例年12月下旬オープン予定"
+  },
+  "crowd": {
+    "area_ha": 115,
+    "parking": 2000,
+    "lifts": {
+      "gondola": 1,
+      "quad": 4,
+      "triple": 1,
+      "pair": 5
+    },
+    "estimated": true,
+    "note": "一部リフトの種別が公式未記載のためペアとして推定"
   }
 }

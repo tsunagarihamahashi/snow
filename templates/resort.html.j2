@@ -90,8 +90,11 @@
 {%- endfor %}
     </div>
 {%- endif %}
+{%- if r.scale.get('crowd_note') %}
+    <p class="calc-foot" style="margin-top:10px;">{{ r.scale.crowd_note|safe }}</p>
+{%- endif %}
 {%- if r.scale.foot %}
-    <p class="calc-foot" style="margin-top:14px;">{{ r.scale.foot|safe }}</p>
+    <p class="calc-foot" style="margin-top:{{ '8' if r.scale.get('crowd_note') else '14' }}px;">{{ r.scale.foot|safe }}</p>
 {%- endif %}
 {%- if r.scale.map_img %}
     <img class="trail-map-img" id="trailMapImg" src="{{ r.scale.map_img.src }}" alt="{{ r.scale.map_img.alt }}" loading="lazy">

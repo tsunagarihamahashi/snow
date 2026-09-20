@@ -52,14 +52,6 @@
         "idx_tag": null
       },
       {
-        "num": "257",
-        "num_unit": null,
-        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
-        "wide": false,
-        "tier": "low",
-        "idx_tag": "やや混みやすい方"
-      },
-      {
         "num": "8",
         "num_unit": "基",
         "unit": "索道数（ペアリフト5・スーパーツイン2・日光白根山ロープウェイ1）",
@@ -423,5 +415,13 @@
     "end": "2027-05-05",
     "approximate": true,
     "next_note": "次シーズンは例年11月下旬オープン予定"
+  },
+  "crowd": {
+    "area_ha": 59,
+    "parking": 2300,
+    "lifts": {
+      "gondola": 1,
+      "pair": 7
+    }
   }
 }

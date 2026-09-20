@@ -51,22 +51,6 @@
         "wide": false,
         "tier": null,
         "idx_tag": null
-      },
-      {
-        "num": "2,300",
-        "num_unit": null,
-        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
-        "wide": false,
-        "tier": "good",
-        "idx_tag": "混みにくい方・10件中1位"
-      },
-      {
-        "num": "約22,200",
-        "num_unit": "人/時",
-        "unit": "リフト輸送力（クワッド4基・トリプル5基・ペア3基・ゴンドラ1基、標準値による推定）",
-        "wide": true,
-        "tier": null,
-        "idx_tag": null
       }
     ],
     "level_bar": [
@@ -87,7 +71,7 @@
       }
     ],
     "notice": null,
-    "foot": "輸送力を駐車場台数で割ると約22.2人時/台で、リフト待ちのリスクは低めと推定されます（尾瀬岩鞍は約14.2人時/台。算出済み2ゲレンデでの比較）。",
+    "foot": null,
     "map_img": {
       "src": "https://ishiuchi.or.jp/winter/wp/wp-content/uploads/2025/12/25-26_ishiuchi_A5%E3%83%9E%E3%83%83%E3%83%97.png",
       "alt": "石打丸山スキー場 コースマップ（クリックで拡大）"
@@ -583,5 +567,15 @@
     "end": "2027-04-04",
     "approximate": true,
     "next_note": "次シーズンは例年12月中旬オープン予定"
+  },
+  "crowd": {
+    "area_ha": 230,
+    "parking": 1000,
+    "lifts": {
+      "gondola": 1,
+      "quad": 4,
+      "triple": 5,
+      "pair": 3
+    }
   }
 }

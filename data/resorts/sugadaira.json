@@ -274,5 +274,16 @@
     "end": "2027-04-11",
     "approximate": true,
     "next_note": "次シーズンは例年11月下旬オープン予定"
+  },
+  "crowd": {
+    "area_ha": 175,
+    "parking": 3000,
+    "lifts": {
+      "quad": 2,
+      "triple": 2,
+      "pair": 14
+    },
+    "estimated": true,
+    "note": "リフト種別が公式未記載の7基をペアとして推定"
   }
 }

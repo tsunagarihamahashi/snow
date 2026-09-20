@@ -59,14 +59,6 @@
         "wide": false,
         "tier": null,
         "idx_tag": null
-      },
-      {
-        "num": "12,000",
-        "num_unit": "人/時",
-        "unit": "リフト輸送力（参考値）",
-        "wide": true,
-        "tier": null,
-        "idx_tag": null
       }
     ],
     "level_bar": null,
@@ -301,5 +293,13 @@
     "end": "2027-04-11",
     "approximate": false,
     "next_note": "次シーズンは例年12月中旬オープン予定"
+  },
+  "crowd": {
+    "area_ha": 130,
+    "parking": 2000,
+    "lifts": {
+      "quad": 3,
+      "pair": 3
+    }
   }
 }

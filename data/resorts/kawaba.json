@@ -51,27 +51,11 @@
         "wide": false,
         "tier": null,
         "idx_tag": null
-      },
-      {
-        "num": "323",
-        "num_unit": null,
-        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
-        "wide": false,
-        "tier": "low",
-        "idx_tag": "やや混みやすい・10件中9位"
-      },
-      {
-        "num": "11,032",
-        "num_unit": "人/時",
-        "unit": "リフト輸送力（公式発表値）",
-        "wide": true,
-        "tier": null,
-        "idx_tag": null
       }
     ],
     "level_bar": null,
     "notice": null,
-    "foot": "標高差640m（1,230m〜1,870m）。フード付きリフトもあり初級者でも山頂まで行ける構成。輸送力を駐車場台数で割ると約8.5人時/台で、尾瀬岩鞍（約14.2）・石打丸山（約22.2）と比べるとリフト待ちのリスクはやや高めと推定されます。",
+    "foot": "標高差640m（1,230m〜1,870m）。フード付きリフトもあり初級者でも山頂まで行ける構成。",
     "map_img": null,
     "map_source_note": null,
     "cards": [
@@ -503,5 +487,14 @@
     "end": "2027-04-18",
     "approximate": true,
     "next_note": "次シーズンは例年12月中旬オープン予定"
+  },
+  "crowd": {
+    "area_ha": 42,
+    "parking": 1300,
+    "lifts": {
+      "quad": 4,
+      "pair": 1
+    },
+    "capacity_official": 11032
   }
 }

@@ -51,27 +51,11 @@
         "wide": false,
         "tier": null,
         "idx_tag": null
-      },
-      {
-        "num": "1,010",
-        "num_unit": null,
-        "unit": "混雑しにくさ ㎡/台<br/>（面積÷駐車場台数）",
-        "wide": false,
-        "tier": "mid",
-        "idx_tag": "平均的・10件中4位"
-      },
-      {
-        "num": "約15,600",
-        "num_unit": "人/時",
-        "unit": "リフト輸送力（ペア8基・クワッド2基・ゴンドラ1基、標準値による推定）",
-        "wide": true,
-        "tier": null,
-        "idx_tag": null
       }
     ],
     "level_bar": null,
     "notice": null,
-    "foot": "初級から上級まで多彩なコースを備える関東最大級のビッグゲレンデ。良質なパウダースノーが特徴。輸送力を駐車場台数で割ると約14.2人時/台で、リフト待ちのリスクは中程度と推定されます（石打丸山は約22.2人時/台）。",
+    "foot": "初級から上級まで多彩なコースを備える関東最大級のビッグゲレンデ。良質なパウダースノーが特徴。",
     "map_img": {
       "src": "https://www.oze-iwakura.co.jp/ski/slopeguide/images/map.jpg",
       "alt": "ホワイトワールド尾瀬岩鞍 コースマップ（クリックで拡大）"
@@ -381,5 +365,14 @@
     "end": "2027-04-04",
     "approximate": true,
     "next_note": "次シーズンは例年12月中旬オープン予定"
+  },
+  "crowd": {
+    "area_ha": 111,
+    "parking": 1100,
+    "lifts": {
+      "gondola": 1,
+      "quad": 2,
+      "pair": 8
+    }
   }
 }

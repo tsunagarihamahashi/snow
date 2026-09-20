@@ -280,12 +280,13 @@ h1.resort-name, h2 .rn { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* ---- scale stats ---- */
 .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-.stat { background: var(--card); padding: 16px 12px; text-align: center; }
-.stat .num { font-family: "Roboto Mono", monospace; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.stat .unit { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+/* label on the left, value on the right, so each number is read with its meaning */
+.stat { background: var(--card); padding: 14px 16px; display: grid; grid-template-columns: 1fr auto; grid-template-areas: "unit num" "tag num"; column-gap: 12px; align-items: center; }
+.stat .num { grid-area: num; font-family: "Roboto Mono", monospace; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.stat .unit { grid-area: unit; font-size: 13px; color: var(--text-muted); line-height: 1.4; }
 .stat-wide { grid-column: 1 / -1; }
-.stat-wide .num-unit { font-size: 14px; font-weight: 400; color: var(--text-muted); margin-left: 4px; }
-.stat .idx-tag { display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 1.5px 7.5px; border-radius: 100px; background: var(--card); border: 1.5px solid; }
+.stat-wide .num-unit { font-size: 13px; font-weight: 400; color: var(--text-muted); margin-left: 3px; }
+.stat .idx-tag { grid-area: tag; justify-self: start; display: inline-block; margin-top: 6px; font-size: 11px; font-weight: 700; padding: 1.5px 7.5px; border-radius: 100px; background: var(--card); border: 1.5px solid; }
 .stat.tier-good .num { color: var(--pine-600); }
 .stat.tier-good .idx-tag { border-color: var(--pine-600); color: var(--pine-600); }
 .stat.tier-mid .num { color: var(--amber-600); }
@@ -388,6 +389,7 @@ footer p { margin: 0 0 8px; }
   .wrap { padding-left: 16px; padding-right: 16px; }
   .statusbar .inner { padding-left: 16px; padding-right: 16px; }
   h1.resort-name { font-size: 28px; }
+  .stat-grid { grid-template-columns: 1fr; }
   .calc-total .amount { font-size: 26px; }
   .shop-list li { flex-direction: column; align-items: flex-start; }
   .shop-list li > .maplink { align-self: flex-start; }

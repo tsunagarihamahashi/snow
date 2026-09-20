@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>万座温泉スキー場</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">群馬県 / 標高1,800m・プリンススノーリゾート</p>
+    <h1 class="resort-name">万座温泉<wbr>スキー場</h1>
+    <p class="pref">群馬県吾妻郡嬬恋村万座温泉</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<div class="hours-strip">
+  <div class="inner">
+    <div class="hour-item"><span class="hour-label">平日・日・祝</span><span class="hour-value">8:30〜16:30</span></div>
+    <div class="hour-item"><span class="hour-label">土曜・年末年始・連休中日</span><span class="hour-value">8:30〜17:00</span></div>
+    <div class="hour-item"><span class="hour-label">キッズパーク</span><span class="hour-value">土休日 9:00〜16:00<br>平日 10:00〜15:00</span></div>
+    <div class="hour-item"><span class="hour-label">ナイター</span><span class="hour-value">なし</span></div>
+  </div>
+  <p class="hours-foot">2025-26シーズンの営業時間（2026-27は公式サイトで順次更新予定）。天候・積雪状況により営業期間・時間が変更になる場合があります</p>
+</div>
+
+<nav class="jumpnav">
+  <div class="inner">
+    <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
+    <a href="#weather">天気</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#price">料金</a>
+    <a href="#kids">キッズ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#onsen">温泉</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="scale">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <p class="calc-foot" style="margin-bottom:14px;">ℹ️ 2026-27シーズンは「3年ぶりのフルオープン」を予定（公式発表・2026年9月1日）。2025-26はプリンスリフトとプリンスゲレンデL・Rのみの縮小営業でした。リフト券料金・営業時間は2026-27向けの更新を待つ必要があります。</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">38</div><div class="unit">総面積 ha</div></div>
+      <div class="stat"><div class="num">14</div><div class="unit">コース数</div></div>
+      <div class="stat"><div class="num">2,500</div><div class="unit">最長滑走 m<br>（総滑走距離7,976m）</div></div>
+      <div class="stat"><div class="num">336</div><div class="unit">標高差 m<br>（1,654〜1,990m）</div></div>
+      <div class="stat stat-wide"><div class="num">4<span class="num-unit">基</span></div><div class="unit">リフト数（高速クワッド1・ペア3）</div></div>
+      <div class="stat"><div class="num">950</div><div class="unit">ゲレンデの余裕 ㎡/台<br>（総面積÷駐車場台数）</div><span class="idx-tag">12件中3位</span></div>
+      <div class="stat"><div class="num">15.0</div><div class="unit">リフトの余裕 人時/台<br>（輸送力6,000人/時÷駐車場台数）</div><span class="idx-tag">12件中2位</span></div>
+      <div class="stat stat-wide tier-good"><div class="num">3<span class="num-unit">位 / 12件</span></div><div class="unit">混雑しにくさ 総合（ゲレンデとリフトの順位平均）</div></div>
+    </div>
+    <div class="level-bar">
+      <span style="width:50%; background:var(--pine-600);"></span>
+      <span style="width:28%; background:var(--amber-600);"></span>
+      <span style="width:21%; background:var(--ridge-700);"></span>
+    </div>
+    <div class="level-legend">
+      <span><span class="sw" style="background:var(--pine-600);"></span>初級 7本</span>
+      <span><span class="sw" style="background:var(--amber-600);"></span>中級 4本</span>
+      <span><span class="sw" style="background:var(--ridge-700);"></span>上級 3本</span>
+    </div>
+    <p class="calc-foot" style="margin-top:10px;">混雑しにくさは駐車場台数を来場者数の代理指標として算出した参考値。輸送力はクワッド1・ペア3の標準値から推定。順位は算出対象12ゲレンデ中。</p>
+    <p class="calc-foot" style="margin-top:8px;">最大斜度30°（B2しゃくなげコース）。標高1,800mの「粉雪の万座」として知られ、ベースの標高が高いぶん雪質は関東屈指。万座山ゲレンデ（D1・最大29°）や黒湯上級コースなど短くても手応えのある斜面と、1,687mのどうぶつの森コース（平均6°）のような初級ロングコースが揃う。</p>
+    <img class="trail-map-img" id="trailMapImg" src="https://www.princehotels.co.jp/image.jsp?id=520911" alt="万座温泉スキー場 コースマップ（クリックで拡大）" loading="lazy">
+    <a class="map-card" href="https://www.princehotels.co.jp/ski/manza/winter/coursemap/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">コースオープン・リフト運行状況を見る（公式サイト）</span>
+        <span class="mc-sub">積雪情報・コース14本とリフト4基の当日の状況はこちら</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="reviews">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+          <li>標高1,800mのベースがもたらす良質なパウダー「粉雪の万座」</li>
+          <li>日本有数の硫黄濃度を誇る万座温泉の乳白色のにごり湯がゲレンデ直結。滑った後にそのまま湯めぐりできる</li>
+          <li>小学生以下はリフト券無料で、ファミリーの費用負担が軽い</li>
+          <li>コンパクトで人が少なく、初級コースが広いため初心者・子供連れが落ち着いて練習できる</li>
+          <li>万座プリンスホテルがゲレンデ徒歩0分で、泊まりなら朝一の圧雪バーンを独占しやすい</li>
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+          <li>38ha・14コースと小規模で、1日中滑り込むには物足りない</li>
+          <li>万座ハイウェー（有料）経由の山道で、冬季は草津側からの国道292号が通行止め。電車もバス乗り継ぎで時間がかかる</li>
+          <li>2025-26は縮小営業だったため、2026-27の運行本数・料金は事前に公式サイトで確認が必要</li>
+        </ul>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。</p>
+  </section>
+
+  <section id="weather">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
+    <div class="weather-toggle" role="group" aria-label="予報の範囲">
+      <button data-range="today" aria-pressed="true">当日</button>
+      <button data-range="2day" aria-pressed="false">2日間</button>
+      <button data-range="week" aria-pressed="false">週間</button>
+    </div>
+    <div class="weather-row" id="weatherRow"><p class="weather-foot">読み込み中…</p></div>
+    <p class="weather-foot">群馬県嬬恋村・万座温泉付近（標高約1,800m）の予報。<a href="https://www.princehotels.co.jp/ski/manza/winter/coursemap/" target="_blank" rel="noopener">現地の最新情報</a>も合わせてご確認ください。</p>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <a class="map-card" href="https://www.princehotels.co.jp/ski/manza/winter/coursemap/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">積雪情報・運行状況を見る（公式サイト）</span>
+        <span class="mc-sub">公式サイトにライブカメラの掲載がないため、天気・積雪・雪質・路面状況のページへリンクしています</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="calc-card">
+      <div class="daytype-toggle" role="group" aria-label="購入区分">
+        <button data-day="general" aria-pressed="true">一般</button>
+        <button data-day="member" aria-pressed="false">SEIBU PRINCE CLUB会員</button>
+      </div>
+      <div id="catRows"></div>
+      <div class="calc-total">
+        <span class="label">1日券 合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot">2025-26シーズンの縮小営業時の【特別料金】を参考値として掲載。2026-27はフルオープン予定のため料金が変わる見込みです（公式サイトで順次更新予定）。小学生以下はリフト券売り場で無料の専用チケットを発行（未就学児は保護者同伴）。1回券¥1,000。20歳は対象期間中の平日リフト無料。</p>
+      <details class="rental-acc">
+        <summary>レンタル料金をシミュレーション<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <p class="rental-legend">1日料金。こども＝小学生まで。セット＝板・ブーツ・ストックの3点。当日受付・身分証明書が必要</p>
+          <div id="rentalCatRows"></div>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
+          <p class="calc-foot">4時間セット（おとな¥4,500／こども¥3,000）、2日セット（¥10,000／¥5,500）、板・ブーツ・ストックの単品もあり。グローブ・ゴーグル・帽子のレンタルはなく、スキーセンター内「ゲレスポ」で販売。こども用はガチャピン・ムックデザインの板。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="kids">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>Manzaスノーフィールド</span><span class="shop-tag">スノーエスカレーター・そり・ふあふあなどアイテム満載のキッズパーク。そりは無料貸出（台数限定）</span></div><span class="shop-tag">小学生以上¥1,800／未就学児¥1,000</span></li>
+      <li><div class="shop-main"><span>こどものリフト無料</span><span class="shop-tag">小学生以下はシーズン中全日リフト料金無料。リフト券売り場で専用チケットを発行</span></div><span class="shop-tag">無料</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">2025-26シーズンの内容。3歳未満は無料。営業は土休日9:00〜16:00、平日10:00〜15:00（12/20〜3/22）。PRINCE KIDS CLUB会員向けのプログラムもあり。</p>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <ul class="shop-list" id="shopList">
+      <li><div class="shop-main"><span>レストラン アリエスカ 北・南</span><span class="shop-tag">スキー場ベースエリアのレストラン。行き交うスキーヤーと雪景色を眺めながら食事できる</span></div><a class="maplink" href="https://www.google.com/maps/search/%E4%B8%87%E5%BA%A7%E6%B8%A9%E6%B3%89%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%82%A2%E3%83%AA%E3%82%A8%E3%82%B9%E3%82%AB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>万座山ヒュッテ</span><span class="shop-tag">スキー場中腹の山小屋風レストラン。窓の外に雄大な景色が広がる</span></div><a class="maplink" href="https://www.google.com/maps/search/%E4%B8%87%E5%BA%A7%E6%B8%A9%E6%B3%89%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4%20%E4%B8%87%E5%BA%A7%E5%B1%B1%E3%83%92%E3%83%A5%E3%83%83%E3%83%86" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>レストラン しゃくなげ（万座プリンスホテル内）</span><span class="shop-tag">広々としたホテルレストランでゆっくりランチ</span></div><a class="maplink" href="https://www.google.com/maps/search/%E4%B8%87%E5%BA%A7%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B9%E3%83%9B%E3%83%86%E3%83%AB%20%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%81%97%E3%82%83%E3%81%8F%E3%81%AA%E3%81%92" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">各店のメニュー・料金は公式サイトに掲載がないため未記載です。ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。</p>
+  </section>
+
+  <section id="onsen">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>万座プリンスホテル「こまくさの湯」</span><span class="shop-tag">ゲレンデ直結。開放感たっぷりの露天風呂と女性専用屋根付き露天「しゃくなげの湯」。日帰り受付11:00〜16:00（入浴受付15:00まで）</span></div><span class="shop-tag">大人¥1,500／子供¥750</span></li>
+      <li><div class="shop-main"><span>万座高原ホテル「石庭露天風呂」</span><span class="shop-tag">8つの湯船からなる名物露天風呂（7つは混浴・1つ女性専用）。日帰り受付11:00〜18:00（入浴受付17:00まで）</span></div><span class="shop-tag">大人¥1,700／子供¥850</span></li>
+      <li><div class="shop-main"><span>万座温泉 日進舘</span><span class="shop-tag">苦湯・姥湯など湯船が並び湯めぐりができる。日帰り受付10:00〜17:00（入浴受付16:00まで）</span></div><span class="shop-tag">中学生以上¥1,000／小学生¥700</span></li>
+      <li><div class="shop-main"><span>豊国館</span><span class="shop-tag">湯治場の雰囲気を残した内湯と露天風呂。日帰り受付8:30〜16:30</span></div><span class="shop-tag">大人¥800／子供¥400</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">万座温泉観光協会の日帰り温泉一覧（2026年9月時点）より。ほかに湯の花旅館・万座ホテルジュラク・万座亭も日帰り可。「万座温泉湯めぐり手形」（¥1,300、各施設利用料¥500）もあり。</p>
+  </section>
+
+  <section id="access">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>上信越道 碓氷軽井沢ICから鬼押ハイウェー・万座ハイウェー（ともに有料）経由。冬季は草津側からの国道292号（志賀草津道路）が通行止めのため嬬恋側から入る。ディーゼル車は嬬恋村内で寒冷地用軽油を給油</dd>
+      <dt>電車</dt>
+      <dd>北陸新幹線 軽井沢駅またはJR吾妻線 万座・鹿沢口駅から西武観光バス「万座温泉」行き（軽井沢駅→万座・鹿沢口駅→万座温泉）</dd>
+      <dt>駐車場</dt>
+      <dd>400台・無料・24時間利用可（トイレあり）</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.princehotels.co.jp/ski/manza/winter/access/" target="_blank" rel="noopener">princehotels.co.jp／アクセス詳細</a></dd>
+    </dl>
+    <p class="calc-foot" style="margin-top:14px;">万座周辺の道路状況は群馬県のライブカメラで確認できます（公式アクセスページからリンク）。</p>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <ul class="news-list" id="newsList">
+      <li><span class="news-date">2026年09月01日</span><a href="https://www.princehotels.co.jp/ski/manza/informations/2026_news1" target="_blank" rel="noopener">待ち望んだ冬へ 3年ぶりのフルオープン。（2026-27シーズンは全コースで営業予定）</a></li>
+      <li><span class="news-date">2026年09月01日</span><a href="https://www.princehotels.co.jp/ski/manza/winter/" target="_blank" rel="noopener">2026-2027シーズン：2026年12月19日（土）オープン予定</a></li>
+    </ul>
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2><span class="rn">万座温泉<wbr>スキー場</span>の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+
+    <a class="map-card" href="https://twitter.com/manzaspa_snow" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">@manzaspa_snow（公式X）</span>
+        <span class="mc-sub">最新の投稿はXでご確認ください</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>営業期間：2026年12月19日オープン予定（公式発表）。終了日は未発表のため、2025-26の実績（3月下旬）をもとにした目安です。コースマップは万座温泉スキー場（西武プリンスホテルズ＆リゾーツ）公式サイト掲載の著作物です。</p>
+    <p>データ精度：面積・コース・リフト・駐車場は公式サイトの値、リフト券・レンタル・キッズパークは2025-26シーズンの公式値です。2026-27はフルオープンに伴い料金・運行内容が変わる可能性があります。</p>
+  </footer>
+</div>
+
+<div class="map-modal" id="mapModal">
+  <button class="map-modal-close" id="mapModalClose" aria-label="閉じる">✕</button>
+  <img id="mapModalImg" src="" alt="">
+</div>
+
+<script>window.RESORT = {"livecam": {"cards": [{"href": "https://www.princehotels.co.jp/ski/manza/winter/coursemap/", "sub": "\u516c\u5f0f\u30b5\u30a4\u30c8\u306b\u30e9\u30a4\u30d6\u30ab\u30e1\u30e9\u306e\u63b2\u8f09\u304c\u306a\u3044\u305f\u3081\u3001\u5929\u6c17\u30fb\u7a4d\u96ea\u30fb\u96ea\u8cea\u30fb\u8def\u9762\u72b6\u6cc1\u306e\u30da\u30fc\u30b8\u3078\u30ea\u30f3\u30af\u3057\u3066\u3044\u307e\u3059", "title": "\u7a4d\u96ea\u60c5\u5831\u30fb\u904b\u884c\u72b6\u6cc1\u3092\u898b\u308b\uff08\u516c\u5f0f\u30b5\u30a4\u30c8\uff09"}], "foot": null, "type": "linkout"}, "price": {"aria_label": "\u8cfc\u5165\u533a\u5206", "categories": [{"cond": "\u4e2d\u5b66\u751f\u4ee5\u4e0a", "key": "adult", "label": "\u304a\u3068\u306a"}, {"cond": "\u5c0f\u5b66\u751f\u4ee5\u4e0b\u30fb\u7121\u6599", "key": "child", "label": "\u5b50\u3069\u3082"}], "counts": {"adult": 2, "child": 0}, "default_option": "general", "foot": "2025-26\u30b7\u30fc\u30ba\u30f3\u306e\u7e2e\u5c0f\u55b6\u696d\u6642\u306e\u3010\u7279\u5225\u6599\u91d1\u3011\u3092\u53c2\u8003\u5024\u3068\u3057\u3066\u63b2\u8f09\u30022026-27\u306f\u30d5\u30eb\u30aa\u30fc\u30d7\u30f3\u4e88\u5b9a\u306e\u305f\u3081\u6599\u91d1\u304c\u5909\u308f\u308b\u898b\u8fbc\u307f\u3067\u3059\uff08\u516c\u5f0f\u30b5\u30a4\u30c8\u3067\u9806\u6b21\u66f4\u65b0\u4e88\u5b9a\uff09\u3002\u5c0f\u5b66\u751f\u4ee5\u4e0b\u306f\u30ea\u30d5\u30c8\u5238\u58f2\u308a\u5834\u3067\u7121\u6599\u306e\u5c02\u7528\u30c1\u30b1\u30c3\u30c8\u3092\u767a\u884c\uff08\u672a\u5c31\u5b66\u5150\u306f\u4fdd\u8b77\u8005\u540c\u4f34\uff09\u30021\u56de\u5238\u00a51,000\u300220\u6b73\u306f\u5bfe\u8c61\u671f\u9593\u4e2d\u306e\u5e73\u65e5\u30ea\u30d5\u30c8\u7121\u6599\u3002", "intro": null, "mode": "toggle", "options": [{"key": "general", "label": "\u4e00\u822c"}, {"key": "member", "label": "SEIBU PRINCE CLUB\u4f1a\u54e1"}], "price_table": {"general": {"adult": 3000, "child": 0}, "member": {"adult": 2800, "child": 0}}, "total_label": "1\u65e5\u5238 \u5408\u8a08"}, "rental": {"foot": "4\u6642\u9593\u30bb\u30c3\u30c8\uff08\u304a\u3068\u306a\u00a54,500\uff0f\u3053\u3069\u3082\u00a53,000\uff09\u30012\u65e5\u30bb\u30c3\u30c8\uff08\u00a510,000\uff0f\u00a55,500\uff09\u3001\u677f\u30fb\u30d6\u30fc\u30c4\u30fb\u30b9\u30c8\u30c3\u30af\u306e\u5358\u54c1\u3082\u3042\u308a\u3002\u30b0\u30ed\u30fc\u30d6\u30fb\u30b4\u30fc\u30b0\u30eb\u30fb\u5e3d\u5b50\u306e\u30ec\u30f3\u30bf\u30eb\u306f\u306a\u304f\u3001\u30b9\u30ad\u30fc\u30bb\u30f3\u30bf\u30fc\u5185\u300c\u30b2\u30ec\u30b9\u30dd\u300d\u3067\u8ca9\u58f2\u3002\u3053\u3069\u3082\u7528\u306f\u30ac\u30c1\u30e3\u30d4\u30f3\u30fb\u30e0\u30c3\u30af\u30c7\u30b6\u30a4\u30f3\u306e\u677f\u3002", "items": [{"key": "set_adult", "label": "\u30b9\u30ad\u30fc\uff0f\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb\u304a\u3068\u306a", "price": 6000}, {"key": "set_child", "label": "\u30b9\u30ad\u30fc\uff0f\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb\u3053\u3069\u3082", "price": 3500}, {"key": "wear_adult", "label": "\u30a6\u30a8\u30a2\u4e0a\u4e0b\u30fb\u304a\u3068\u306a", "price": 5500}, {"key": "wear_child", "label": "\u30a6\u30a8\u30a2\u4e0a\u4e0b\u30fb\u3053\u3069\u3082", "price": 4000}, {"key": "helmet", "label": "\u30d8\u30eb\u30e1\u30c3\u30c8", "price": 1000}], "legend": "1\u65e5\u6599\u91d1\u3002\u3053\u3069\u3082\uff1d\u5c0f\u5b66\u751f\u307e\u3067\u3002\u30bb\u30c3\u30c8\uff1d\u677f\u30fb\u30d6\u30fc\u30c4\u30fb\u30b9\u30c8\u30c3\u30af\u306e3\u70b9\u3002\u5f53\u65e5\u53d7\u4ed8\u30fb\u8eab\u5206\u8a3c\u660e\u66f8\u304c\u5fc5\u8981", "mode": "stepper", "summary": "\u30ec\u30f3\u30bf\u30eb\u6599\u91d1\u3092\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3"}, "season": {"approximate": true, "end": "2027-03-28", "next_note": "\u6b21\u30b7\u30fc\u30ba\u30f3\u306f\u4f8b\u5e7412\u6708\u4e2d\u65ec\u30aa\u30fc\u30d7\u30f3\u4e88\u5b9a", "start": "2026-12-19"}, "snow": {"fallback_url": "https://www.princehotels.co.jp/ski/manza/winter/coursemap/", "key": "manza", "layout": "amount"}, "weather": {"foot": "\u7fa4\u99ac\u770c\u5b2c\u604b\u6751\u30fb\u4e07\u5ea7\u6e29\u6cc9\u4ed8\u8fd1\uff08\u6a19\u9ad8\u7d041,800m\uff09\u306e\u4e88\u5831\u3002\u003ca href=\"https://www.princehotels.co.jp/ski/manza/winter/coursemap/\" target=\"_blank\" rel=\"noopener\"\u003e\u73fe\u5730\u306e\u6700\u65b0\u60c5\u5831\u003c/a\u003e\u3082\u5408\u308f\u305b\u3066\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002", "lat": 36.634, "lon": 138.507}};</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

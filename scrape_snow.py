@@ -228,6 +228,11 @@ def scrape_yuzawa_kogen():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_iwappara():
+    # 公式サイトの積雪表示の構造が未確認のため、現時点では未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -256,6 +261,7 @@ def main():
             "kusatsu": scrape_kusatsu(),
             "yuzawa_nakazato": scrape_yuzawa_nakazato(),
             "yuzawa_kogen": scrape_yuzawa_kogen(),
+            "iwappara": scrape_iwappara(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

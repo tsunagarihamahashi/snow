@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-19T22:36:10.299468+00:00",
+  "scraped_at": "2026-09-20T22:50:52.626291+00:00",
   "resorts": {
     "oze_iwakura": {
       "available": true,
@@ -58,6 +58,70 @@
       "note": "18スキー場共通の積雪データソースが未確認のため今回は取得していません"
     },
     "grandeco": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "tambara": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "minakami_kogen": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "norn": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "ogna_hotaka": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "mt_t": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "palcall_tsumagoi": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "manza": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "kusatsu": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "yuzawa_nakazato": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "yuzawa_kogen": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "iwappara": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "jkokusai": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "naspa": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "hakkaisan": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "muika": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "akakura_kanko": {
       "available": false,
       "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
     }

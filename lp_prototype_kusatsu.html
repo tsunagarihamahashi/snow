@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>草津温泉スキー場</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">群馬県 / 草津温泉街から車で5分</p>
+    <h1 class="resort-name">草津温泉<wbr>スキー場</h1>
+    <p class="pref">群馬県吾妻郡草津町草津</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<div class="hours-strip">
+  <div class="inner">
+    <div class="hour-item"><span class="hour-label">リフト</span><span class="hour-value">8:30〜16:30</span></div>
+    <div class="hour-item"><span class="hour-label">パルスゴンドラ天狗</span><span class="hour-value">9:00〜16:00</span></div>
+    <div class="hour-item"><span class="hour-label">ナイター</span><span class="hour-value">16:30〜20:00</span></div>
+    <div class="hour-item"><span class="hour-label">ナイター営業日</span><span class="hour-value">毎週土曜＋年末年始等</span></div>
+  </div>
+  <p class="hours-foot">2025-26シーズンの時間（2026-27は公式サイトで順次更新予定）。リフトごとに運行時間が異なり、しゃくなげ高速クワッド・青葉山ペアは9:00〜15:50。ナイターは天狗山ゲレンデのみで、2025-26は12/27〜3/21の毎週土曜と12/27〜1/3・1/11・2/22・3/20</p>
+</div>
+
+<nav class="jumpnav">
+  <div class="inner">
+    <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
+    <a href="#weather">天気</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#price">料金</a>
+    <a href="#kids">キッズ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#onsen">温泉</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="scale">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">5</div><div class="unit">ゲレンデ数（コース5本）</div></div>
+      <div class="stat"><div class="num">4,300</div><div class="unit">最長滑走 m（青葉山→おなり山→天狗山）</div></div>
+      <div class="stat"><div class="num">355</div><div class="unit">標高差 m<br>（1,245〜1,600m）</div></div>
+      <div class="stat"><div class="num">30</div><div class="unit">最大斜度 度（天狗山ゲレンデ「天狗のカベ」）</div></div>
+      <div class="stat stat-wide"><div class="num">7<span class="num-unit">基</span></div><div class="unit">リフト数（ゴンドラ1・高速クワッド2・ペア4）</div></div>
+    </div>
+    <div class="level-bar">
+      <span style="width:50%; background:var(--pine-600);"></span>
+      <span style="width:30%; background:var(--amber-600);"></span>
+      <span style="width:20%; background:var(--ridge-700);"></span>
+    </div>
+    <div class="level-legend">
+      <span><span class="sw" style="background:var(--pine-600);"></span>初級 50%</span>
+      <span><span class="sw" style="background:var(--amber-600);"></span>中級 30%</span>
+      <span><span class="sw" style="background:var(--ridge-700);"></span>上級 20%</span>
+    </div>
+    <p class="calc-foot" style="margin-top:10px;">混雑しにくさ指標：総面積が公式に公開されていないため算出対象外（駐車場約860台・リフト7基）。</p>
+    <p class="calc-foot" style="margin-top:8px;">カラマツ林を抜ける3,200mのしゃくなげコース（平均8°）や、冬季通行止めの国道292号を滑るR292コースなど緩やかなロングコースが中心で、ファミリー・初級者向き。ゲレンデトップの青葉山第1ゲレンデ（最大28°）は晴れた日に富士山が見えることも。天狗山山頂へは8人乗りパルスゴンドラ（全長473m・4分）で上がれ、バンジップ・スカイスウィングなどのアトラクションも併設。</p>
+    <img class="trail-map-img" id="trailMapImg" src="https://www.932-onsen.com/winter/assets/img/course/map.png" alt="草津温泉スキー場 ゲレンデマップ（クリックで拡大）" loading="lazy">
+    <a class="map-card" href="https://www.932-onsen.com/winter/course/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">コース・リフト運行状況を見る（公式サイト）</span>
+        <span class="mc-sub">各コースの積雪とリフト・ゴンドラの運行状況はこちら</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="reviews">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+          <li>日本三名泉・草津温泉の温泉街まで車で5分。滑った後に大滝乃湯・御座之湯・西の河原露天風呂の湯めぐりができる</li>
+          <li>緩斜面のロングコースとキッズパークで、初心者・子供連れが安心して練習できる</li>
+          <li>駐車場が全日無料（約860台）で、温泉街との無料シャトルバスもある</li>
+          <li>パルスゴンドラ天狗で山頂へ上がれば温泉街を一望。バンジップやスカイスウィングなど滑らない人も楽しめる</li>
+          <li>毎週土曜のナイターとペット同伴OKのドッグエリアなど、遊び方の幅が広い</li>
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+          <li>5ゲレンデ・コース全長4,300mとコンパクトで、滑走本数を稼ぎたい中上級者には物足りない</li>
+          <li>標高1,245〜1,600mと高くはなく、シーズン序盤・終盤は雪が薄くなりやすい</li>
+          <li>2025-26は託児所・キッズパラダイス・授乳室が休業しており、幼児連れの屋内施設は限られる</li>
+        </ul>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。</p>
+  </section>
+
+  <section id="weather">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
+    <div class="weather-toggle" role="group" aria-label="予報の範囲">
+      <button data-range="today" aria-pressed="true">当日</button>
+      <button data-range="2day" aria-pressed="false">2日間</button>
+      <button data-range="week" aria-pressed="false">週間</button>
+    </div>
+    <div class="weather-row" id="weatherRow"><p class="weather-foot">読み込み中…</p></div>
+    <p class="weather-foot">群馬県草津町・天狗山付近（標高約1,300m）の予報。<a href="https://www.932-onsen.com/winter/" target="_blank" rel="noopener">現地の最新情報</a>も合わせてご確認ください。</p>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <div class="livecam-card">
+      <div class="lc-head">
+        <span class="lc-head-left"><span class="lc-dot"></span><span class="lc-text" id="lcLabel">天狗山ゲレンデ 山麓</span></span>
+      </div>
+      <div class="lc-player">
+        <iframe id="lcFrame" src="https://www.youtube.com/embed/eX7vAL4Jtfk?autoplay=1&mute=1" title="草津温泉スキー場ライブカメラ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="lc-tabs" id="lcTabs"></div>
+    </div>
+    <p class="calc-foot" style="margin-top:10px;">公式YouTubeのライブ配信。ほかに国道292号（草津入口・前口）の道路カメラも公式サイトのライブカメラページで見られます。</p>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="calc-card">
+      <div class="daytype-toggle" role="group" aria-label="時期">
+        <button data-day="regular" aria-pressed="true">通常期</button>
+        <button data-day="service" aria-pressed="false">オープニング・春スキー</button>
+      </div>
+      <div id="catRows"></div>
+      <div class="calc-total">
+        <span class="label">1日券 合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot">2025-26シーズンの料金を参考値として掲載（2026-27の料金は公式サイトで順次更新予定）。サービスデー料金は2025-26ではオープニング週（12/18〜24）と春スキー週（3/23〜29）に適用。3歳以下無料。4時間券 大人¥5,300／ジュニア¥2,000／シニア・中高生¥4,700、ナイター券¥2,000／¥1,000／¥2,000、1回券¥600（ゴンドラ片道は大人2枚）。</p>
+      <details class="rental-acc">
+        <summary>レンタル料金をシミュレーション<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <p class="rental-legend">1日（運転開始〜16:30）料金。ジュニア＝小学生以下。セット＝スキー3点／ボード2点。セットを借りた子供はヘルメット無料</p>
+          <div id="rentalCatRows"></div>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
+          <p class="calc-foot">4時間・ナイター料金は割安。ハイグレードスキーセット¥6,000、ファンスキーセット¥4,500、板・ブーツ単品、ゴーグル・帽子¥700、防寒靴¥600、ソリ¥1,000もあり。連泊は翌日以降10%引き。リフト1日券＋レンタル一式の「手ぶらでスキーセット」（WEB予約限定、大人¥13,500／ジュニア¥7,000）も。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="kids">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>キッズパーク（キッズゲレンデ）</span><span class="shop-tag">天狗山ファミリーペアリフト乗り場脇。スノーエスカレーター常設、フワフワ遊具・雪遊び場。パーク内のそりは無料貸出。9:00〜16:00</span></div><span class="shop-tag">子供¥1,500（保護者1名無料）</span></li>
+      <li><div class="shop-main"><span>スノーレーサーレンタル</span><span class="shop-tag">キッズパーク内。1人乗り1時間¥800、大人＋子供の2人乗りKINGサイズ1時間¥1,000</span></div><span class="shop-tag">¥800〜/時間</span></li>
+      <li><div class="shop-main"><span>ファミリーゲレンデ</span><span class="shop-tag">平均・最大斜度8°の450m。ゲレンデデビューや子供の練習向け</span></div><span class="shop-tag">リフト券で利用可</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">2025-26シーズンの内容。キッズパークは12月下旬〜4月上旬（予定）、入場料は現地清算・現金のみ。保護者の追加付き添いは1名¥500。2025-26は託児所・キッズパラダイス・授乳室・貸切休憩室が休業。</p>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <ul class="shop-list" id="shopList">
+      <li><div class="shop-main"><span>天狗山メインレストラン（麺屋てんぐぅ・天狗喫茶）</span><span class="shop-tag">天狗山レストハウスのメインスポット。和・洋・中・喫茶、480席。8:30〜16:30</span></div><a class="maplink" href="https://www.google.com/maps/search/%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4%20%E5%A4%A9%E7%8B%97%E5%B1%B1%E3%83%AC%E3%82%B9%E3%83%88%E3%83%8F%E3%82%A6%E3%82%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>クリスタル天（ソラ）鮨おおぜき</span><span class="shop-tag">絶景を眺めながら本格江戸前寿司。52席（テラス12席・ペットOK）、水曜定休。食事10:30〜16:00</span></div><a class="maplink" href="https://www.google.com/maps/search/%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4%20%E9%AE%A8%E3%81%8A%E3%81%8A%E3%81%9C%E3%81%8D" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>おなりロッヂ</span><span class="shop-tag">おなり山ゲレンデベース。焼きたてパンとパスタ、46席。9:00〜16:00</span></div><a class="maplink" href="https://www.google.com/maps/search/%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4%20%E3%81%8A%E3%81%AA%E3%82%8A%E3%83%AD%E3%83%83%E3%83%82" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>青葉山レストラン</span><span class="shop-tag">本格手作り中華が自慢、150席。9:00〜16:00</span></div><a class="maplink" href="https://www.google.com/maps/search/%E8%8D%89%E6%B4%A5%E6%B8%A9%E6%B3%89%E3%82%B9%E3%82%AD%E3%83%BC%E5%A0%B4%20%E9%9D%92%E8%91%89%E5%B1%B1%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真はGoogleマップの店舗ページに委ねる方針です。</p>
+  </section>
+
+  <section id="onsen">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>西の河原露天風呂</span><span class="shop-tag">500㎡の大露天風呂。天狗山第1駐車場（スキー場駐車場）から徒歩圏。冬季9:00〜20:00</span></div><span class="shop-tag">大人¥800／子供¥400</span></li>
+      <li><div class="shop-main"><span>御座之湯</span><span class="shop-tag">湯畑前の木造共同浴場。湯畑源泉と万代鉱源泉の2つの湯。冬季8:00〜21:00</span></div><span class="shop-tag">大人¥900／子供¥450</span></li>
+      <li><div class="shop-main"><span>大滝乃湯</span><span class="shop-tag">合わせ湯や露天風呂、食事処・貸切風呂を備える日帰り温泉施設。9:00〜21:00</span></div><span class="shop-tag">大人¥1,200／子供¥600</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">「草津三湯」の料金は2025年9月改定後の値（各施設公式サイトより）。3か所に1回ずつ入れる「ちょいな三湯めぐり手形」は大人¥2,100／子ども¥1,050で有効期限なし。</p>
+  </section>
+
+  <section id="access">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>関越道 渋川伊香保ICまたは上信越道 碓氷軽井沢ICから草津温泉へ。温泉街からスキー場まで車で約5分。国道292号（志賀草津道路）の草津〜万座・志賀方面は冬季通行止め</dd>
+      <dt>電車</dt>
+      <dd>JR吾妻線 長野原草津口駅からJRバスで草津温泉バスターミナルへ。温泉街とスキー場は無料シャトルバス・町内巡回バスで移動。東京・新宿・渋谷・横浜・大宮発の高速バス「上州ゆめぐり号」もあり</dd>
+      <dt>駐車場</dt>
+      <dd>全日無料。天狗山第1（300台）・第2（80台）・第3（100台）・第4（160台）・第6（220台）、第5は車中泊サイト</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.932-onsen.com/common/access/" target="_blank" rel="noopener">932-onsen.com／アクセス詳細</a></dd>
+    </dl>
+    <p class="calc-foot" style="margin-top:14px;">道路状況は公式ライブカメラページの国道292号カメラ（草津入口・前口）で確認できます。</p>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <ul class="news-list" id="newsList">
+      <li><span class="news-date">2026年09月16日</span><a href="https://www.932-onsen.com/winter/news/501.php" target="_blank" rel="noopener">2026‐2027 草津温泉スキー場「シーズン券」販売のお知らせ（超早割 大人¥48,000・10月末まで）</a></li>
+      <li><span class="news-date">2026年08月12日</span><a href="https://www.932-onsen.com/winter/news/464.php" target="_blank" rel="noopener">「BanZip TENGU」利用申込書について</a></li>
+      <li><span class="news-date">2026年03月28日</span><a href="https://www.932-onsen.com/winter/news/234.php" target="_blank" rel="noopener">2025-2026スノーシーズン営業終了のお知らせ</a></li>
+    </ul>
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2><span class="rn">草津温泉<wbr>スキー場</span>の公式X</h2><span class="section-num">11 / 最新の投稿</span></div>
+
+    <a class="map-card" href="https://twitter.com/snowspa932" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">@snowspa932（公式X）</span>
+        <span class="mc-sub">最新の投稿はXでご確認ください</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>営業期間：2026年12月中旬〜2027年3月下旬（2025-26の実績12/18〜3/29をもとにした目安。2026-27の正式日程は未発表）。ゲレンデマップ・ライブカメラは草津温泉スキー場（草津観光公社）公式サイト掲載の著作物です。</p>
+    <p>データ精度：リフト券・レンタル・キッズパークは2025-26シーズンの公式値、コース・リフト・駐車場は公式サイトの値です。総面積は公式に明記がないため混雑しにくさ指標は未算出です。当日の運行状況は公式サイトを優先してください。</p>
+  </footer>
+</div>
+
+<div class="map-modal" id="mapModal">
+  <button class="map-modal-close" id="mapModalClose" aria-label="閉じる">✕</button>
+  <img id="mapModalImg" src="" alt="">
+</div>
+
+<script>window.RESORT = {"livecam": {"aspect": "16/9", "cams": [{"id": "eX7vAL4Jtfk", "label": "\u5929\u72d7\u5c71\u30b2\u30ec\u30f3\u30c7 \u5c71\u9e93"}, {"id": "hN8mxz3-1pg", "label": "\u5929\u72d7\u5c71\u30b2\u30ec\u30f3\u30c7 \u5c71\u9802"}], "cards": [], "foot": "\u516c\u5f0fYouTube\u306e\u30e9\u30a4\u30d6\u914d\u4fe1\u3002\u307b\u304b\u306b\u56fd\u9053292\u53f7\uff08\u8349\u6d25\u5165\u53e3\u30fb\u524d\u53e3\uff09\u306e\u9053\u8def\u30ab\u30e1\u30e9\u3082\u516c\u5f0f\u30b5\u30a4\u30c8\u306e\u30e9\u30a4\u30d6\u30ab\u30e1\u30e9\u30da\u30fc\u30b8\u3067\u898b\u3089\u308c\u307e\u3059\u3002", "iframe_title": "\u8349\u6d25\u6e29\u6cc9\u30b9\u30ad\u30fc\u5834\u30e9\u30a4\u30d6\u30ab\u30e1\u30e9", "label": "\u5929\u72d7\u5c71\u30b2\u30ec\u30f3\u30c7 \u5c71\u9e93", "type": "youtube"}, "price": {"aria_label": "\u6642\u671f", "categories": [{"cond": null, "key": "adult", "label": "\u5927\u4eba"}, {"cond": "4\u6b73\u4ee5\u4e0a\u301c\u5c0f\u5b66\u751f", "key": "junior", "label": "\u30b8\u30e5\u30cb\u30a2"}, {"cond": "60\u6b73\u4ee5\u4e0a\uff0f\u4e2d\u5b66\u30fb\u9ad8\u6821\u751f", "key": "senior", "label": "\u30b7\u30cb\u30a2\u30fb\u4e2d\u9ad8\u751f"}], "counts": {"adult": 2, "junior": 0, "senior": 0}, "default_option": "regular", "foot": "2025-26\u30b7\u30fc\u30ba\u30f3\u306e\u6599\u91d1\u3092\u53c2\u8003\u5024\u3068\u3057\u3066\u63b2\u8f09\uff082026-27\u306e\u6599\u91d1\u306f\u516c\u5f0f\u30b5\u30a4\u30c8\u3067\u9806\u6b21\u66f4\u65b0\u4e88\u5b9a\uff09\u3002\u30b5\u30fc\u30d3\u30b9\u30c7\u30fc\u6599\u91d1\u306f2025-26\u3067\u306f\u30aa\u30fc\u30d7\u30cb\u30f3\u30b0\u9031\uff0812/18\u301c24\uff09\u3068\u6625\u30b9\u30ad\u30fc\u9031\uff083/23\u301c29\uff09\u306b\u9069\u7528\u30023\u6b73\u4ee5\u4e0b\u7121\u6599\u30024\u6642\u9593\u5238 \u5927\u4eba\u00a55,300\uff0f\u30b8\u30e5\u30cb\u30a2\u00a52,000\uff0f\u30b7\u30cb\u30a2\u30fb\u4e2d\u9ad8\u751f\u00a54,700\u3001\u30ca\u30a4\u30bf\u30fc\u5238\u00a52,000\uff0f\u00a51,000\uff0f\u00a52,000\u30011\u56de\u5238\u00a5600\uff08\u30b4\u30f3\u30c9\u30e9\u7247\u9053\u306f\u5927\u4eba2\u679a\uff09\u3002", "intro": null, "mode": "toggle", "options": [{"key": "regular", "label": "\u901a\u5e38\u671f"}, {"key": "service", "label": "\u30aa\u30fc\u30d7\u30cb\u30f3\u30b0\u30fb\u6625\u30b9\u30ad\u30fc"}], "price_table": {"regular": {"adult": 6000, "junior": 2000, "senior": 5200}, "service": {"adult": 3500, "junior": 1500, "senior": 3000}}, "total_label": "1\u65e5\u5238 \u5408\u8a08"}, "rental": {"foot": "4\u6642\u9593\u30fb\u30ca\u30a4\u30bf\u30fc\u6599\u91d1\u306f\u5272\u5b89\u3002\u30cf\u30a4\u30b0\u30ec\u30fc\u30c9\u30b9\u30ad\u30fc\u30bb\u30c3\u30c8\u00a56,000\u3001\u30d5\u30a1\u30f3\u30b9\u30ad\u30fc\u30bb\u30c3\u30c8\u00a54,500\u3001\u677f\u30fb\u30d6\u30fc\u30c4\u5358\u54c1\u3001\u30b4\u30fc\u30b0\u30eb\u30fb\u5e3d\u5b50\u00a5700\u3001\u9632\u5bd2\u9774\u00a5600\u3001\u30bd\u30ea\u00a51,000\u3082\u3042\u308a\u3002\u9023\u6cca\u306f\u7fcc\u65e5\u4ee5\u964d10%\u5f15\u304d\u3002\u30ea\u30d5\u30c81\u65e5\u5238\uff0b\u30ec\u30f3\u30bf\u30eb\u4e00\u5f0f\u306e\u300c\u624b\u3076\u3089\u3067\u30b9\u30ad\u30fc\u30bb\u30c3\u30c8\u300d\uff08WEB\u4e88\u7d04\u9650\u5b9a\u3001\u5927\u4eba\u00a513,500\uff0f\u30b8\u30e5\u30cb\u30a2\u00a57,000\uff09\u3082\u3002", "items": [{"key": "set_adult", "label": "\u30b9\u30ad\u30fc\uff0f\u30dc\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb\u5927\u4eba", "price": 5000}, {"key": "set_junior", "label": "\u30b9\u30ad\u30fc\uff0f\u30dc\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb\u30b8\u30e5\u30cb\u30a2", "price": 3000}, {"key": "full_adult", "label": "\u30bb\u30c3\u30c8\uff0b\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb\u5927\u4eba", "price": 8000}, {"key": "full_junior", "label": "\u30bb\u30c3\u30c8\uff0b\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb\u30b8\u30e5\u30cb\u30a2", "price": 4500}, {"key": "wear_adult", "label": "\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb\u5927\u4eba", "price": 4000}, {"key": "wear_junior", "label": "\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb\u30b8\u30e5\u30cb\u30a2", "price": 3000}, {"key": "helmet_adult", "label": "\u30d8\u30eb\u30e1\u30c3\u30c8\u30fb\u5927\u4eba", "price": 1500}, {"key": "helmet_junior", "label": "\u30d8\u30eb\u30e1\u30c3\u30c8\u30fb\u30b8\u30e5\u30cb\u30a2", "price": 700}], "legend": "1\u65e5\uff08\u904b\u8ee2\u958b\u59cb\u301c16:30\uff09\u6599\u91d1\u3002\u30b8\u30e5\u30cb\u30a2\uff1d\u5c0f\u5b66\u751f\u4ee5\u4e0b\u3002\u30bb\u30c3\u30c8\uff1d\u30b9\u30ad\u30fc3\u70b9\uff0f\u30dc\u30fc\u30c92\u70b9\u3002\u30bb\u30c3\u30c8\u3092\u501f\u308a\u305f\u5b50\u4f9b\u306f\u30d8\u30eb\u30e1\u30c3\u30c8\u7121\u6599", "mode": "stepper", "summary": "\u30ec\u30f3\u30bf\u30eb\u6599\u91d1\u3092\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3"}, "season": {"approximate": true, "end": "2027-03-28", "next_note": "\u6b21\u30b7\u30fc\u30ba\u30f3\u306f\u4f8b\u5e7412\u6708\u4e2d\u65ec\u30aa\u30fc\u30d7\u30f3\u4e88\u5b9a", "start": "2026-12-17"}, "snow": {"fallback_url": "https://www.932-onsen.com/winter/", "key": "kusatsu", "layout": "amount"}, "weather": {"foot": "\u7fa4\u99ac\u770c\u8349\u6d25\u753a\u30fb\u5929\u72d7\u5c71\u4ed8\u8fd1\uff08\u6a19\u9ad8\u7d041,300m\uff09\u306e\u4e88\u5831\u3002\u003ca href=\"https://www.932-onsen.com/winter/\" target=\"_blank\" rel=\"noopener\"\u003e\u73fe\u5730\u306e\u6700\u65b0\u60c5\u5831\u003c/a\u003e\u3082\u5408\u308f\u305b\u3066\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002", "lat": 36.614, "lon": 138.579}};</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

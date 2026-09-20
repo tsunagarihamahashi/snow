@@ -213,6 +213,11 @@ def scrape_manza():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_kusatsu():
+    # 公式サイトの積雪表示の構造が未確認のため、現時点では未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -238,6 +243,7 @@ def main():
             "mt_t": scrape_mt_t(),
             "palcall_tsumagoi": scrape_palcall_tsumagoi(),
             "manza": scrape_manza(),
+            "kusatsu": scrape_kusatsu(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

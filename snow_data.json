@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-22T23:24:07.492267+00:00",
+  "scraped_at": "2026-09-23T23:22:47.373815+00:00",
   "resorts": {
     "oze_iwakura": {
       "available": true,
@@ -13,8 +13,9 @@
       "note": "オフシーズンのため積雪情報が未掲載です"
     },
     "kawaba": {
-      "available": false,
-      "note": "取得エラー: HTTPSConnectionPool(host='www.kawaba.co.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kawaba.co.jp', port=443) at 0x7f737f073800>, 'Connection to www.kawaba.co.jp timed out. (connect timeout=20)'))"
+      "available": true,
+      "amount": 0.0,
+      "updated": "2026/04/26/16:22"
     },
     "marunuma": {
       "available": false,
@@ -121,6 +122,18 @@
       "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
     },
     "akakura_kanko": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "ikenotaira": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "suginohara": {
+      "available": false,
+      "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
+    },
+    "lotte_arai": {
       "available": false,
       "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"
     }

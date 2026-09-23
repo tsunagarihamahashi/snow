@@ -1,0 +1,166 @@
+{
+  "id": "suginohara",
+  "title": "妙高 杉ノ原スキー場",
+  "name": "妙高 杉ノ原スキー場",
+  "name_wbr": "妙高 杉ノ原|スキー場",
+  "eyebrow": "新潟県 / 妙高山の麓・プリンススノーリゾート",
+  "pref": "新潟県妙高市杉野沢",
+  "hours": {
+    "items": [
+      {"label": "ゴンドラ・リフト", "value": "8:30〜16:00"},
+      {"label": "レンタル", "value": "8:15〜16:30"},
+      {"label": "駐車場", "value": "24時間（トイレ24時間可）"},
+      {"label": "ナイター", "value": "なし"}
+    ],
+    "foot": "2025-26シーズンの運行時間（2026-27は公式サイトで順次更新予定）。天候や降雪状況によって変更になる場合があります"
+  },
+  "scale": {
+    "stats": [
+      {"num": "90", "num_unit": null, "unit": "総面積 ha", "wide": false, "tier": null, "idx_tag": null},
+      {"num": "16", "num_unit": null, "unit": "コース数（初級8・中級6・上級2）", "wide": false, "tier": null, "idx_tag": null},
+      {"num": "8,500", "num_unit": null, "unit": "最長滑走 m<br>（総滑走距離18,660m）", "wide": false, "tier": null, "idx_tag": null},
+      {"num": "1,124", "num_unit": null, "unit": "標高差 m（最大斜度38°）", "wide": false, "tier": null, "idx_tag": null},
+      {"num": "5", "num_unit": "基", "unit": "索道数（8人乗りゴンドラ1・高速クワッド2・ペア2）", "wide": true, "tier": null, "idx_tag": null}
+    ],
+    "level_bar": [
+      {"pct": 50.0, "color": "var(--pine-600)", "label": "初級 8本"},
+      {"pct": 37.5, "color": "var(--amber-600)", "label": "中級 6本"},
+      {"pct": 12.5, "color": "var(--ridge-700)", "label": "上級 2本"}
+    ],
+    "notice": "ℹ️ 2026-27シーズンはシーズン券（全日・平日・50時間券）と早割・前売リフト券の販売を中止（公式発表・2026年9月17日）。駐車場もコンパクトな運営となり、近隣に臨時駐車場を設置予定です。",
+    "foot": "全長3,074mの8人乗りゴンドラで一気に標高1,485mへ上がり、最長8.5km・標高差1,124mのロングランが看板。初級のパノラマゲレンデ（上部1,925m＋下部2,124m）や3,255mの白樺コースなど長い緩中斜面が中心で、三田原エリア最上部には最大38°のスーパージャイアント、32°のスーパーモーグルがある。眼下に野尻湖と北信濃の山々を望む眺望も魅力。Sugi Parkは3エリア。",
+    "map_img": {"src": "https://www.princehotels.co.jp/image.jsp?id=498726", "alt": "妙高 杉ノ原スキー場 コースマップ（クリックで拡大）"},
+    "map_source_note": null,
+    "cards": [
+      {"href": "https://www.princehotels.co.jp/ski/myoko/winter/coursemap/", "title": "コースオープン・リフト運行状況を見る（公式サイト）", "sub": "積雪情報とコース16本・索道5基の当日の状況はこちら"}
+    ]
+  },
+  "reviews": {
+    "good": [
+      "最長8.5km・標高差1,124mのロングランは国内有数のスケール",
+      "初級コースが8本と多く、長い緩斜面でロングクルージングを楽しめる",
+      "小学生以下はリフト・ゴンドラ料金が無料",
+      "最大38°のスーパージャイアントコースなど上級者向けの急斜面も揃う",
+      "上越妙高名物「食堂ミサ」の味噌ラーメンがゲレンデで食べられる"
+    ],
+    "bad": [
+      "2026-27はシーズン券・早割・前売券の販売が中止され、当日券が基本になる",
+      "1日券はおとな¥8,000（2025-26）と高め",
+      "駐車場は土休日有料（乗用車¥1,000）で、2026-27はコンパクト運営の予定"
+    ],
+    "foot": "公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。"
+  },
+  "weather": {
+    "lat": 36.858,
+    "lon": 138.117,
+    "foot": "新潟県妙高市杉野沢・妙高杉ノ原スキー場付近（山麓標高約750m）の予報。<a href=\"https://www.princehotels.co.jp/ski/myoko/winter/coursemap/\" target=\"_blank\" rel=\"noopener\">現地の最新情報</a>も合わせてご確認ください。"
+  },
+  "snow": {
+    "key": "suginohara",
+    "fallback_url": "https://www.princehotels.co.jp/ski/myoko/winter/coursemap/",
+    "layout": "top_mid_base"
+  },
+  "livecam": {
+    "cards": [
+      {"href": "https://www.princehotels.co.jp/ski/myoko/winter/coursemap/", "title": "積雪情報・運行状況を見る（公式サイト）", "sub": "公式サイトにライブカメラの掲載がないため、山頂・山麓の積雪量、雪質、路面状況のページへリンクしています"}
+    ],
+    "foot": null,
+    "type": "linkout"
+  },
+  "price": {
+    "intro": null,
+    "total_label": "1日券 合計",
+    "mode": "toggle",
+    "categories": [
+      {"key": "adult", "label": "おとな", "cond": null},
+      {"key": "senior", "label": "シニア・中高生", "cond": "55歳以上（要証明書）／中学・高校生"},
+      {"key": "child", "label": "小学生以下", "cond": "無料"}
+    ],
+    "counts": {"adult": 2, "senior": 0, "child": 0},
+    "options": [
+      {"key": "general", "label": "一般"},
+      {"key": "member", "label": "SEIBU PRINCE CLUB会員"}
+    ],
+    "aria_label": "購入区分",
+    "price_table": {
+      "general": {"adult": 8000, "senior": 7400, "child": 0},
+      "member": {"adult": 7200, "senior": 6800, "child": 0}
+    },
+    "default_option": "general",
+    "foot": "2025-26シーズンのオンシーズン（12/13〜3/29）料金を参考値として掲載（2026-27の料金は公式サイトで順次更新予定）。リフト・ゴンドラ共通券。4時間券 おとな¥7,200／シニア・中高生¥6,700、2日券¥15,000／¥13,800。ポイント券は3ポイント（ゴンドラ）¥2,700、2ポイント（高速リフト）¥1,800、1ポイント（リフト）¥900。妙高ツーリズムマネジメントの「Mt.Myokoスーパーシーズン券」は2026-27も利用可、斑尾＆杉ノ原共通の5Days Snow Passも販売予定。"
+  },
+  "rental": {
+    "summary": "レンタル料金をシミュレーション",
+    "legend": "1日料金（ブランドバイキング・第1駐車場センターエリアのレンタルハウス）。おとな＝中学生以上、シニア＝55歳以上、こども＝小学生以下",
+    "foot": "2025-26シーズンの料金。4時間はセット¥4,500／¥3,000、ウエア¥4,000／¥3,000。板¥3,500／¥2,500、ブーツ¥3,000／¥2,000、ストック¥1,000、そり¥500。スノースクート・スノースケートは1日¥4,500。ゴーグル・グローブ・帽子のレンタルはなし。毎月第3日曜は家族来場に限り小学生以下のセットが無料。",
+    "mode": "stepper",
+    "items": [
+      {"key": "set_adult", "label": "スキー／スノーボードセット・おとな", "price": 5500},
+      {"key": "set_child", "label": "スキー／スノーボードセット・シニア／こども", "price": 4000},
+      {"key": "wear_adult", "label": "ウエア・おとな", "price": 4500},
+      {"key": "wear_child", "label": "ウエア・シニア／こども", "price": 3500},
+      {"key": "helmet", "label": "ヘルメット", "price": 1000}
+    ]
+  },
+  "kids": {
+    "items": [
+      {"name": "こどものリフト無料", "tag": "小学生まではリフト・ゴンドラ料金が無料", "right": "無料", "link": null},
+      {"name": "こども応援プロジェクト", "tag": "毎月第3日曜は小学生までのスキー・スノーボードセットのレンタルが無料（家族での来場に限る・団体は対象外）", "right": "レンタル無料", "link": null},
+      {"name": "ファミリーRコース／三田原連絡ビギナーライン", "tag": "平均7°・1,048mと平均6°・896mの緩斜面。初心者・子供の練習向け", "right": "リフト券で利用可", "link": null}
+    ],
+    "foot": "常設のキッズパークは公式サイトに掲載がありません。PRINCE KIDS CLUB会員向けのプログラム（ワンポイントレッスン等）もあります。"
+  },
+  "gochiso": {
+    "badge": null,
+    "shops": [
+      {"name": "食堂ミサ 妙高杉ノ原店", "tag": "創業60年、上越妙高名物「ミサの味噌ラーメン」。90席", "mapQuery": "食堂ミサ 妙高杉ノ原店"},
+      {"name": "山麓レストラン妙高", "tag": "広い店内でゆったりランチ。地元の食材を生かしたメニュー。120席", "mapQuery": "妙高杉ノ原スキー場 山麓レストラン妙高"},
+      {"name": "レストラン アリエスカ", "tag": "第1駐車場の目の前、三角屋根が目印。108席", "mapQuery": "妙高杉ノ原スキー場 レストラン アリエスカ"},
+      {"name": "SUGINOHARA BASE", "tag": "本格コーヒーが楽しめるカフェ。18席", "mapQuery": "妙高杉ノ原スキー場 SUGINOHARA BASE"}
+    ],
+    "foot": "三田原エリアにはレストラン トロイカ、サンアントン、L&C ゆきつばきなどが並ぶ「三田原食堂街」も。レストランは冬期のみの営業です。ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。"
+  },
+  "onsen": {
+    "items": [
+      {"name": "杉野沢・妙高高原エリアの日帰り入浴施設", "tag": "スキー場のある杉野沢地区や池の平温泉・赤倉温泉など、妙高高原一帯に日帰り入浴可の施設があります", "right": "施設により異なる", "link": null}
+    ],
+    "foot": "スキー場内に日帰り温泉施設はありません。公式サイトの「周辺施設・観光スポットのご紹介」では宿泊施設「LIME RESORT MYOKO」などが案内されています。各施設の料金・営業時間は直接ご確認ください。"
+  },
+  "access": {
+    "kv": [
+      {"k": "車で", "v": "上信越道 妙高高原ICから杉野沢方面へ（住所：新潟県妙高市杉野沢）。冬タイヤ必須。詳しい経路は公式アクセスページをご確認ください"},
+      {"k": "電車", "v": "北陸新幹線 長野駅からしなの鉄道北しなの線で妙高高原駅へ。妙高高原駅からバス・タクシー（公式アクセスページ参照）"},
+      {"k": "駐車場", "v": "杉ノ原第1〜第3駐車場（ゲレンデまで徒歩0分）。平日無料、土休日は乗用車・マイクロバス¥1,000／大型バス¥2,000（12/27〜1/4は休日扱い、3/16以降は全日無料）。24時間利用可・トイレあり"},
+      {"k": "公式", "v": "<a class=\"outlink\" href=\"https://www.princehotels.co.jp/ski/myoko/winter/access/\" target=\"_blank\" rel=\"noopener\">princehotels.co.jp／アクセス詳細</a>"}
+    ],
+    "foot": "2026-27シーズンは近隣に臨時駐車場を設置予定（公式発表）。駐車料金は2025-26シーズンの掲載値です。"
+  },
+  "news": {
+    "source": "from princehotels.co.jp/ski/myoko/informations, 2026-09-23",
+    "items": [
+      {"date": "2026年09月17日", "title": "2026-2027シーズン シーズン券、早割・前売リフト・ゴンドラ券について（販売中止／5Days Snow Pass予定）", "url": "https://www.princehotels.co.jp/ski/myoko/informations/seasonpass_earlybirdticket"},
+      {"date": "2026年05月28日", "title": "妙高杉ノ原スキー場 周辺施設・観光スポットのご紹介", "url": "https://www.princehotels.co.jp/ski/myoko/informations/NearbyFacilities"},
+      {"date": "2025年10月21日", "title": "Myoko Suginohara Ski Resort Joins Ikon Pass from Winter 2025", "url": "https://www.princehotels.co.jp/ski/myoko/informations/ikonpass"}
+    ],
+    "foot": null
+  },
+  "sns": {
+    "kind": "instagram",
+    "href": "https://www.instagram.com/suginohara_official/",
+    "title": "@suginohara_official（公式Instagram）",
+    "sub": "公式Xアカウントは確認できなかったため、公式Instagramへリンクしています"
+  },
+  "footer": [
+    "営業期間：2026年12月19日〜2027年3月28日（公式発表）。コースマップは妙高 杉ノ原スキー場（西武プリンスホテルズ＆リゾーツ）公式サイト掲載の著作物です。",
+    "データ精度：営業期間は2026-27の公式発表値、面積・コース・索道は公式サイトの値、リフト券・レンタル・駐車料金は2025-26シーズンの公式値です。駐車場の収容台数は公式に明記がないため混雑しにくさ指標は未算出です。"
+  ],
+  "season": {
+    "start": "2026-12-19",
+    "end": "2027-03-28",
+    "approximate": false,
+    "next_note": "次シーズンは例年12月中旬オープン予定"
+  },
+  "crowd": {
+    "exclude": "駐車場の収容台数が公式に公開されていないため算出対象外（総面積90ha・索道5基）"
+  }
+}

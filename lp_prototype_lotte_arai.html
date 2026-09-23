@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ロッテアライリゾート</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="statusbar">
+  <div class="inner">
+    <p class="eyebrow">新潟県 / 高速ICから約10分・上越妙高駅から約30分</p>
+    <h1 class="resort-name">ロッテアライ<wbr>リゾート</h1>
+    <p class="pref">新潟県妙高市両善寺</p>
+    <div class="status-row">
+      <span class="pill" id="statusPill"><span class="dot"></span><span id="statusText">確認中</span></span>
+      <span class="status-note" id="statusNote"></span>
+    </div>
+  </div>
+</div>
+
+<div class="hours-strip">
+  <div class="inner">
+    <div class="hour-item"><span class="hour-label">通常営業</span><span class="hour-value">8:30〜16:00</span></div>
+    <div class="hour-item"><span class="hour-label">ファーストクラス乗車</span><span class="hour-value">8:00〜</span></div>
+    <div class="hour-item"><span class="hour-label">ナイター</span><span class="hour-value">18:00〜22:00</span></div>
+    <div class="hour-item"><span class="hour-label">ナイター営業日</span><span class="hour-value">金・土曜＋年末年始</span></div>
+  </div>
+  <p class="hours-foot">2025-26シーズンの掲載値（2026-27は公式サイトで順次更新予定）。ナイターは毎週金・土曜、年末年始（12/26〜1/4）は毎日営業。天候状況により乗車開始時間が変わる場合あり</p>
+</div>
+
+<nav class="jumpnav">
+  <div class="inner">
+    <a href="#scale">コース</a>
+    <a href="#reviews">口コミ</a>
+    <a href="#weather">天気</a>
+    <a href="#livecam">ライブカメラ</a>
+    <a href="#price">料金</a>
+    <a href="#kids">キッズ</a>
+    <a href="#gochiso">ゲレ食</a>
+    <a href="#onsen">温泉</a>
+    <a href="#access">アクセス</a>
+    <a href="#news">お知らせ</a>
+    <a href="#sns">X</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="scale">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>のゲレンデ規模</h2><span class="section-num">01 / コース</span></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">214</div><div class="unit">滑走可能面積 ha<br>（2.14㎢）</div></div>
+      <div class="stat"><div class="num">14</div><div class="unit">コース数（初級36%・中級36%・上級21%・超上級7%）</div></div>
+      <div class="stat"><div class="num">7,000</div><div class="unit">最長滑走 m</div></div>
+      <div class="stat"><div class="num">951</div><div class="unit">標高差 m<br>（329〜1,280m）</div></div>
+      <div class="stat stat-wide"><div class="num">5<span class="num-unit">基</span></div><div class="unit">索道数（ゴンドラ1・高速クワッド2・ペア2）</div></div>
+    </div>
+    <div class="level-bar">
+      <span style="width:36%; background:var(--pine-600);"></span>
+      <span style="width:36%; background:var(--amber-600);"></span>
+      <span style="width:28%; background:var(--ridge-700);"></span>
+    </div>
+    <div class="level-legend">
+      <span><span class="sw" style="background:var(--pine-600);"></span>初級 36%</span>
+      <span><span class="sw" style="background:var(--amber-600);"></span>中級 36%</span>
+      <span><span class="sw" style="background:var(--ridge-700);"></span>上級・超上級 28%</span>
+    </div>
+    <p class="calc-foot" style="margin-top:10px;">混雑しにくさ指標：駐車場の収容台数が公式に公開されていないため算出対象外（滑走可能面積2.14㎢・索道5基）。</p>
+    <p class="calc-foot" style="margin-top:8px;">大毛無山の圧倒的な積雪量と、10エリア・1.608㎢（東京ドーム約34個分）のフリーライディングゾーンが最大の特徴。膳棚ボウル（FJT／FWQ3*公認）やマムシ（FWQ2*公認）など国際大会公認の非圧雪エリアを備える一方、アンコール・ビーフリーなど山頂から続くなだらかなロングコースもあり、最長7kmのクルージングが楽しめる。好天時は日本海まで見渡せる。IKON PASS加盟リゾート。</p>
+    <img class="trail-map-img" id="trailMapImg" src="https://img.lottehotel.com/cms/asset/2026/01/29/36539/%E3%82%B3%E3%83%BC%E3%82%B9%E3%83%9E%E3%83%83%E3%83%972.jpg" alt="ロッテアライリゾート コースマップ（クリックで拡大）" loading="lazy">
+    <a class="map-card" href="https://www.lottehotel.com/arai-resort/ja/snow-season" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">本日の営業情報・ゴンドラ＆リフト状況を見る（公式サイト）</span>
+        <span class="mc-sub">ゴンドラ・リフト5基とコース、フリーライディングゾーンの当日の状況はこちら</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="reviews">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>の口コミまとめ</h2><span class="section-num">02 / みんなの声</span></div>
+    <div class="review-cols">
+      <div class="review-col good">
+        <p class="review-col-head"><span class="review-dot"></span>良い点</p>
+        <ul>
+          <li>10エリア・1.608㎢の広大なフリーライディングゾーン（非圧雪）は国内最大級。FWQ・FJT公認エリアもある</li>
+          <li>日本有数の積雪量と標高差951m・最長7kmのロングラン</li>
+          <li>ホテル・温泉・レストランが一体のリゾートで、ゲレンデから直接チェックインできる</li>
+          <li>地下1,750mから湧く「星空温泉」に日帰り入浴（大人¥900）でも入れる</li>
+          <li>金・土はナイター営業（18:00〜22:00）、ジップツアーやスノーラフティングなど滑らない人向けのアクティビティも充実</li>
+        </ul>
+      </div>
+      <div class="review-col bad">
+        <p class="review-col-head"><span class="review-dot"></span>悪い点</p>
+        <ul>
+          <li>1日券は大人¥7,777（ハイシーズン）と国内では高い部類</li>
+          <li>超上級・上級エリアの比率が高く、フリーライディングゾーンは初中級者には不向き</li>
+          <li>キッズルームは宿泊者専用で、日帰りのファミリー向け設備は限られる</li>
+        </ul>
+      </div>
+    </div>
+    <p class="calc-foot" style="margin-top:14px;">公式サイト掲載情報および一般的な口コミサイトに投稿された内容を要約したものです（個別の口コミそのものではありません）。</p>
+  </section>
+
+  <section id="weather">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>の天気・積雪</h2><span class="section-num">03 / 予報</span></div>
+    <div class="snowdepth-card" id="snowDepth"><p class="weather-foot">積雪データを読み込み中…</p></div>
+    <div class="weather-toggle" role="group" aria-label="予報の範囲">
+      <button data-range="today" aria-pressed="true">当日</button>
+      <button data-range="2day" aria-pressed="false">2日間</button>
+      <button data-range="week" aria-pressed="false">週間</button>
+    </div>
+    <div class="weather-row" id="weatherRow"><p class="weather-foot">読み込み中…</p></div>
+    <p class="weather-foot">新潟県妙高市両善寺・ロッテアライリゾート付近（山麓標高約330m）の予報。<a href="https://www.lottehotel.com/arai-resort/ja/snow-season" target="_blank" rel="noopener">現地の最新情報</a>も合わせてご確認ください。</p>
+  </section>
+
+  <section id="livecam">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>のライブカメラ</h2><span class="section-num">04 / 現地の様子</span></div>
+    <a class="map-card" href="https://www.lottehotel.com/arai-resort/ja/snow-season" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">現在の気象情報・本日の営業情報を見る（公式サイト）</span>
+        <span class="mc-sub">公式サイトにライブカメラの掲載がないため、気温・積雪とゴンドラ＆リフトの運行状況ページへリンクしています</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <section id="price">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>のリフト券・人数計算</h2><span class="section-num">05 / 料金</span></div>
+    <div class="calc-card">
+      <div class="daytype-toggle" role="group" aria-label="シーズン">
+        <button data-day="high" aria-pressed="true">ハイシーズン（12/12〜3/21）</button>
+        <button data-day="spring" aria-pressed="false">スプリング（3/22〜5/9）</button>
+      </div>
+      <div id="catRows"></div>
+      <div class="calc-total">
+        <span class="label">1日券 合計</span>
+        <span class="amount" id="totalAmount">¥0</span>
+      </div>
+      <p class="calc-foot">2026-27シーズンのエコノミークラス公式料金。ハイシーズンはPM券（11:00〜）大人¥6,800／50＋¥6,300／子ども¥5,000、山麓パス（山麓第1・第2リフトのみ）¥5,500／¥5,000／¥4,500、2日券¥15,000ほか。スプリングシーズンは山麓パス¥4,000／¥3,500／¥3,000。6歳以下は無料だがチケットセンターでの発行が必要。IKON PASS加盟リゾートで、同パスでも滑走可。</p>
+      <details class="rental-acc">
+        <summary>レンタル料金をシミュレーション<span class="chev">▾</span></summary>
+        <div class="rental-sim">
+          <p class="rental-legend">SALOMON STATION（ヴィレッジステーション1F）の1日料金。13歳以上／12歳以下の2区分。ハイシーズン7:30〜17:00</p>
+          <div id="rentalCatRows"></div>
+          <div class="calc-total">
+            <span class="label">レンタル合計</span>
+            <span class="amount" id="rentalTotalAmount">¥0</span>
+          </div>
+          <div class="grand-total">
+            <span class="label">リフト券＋レンタル 合計</span>
+            <span class="amount" id="grandTotalAmount">¥0</span>
+          </div>
+          <p class="calc-foot">2025-26シーズンの料金。PM（12:00〜17:00）はスタンダードセット¥4,000／¥3,000。ハイエンドセット1日¥7,500、ハイエンド単品¥5,500、スキーのみのハイエンドブーツ¥4,000。長靴¥1,000、スノーシュー¥2,000、スノースケート・スノードライブ¥3,000。スキー⇔スノーボードの交換乗換は1回¥2,000、ブーツ乾燥¥500、用具お預かり¥1,000。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="kids">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>のキッズパーク</h2><span class="section-num">06 / 家族向け</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>NSDキッズプログラム</span><span class="shop-tag">子供のスノーデビューを応援するプログラムがアライマウンテンリゾートで利用可能（2026年8月3日〜2027年3月31日）</span></div><span class="shop-tag">公式サイトで確認</span></li>
+      <li><div class="shop-main"><span>キッズルーム（アライ棟1F）</span><span class="shop-tag">ロッテのキャラクターがいっぱいの室内プレイルーム。乳児〜6歳、保護者同伴。8:00〜20:00（13:00〜14:30は清掃）</span></div><span class="shop-tag">無料（宿泊者専用）</span></li>
+      <li><div class="shop-main"><span>スノーラフティング／ジップライン</span><span class="shop-tag">スノーモービルに引かれたボートに乗る家族向けアクティビティや、170mのジップラインなど</span></div><span class="shop-tag">公式サイトで確認</span></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">6歳以下はリフト無料（チケットセンターでの発行が必要）。屋内の「プレイグラウンド」（ボルダリング・トランポリンなど）は天候によらず遊べます。</p>
+  </section>
+
+  <section id="gochiso">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>のゲレ食</h2><span class="section-num">07 / 飲食</span></div>
+    <ul class="shop-list" id="shopList">
+      <li><div class="shop-main"><span>ゴンドラレストラン Village（ヴィレッジステーション1F）</span><span class="shop-tag">ゲレンデベースのフードコート</span></div><a class="maplink" href="https://www.google.com/maps/search/%E3%83%AD%E3%83%83%E3%83%86%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%20%E3%82%B4%E3%83%B3%E3%83%89%E3%83%A9%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20Village" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>スカイレストラン ZEN（膳棚ステーション1F）</span><span class="shop-tag">山頂エリアのフードコート。スキー場営業期間中のみ営業</span></div><a class="maplink" href="https://www.google.com/maps/search/%E3%83%AD%E3%83%83%E3%83%86%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%20%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20ZEN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>THE PLATE（アライ棟1F）</span><span class="shop-tag">洋食レストラン（夕食パッケージ対応）</span></div><a class="maplink" href="https://www.google.com/maps/search/%E3%83%AD%E3%83%83%E3%83%86%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%20THE%20PLATE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+      <li><div class="shop-main"><span>日本料理 あさ日（ロッジ棟2F）</span><span class="shop-tag">日本料理（夕食パッケージ対応）。ほかにしゃぶしゃぶ矢代、ステーキハウスBECOも</span></div><a class="maplink" href="https://www.google.com/maps/search/%E3%83%AD%E3%83%83%E3%83%86%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%20%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86%20%E3%81%82%E3%81%95%E6%97%A5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>地図で見る</a></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">ピエール・エルメ・パリの北信越初の常設イートイン＆物販スペースも館内にあります。各店のメニュー料金は公式サイトに掲載がないため未記載です。ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。</p>
+  </section>
+
+  <section id="onsen">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>の温泉</h2><span class="section-num">08 / 帰りに一風呂</span></div>
+
+    <ul class="shop-list">
+      <li><div class="shop-main"><span>星空温泉（アライI棟2F）</span><span class="shop-tag">地下1,750mから湧く弱アルカリ性の単純温泉（源泉名：大毛無温泉）。岩風呂の露天、寝湯、打たせ湯、水風呂、男女別サウナを備える。日帰りは平日13:00〜23:00、土日祝11:00〜23:00（最終入場22:00）</span></div><a class="maplink" href="https://www.lottehotel.com/arai-resort/ja/wellness/hoshizora-onsen" target="_blank" rel="noopener">公式ページ</a></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:14px;">大人＝13歳以上、子ども＝4〜12歳、3歳以下無料。宿泊者は無料、チェックイン前・チェックアウト後は大人¥500／子ども¥250。タオルは2枚組¥200で貸出。</p>
+  </section>
+
+  <section id="access">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>のアクセス・駐車場</h2><span class="section-num">09 / 場所</span></div>
+    <dl class="kv-grid">
+      <dt>車で</dt>
+      <dd>上信越道の最寄りインターチェンジから約10分（公式）。住所は新潟県妙高市両善寺1966。冬タイヤ必須</dd>
+      <dt>電車</dt>
+      <dd>北陸新幹線 上越妙高駅から約30分。えちごトキめき鉄道 妙高はねうまライン沿線からもアクセス可</dd>
+      <dt>駐車場</dt>
+      <dd>あり（料金・収容台数は公式サイトでご確認ください）</dd>
+      <dt>公式</dt>
+      <dd><a class="outlink" href="https://www.lottehotel.com/arai-resort/ja/attractions/transportation" target="_blank" rel="noopener">lottehotel.com／交通観光ガイド</a></dd>
+    </dl>
+    <p class="calc-foot" style="margin-top:14px;">スノーシーズンは妙高高原バスターミナルから地獄谷野猿公苑・野沢温泉・斑尾高原方面へのバスもあります。観光タクシーの予約はホテルフロントで受付。</p>
+  </section>
+
+  <section id="news">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>のお知らせ</h2><span class="section-num">10 / 運営情報</span></div>
+    <ul class="news-list" id="newsList">
+      <li><span class="news-date">2026年08月03日</span><a href="https://www.lottehotel.com/arai-resort/ja/offers/events/IF260803/arai-snowprogram" target="_blank" rel="noopener">お子様のスノーデビューを応援！「NSDキッズプログラム」がアライマウンテンリゾートで利用可能に（〜2027/3/31）</a></li>
+      <li><span class="news-date">2026年07月13日</span><a href="https://www.lottehotel.com/arai-resort/ja/offers/events/IF260713/arai-pierre" target="_blank" rel="noopener">ピエール・エルメ・パリの北信越初の常設イートイン＆物販スペースがロッテアライリゾートに登場！</a></li>
+      <li><span class="news-date">2026年07月13日</span><a href="https://www.lottehotel.com/arai-resort/ja/snow/ski-lift/economy-class" target="_blank" rel="noopener">2026-27シーズンのリフト券料金を公開（ハイシーズン12/12〜3/21、スプリング3/22〜5/9予定）</a></li>
+    </ul>
+    <p class="calc-foot" style="margin-top:10px;">リフト券料金ページの公開日は公式サイトに明記がないため、同時期のお知らせの日付を参考に記載しています。</p>
+  </section>
+
+  <section id="sns">
+    <div class="section-head"><h2><span class="rn">ロッテアライ<wbr>リゾート</span>の公式SNS</h2><span class="section-num">11 / 最新の投稿</span></div>
+
+    <a class="map-card" href="https://www.instagram.com/lottearairesort/" target="_blank" rel="noopener">
+      <div class="mc-text">
+        <span class="mc-title">@lottearairesort（公式Instagram）</span>
+        <span class="mc-sub">公式Xアカウントは確認できなかったため、公式Instagramへリンクしています。公式Facebookもあり</span>
+      </div>
+      <span class="mc-arrow">→</span>
+    </a>
+  </section>
+
+  <footer>
+    <p>営業期間：2026年12月12日〜2027年5月9日（公式掲載のハイシーズン／スプリングシーズンの期間による・予定）。コースマップはロッテアライリゾート公式サイト掲載の著作物です。</p>
+    <p>データ精度：リフト券は2026-27の公式掲載料金、面積・コース・索道・温泉は公式サイトの値、営業時間・レンタルは2025-26シーズンの掲載値です。駐車場の収容台数は公式に明記がないため混雑しにくさ指標は未算出です。</p>
+  </footer>
+</div>
+
+<div class="map-modal" id="mapModal">
+  <button class="map-modal-close" id="mapModalClose" aria-label="閉じる">✕</button>
+  <img id="mapModalImg" src="" alt="">
+</div>
+
+<script>window.RESORT = {"livecam": {"cards": [{"href": "https://www.lottehotel.com/arai-resort/ja/snow-season", "sub": "\u516c\u5f0f\u30b5\u30a4\u30c8\u306b\u30e9\u30a4\u30d6\u30ab\u30e1\u30e9\u306e\u63b2\u8f09\u304c\u306a\u3044\u305f\u3081\u3001\u6c17\u6e29\u30fb\u7a4d\u96ea\u3068\u30b4\u30f3\u30c9\u30e9\uff06\u30ea\u30d5\u30c8\u306e\u904b\u884c\u72b6\u6cc1\u30da\u30fc\u30b8\u3078\u30ea\u30f3\u30af\u3057\u3066\u3044\u307e\u3059", "title": "\u73fe\u5728\u306e\u6c17\u8c61\u60c5\u5831\u30fb\u672c\u65e5\u306e\u55b6\u696d\u60c5\u5831\u3092\u898b\u308b\uff08\u516c\u5f0f\u30b5\u30a4\u30c8\uff09"}], "foot": null, "type": "linkout"}, "price": {"aria_label": "\u30b7\u30fc\u30ba\u30f3", "categories": [{"cond": "16\u301c49\u6b73", "key": "adult", "label": "\u5927\u4eba"}, {"cond": "50\u6b73\u4ee5\u4e0a\uff08\u8981\u8eab\u5206\u8a3c\uff09", "key": "fifty", "label": "50\uff0b"}, {"cond": "7\u301c15\u6b73", "key": "child", "label": "\u5b50\u3069\u3082"}, {"cond": "\u7121\u6599\uff08\u8981\u30c1\u30b1\u30c3\u30c8\u767a\u884c\uff09", "key": "kids", "label": "6\u6b73\u4ee5\u4e0b"}], "counts": {"adult": 2, "child": 0, "fifty": 0, "kids": 0}, "default_option": "high", "foot": "2026-27\u30b7\u30fc\u30ba\u30f3\u306e\u30a8\u30b3\u30ce\u30df\u30fc\u30af\u30e9\u30b9\u516c\u5f0f\u6599\u91d1\u3002\u30cf\u30a4\u30b7\u30fc\u30ba\u30f3\u306fPM\u5238\uff0811:00\u301c\uff09\u5927\u4eba\u00a56,800\uff0f50\uff0b\u00a56,300\uff0f\u5b50\u3069\u3082\u00a55,000\u3001\u5c71\u9e93\u30d1\u30b9\uff08\u5c71\u9e93\u7b2c1\u30fb\u7b2c2\u30ea\u30d5\u30c8\u306e\u307f\uff09\u00a55,500\uff0f\u00a55,000\uff0f\u00a54,500\u30012\u65e5\u5238\u00a515,000\u307b\u304b\u3002\u30b9\u30d7\u30ea\u30f3\u30b0\u30b7\u30fc\u30ba\u30f3\u306f\u5c71\u9e93\u30d1\u30b9\u00a54,000\uff0f\u00a53,500\uff0f\u00a53,000\u30026\u6b73\u4ee5\u4e0b\u306f\u7121\u6599\u3060\u304c\u30c1\u30b1\u30c3\u30c8\u30bb\u30f3\u30bf\u30fc\u3067\u306e\u767a\u884c\u304c\u5fc5\u8981\u3002IKON PASS\u52a0\u76df\u30ea\u30be\u30fc\u30c8\u3067\u3001\u540c\u30d1\u30b9\u3067\u3082\u6ed1\u8d70\u53ef\u3002", "intro": null, "mode": "toggle", "options": [{"key": "high", "label": "\u30cf\u30a4\u30b7\u30fc\u30ba\u30f3\uff0812/12\u301c3/21\uff09"}, {"key": "spring", "label": "\u30b9\u30d7\u30ea\u30f3\u30b0\uff083/22\u301c5/9\uff09"}], "price_table": {"high": {"adult": 7777, "child": 5555, "fifty": 7300, "kids": 0}, "spring": {"adult": 5500, "child": 3500, "fifty": 5000, "kids": 0}}, "total_label": "1\u65e5\u5238 \u5408\u8a08"}, "rental": {"foot": "2025-26\u30b7\u30fc\u30ba\u30f3\u306e\u6599\u91d1\u3002PM\uff0812:00\u301c17:00\uff09\u306f\u30b9\u30bf\u30f3\u30c0\u30fc\u30c9\u30bb\u30c3\u30c8\u00a54,000\uff0f\u00a53,000\u3002\u30cf\u30a4\u30a8\u30f3\u30c9\u30bb\u30c3\u30c81\u65e5\u00a57,500\u3001\u30cf\u30a4\u30a8\u30f3\u30c9\u5358\u54c1\u00a55,500\u3001\u30b9\u30ad\u30fc\u306e\u307f\u306e\u30cf\u30a4\u30a8\u30f3\u30c9\u30d6\u30fc\u30c4\u00a54,000\u3002\u9577\u9774\u00a51,000\u3001\u30b9\u30ce\u30fc\u30b7\u30e5\u30fc\u00a52,000\u3001\u30b9\u30ce\u30fc\u30b9\u30b1\u30fc\u30c8\u30fb\u30b9\u30ce\u30fc\u30c9\u30e9\u30a4\u30d6\u00a53,000\u3002\u30b9\u30ad\u30fc\u21d4\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u306e\u4ea4\u63db\u4e57\u63db\u306f1\u56de\u00a52,000\u3001\u30d6\u30fc\u30c4\u4e7e\u71e5\u00a5500\u3001\u7528\u5177\u304a\u9810\u304b\u308a\u00a51,000\u3002", "items": [{"key": "set_adult", "label": "\u30b9\u30bf\u30f3\u30c0\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb13\u6b73\u4ee5\u4e0a", "price": 5500}, {"key": "set_child", "label": "\u30b9\u30bf\u30f3\u30c0\u30fc\u30c9\u30bb\u30c3\u30c8\u30fb12\u6b73\u4ee5\u4e0b", "price": 4000}, {"key": "wear_adult", "label": "\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb13\u6b73\u4ee5\u4e0a", "price": 4000}, {"key": "wear_child", "label": "\u30a6\u30a7\u30a2\u4e0a\u4e0b\u30fb12\u6b73\u4ee5\u4e0b", "price": 3000}, {"key": "boots_adult", "label": "\u30d6\u30fc\u30c4\u306e\u307f\u30fb13\u6b73\u4ee5\u4e0a", "price": 2500}, {"key": "helmet", "label": "\u30d8\u30eb\u30e1\u30c3\u30c8", "price": 1000}], "legend": "SALOMON STATION\uff08\u30f4\u30a3\u30ec\u30c3\u30b8\u30b9\u30c6\u30fc\u30b7\u30e7\u30f31F\uff09\u306e1\u65e5\u6599\u91d1\u300213\u6b73\u4ee5\u4e0a\uff0f12\u6b73\u4ee5\u4e0b\u306e2\u533a\u5206\u3002\u30cf\u30a4\u30b7\u30fc\u30ba\u30f37:30\u301c17:00", "mode": "stepper", "summary": "\u30ec\u30f3\u30bf\u30eb\u6599\u91d1\u3092\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3"}, "season": {"approximate": true, "end": "2027-05-09", "next_note": "\u6b21\u30b7\u30fc\u30ba\u30f3\u306f\u4f8b\u5e7412\u6708\u4e2d\u65ec\u30aa\u30fc\u30d7\u30f3\u4e88\u5b9a", "start": "2026-12-12"}, "snow": {"fallback_url": "https://www.lottehotel.com/arai-resort/ja/snow-season", "key": "lotte_arai", "layout": "amount"}, "weather": {"foot": "\u65b0\u6f5f\u770c\u5999\u9ad8\u5e02\u4e21\u5584\u5bfa\u30fb\u30ed\u30c3\u30c6\u30a2\u30e9\u30a4\u30ea\u30be\u30fc\u30c8\u4ed8\u8fd1\uff08\u5c71\u9e93\u6a19\u9ad8\u7d04330m\uff09\u306e\u4e88\u5831\u3002\u003ca href=\"https://www.lottehotel.com/arai-resort/ja/snow-season\" target=\"_blank\" rel=\"noopener\"\u003e\u73fe\u5730\u306e\u6700\u65b0\u60c5\u5831\u003c/a\u003e\u3082\u5408\u308f\u305b\u3066\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002", "lat": 37.008, "lon": 138.212}};</script>
+<script src="assets/site.js"></script>
+</body>
+</html>

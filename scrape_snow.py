@@ -268,6 +268,11 @@ def scrape_suginohara():
     return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
 
 
+def scrape_lotte_arai():
+    # 公式サイトの積雪表示の構造が未確認のため、現時点では未対応として正直に記録する。
+    return {"available": False, "note": "積雪量を表示するページ構造が未確認のため今回は取得していません"}
+
+
 def main():
     data = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
@@ -304,6 +309,7 @@ def main():
             "akakura_kanko": scrape_akakura_kanko(),
             "ikenotaira": scrape_ikenotaira(),
             "suginohara": scrape_suginohara(),
+            "lotte_arai": scrape_lotte_arai(),
         },
     }
     with open("snow_data.json", "w", encoding="utf-8") as f:

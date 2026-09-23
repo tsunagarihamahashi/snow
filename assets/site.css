@@ -293,6 +293,8 @@ h1.resort-name, h2 .rn { word-break: keep-all; overflow-wrap: anywhere; }
 .stat.tier-mid .idx-tag { border-color: var(--amber-600); color: var(--amber-600); }
 .stat.tier-low .num { color: var(--dust-600); }
 .stat.tier-low .idx-tag { border-color: var(--dust-600); color: var(--dust-600); }
+.stat-na .num { font-family: inherit; font-size: 14px; color: var(--text-muted); }
+.stat-na .idx-tag { border-color: var(--border); color: var(--text-muted); }
 
 .map-card {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;

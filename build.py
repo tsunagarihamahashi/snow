@@ -65,6 +65,15 @@ def inject_crowd_stats(r: dict, idx: dict):
     if not c:
         return
     if c.get("exclude"):
+        # 指標が出せない場合も項目自体は残し、「算出不可」と理由を示す
+        r["scale"]["stats"] += [
+            {"num": "算出不可", "num_unit": None, "unit": "ゲレンデの余裕 ㎡/台<br>（総面積÷駐車場台数）",
+             "wide": False, "tier": None, "idx_tag": "算出対象外", "na": True},
+            {"num": "算出不可", "num_unit": None, "unit": "リフトの余裕 人時/台<br>（輸送力÷駐車場台数）",
+             "wide": False, "tier": None, "idx_tag": "算出対象外", "na": True},
+            {"num": "算出不可", "num_unit": None, "unit": "混雑しにくさ 総合（ゲレンデとリフトの順位平均）",
+             "wide": True, "tier": None, "idx_tag": "算出対象外", "na": True},
+        ]
         r["scale"]["crowd_note"] = f"混雑しにくさ指標：{c['exclude']}。"
         return
     x = idx[r["id"]]

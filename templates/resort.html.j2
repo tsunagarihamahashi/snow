@@ -75,7 +75,7 @@
 {%- endif %}
     <div class="stat-grid">
 {%- for s in r.scale.stats %}
-      <div class="stat{% if s.wide %} stat-wide{% endif %}{% if s.tier %} tier-{{ s.tier }}{% endif %}"><div class="num">{{ s.num|safe }}{% if s.num_unit %}<span class="num-unit">{{ s.num_unit|safe }}</span>{% endif %}</div><div class="unit">{{ s.unit|safe }}</div>{% if s.idx_tag %}<span class="idx-tag">{{ s.idx_tag|safe }}</span>{% endif %}</div>
+      <div class="stat{% if s.wide %} stat-wide{% endif %}{% if s.tier %} tier-{{ s.tier }}{% endif %}{% if s.get('na') %} stat-na{% endif %}"><div class="num">{{ s.num|safe }}{% if s.num_unit %}<span class="num-unit">{{ s.num_unit|safe }}</span>{% endif %}</div><div class="unit">{{ s.unit|safe }}</div>{% if s.idx_tag %}<span class="idx-tag">{{ s.idx_tag|safe }}</span>{% endif %}</div>
 {%- endfor %}
     </div>
 {%- if r.scale.level_bar %}

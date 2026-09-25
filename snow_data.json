@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-24T23:42:19.760076+00:00",
+  "scraped_at": "2026-09-25T23:43:56.363811+00:00",
   "resorts": {
     "oze_iwakura": {
       "available": true,
@@ -15,7 +15,7 @@
     "kawaba": {
       "available": true,
       "amount": 0.0,
-      "updated": "2026/04/26/16:22"
+      "updated": "2026/09/25/12:27"
     },
     "marunuma": {
       "available": false,

@@ -5,6 +5,7 @@ Static site build: data/resorts/<id>.json + templates/ -> lp_prototype_<id>.html
     python build.py naeba      # build one resort (and the index)
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -117,9 +118,21 @@ def build_resort(rid: str, idx: dict) -> Path:
     return out
 
 
+def group_by_pref(site: dict) -> list:
+    """都道府県ごとにまとめる。都道府県の並び順・県内の並び順は site.json の並び順に従う。"""
+    groups = {}
+    for rid in site["resorts"]:
+        r = load_resort(rid)
+        pref = re.match(r"..[都道府県]|...[都道府県]", r["pref"]).group()
+        area = r["eyebrow"].split("/", 1)[1].strip() if "/" in r["eyebrow"] else ""
+        groups.setdefault(pref, []).append({"name": r["name"], "out": out_name(rid), "area": area})
+    return [{"pref": p, "items": items} for p, items in groups.items()]
+
+
 def build_index(site: dict) -> Path:
-    resorts = [{"name": load_resort(rid)["name"], "out": out_name(rid)} for rid in site["resorts"]]
-    html = env.get_template("index.html.j2").render(site=site, resorts=resorts)
+    groups = group_by_pref(site)
+    total = sum(len(g["items"]) for g in groups)
+    html = env.get_template("index.html.j2").render(site=site, groups=groups, total=total)
     out = ROOT / "index.html"
     out.write_text(html, encoding="utf-8", newline="\n")
     return out

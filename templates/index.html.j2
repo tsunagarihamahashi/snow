@@ -6,19 +6,29 @@
 <title>{{ site.title }}</title>
 <style>
   body { font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; max-width: 480px; margin: 40px auto; padding: 0 20px; color: #1c2a3a; }
-  h1 { font-size: 20px; }
-  ul { list-style: none; padding: 0; }
-  li { margin: 12px 0; }
-  a { display: block; padding: 14px 16px; border: 1px solid #d7dfe7; border-radius: 10px; text-decoration: none; color: #1c2a3a; font-weight: 700; }
+  h1 { font-size: 20px; margin-bottom: 4px; }
+  .lead { font-size: 13px; color: #6b7a8c; margin: 0 0 28px; }
+  h2 { display: flex; align-items: baseline; gap: 8px; font-size: 15px; margin: 28px 0 10px; padding-bottom: 6px; border-bottom: 2px solid #1c2a3a; }
+  h2 .count { font-size: 12px; font-weight: 400; color: #6b7a8c; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { margin: 8px 0; }
+  a { display: block; padding: 12px 16px; border: 1px solid #d7dfe7; border-radius: 10px; text-decoration: none; color: #1c2a3a; }
   a:hover { border-color: #de5b2c; color: #de5b2c; }
+  .name { display: block; font-weight: 700; }
+  .area { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: #6b7a8c; }
+  a:hover .area { color: #de5b2c; }
 </style>
 </head>
 <body>
   <h1>{{ site.heading }}</h1>
+  <p class="lead">全{{ total }}ゲレンデ（都道府県別）</p>
+{%- for g in groups %}
+  <h2>{{ g.pref }}<span class="count">{{ g['items'] | length }}件</span></h2>
   <ul>
-{%- for r in resorts %}
-    <li><a href="{{ r.out }}">{{ r.name }}</a></li>
+{%- for r in g['items'] %}
+    <li><a href="{{ r.out }}"><span class="name">{{ r.name }}</span>{% if r.area %}<span class="area">{{ r.area }}</span>{% endif %}</a></li>
 {%- endfor %}
   </ul>
+{%- endfor %}
 </body>
 </html>

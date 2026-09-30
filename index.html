@@ -6,49 +6,66 @@
 <title>ゲレンデアプリ テストサイト</title>
 <style>
   body { font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; max-width: 480px; margin: 40px auto; padding: 0 20px; color: #1c2a3a; }
-  h1 { font-size: 20px; }
-  ul { list-style: none; padding: 0; }
-  li { margin: 12px 0; }
-  a { display: block; padding: 14px 16px; border: 1px solid #d7dfe7; border-radius: 10px; text-decoration: none; color: #1c2a3a; font-weight: 700; }
+  h1 { font-size: 20px; margin-bottom: 4px; }
+  .lead { font-size: 13px; color: #6b7a8c; margin: 0 0 28px; }
+  h2 { display: flex; align-items: baseline; gap: 8px; font-size: 15px; margin: 28px 0 10px; padding-bottom: 6px; border-bottom: 2px solid #1c2a3a; }
+  h2 .count { font-size: 12px; font-weight: 400; color: #6b7a8c; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { margin: 8px 0; }
+  a { display: block; padding: 12px 16px; border: 1px solid #d7dfe7; border-radius: 10px; text-decoration: none; color: #1c2a3a; }
   a:hover { border-color: #de5b2c; color: #de5b2c; }
+  .name { display: block; font-weight: 700; }
+  .area { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: #6b7a8c; }
+  a:hover .area { color: #de5b2c; }
 </style>
 </head>
 <body>
   <h1>ゲレンデアプリ MVP LPプロトタイプ</h1>
+  <p class="lead">全33ゲレンデ（都道府県別）</p>
+  <h2>群馬県<span class="count">12件</span></h2>
   <ul>
-    <li><a href="lp_prototype_oze_iwakura.html">ホワイトワールド尾瀬岩鞍</a></li>
-    <li><a href="lp_prototype_ishiuchi_maruyama.html">石打丸山スキー場</a></li>
-    <li><a href="lp_prototype_kawaba.html">川場スキー場</a></li>
-    <li><a href="lp_prototype_marunuma.html">丸沼高原</a></li>
-    <li><a href="lp_prototype_hodaigi.html">群馬みなかみほうだいぎスキー場</a></li>
-    <li><a href="lp_prototype_naeba.html">苗場スキー場</a></li>
-    <li><a href="lp_prototype_gala.html">GALA湯沢スキー場</a></li>
-    <li><a href="lp_prototype_kandatsu.html">神立スノーリゾート</a></li>
-    <li><a href="lp_prototype_kagura.html">かぐらスキー場</a></li>
-    <li><a href="lp_prototype_maiko.html">舞子スノーリゾート</a></li>
-    <li><a href="lp_prototype_ryuoo.html">竜王スキーパーク</a></li>
-    <li><a href="lp_prototype_sugadaira.html">菅平高原スノーリゾート</a></li>
-    <li><a href="lp_prototype_shigakogen.html">志賀高原</a></li>
-    <li><a href="lp_prototype_grandeco.html">グランデコスノーリゾート</a></li>
-    <li><a href="lp_prototype_tambara.html">たんばらスキーパーク</a></li>
-    <li><a href="lp_prototype_minakami_kogen.html">水上高原スキーリゾート</a></li>
-    <li><a href="lp_prototype_norn.html">ノルンみなかみスキー場</a></li>
-    <li><a href="lp_prototype_ogna_hotaka.html">オグナほたかスキー場</a></li>
-    <li><a href="lp_prototype_mt_t.html">Mt.T</a></li>
-    <li><a href="lp_prototype_palcall_tsumagoi.html">パルコール嬬恋リゾート</a></li>
-    <li><a href="lp_prototype_manza.html">万座温泉スキー場</a></li>
-    <li><a href="lp_prototype_kusatsu.html">草津温泉スキー場</a></li>
-    <li><a href="lp_prototype_yuzawa_nakazato.html">湯沢中里スノーリゾート</a></li>
-    <li><a href="lp_prototype_yuzawa_kogen.html">湯沢高原スキー場</a></li>
-    <li><a href="lp_prototype_iwappara.html">岩原スキー場</a></li>
-    <li><a href="lp_prototype_jkokusai.html">上越国際スキー場</a></li>
-    <li><a href="lp_prototype_naspa.html">NASPAスキーガーデン</a></li>
-    <li><a href="lp_prototype_hakkaisan.html">六日町 八海山スキー場</a></li>
-    <li><a href="lp_prototype_muika.html">ムイカスノーリゾート</a></li>
-    <li><a href="lp_prototype_akakura_kanko.html">赤倉観光リゾートスキー場</a></li>
-    <li><a href="lp_prototype_ikenotaira.html">池の平温泉アルペンブリックスキー場</a></li>
-    <li><a href="lp_prototype_suginohara.html">妙高 杉ノ原スキー場</a></li>
-    <li><a href="lp_prototype_lotte_arai.html">ロッテアライリゾート</a></li>
+    <li><a href="lp_prototype_oze_iwakura.html"><span class="name">ホワイトワールド尾瀬岩鞍</span><span class="area">関東最大級ゲレンデ</span></a></li>
+    <li><a href="lp_prototype_kawaba.html"><span class="name">川場スキー場</span><span class="area">首都圏から日帰りのゲレンデ</span></a></li>
+    <li><a href="lp_prototype_marunuma.html"><span class="name">丸沼高原</span><span class="area">標高2000mの高原スキー場</span></a></li>
+    <li><a href="lp_prototype_hodaigi.html"><span class="name">群馬みなかみほうだいぎスキー場</span><span class="area">みなかみのパウダーエリア</span></a></li>
+    <li><a href="lp_prototype_tambara.html"><span class="name">たんばらスキーパーク</span><span class="area">関越道 沼田ICから約30分</span></a></li>
+    <li><a href="lp_prototype_minakami_kogen.html"><span class="name">水上高原スキーリゾート</span><span class="area">関越道 水上IC・練馬ICから約120分</span></a></li>
+    <li><a href="lp_prototype_norn.html"><span class="name">ノルンみなかみスキー場</span><span class="area">関越道 水上ICから3km</span></a></li>
+    <li><a href="lp_prototype_ogna_hotaka.html"><span class="name">オグナほたかスキー場</span><span class="area">関越道 沼田ICから約28km</span></a></li>
+    <li><a href="lp_prototype_mt_t.html"><span class="name">Mt.T</span><span class="area">谷川岳天神平・星野リゾート</span></a></li>
+    <li><a href="lp_prototype_palcall_tsumagoi.html"><span class="name">パルコール嬬恋リゾート</span><span class="area">軽井沢と草津の中間・バラギ高原</span></a></li>
+    <li><a href="lp_prototype_manza.html"><span class="name">万座温泉スキー場</span><span class="area">標高1,800m・プリンススノーリゾート</span></a></li>
+    <li><a href="lp_prototype_kusatsu.html"><span class="name">草津温泉スキー場</span><span class="area">草津温泉街から車で5分</span></a></li>
+  </ul>
+  <h2>新潟県<span class="count">17件</span></h2>
+  <ul>
+    <li><a href="lp_prototype_ishiuchi_maruyama.html"><span class="name">石打丸山スキー場</span><span class="area">湯沢エリア</span></a></li>
+    <li><a href="lp_prototype_naeba.html"><span class="name">苗場スキー場</span><span class="area">プリンススノーリゾート</span></a></li>
+    <li><a href="lp_prototype_gala.html"><span class="name">GALA湯沢スキー場</span><span class="area">新幹線駅直結スキー場</span></a></li>
+    <li><a href="lp_prototype_kandatsu.html"><span class="name">神立スノーリゾート</span><span class="area">関東から一番近い100%天然雪</span></a></li>
+    <li><a href="lp_prototype_kagura.html"><span class="name">かぐらスキー場</span><span class="area">プリンススノーリゾート</span></a></li>
+    <li><a href="lp_prototype_maiko.html"><span class="name">舞子スノーリゾート</span><span class="area">関越道ICから1分</span></a></li>
+    <li><a href="lp_prototype_yuzawa_nakazato.html"><span class="name">湯沢中里スノーリゾート</span><span class="area">関越道 湯沢ICから約5km・越後中里駅直結</span></a></li>
+    <li><a href="lp_prototype_yuzawa_kogen.html"><span class="name">湯沢高原スキー場</span><span class="area">越後湯沢駅から徒歩約8分・温泉街直結</span></a></li>
+    <li><a href="lp_prototype_iwappara.html"><span class="name">岩原スキー場</span><span class="area">関越道 湯沢ICから約3km</span></a></li>
+    <li><a href="lp_prototype_jkokusai.html"><span class="name">上越国際スキー場</span><span class="area">関越道 塩沢石打ICから約6km・駅前がゲレンデ</span></a></li>
+    <li><a href="lp_prototype_naspa.html"><span class="name">NASPAスキーガーデン</span><span class="area">関越道 湯沢ICから約5分・スキーヤー専用</span></a></li>
+    <li><a href="lp_prototype_hakkaisan.html"><span class="name">六日町 八海山スキー場</span><span class="area">関越道 六日町ICから12km・プリンススノーリゾート</span></a></li>
+    <li><a href="lp_prototype_muika.html"><span class="name">ムイカスノーリゾート</span><span class="area">関越道 六日町ICから約3km・約5分</span></a></li>
+    <li><a href="lp_prototype_akakura_kanko.html"><span class="name">赤倉観光リゾートスキー場</span><span class="area">上信越道 妙高高原ICから約8分・AKAKAN</span></a></li>
+    <li><a href="lp_prototype_ikenotaira.html"><span class="name">池の平温泉アルペンブリックスキー場</span><span class="area">上信越道 妙高高原ICから2.5km・約5分</span></a></li>
+    <li><a href="lp_prototype_suginohara.html"><span class="name">妙高 杉ノ原スキー場</span><span class="area">妙高山の麓・プリンススノーリゾート</span></a></li>
+    <li><a href="lp_prototype_lotte_arai.html"><span class="name">ロッテアライリゾート</span><span class="area">高速ICから約10分・上越妙高駅から約30分</span></a></li>
+  </ul>
+  <h2>長野県<span class="count">3件</span></h2>
+  <ul>
+    <li><a href="lp_prototype_ryuoo.html"><span class="name">竜王スキーパーク</span><span class="area">信州中野ICから16km</span></a></li>
+    <li><a href="lp_prototype_sugadaira.html"><span class="name">菅平高原スノーリゾート</span><span class="area">首都圏から2.5時間</span></a></li>
+    <li><a href="lp_prototype_shigakogen.html"><span class="name">志賀高原</span><span class="area">東京から約3時間30分</span></a></li>
+  </ul>
+  <h2>福島県<span class="count">1件</span></h2>
+  <ul>
+    <li><a href="lp_prototype_grandeco.html"><span class="name">グランデコスノーリゾート</span><span class="area">猪苗代磐梯高原ICから車で30分</span></a></li>
   </ul>
 </body>
 </html>

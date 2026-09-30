@@ -4,23 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ゲレンデアプリ テストサイト</title>
-<style>
-  body { font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; max-width: 480px; margin: 40px auto; padding: 0 20px; color: #1c2a3a; }
-  h1 { font-size: 20px; margin-bottom: 4px; }
-  .lead { font-size: 13px; color: #6b7a8c; margin: 0 0 28px; }
-  h2 { display: flex; align-items: baseline; gap: 8px; font-size: 15px; margin: 28px 0 10px; padding-bottom: 6px; border-bottom: 2px solid #1c2a3a; }
-  h2 .count { font-size: 12px; font-weight: 400; color: #6b7a8c; }
-  ul { list-style: none; padding: 0; margin: 0; }
-  li { margin: 8px 0; }
-  a { display: block; padding: 12px 16px; border: 1px solid #d7dfe7; border-radius: 10px; text-decoration: none; color: #1c2a3a; }
-  a:hover { border-color: #de5b2c; color: #de5b2c; }
-  .name { display: block; font-weight: 700; }
-  .area { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; color: #6b7a8c; }
-  a:hover .area { color: #de5b2c; }
-</style>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
 </head>
-<body>
-  <h1>ゲレンデアプリ MVP LPプロトタイプ</h1>
+<body class="directory-page">
+  <main class="directory-wrap">
+    <div class="directory-kicker"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M3 24 12 9l5 8 3-5 9 12H3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 24h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>SNOW GUIDE</span></div>
+    <h1>ゲレンデアプリ MVP LPプロトタイプ</h1>
   <p class="lead">全33ゲレンデ（都道府県別）</p>
   <h2>群馬県<span class="count">12件</span></h2>
   <ul>
@@ -67,5 +58,6 @@
   <ul>
     <li><a href="lp_prototype_grandeco.html"><span class="name">グランデコスノーリゾート</span><span class="area">猪苗代磐梯高原ICから車で30分</span></a></li>
   </ul>
+  </main>
 </body>
 </html>

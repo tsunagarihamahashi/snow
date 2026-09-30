@@ -12,7 +12,10 @@
 
 <div class="statusbar">
   <div class="inner">
-    <p class="eyebrow">{{ r.eyebrow }}</p>
+    <div class="resort-kicker">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M3 24 12 9l5 8 3-5 9 12H3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 24h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <p class="eyebrow">{{ r.eyebrow }}</p>
+    </div>
     <h1 class="resort-name">{{ r.get('name_wbr', r.name)|replace('|', '<wbr>')|safe }}</h1>
     <p class="pref">{{ r.pref }}</p>
     <div class="status-row">

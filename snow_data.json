@@ -1,12 +1,12 @@
 {
-  "scraped_at": "2026-09-30T00:01:09.625699+00:00",
+  "scraped_at": "2026-10-01T00:17:53.153753+00:00",
   "resorts": {
     "oze_iwakura": {
       "available": true,
       "top": 0.0,
       "mid": 0.0,
       "base": 0.0,
-      "updated": "9/6 8:03"
+      "updated": "9/30 17:58"
     },
     "ishiuchi_maruyama": {
       "available": false,

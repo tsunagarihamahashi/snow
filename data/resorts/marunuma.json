@@ -371,7 +371,7 @@
     "foot": null
   },
   "news": {
-    "source": "from marunuma.jp/winter/category/news/, 2026-09-15",
+    "source": "from marunuma.jp/wp-json, 2026-10-04",
     "items": [
       {
         "date": "2026年05月06日",
@@ -384,22 +384,13 @@
         "url": "https://www.marunuma.jp/winter/13774/"
       },
       {
-        "date": "2026年03月21日",
-        "title": "第47回丸沼高原大回転競技大会リザルト",
-        "url": "https://www.marunuma.jp/winter/13474/"
-      },
-      {
-        "date": "2026年01月09日",
-        "title": "全面滑走可能",
-        "url": "https://www.marunuma.jp/winter/12451/"
-      },
-      {
-        "date": "2025年12月22日",
-        "title": "12月25日ロープウェイ運行開始",
-        "url": "https://www.marunuma.jp/winter/12168/"
+        "date": "2026年04月17日",
+        "title": "【スノーパーク・ロープウェイの営業終了のお知らせ】※スキー場は引き続き営業いたします",
+        "url": "https://www.marunuma.jp/winter/13808/"
       }
     ],
-    "foot": null
+    "foot": null,
+    "feed": "https://www.marunuma.jp/winter/wp-json/wp/v2/posts"
   },
   "sns": {
     "href": "https://x.com/marunumakogen",

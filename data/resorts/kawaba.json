@@ -443,35 +443,26 @@
     "foot": null
   },
   "news": {
-    "source": "from kawaba.co.jp/topics/, 2026-09-16",
+    "source": "from kawaba.co.jp/wp-json, 2026-10-04",
     "items": [
       {
-        "date": "2026年07月17日",
-        "title": "ARCHIVE SALE",
-        "url": "https://www.kawaba.co.jp/topics/9527/"
+        "date": "2026年10月01日",
+        "title": "早割券、早割シーズン券販売開始",
+        "url": "https://www.kawaba.co.jp/topics/9667/"
       },
       {
-        "date": "2026年04月19日",
-        "title": "2025-26シーズン終了のお知らせ",
-        "url": "https://www.kawaba.co.jp/topics/9398/"
+        "date": "2026年10月01日",
+        "title": "2026-27シーズンLIFT TICKET",
+        "url": "https://www.kawaba.co.jp/topics/9686/"
       },
       {
-        "date": "2026年04月17日",
-        "title": "明日4/19の雪山登山に関しまして",
-        "url": "https://www.kawaba.co.jp/topics/5362/"
-      },
-      {
-        "date": "2026年04月14日",
-        "title": "FLUX PARK今シーズンの営業終了のお知らせ",
-        "url": "https://www.kawaba.co.jp/topics/9357/"
-      },
-      {
-        "date": "2026年04月06日",
-        "title": "25-26シーズン 営業終了日延長のお知らせ",
-        "url": "https://www.kawaba.co.jp/topics/9217/"
+        "date": "2026年09月25日",
+        "title": "2026-27シーズン、大規模アップデート ~岩渕麗楽プロデュースパーク新設、FWT公認エリア拡大、「Kawaba City」大規模リニューアル~",
+        "url": "https://www.kawaba.co.jp/topics/9645/"
       }
     ],
-    "foot": null
+    "foot": null,
+    "feed": "https://www.kawaba.co.jp/wp-json/wp/v2/topics"
   },
   "sns": {
     "href": "https://x.com/kawabaski",

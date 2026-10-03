@@ -533,25 +533,26 @@
     "foot": null
   },
   "news": {
-    "source": "from ishiuchi.or.jp/winter/, 2026-09-16",
+    "source": "from ishiuchi.or.jp/wp-json, 2026-10-04",
     "items": [
       {
         "date": "2026年09月11日",
-        "title": "26-27シーズン 早割1日券の販売開始について",
+        "title": "26-27シーズン　早割1日券の販売開始について",
         "url": "https://ishiuchi.or.jp/winter/other/8304/"
       },
       {
         "date": "2026年08月01日",
-        "title": "1日券あたり最安5,200円！チャージ機能付きチケット「DAY PASS」早割販売開始！",
-        "url": "https://ishiuchi.or.jp/winter/other/8141/"
+        "title": "石打丸山バケーションレンタル　2026-27シーズンの宿泊予約開始！",
+        "url": "https://ishiuchi.or.jp/winter/other/8152/"
       },
       {
-        "date": "2026年06月30日",
-        "title": "2026-2027ウィンターシーズン シーズン券「スーパー早割」販売開始！",
-        "url": "https://ishiuchi.or.jp/winter/news/8044/"
+        "date": "2026年08月01日",
+        "title": "1日券あたり最安5,200円！お得なチャージ機能付きチケット「DAY PASS」早割販売開始！",
+        "url": "https://ishiuchi.or.jp/winter/other/8141/"
       }
     ],
-    "foot": "取得時点（2026年9月）はグリーンシーズン中のため、夏季のお知らせが中心です。冬季は運行状況・臨時休業等に切り替わります。"
+    "foot": "取得時点（2026年9月）はグリーンシーズン中のため、夏季のお知らせが中心です。冬季は運行状況・臨時休業等に切り替わります。",
+    "feed": "https://ishiuchi.or.jp/wp-json/wp/v2/posts"
   },
   "sns": {
     "href": "https://x.com/ishiuchi_IM",

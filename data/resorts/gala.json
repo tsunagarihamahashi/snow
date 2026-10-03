@@ -298,25 +298,21 @@
     "foot": null
   },
   "news": {
-    "source": "from gala.co.jp/winter/news, 2026-09-15",
+    "source": "from gala.co.jp/wp-json, 2026-10-04",
     "items": [
       {
+        "date": "2026年10月02日",
+        "title": "超早割リフト券 10月5日（月）10時よりWebketにて販売開始‼️",
+        "url": "https://gala.co.jp/winter/information/liftticketearlysale20261015/"
+      },
+      {
         "date": "2026年09月15日",
-        "title": "2026-2027ウインターシーズン南エリア営業休止のお知らせ",
-        "url": "https://gala.co.jp/winter/news/64209/"
-      },
-      {
-        "date": "2026年08月01日",
-        "title": "【リクルート】正社員募集",
-        "url": "https://gala.co.jp/winter/pickup/20923/"
-      },
-      {
-        "date": "2026年02月12日",
-        "title": "弊社サーバーへの不正アクセスによりお客さま情報が漏えいした可能性について",
-        "url": "https://gala.co.jp/winter/pickup/60429/"
+        "title": "２０２６-２０２７ウインターシーズン南エリア営業休止のお知らせ",
+        "url": "https://gala.co.jp/winter/information/2026-2027wintersouthareaclosed/"
       }
     ],
-    "foot": null
+    "foot": null,
+    "feed": "https://gala.co.jp/winter/wp-json/wp/v2/information"
   },
   "sns": {
     "href": "https://x.com/GALA_yuzawa",

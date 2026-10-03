@@ -353,35 +353,26 @@
     "foot": null
   },
   "news": {
-    "source": "from hodaigi.jp/news/, 2026-09-15",
+    "source": "from hodaigi.jp/wp-json, 2026-10-04",
     "items": [
       {
+        "date": "2026年10月01日",
+        "title": "10月1日（木）～「10月限定早割webリフト1日券」販売！",
+        "url": "https://hodaigi.jp/news-event/2080/"
+      },
+      {
+        "date": "2026年09月24日",
+        "title": "10月1日(木)「POWDER5ぐんま」シーパス・早割時間券販売開始！",
+        "url": "https://hodaigi.jp/news-event/2076/"
+      },
+      {
         "date": "2026年08月30日",
-        "title": "9月1日（火）〜「9月限定早割Webリフト1日券」販売開始！",
+        "title": "9月1日（火）～「9月限定早割Webリフト1日券」販売開始！",
         "url": "https://hodaigi.jp/news-event/2052/"
-      },
-      {
-        "date": "2026年08月30日",
-        "title": "9月1日（火）〜27\"スノーシーズン「早割シーズン券」販売開始！",
-        "url": "https://hodaigi.jp/news-event/2048/"
-      },
-      {
-        "date": "2026年03月29日",
-        "title": "今シーズンの営業は終了しました。",
-        "url": "https://hodaigi.jp/news-event/2032/"
-      },
-      {
-        "date": "2026年03月28日",
-        "title": "3月29日（日）最終営業日になります。",
-        "url": "https://hodaigi.jp/news-event/2031/"
-      },
-      {
-        "date": "2026年03月27日",
-        "title": "ファイナルイベント「宝さがし」開催！",
-        "url": "https://hodaigi.jp/news-event/2028/"
       }
     ],
-    "foot": null
+    "foot": null,
+    "feed": "https://hodaigi.jp/wp-json/wp/v2/news-event"
   },
   "sns": {
     "href": "https://x.com/houdaigiskiarea",

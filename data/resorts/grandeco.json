@@ -251,7 +251,7 @@
     "foot": null
   },
   "news": {
-    "source": "from grandecoresort.co.jp/snow, 2026-09-15",
+    "source": "from grandecoresort.co.jp/wp-json, 2026-10-04",
     "items": [
       {
         "date": "2026年08月29日",
@@ -265,11 +265,12 @@
       },
       {
         "date": "2026年06月19日",
-        "title": "SURF & SNOW 2025-2026 SKI RESORTランキング",
+        "title": "SURF & SNOW 2025-2026SKI RESORT ランキング",
         "url": "https://grandecoresort.co.jp/snow/2026/06/19/surf-snow-2025-2026ski-resort-%e3%83%a9%e3%83%b3%e3%82%ad%e3%83%b3%e3%82%b0/"
       }
     ],
-    "foot": null
+    "foot": null,
+    "feed": "https://grandecoresort.co.jp/snow/wp-json/wp/v2/posts"
   },
   "sns": {
     "href": "https://x.com/grandeco",

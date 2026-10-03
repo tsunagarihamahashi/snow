@@ -7,32 +7,95 @@
   "pref": "群馬県沼田市玉原高原",
   "hours": {
     "items": [
-      {"label": "リフト（平日）", "value": "8:30〜16:00"},
-      {"label": "リフト（特定日）", "value": "8:00〜16:00"},
-      {"label": "初滑り・春", "value": "8:30〜15:30<br>8:00〜15:30"},
-      {"label": "ナイター", "value": "なし"}
+      {
+        "label": "リフト（平日）",
+        "value": "8:30〜16:00"
+      },
+      {
+        "label": "リフト（特定日）",
+        "value": "8:00〜16:00"
+      },
+      {
+        "label": "初滑り・春",
+        "value": "8:30〜15:30<br>8:00〜15:30"
+      },
+      {
+        "label": "ナイター",
+        "value": "なし"
+      }
     ],
     "foot": "TOPシーズン（12/12〜4/4）の時間。特定日は土日祝・年末年始（12/28〜1/1）。GW（4/26〜5/5）は7:30〜15:00。積雪状況により変更あり"
   },
   "scale": {
     "stats": [
-      {"num": "41", "num_unit": null, "unit": "ゲレンデ面積 ha", "wide": false, "tier": null, "idx_tag": null},
-      {"num": "8", "num_unit": null, "unit": "コース数", "wide": false, "tier": null, "idx_tag": null},
-      {"num": "2,550", "num_unit": null, "unit": "最長滑走 m", "wide": false, "tier": null, "idx_tag": null},
-      {"num": "300", "num_unit": null, "unit": "標高差 m<br>（1,250〜1,550m）", "wide": false, "tier": null, "idx_tag": null},
-      {"num": "6", "num_unit": "基", "unit": "リフト数（高速クワッド1・トリプル1・ペア4）", "wide": true, "tier": null, "idx_tag": null}
+      {
+        "num": "41",
+        "num_unit": null,
+        "unit": "ゲレンデ面積 ha",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "8",
+        "num_unit": null,
+        "unit": "コース数",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "2,550",
+        "num_unit": null,
+        "unit": "最長滑走 m",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "300",
+        "num_unit": null,
+        "unit": "標高差 m<br>（1,250〜1,550m）",
+        "wide": false,
+        "tier": null,
+        "idx_tag": null
+      },
+      {
+        "num": "6",
+        "num_unit": "基",
+        "unit": "リフト数（高速クワッド1・トリプル1・ペア4）",
+        "wide": true,
+        "tier": null,
+        "idx_tag": null
+      }
     ],
     "level_bar": [
-      {"pct": 35.0, "color": "var(--pine-600)", "label": "初級 35%"},
-      {"pct": 45.0, "color": "var(--amber-600)", "label": "中級 45%"},
-      {"pct": 20.0, "color": "var(--ridge-700)", "label": "上級 20%"}
+      {
+        "pct": 35.0,
+        "color": "var(--pine-600)",
+        "label": "初級 35%"
+      },
+      {
+        "pct": 45.0,
+        "color": "var(--amber-600)",
+        "label": "中級 45%"
+      },
+      {
+        "pct": 20.0,
+        "color": "var(--ridge-700)",
+        "label": "上級 20%"
+      }
     ],
     "notice": null,
     "foot": "平均斜度10°・最大25°（公式サイトより）。センターコース〜ウッディコースをつなぐ最長2,550mのロングランと、幅の広い緩斜面「ファミリーコース」（平均5°）が特徴。11月下旬〜GWまで約160日のロングシーズン営業。",
     "map_img": null,
     "map_source_note": null,
     "cards": [
-      {"href": "https://www.tambara.co.jp/winter/course/", "title": "コースガイド・運行状況を見る（公式サイト）", "sub": "コースマップは運行状況を重ねて表示するインタラクティブ形式のため、公式サイトへリンクしています"}
+      {
+        "href": "https://www.tambara.co.jp/winter/course/",
+        "title": "コースガイド・運行状況を見る（公式サイト）",
+        "sub": "コースマップは運行状況を重ねて表示するインタラクティブ形式のため、公式サイトへリンクしています"
+      }
     ]
   },
   "reviews": {
@@ -62,7 +125,11 @@
   },
   "livecam": {
     "cards": [
-      {"href": "https://www.tambara.co.jp/winter/gelande/", "title": "本日のゲレンデ状況を見る（公式サイト）", "sub": "公式サイトにライブカメラの配信はなく、天候・気温・積雪とリフト運行状況が毎日更新されています"}
+      {
+        "href": "https://www.tambara.co.jp/winter/gelande/",
+        "title": "本日のゲレンデ状況を見る（公式サイト）",
+        "sub": "公式サイトにライブカメラの配信はなく、天候・気温・積雪とリフト運行状況が毎日更新されています"
+      }
     ],
     "foot": null,
     "type": "linkout"
@@ -72,24 +139,77 @@
     "total_label": "1日券 合計",
     "mode": "toggle",
     "categories": [
-      {"key": "adult", "label": "大人", "cond": "中学生〜59歳"},
-      {"key": "senior", "label": "シニア", "cond": "60歳以上（要証明書）"},
-      {"key": "elem", "label": "小学生", "cond": null},
-      {"key": "kids", "label": "キッズ", "cond": "4歳以上の未就学児"}
+      {
+        "key": "adult",
+        "label": "大人",
+        "cond": "中学生〜59歳"
+      },
+      {
+        "key": "senior",
+        "label": "シニア",
+        "cond": "60歳以上（要証明書）"
+      },
+      {
+        "key": "elem",
+        "label": "小学生",
+        "cond": null
+      },
+      {
+        "key": "kids",
+        "label": "キッズ",
+        "cond": "4歳以上の未就学児"
+      }
     ],
-    "counts": {"adult": 2, "senior": 0, "elem": 0, "kids": 0},
+    "counts": {
+      "adult": 2,
+      "senior": 0,
+      "elem": 0,
+      "kids": 0
+    },
     "options": [
-      {"key": "weekday", "label": "平日"},
-      {"key": "weekend", "label": "土日祝"},
-      {"key": "peak", "label": "年末年始〜2月の土日祝"},
-      {"key": "early_spring", "label": "初滑り・春"}
+      {
+        "key": "weekday",
+        "label": "平日"
+      },
+      {
+        "key": "weekend",
+        "label": "土日祝"
+      },
+      {
+        "key": "peak",
+        "label": "年末年始〜2月の土日祝"
+      },
+      {
+        "key": "early_spring",
+        "label": "初滑り・春"
+      }
     ],
     "aria_label": "日付タイプ",
     "price_table": {
-      "weekday": {"adult": 5200, "senior": 5000, "elem": 3700, "kids": 2700},
-      "weekend": {"adult": 6000, "senior": 5700, "elem": 3900, "kids": 2700},
-      "peak": {"adult": 6500, "senior": 6200, "elem": 4000, "kids": 2700},
-      "early_spring": {"adult": 5000, "senior": 4800, "elem": 3400, "kids": 2500}
+      "weekday": {
+        "adult": 5200,
+        "senior": 5000,
+        "elem": 3700,
+        "kids": 2700
+      },
+      "weekend": {
+        "adult": 6000,
+        "senior": 5700,
+        "elem": 3900,
+        "kids": 2700
+      },
+      "peak": {
+        "adult": 6500,
+        "senior": 6200,
+        "elem": 4000,
+        "kids": 2700
+      },
+      "early_spring": {
+        "adult": 5000,
+        "senior": 4800,
+        "elem": 3400,
+        "kids": 2500
+      }
     },
     "default_option": "weekday",
     "foot": "2025-26シーズンの窓口料金を参考値として掲載（2026-27の料金は10月1日の早割販売開始にあわせて公式サイトで発表予定）。3歳以下はリフト無料。「土日祝」は12月中旬・3月〜4月上旬の土日祝、「年末年始〜2月の土日祝」は12月下旬〜2月末の土日祝と年末年始。午後券（12:00〜）・第1リフト専用券・障がい者割引もあります。"
@@ -100,53 +220,141 @@
     "foot": "スキー（HEAD製）・スノーボード（BURTON製）とも同料金。ストック単品¥500、大人用ヘルメット¥1,300、子供用ヘルメット¥800。",
     "mode": "stepper",
     "items": [
-      {"key": "set_adult", "label": "スキー／スノーボードセット・大人", "price": 5500},
-      {"key": "set_elem", "label": "スキー／スノーボードセット・小学生", "price": 3500},
-      {"key": "set_kids", "label": "スキー／スノーボードセット・キッズ", "price": 2500},
-      {"key": "wear_adult", "label": "ウェア上下・大人", "price": 4500},
-      {"key": "wear_elem", "label": "ウェア上下・小学生", "price": 2800},
-      {"key": "wear_kids", "label": "ウェア上下・キッズ", "price": 1800}
+      {
+        "key": "set_adult",
+        "label": "スキー／スノーボードセット・大人",
+        "price": 5500
+      },
+      {
+        "key": "set_elem",
+        "label": "スキー／スノーボードセット・小学生",
+        "price": 3500
+      },
+      {
+        "key": "set_kids",
+        "label": "スキー／スノーボードセット・キッズ",
+        "price": 2500
+      },
+      {
+        "key": "wear_adult",
+        "label": "ウェア上下・大人",
+        "price": 4500
+      },
+      {
+        "key": "wear_elem",
+        "label": "ウェア上下・小学生",
+        "price": 2800
+      },
+      {
+        "key": "wear_kids",
+        "label": "ウェア上下・キッズ",
+        "price": 1800
+      }
     ]
   },
   "kids": {
     "items": [
-      {"name": "たんばランド", "tag": "雪遊び・そり専用エリア。そり・ハンドルそり・スノーストライダー・チュービング（入園者は無料貸出）", "right": "¥1,800（2歳以下無料）", "link": null},
-      {"name": "ファミリーコース（Gコース）", "tag": "平均斜度5°・750mのワイドな緩斜面。初心者・ちびっこのデビューコース", "right": "リフト券で利用", "link": null}
+      {
+        "name": "たんばランド",
+        "tag": "雪遊び・そり専用エリア。そり・ハンドルそり・スノーストライダー・チュービング（入園者は無料貸出）",
+        "right": "¥1,800（2歳以下無料）",
+        "link": null
+      },
+      {
+        "name": "ファミリーコース（Gコース）",
+        "tag": "平均斜度5°・750mのワイドな緩斜面。初心者・ちびっこのデビューコース",
+        "right": "リフト券で利用",
+        "link": null
+      }
     ],
     "foot": "たんばランドの営業は2026年12月19日〜2027年4月4日（予定）、9:00〜16:00（土日祝・年末年始は8:30〜、最終入場15:40）。スキー・スノーボードは持ち込み不可。積雪状況により変更あり。"
   },
   "gochiso": {
     "badge": null,
     "shops": [
-      {"name": "ウッドランドカフェ（レストハウス・中腹）", "tag": "メインダイニング350席。上州麦豚ガーリックライス、ぐんま豚チャーシュー醤油ラーメン、たんばら丼", "mapQuery": "たんばらスキーパーク ウッドランドカフェ"},
-      {"name": "レストラン オン＆オフ（リゾートセンター・山麓）", "tag": "500席・お子様メニュー充実。座敷の小上がり席・窓際BOX席は予約可", "mapQuery": "たんばらスキーパーク レストラン オン＆オフ"},
-      {"name": "ラーメンボーンブロス（レストハウス・中腹）", "tag": "沼田市の人気店が出店。エビ味噌ラーメン・たんばら風ラーメン二郎（土日祝・年末年始のみ）", "mapQuery": "たんばらスキーパーク レストハウス"}
+      {
+        "name": "ウッドランドカフェ（レストハウス・中腹）",
+        "tag": "メインダイニング350席。上州麦豚ガーリックライス、ぐんま豚チャーシュー醤油ラーメン、たんばら丼",
+        "mapQuery": "たんばらスキーパーク ウッドランドカフェ"
+      },
+      {
+        "name": "レストラン オン＆オフ（リゾートセンター・山麓）",
+        "tag": "500席・お子様メニュー充実。座敷の小上がり席・窓際BOX席は予約可",
+        "mapQuery": "たんばらスキーパーク レストラン オン＆オフ"
+      },
+      {
+        "name": "ラーメンボーンブロス（レストハウス・中腹）",
+        "tag": "沼田市の人気店が出店。エビ味噌ラーメン・たんばら風ラーメン二郎（土日祝・年末年始のみ）",
+        "mapQuery": "たんばらスキーパーク レストハウス"
+      }
     ],
     "foot": "ゲレ飯コスパ指数は算出に必要な店舗データが十分に集まっていないため今回は未掲載です。各店の評価・写真・営業時間はGoogleマップの店舗ページに委ねる方針です。"
   },
   "onsen": {
     "items": [
-      {"name": "道の駅 白沢 望郷の湯", "tag": "木造モダンな建物と自然を取り入れた露天風呂。たんばらから車で約30分", "right": "車で約30分", "link": null},
-      {"name": "川場温泉 悠湯里庵", "tag": "源泉かけ流しの川場温泉", "right": "車で約30分", "link": null},
-      {"name": "南郷温泉 しゃくなげの湯", "tag": "檜風呂と玉石を積んだ石風呂", "right": "車で約30分", "link": null}
+      {
+        "name": "道の駅 白沢 望郷の湯",
+        "tag": "木造モダンな建物と自然を取り入れた露天風呂。たんばらから車で約30分",
+        "right": "車で約30分",
+        "link": null
+      },
+      {
+        "name": "川場温泉 悠湯里庵",
+        "tag": "源泉かけ流しの川場温泉",
+        "right": "車で約30分",
+        "link": null
+      },
+      {
+        "name": "南郷温泉 しゃくなげの湯",
+        "tag": "檜風呂と玉石を積んだ石風呂",
+        "right": "車で約30分",
+        "link": null
+      }
     ],
     "foot": "スキー場内に日帰り温泉施設はなく、公式サイトが案内する周辺の日帰り温泉です。料金・営業時間は各施設でご確認ください。"
   },
   "access": {
     "kv": [
-      {"k": "車で", "v": "関越道 沼田IC → 約30分（東京・練馬ICから約2時間）。冬季はスノーチェーン無料貸出・雪道パトロール「お助け隊」あり"},
-      {"k": "電車", "v": "JR沼田駅・上毛高原駅から無料送迎バス（事前予約制・先着18名、上毛高原駅発は特定日のみ）"},
-      {"k": "駐車場", "v": "約2,000台。平日無料、12月下旬〜3月下旬の土日祝・年末年始は普通車¥1,000（第3駐車場は無料）"},
-      {"k": "公式", "v": "<a class=\"outlink\" href=\"https://www.tambara.co.jp/winter/access/\" target=\"_blank\" rel=\"noopener\">tambara.co.jp／アクセス詳細</a>"}
+      {
+        "k": "車で",
+        "v": "関越道 沼田IC → 約30分（東京・練馬ICから約2時間）。冬季はスノーチェーン無料貸出・雪道パトロール「お助け隊」あり"
+      },
+      {
+        "k": "電車",
+        "v": "JR沼田駅・上毛高原駅から無料送迎バス（事前予約制・先着18名、上毛高原駅発は特定日のみ）"
+      },
+      {
+        "k": "駐車場",
+        "v": "約2,000台。平日無料、12月下旬〜3月下旬の土日祝・年末年始は普通車¥1,000（第3駐車場は無料）"
+      },
+      {
+        "k": "公式",
+        "v": "<a class=\"outlink\" href=\"https://www.tambara.co.jp/winter/access/\" target=\"_blank\" rel=\"noopener\">tambara.co.jp／アクセス詳細</a>"
+      }
     ],
     "foot": "特定日（土日祝・年末年始）は駐車場が5:00開場。夜間の駐車は不可。"
   },
   "news": {
-    "source": "from tambara.co.jp/winter/news, 2026-09-20",
+    "source": "from tambara.co.jp/wp-json, 2026-10-04",
     "items": [
-      {"date": "2026年08月30日", "title": "2026-27シーズンについて（11月28日営業開始・5月5日まで、10月1日から早割販売）", "url": "https://www.tambara.co.jp/winter/news/26-27season/"}
+      {
+        "date": "2026年10月01日",
+        "title": "26-27【早割シーズン券】販売開始！",
+        "url": "https://www.tambara.co.jp/winter/news/26-27_early_seasonpass/"
+      },
+      {
+        "date": "2026年10月01日",
+        "title": "26-27 【早割リフト1日券】販売開始！",
+        "url": "https://www.tambara.co.jp/winter/news/26-27_early_lift_ticket/"
+      },
+      {
+        "date": "2026年08月30日",
+        "title": "2026-27シーズンについて",
+        "url": "https://www.tambara.co.jp/winter/news/26-27season/"
+      }
     ],
-    "foot": null
+    "foot": null,
+    "feed": "https://www.tambara.co.jp/winter/wp-json/wp/v2/news"
   },
   "sns": {
     "href": "https://x.com/tambaraskipark",
@@ -166,6 +374,10 @@
   "crowd": {
     "area_ha": 41,
     "parking": 2000,
-    "lifts": {"quad": 1, "triple": 1, "pair": 4}
+    "lifts": {
+      "quad": 1,
+      "triple": 1,
+      "pair": 4
+    }
   }
 }

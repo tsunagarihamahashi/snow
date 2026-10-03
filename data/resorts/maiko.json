@@ -246,25 +246,26 @@
     "foot": null
   },
   "news": {
-    "source": "from maiko-resort.com/news, 2026-09-15",
+    "source": "from maiko-resort.com/wp-json, 2026-10-04",
     "items": [
       {
-        "date": "2026年09月07日",
-        "title": "ふるさと納税返礼品に「舞子スノーリゾート1dayパス」を出品中",
-        "url": "https://www.maiko-resort.com/news/furusatonouzei2026snow.html"
-      },
-      {
-        "date": "2026年09月07日",
-        "title": "舞子スノーリゾート2026-2027採用情報",
-        "url": "https://www.maiko-resort.com/news/recruit.html"
-      },
-      {
-        "date": "2026年09月02日",
-        "title": "【早割第1弾9/30までが最得】2026-2027舞子シーズン券のご案内",
+        "date": "2026年10月01日",
+        "title": "【早割第2弾11/30まで】2026-2027舞子シーズン券のご案内",
         "url": "https://www.maiko-resort.com/news/2027seasonticket.html"
+      },
+      {
+        "date": "2026年09月18日",
+        "title": "【舞子高原ホテル】新米フェア開催！",
+        "url": "https://www.maiko-resort.com/news/20260918shinmai.html"
+      },
+      {
+        "date": "2026年09月11日",
+        "title": "【第2弾】新潟県民限定　にいがた GoTo トラベル",
+        "url": "https://www.maiko-resort.com/news/niigatagoto2026_2.html"
       }
     ],
-    "foot": null
+    "foot": null,
+    "feed": "https://www.maiko-resort.com/wp-json/wp/v2/posts"
   },
   "sns": {
     "href": "https://x.com/maiko_snow",

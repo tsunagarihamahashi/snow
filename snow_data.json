@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-02T00:05:25.502054+00:00",
+  "scraped_at": "2026-11-03T02:43:27.571498+00:00",
   "resorts": {
     "oze_iwakura": {
       "available": true,
@@ -12,8 +12,9 @@
       "note": "オフシーズンのため積雪情報が未掲載です"
     },
     "kawaba": {
-      "available": false,
-      "note": "取得エラー: HTTPSConnectionPool(host='www.kawaba.co.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kawaba.co.jp', port=443) at 0x70cb02449220>, 'Connection to www.kawaba.co.jp timed out. (connect timeout=20)'))"
+      "available": true,
+      "amount": 0.0,
+      "updated": "2026/09/25/12:27"
     },
     "marunuma": {
       "available": false,

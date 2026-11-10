@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-09T00:23:55.720940+00:00",
+  "scraped_at": "2026-11-10T03:05:23.550776+00:00",
   "resorts": {
     "oze_iwakura": {
       "available": true,
@@ -18,7 +18,7 @@
     },
     "marunuma": {
       "available": false,
-      "note": "積雪量の数値を解析できませんでした（オフシーズンの可能性）"
+      "note": "積雪量の要素が見つかりませんでした"
     },
     "hodaigi": {
       "available": false,

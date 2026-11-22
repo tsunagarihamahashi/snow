@@ -1,11 +1,9 @@
 {
-  "scraped_at": "2026-11-21T01:54:04.484197+00:00",
+  "scraped_at": "2026-11-22T00:50:14.972473+00:00",
   "resorts": {
     "oze_iwakura": {
-      "available": true,
-      "top": 0.0,
-      "base": 0.0,
-      "updated": null
+      "available": false,
+      "note": "積雪量の要素が見つかりませんでした"
     },
     "ishiuchi_maruyama": {
       "available": false,

@@ -285,22 +285,22 @@
     "foot": null
   },
   "news": {
-    "source": "from norn.co.jp/winter/news, 2026-09-20",
+    "source": "from norn.co.jp/wp-json, 2026-11-25",
     "items": [
+      {
+        "date": "2026年10月14日",
+        "title": "【WEBにて数量限定販売】2026-27シーズンロッカー貸し出しについて",
+        "url": "https://norn.co.jp/winter/news/post-9396/"
+      },
+      {
+        "date": "2026年10月05日",
+        "title": "【安心安全】トレーラーキャビン貸切個室プランのご案内＿26-27シーズン",
+        "url": "https://norn.co.jp/winter/news/post-5209/"
+      },
       {
         "date": "2026年09月15日",
         "title": "ノルンみなかみスキー場でこの冬、働いてみませんか？　オフは滑り放題・ナイターもOK",
-        "url": "https://www.norn.co.jp/winter/news/post-6129/"
-      },
-      {
-        "date": "2026年09月05日",
-        "title": "ノルンみなかみ！お得な早割シーズン券・早割リフト券（期間限定）",
-        "url": "https://www.norn.co.jp/winter/news/post-6075/"
-      },
-      {
-        "date": "2026年03月22日",
-        "title": "ノルンみなかみスキー場2025-2026シーズン終了のお知らせ",
-        "url": "https://www.norn.co.jp/winter/news/post-9947/"
+        "url": "https://norn.co.jp/winter/news/post-6129/"
       }
     ],
     "foot": null,

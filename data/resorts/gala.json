@@ -298,17 +298,22 @@
     "foot": null
   },
   "news": {
-    "source": "from gala.co.jp/wp-json, 2026-10-04",
+    "source": "from gala.co.jp/wp-json, 2026-11-25",
     "items": [
       {
-        "date": "2026年10月02日",
-        "title": "超早割リフト券 10月5日（月）10時よりWebketにて販売開始‼️",
-        "url": "https://gala.co.jp/winter/information/liftticketearlysale20261015/"
+        "date": "2026年11月24日",
+        "title": "【台数限定】シーズンロッカー新規販売開始のお知らせ",
+        "url": "https://gala.co.jp/winter/information/%e3%82%b7%e3%83%bc%e3%82%ba%e3%83%b3%e3%83%ad%e3%83%83%e3%82%ab%e3%83%bc/"
       },
       {
-        "date": "2026年09月15日",
-        "title": "２０２６-２０２７ウインターシーズン南エリア営業休止のお知らせ",
-        "url": "https://gala.co.jp/winter/information/2026-2027wintersouthareaclosed/"
+        "date": "2026年11月20日",
+        "title": "OGASAKA SKI 26-27 SEASON IN 試乗会開催",
+        "url": "https://gala.co.jp/winter/information/ogasaka/"
+      },
+      {
+        "date": "2026年11月17日",
+        "title": "PICK UP BOX 予約受付開始日変更のお知らせ",
+        "url": "https://gala.co.jp/winter/information/gala-yuzawa-pick-up-box-notice/"
       }
     ],
     "foot": null,

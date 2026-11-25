@@ -152,12 +152,12 @@
       {
         "key": "elem",
         "label": "小学生",
-        "cond": null
+        "cond": "A・春A日程は無料（要証明書）"
       },
       {
         "key": "kids",
         "label": "キッズ",
-        "cond": "4歳以上の未就学児"
+        "cond": "4歳以上の未就学児（A・春A日程は無料）"
       }
     ],
     "counts": {
@@ -168,51 +168,61 @@
     },
     "options": [
       {
-        "key": "weekday",
-        "label": "平日"
+        "key": "a",
+        "label": "A日程（平日）"
       },
       {
-        "key": "weekend",
-        "label": "土日祝"
+        "key": "b",
+        "label": "B日程（土日祝）"
       },
       {
-        "key": "peak",
-        "label": "年末年始〜2月の土日祝"
+        "key": "c",
+        "label": "C日程（特定日）"
       },
       {
-        "key": "early_spring",
-        "label": "初滑り・春"
+        "key": "spring_a",
+        "label": "春A（平日）"
+      },
+      {
+        "key": "spring_b",
+        "label": "春B（土日祝）"
       }
     ],
     "aria_label": "日付タイプ",
     "price_table": {
-      "weekday": {
-        "adult": 5200,
-        "senior": 5000,
-        "elem": 3700,
-        "kids": 2700
+      "a": {
+        "adult": 5500,
+        "senior": 5300,
+        "elem": 0,
+        "kids": 0
       },
-      "weekend": {
-        "adult": 6000,
-        "senior": 5700,
+      "b": {
+        "adult": 6300,
+        "senior": 6100,
         "elem": 3900,
         "kids": 2700
       },
-      "peak": {
-        "adult": 6500,
-        "senior": 6200,
+      "c": {
+        "adult": 7000,
+        "senior": 6700,
         "elem": 4000,
         "kids": 2700
       },
-      "early_spring": {
-        "adult": 5000,
-        "senior": 4800,
-        "elem": 3400,
-        "kids": 2500
+      "spring_a": {
+        "adult": 5300,
+        "senior": 5300,
+        "elem": 0,
+        "kids": 0
+      },
+      "spring_b": {
+        "adult": 5300,
+        "senior": 5300,
+        "elem": 3700,
+        "kids": 2700
       }
     },
-    "default_option": "weekday",
-    "foot": "2025-26シーズンの窓口料金を参考値として掲載（2026-27の料金は10月1日の早割販売開始にあわせて公式サイトで発表予定）。3歳以下はリフト無料。「土日祝」は12月中旬・3月〜4月上旬の土日祝、「年末年始〜2月の土日祝」は12月下旬〜2月末の土日祝と年末年始。午後券（12:00〜）・第1リフト専用券・障がい者割引もあります。"
+    "default_option": "a",
+    "foot": "2026-27シーズンの公式発表料金。日程区分は公式サイトのカレンダーでご確認ください（特定日＝土日祝および12/28〜12/31）。3歳以下はリフト無料。午後券（12:00〜）大人¥5,000〜¥6,500、第1リフト専用券 大人¥4,900、1回券¥1,000。障がい者手帳の提示で本人と介助者1名が割引。"
   },
   "rental": {
     "summary": "レンタル料金をシミュレーション",
@@ -335,22 +345,22 @@
     "foot": "特定日（土日祝・年末年始）は駐車場が5:00開場。夜間の駐車は不可。"
   },
   "news": {
-    "source": "from tambara.co.jp/wp-json, 2026-10-04",
+    "source": "from tambara.co.jp/wp-json, 2026-11-25",
     "items": [
       {
-        "date": "2026年10月01日",
-        "title": "26-27【早割シーズン券】販売開始！",
-        "url": "https://www.tambara.co.jp/winter/news/26-27_early_seasonpass/"
+        "date": "2026年11月24日",
+        "title": "11月28日(土)~29日(日)営業内容について",
+        "url": "https://www.tambara.co.jp/winter/news/11%e6%9c%8828%e6%97%a5%e5%9c%9f29%e6%97%a5%e6%97%a5%e5%96%b6%e6%a5%ad%e5%86%85%e5%ae%b9%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
       },
       {
-        "date": "2026年10月01日",
-        "title": "26-27 【早割リフト1日券】販売開始！",
-        "url": "https://www.tambara.co.jp/winter/news/26-27_early_lift_ticket/"
+        "date": "2026年11月24日",
+        "title": "11月27日(金)の営業内容について",
+        "url": "https://www.tambara.co.jp/winter/news/11%e6%9c%8827%e6%97%a5%e9%87%91%e3%81%ae%e5%96%b6%e6%a5%ad%e5%86%85%e5%ae%b9%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
       },
       {
-        "date": "2026年08月30日",
-        "title": "2026-27シーズンについて",
-        "url": "https://www.tambara.co.jp/winter/news/26-27season/"
+        "date": "2026年11月24日",
+        "title": "【重要】11月27日(金)オープン決定！！",
+        "url": "https://www.tambara.co.jp/winter/news/261127open/"
       }
     ],
     "foot": null,
@@ -363,7 +373,7 @@
   },
   "footer": [
     "営業期間：2026年11月28日〜2027年5月5日（公式発表・予定）。コース情報は公式サイト掲載の著作物です。",
-    "データ精度：料金は2025-26シーズンの公式値、面積・コース数は公式サイトの値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
+    "データ精度：営業期間・リフト券は2026-27シーズンの公式値、面積・コース・リフトは公式サイトの値です。当日の運行状況は公式サイトのライブ情報を優先してください。"
   ],
   "season": {
     "start": "2026-11-28",
